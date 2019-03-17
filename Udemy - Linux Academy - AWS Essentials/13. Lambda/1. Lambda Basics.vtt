@@ -1,0 +1,310 @@
+WEBVTT
+
+00:00.360 --> 00:01.700
+Ciao e bentornato.
+
+00:01.740 --> 00:08.270
+Bene, siamo entrati nella sezione finale degli elementi essenziali di AWOS in cui parleremo di LAMDA.
+
+00:08.460 --> 00:12.520
+Quindi andiamo avanti e accendiamo questa sezione e ci tufferemo dentro.
+
+00:12.540 --> 00:19.440
+Quindi per la sezione 12 di AWOS, ci concentreremo su lambda e toccheremo un'introduzione a AWOS lambda,
+
+00:19.530 --> 00:25.230
+una panoramica dei surrealisti che calcolano una panoramica dei prezzi e dei costi.
+
+00:25.410 --> 00:30.760
+E infine usando lambda per eseguire il codice per questa lezione.
+
+00:30.770 --> 00:31.820
+Lezione uno.
+
+00:31.820 --> 00:38.150
+Concentreremo l'attenzione sulle basi e copriremo le definizioni Lamda e una panoramica generale
+
+00:38.210 --> 00:39.830
+del calcolo Servilius.
+
+00:41.470 --> 00:43.190
+Allora, cos'è LAMDA.
+
+00:43.210 --> 00:46.760
+La definizione di well inessentials suona qualcosa del genere.
+
+00:46.780 --> 00:49.240
+Lambda è un elenco di server informatici.
+
+00:49.380 --> 00:55.660
+È la prossima generazione di cloud computing che sostituirà in modo semplice le istanze per la maggior parte, quindi
+
+00:55.660 --> 01:00.520
+ritengo un po 'che ci siano alcune differenze e potrebbero esserci ancora usi per
+
+01:00.580 --> 01:06.640
+cose come le istanze facili in futuro per AWOS ha una definizione diventa molto più coinvolto e tocca
+
+01:06.640 --> 01:08.500
+alcuni fattori chiave qui.
+
+01:08.500 --> 01:15.520
+E questo indica che AWOS land è un servizio informatico che ti consente di eseguire il codice
+
+01:15.610 --> 01:21.400
+senza provisioning o gestione dei server, in modo che parte della frase esegua
+
+01:21.400 --> 01:30.450
+il codice senza provisioning o gestione dei server sia come elenchi di server che calcolano AWOS lambda esegue il tuo codice solo
+
+01:30.480 --> 01:36.540
+quando necessario e scala automaticamente da alcune richieste al giorno a migliaia al secondo.
+
+01:36.630 --> 01:39.630
+Paghi solo per il tempo di elaborazione che consumi.
+
+01:39.630 --> 01:44.150
+Non ci sono costi quando il codice non è in esecuzione con AWDA lambda.
+
+01:44.220 --> 01:51.030
+Puoi eseguire il codice praticamente per qualsiasi tipo di applicazione o tornare al servizio tutto con zero
+
+01:51.570 --> 01:58.440
+amministrazione AWOS lambda esegue il tuo codice sull'infrastruttura di calcolo ad alta disponibilità ed esegue tutta l'amministrazione
+
+01:58.560 --> 02:05.070
+delle risorse di elaborazione compreso il provisioning della capacità di manutenzione del server e del sistema
+
+02:05.130 --> 02:09.330
+operativo e il codice di scaling automatico monitoraggio e registrazione.
+
+02:09.330 --> 02:16.260
+Tutto quello che devi fare è fornire il tuo codice in una delle lingue supportate
+
+02:16.260 --> 02:22.210
+da lambda in AWOS che attualmente non include Java C-Sharp e Python.
+
+02:22.350 --> 02:23.950
+Quindi è molto.
+
+02:24.090 --> 02:25.240
+Cosa significa tutto questo.
+
+02:25.260 --> 02:30.450
+Bene, analizziamolo in un esempio molto semplicistico.
+
+02:30.690 --> 02:34.700
+E per questo diamo un'occhiata a ciò per cui abbiamo lavorato per le ultime lezioni.
+
+02:34.710 --> 02:40.250
+Pertanto, al momento per Project Omega abbiamo alcuni server Web che sono in esecuzione.
+
+02:40.410 --> 02:47.700
+Chiameremo per ora il codice Omega del progetto, che è solo la pagina di test di Apache, ma abbiamo quelli nelle
+
+02:48.300 --> 02:51.140
+sottoreti che sono poi nelle zone di disponibilità.
+
+02:51.150 --> 02:58.380
+Esecuzione su un gruppo di ridimensionamento automatico utilizzando un bilanciamento del carico elastico per instradare il traffico con
+
+02:58.510 --> 03:04.860
+un gateway Internet all'interno del PC e quindi utilizzare i server route 53 e DNS
+
+03:04.860 --> 03:11.880
+per assicurarsi che i clienti di Internet possano trovare e instradare correttamente il traffico nel nostro progetto. .
+
+03:11.880 --> 03:14.240
+Quindi cosa fa Lamda a tutto questo.
+
+03:14.460 --> 03:20.340
+Beh, Lamda fondamentalmente lo fa sostituisce tutto questo.
+
+03:20.500 --> 03:25.100
+E questo è di nuovo un po 'esagerato perché ci saranno ancora cose
+
+03:25.100 --> 03:31.180
+come i server DNS di route 53 e, ovviamente, si conoscerà un percorso che dovrai fare per portare traffico.
+
+03:31.460 --> 03:38.870
+Ma quando parli di specifici web server, le zone di disponibilità sottoreti scalano automaticamente gruppi di bilanciamento del carico elastico e
+
+03:38.870 --> 03:44.600
+tu conosci praticamente il VPC come un intero territorio che sarà un servizio che si prenderà
+
+03:44.750 --> 03:47.000
+cura di tutto questo per te.
+
+03:47.000 --> 03:53.630
+Non dovrai prendere decisioni su quante semplici istanze fornire all'acquisto di un posto o di un'istanza
+
+03:53.660 --> 03:59.780
+riservata o gruppi di truffa automatica o cercando di capire quanta capacità hai
+
+03:59.780 --> 04:00.280
+bisogno.
+
+04:00.410 --> 04:04.630
+Il lambda farà tutto questo per te e ti darò questo esempio.
+
+04:04.700 --> 04:08.350
+Immagina il computer che si trova di fronte a te a cui stai guardando questa lezione.
+
+04:08.420 --> 04:17.300
+Può essere un desktop, un laptop, un cellulare o un tablet, ma il computer che si sta utilizzando ha una
+
+04:17.300 --> 04:20.940
+capacità specifica di potenza di elaborazione e archiviazione.
+
+04:21.320 --> 04:27.260
+Quindi se stai usando solo una applicazione al momento, probabilmente stai utilizzando la
+
+04:27.260 --> 04:29.320
+capacità del tuo computer.
+
+04:29.630 --> 04:34.910
+Ma diciamo che volevi eseguire 30 applicazioni che potrebbero essere più grandi della tua attuale
+
+04:34.970 --> 04:40.850
+capacità di calcolo e quindi non puoi farlo e dovresti andare a comprare un nuovo computer o un
+
+04:40.850 --> 04:44.390
+caso AWOS che dovresti fare un altro facile per esempio.
+
+04:44.390 --> 04:48.920
+Ma cosa succederebbe se non avessi più bisogno di farlo, e se il computer davanti a te
+
+04:48.920 --> 04:55.730
+fosse il tuo portatile, il tuo cellulare o qualsiasi altra cosa tu avessi sempre l'esatta quantità di potenza di calcolo di cui avevi bisogno in un
+
+04:55.730 --> 04:56.450
+dato momento.
+
+04:56.450 --> 05:02.300
+Quindi diciamo che stavi solo eseguendo un'applicazione sul tuo laptop e se il tuo computer in quel momento avesse
+
+05:02.810 --> 05:06.590
+solo quella capacità e questo è tutto ciò che stavi pagando.
+
+05:06.590 --> 05:14.390
+Ma diciamo che all'improvviso volevi eseguire 30 applicazioni all'istante in cui la potenza di elaborazione del tuo computer
+
+05:14.390 --> 05:21.170
+si sarebbe ampliata per poter gestire quelle 30 applicazioni e non avresti dovuto fare nulla per
+
+05:21.170 --> 05:23.120
+raggiungere quella capacità crescente.
+
+05:23.180 --> 05:28.300
+Era tutto Handels per te e non devi mai aggiornare il tuo sistema operativo.
+
+05:28.340 --> 05:32.210
+Non è mai necessario aggiungere più RAM o aumentare la dimensione del disco rigido solo per misurare.
+
+05:32.210 --> 05:34.930
+E 'stato tutto fatto per te.
+
+05:34.970 --> 05:41.210
+Questo è ciò che Servius computing è ed è quello che lambda è e ciò che si finisce per fare è
+
+05:41.210 --> 05:46.450
+solo pagare esattamente la quantità di potenza di calcolo che si sta utilizzando in un dato momento.
+
+05:46.520 --> 05:50.180
+In modo che ci rotolerà nella panoramica dei prezzi e dei costi.
+
+05:50.180 --> 05:55.400
+Quindi, prima di tutto, notiamo che l'uso del tier gratuito è disponibile per Lamé in
+
+05:55.400 --> 06:03.570
+modo limitato, quindi ovviamente vai sempre a questo link qui sotto per visualizzare i prezzi attuali e i limiti di tier gratuiti che hai per lambda.
+
+06:03.590 --> 06:07.970
+Ci sono due modi principali con cui Lamda ti addebiterà per l'utilizzo del suo servizio.
+
+06:07.970 --> 06:11.400
+Il primo è la richiesta di eseguire il codice.
+
+06:11.660 --> 06:17.690
+Quindi ogni volta che vuoi eseguire il codice che inserisci in un lambda che altrimenti sarebbe in
+
+06:17.690 --> 06:22.960
+esecuzione su semplice istanza, ti addebiterà ogni volta che vuoi eseguire il codice.
+
+06:22.970 --> 06:26.420
+Poi c'è la durata necessaria per eseguire il codice.
+
+06:26.420 --> 06:28.790
+Diciamo che bastano solo tre secondi.
+
+06:28.920 --> 06:31.940
+Bene pagherai per una richiesta per eseguire il codice.
+
+06:32.150 --> 06:37.610
+E poi pagherai solo la potenza di calcolo che usi per i tre secondi necessari per
+
+06:37.850 --> 06:39.060
+eseguire il codice.
+
+06:39.140 --> 06:44.210
+E questo in realtà si rompe fino al punto in cui ci viene addebitato solo il millisecondo
+
+06:44.210 --> 06:46.960
+per la durata necessaria per eseguire il codice.
+
+06:47.330 --> 06:52.850
+Quindi, invece di eseguire il provisioning e di semplificare l'istanza e di avere un'esecuzione facile ad esempio per ore
+
+06:52.880 --> 06:58.610
+o mesi, è possibile avere il codice seduto su Lamda e se Kodaly impiega tre secondi per eseguirlo, si paga
+
+06:58.610 --> 07:03.440
+solo per tre secondi di tempo di calcolo anziché pagare per un facile esempio per un giorno
+
+07:03.530 --> 07:05.810
+a settimana al mese o un anno.
+
+07:06.860 --> 07:12.650
+Infine, puoi anche pagare per l'accesso ai dati da altri servizi o risorse AWOS, ad esempio se hai
+
+07:12.890 --> 07:19.940
+una funzione lambda che deve accedere a contenuti o codice che richiede dati di accesso che possono essere un S-3, ma può
+
+07:19.940 --> 07:21.460
+esserlo anche per questo.
+
+07:21.460 --> 07:27.200
+Ma questi sono due modi in cui voglio che tu ricordi come i principali modi
+
+07:27.560 --> 07:35.210
+in cui ti verrà addebitato l'utilizzo di AWOS land che mi concentro maggiormente sulla struttura dei costi per la terra rispetto
+
+07:35.720 --> 07:43.400
+a quella per altri servizi AWOS perché questo è uno dei principali Le caratteristiche di Lamda sono questo nuovo paradigma dei costi
+
+07:43.400 --> 07:49.620
+in cui questa nuova struttura dei costi è molto diversa dalla tradizionale rete di tipo server OK.
+
+07:49.660 --> 07:55.600
+Quindi, ancora una volta per riassumere tutto se si allontana da questo corso, basta ricordare una
+
+07:55.660 --> 08:04.390
+cosa che è AWDA è la piattaforma Servilius e l'elenco dei server significa che è possibile eseguire il codice senza provisioning o gestione
+
+08:04.510 --> 08:05.460
+dei server.
+
+08:05.740 --> 08:10.330
+Quindi se ti ricordi quel pezzo di informazione, allora questo sarà abbastanza buono per te che
+
+08:10.330 --> 08:10.950
+vai avanti.
+
+08:11.050 --> 08:13.440
+E con questo concluderemo questa lezione.
+
+08:13.570 --> 08:14.860
+Grazie per aver guardato.
+
+08:14.860 --> 08:15.750
+Ora puoi andare avanti.

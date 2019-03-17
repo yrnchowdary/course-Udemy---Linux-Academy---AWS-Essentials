@@ -1,0 +1,235 @@
+WEBVTT
+
+00:00.520 --> 00:05.830
+Quindi, ora che hai presentato un'introduzione al progetto Omega, voglio dedicare alcuni minuti e spiegarti
+
+00:05.830 --> 00:11.800
+come utilizzare questa guida interattiva e discutere di come verrà utilizzata per la durata di questo corso.
+
+00:11.800 --> 00:17.230
+Ora la prima cosa da capire su Project Omega e questo diagramma interattivo è che
+
+00:17.230 --> 00:24.200
+questa è una risorsa che hai e che puoi usare proprio come sto usando ora e che userai durante questo corso.
+
+00:24.430 --> 00:31.060
+Il link visto qui verrà fornito nella descrizione del corso e in molti altri luoghi all'interno del corso in modo
+
+00:31.060 --> 00:36.250
+da poter sempre trovare il link e accedervi ogni volta che lo si desidera utilizzare
+
+00:36.250 --> 00:37.800
+per seguire le lezioni.
+
+00:38.020 --> 00:45.040
+Quindi, qual è questa guida interattiva e come verrà utilizzata invece di utilizzare le diapositive di PowerPoint
+
+00:45.040 --> 00:46.990
+tradizionali per trasmettere informazioni.
+
+00:47.020 --> 00:52.930
+In questa accademia abbiamo sviluppato questa guida come una guida interattiva con vari livelli che
+
+00:52.930 --> 00:57.160
+puoi esplorare e utilizzare per saperne di più su AWOS.
+
+00:57.160 --> 01:03.930
+Quindi prima questa è la pagina principale e questo è il progetto dell'infrastruttura di Omega o di ciò che stiamo per costruire.
+
+01:04.060 --> 01:09.370
+E tutti i vari componenti sono stati suddivisi in diverse sezioni e useremo
+
+01:09.370 --> 01:16.060
+queste sezioni per insegnare gli elementi di ciascuno di questi servizi o concetti che andremo ad esplorare.
+
+01:16.090 --> 01:21.500
+Ora la cosa grandiosa di questo è che quasi tutto su questo diagramma è interattivo.
+
+01:21.610 --> 01:24.870
+Possiamo iniziare accendendo o spegnendo tutto.
+
+01:25.730 --> 01:32.180
+In qualsiasi momento possiamo disattivare vari servizi o riaccenderli.
+
+01:32.280 --> 01:39.000
+Volete esplorare quali sono le diverse funzioni e come i servizi vengono utilizzati o visivamente
+
+01:39.010 --> 01:41.230
+posizionati all'interno dell'architettura AWOS.
+
+01:41.340 --> 01:46.890
+Ma quello che faremo per la durata di questo corso è iniziare
+
+01:47.040 --> 01:54.400
+con una lavagna vuota e poi, attraverso ogni lezione, costruiremo l'infrastruttura per Project omega mentre ci spostiamo.
+
+01:57.210 --> 02:04.140
+E all'interno di ciascuna di queste sezioni è possibile fare clic sulla relativa icona sul diagramma e vi
+
+02:04.140 --> 02:08.760
+porterà in quella sezione in cui è possibile visualizzare le lezioni.
+
+02:08.760 --> 02:15.360
+Quindi, per fare un esempio qui per S-3, fai clic sull'icona nel diagramma principale e poi fai un riepilogo di
+
+02:15.360 --> 02:17.890
+ciò che questa sezione sta per coprire.
+
+02:18.000 --> 02:22.280
+E poi tutte le lezioni per questo particolare servizio.
+
+02:22.290 --> 02:25.470
+Quindi la prima lezione sarebbe di base.
+
+02:25.560 --> 02:31.590
+E poi entro tre principi fondamentali che vedrai qui saranno più pagine disponibili e puoi
+
+02:31.590 --> 02:39.120
+cliccare su quelle e vedere i diagrammi dei componenti delle definizioni e le informazioni che voglio trasmettere per ogni lezione.
+
+02:39.180 --> 02:49.150
+Quindi ogni video in questo corso corrisponderà a una di queste lezioni con in una sezione.
+
+02:49.260 --> 02:54.990
+Quindi c'è una navigazione fluida a questo che sarai in grado di usare e saltare in qualsiasi servizio specifico
+
+02:54.990 --> 02:57.140
+che vuoi in un dato momento.
+
+02:57.150 --> 03:04.270
+Ad esempio, se vuoi saperne di più se vuoi saperne di più sul solo VPC, puoi attivare quella
+
+03:04.270 --> 03:05.090
+sezione.
+
+03:05.080 --> 03:10.940
+Fai clic sul diagramma VPC e quindi avrai tutte le lezioni VPC qui.
+
+03:12.220 --> 03:17.740
+Ora all'interno di ciascuna di queste lezioni c'è la possibilità per noi di fornire collegamenti in tempo reale per te.
+
+03:17.770 --> 03:23.230
+Quindi in fondo a ogni pagina introduttiva per una lezione ci saranno link utili
+
+03:23.230 --> 03:29.140
+e questi saranno collegamenti direttamente alla lezione che è già stata preparata per questo particolare argomento.
+
+03:30.080 --> 03:37.160
+Inoltre, ci sarà un collegamento alla documentazione AWOS specifica per gli elementi di cui stavamo parlando in
+
+03:37.250 --> 03:38.860
+quella particolare lezione.
+
+03:41.580 --> 03:48.120
+Quindi l'elenco di controllo dell'accesso alla rete era proprio qui per gli elenchi di controllo dell'accesso alla rete della lezione e quindi
+
+03:48.120 --> 03:49.620
+per navigare attraverso ogni lezione.
+
+03:49.620 --> 03:55.750
+Basta seguire e puoi cliccare sulle pagine.
+
+03:55.970 --> 03:57.860
+Anche in ogni sezione.
+
+03:57.860 --> 04:03.210
+Quindi se fai clic su S-3 ci sarà un pulsante di riferimento rapido in alto se lo accendi.
+
+04:03.380 --> 04:08.570
+Coprirà qualsiasi altra cosa tu stia guardando, ma puoi passare dal progetto Omega se vuoi
+
+04:08.570 --> 04:09.930
+rivedere cosa sia.
+
+04:10.010 --> 04:16.760
+Ma poi anche sezioni sulle definizioni AWOS semplificate per tutti i vari servizi e la definizione
+
+04:16.850 --> 04:19.780
+ufficiale AWOS per tutti i servizi.
+
+04:19.790 --> 04:29.380
+Quindi se capita di essere in una lezione di dire per tre e mi capita di menzionare il facile asino di Oresund o uno degli altri servizi che non
+
+04:29.380 --> 04:34.050
+ti sono familiari, puoi sempre mettere in pausa il video che viene qui per fare
+
+04:34.050 --> 04:40.000
+un rapido riferimento per la definizione semplificata o la definizione ufficiale e leggere su quei servizi solo così
+
+04:40.000 --> 04:43.290
+hai una comprensione di base di quello che sono.
+
+04:43.330 --> 04:52.220
+Se in qualsiasi momento hai un po 'di confusione e puoi sempre attivare e disattivare questa opzione, un'altra nota è che, a seconda del
+
+04:52.280 --> 04:57.020
+tuo computer, la tua risoluzione e le dimensioni del monitor che stai utilizzando
+
+04:57.020 --> 05:00.450
+potrebbero avere queste pagine visualizzate con dimensioni diverse .
+
+05:00.470 --> 05:03.740
+Quindi, se passi il mouse sopra il fondo, verrà qui per te.
+
+05:03.740 --> 05:09.470
+Una funzione di zoom in cui è possibile scegliere manualmente uno zoom di solito zoom su pagina è ciò che si desidera utilizzare che
+
+05:09.470 --> 05:10.150
+funziona meglio.
+
+05:10.310 --> 05:16.910
+Oppure puoi ridimensionare manualmente ogni pagina, ma siamo davvero entusiasti di mostrare questo nuovo tipo di formato
+
+05:16.910 --> 05:22.550
+di apprendimento interattivo e saremo davvero felici di ricevere feedback da tutti voi che
+
+05:22.550 --> 05:29.150
+portate questo corso nella comunità e per tutta la durata di questo corso scoprirai che mentre sto
+
+05:29.150 --> 05:34.760
+insegnando il corso, quello che faremo sarà avere la guida interattiva live qui e
+
+05:34.760 --> 05:38.030
+la userò per insegnare concetti e informazioni.
+
+05:38.030 --> 05:44.270
+Ma poi, nello stesso tempo, sull'altra metà dello schermo lavorerò nella console AWOS che imita quello che
+
+05:44.300 --> 05:45.820
+sto insegnando qui.
+
+05:45.830 --> 05:49.620
+Quindi questi due strumenti vanno di pari passo l'uno con l'altro.
+
+05:49.760 --> 05:55.310
+Sono davvero entusiasta di dare a tutti l'opportunità di provare questo nuovo formato interattivo su cui
+
+05:55.310 --> 05:56.350
+abbiamo lavorato.
+
+05:56.510 --> 06:00.120
+E ancora questa è davvero la prima volta che proviamo qualcosa di simile.
+
+06:00.140 --> 06:06.560
+Quindi chiamerei davvero questo un beta test per questo tipo di guida interattiva e questo tipo di esperienza
+
+06:06.560 --> 06:07.430
+di apprendimento.
+
+06:07.430 --> 06:14.860
+Quindi, ancora una volta vorrei ricevere qualche feedback da qualcuno di voi sui vostri pensieri per questo nuovo tipo di piattaforma e di nuovo
+
+06:14.860 --> 06:17.620
+per trovare il link per questo diagramma interattivo.
+
+06:17.620 --> 06:23.360
+Si prega di guardare nella descrizione del corso e nella sezione download del corso.
+
+06:23.440 --> 06:28.880
+Ma per ora concluderemo questa introduzione al progetto Omega e questa guida interattiva.
+
+06:28.900 --> 06:29.950
+Grazie per aver guardato.
+
+06:29.950 --> 06:30.850
+Ora puoi andare avanti.

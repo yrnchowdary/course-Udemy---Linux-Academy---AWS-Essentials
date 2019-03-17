@@ -1,0 +1,202 @@
+WEBVTT
+
+00:01.140 --> 00:08.760
+Ciao e bentornato dato che abbiamo appena finito la sezione su S. UN. in cui abbiamo appreso come
+
+00:08.760 --> 00:12.740
+inviare messaggi utilizzando il semplice servizio di notifica.
+
+00:12.840 --> 00:19.530
+Ora passeremo al cloud watch che va di pari passo con S e S permettendoci di monitorare
+
+00:19.680 --> 00:26.340
+e ricevere avvisi e messaggi quando si verificano determinati eventi all'interno del nostro account AWOS.
+
+00:26.340 --> 00:34.410
+Quindi, senza ulteriori indugi, accendiamo la sezione di visualizzazione del cloud e ci immergiamo in modo che l'attenzione di Section 8
+
+00:34.440 --> 00:37.260
+su AWOS sia focalizzata sulla cloud watch.
+
+00:37.260 --> 00:43.140
+Avremo un'introduzione al cloud watch con una panoramica concettuale del cloud watch con una panoramica
+
+00:43.140 --> 00:45.480
+dei prezzi e dei costi.
+
+00:45.480 --> 00:47.730
+Parla di metriche e allarmi.
+
+00:47.790 --> 00:56.840
+Infine, utilizzando gli allarmi per attivare l'argomento di s e s iniziando con meno di uno, ci concentreremo su cloud
+
+00:56.870 --> 01:04.040
+watch, in particolare la panoramica concettuale della definizione di cloud watch dei componenti del cloud watch
+
+01:04.040 --> 01:12.730
+watch cloud e la panoramica dei prezzi e dei costi, quindi per iniziare con alcune definizioni parliamo di cos'è il
+
+01:12.820 --> 01:20.020
+cloud watch for inessentials definition cloud watch è un servizio che ti permette di monitorare vari
+
+01:20.080 --> 01:25.280
+elementi del tuo account AWOS per la definizione di AWOS.
+
+01:25.450 --> 01:33.520
+L'orologio Amazon Cloud monitora le risorse dei servizi Web Amazon e le applicazioni eseguite su una W-S
+
+01:33.640 --> 01:35.290
+in tempo reale.
+
+01:35.350 --> 01:42.640
+È possibile utilizzare il cloud watch per raccogliere e tenere traccia delle metriche che sono variabili che è possibile misurare per le
+
+01:42.640 --> 01:47.440
+risorse e le applicazioni cloud che gli allarmi di guardia inviano notifiche o.
+
+01:47.500 --> 01:53.430
+Apporta modifiche alle risorse che stai monitorando in base alle regole che definisci.
+
+01:53.440 --> 01:59.740
+Quindi, fondamentalmente il cloud watch è il modo in cui possiamo monitorare le risorse che lanciamo e forniamo nel
+
+01:59.740 --> 02:06.790
+nostro account AWOS e quindi possiamo impostare le notifiche in modo che ci notifichino o automaticamente prendere provvedimenti in base alle
+
+02:06.790 --> 02:11.230
+metriche e alle soglie che potremmo mettere in atto su quelle metriche.
+
+02:12.410 --> 02:16.430
+Quindi ora parliamo concettualmente di cosa può fare il cloud watch.
+
+02:16.430 --> 02:22.000
+È possibile utilizzare il cloud watch per monitorare le varie metriche di altri servizi e risorse AWOS.
+
+02:22.070 --> 02:25.800
+Ad esempio possiamo usare il cloud watch per monitorare SETI.
+
+02:25.810 --> 02:33.310
+È possibile visualizzare metriche come lo stato di utilizzo del CPQ controlla le operazioni di lettura e scrittura del disco per
+
+02:33.620 --> 02:38.210
+S3 il numero di oggetti in un bucket o dimensione del bucket.
+
+02:38.210 --> 02:42.250
+E ci sono anche modi per monitorare la fatturazione per monitorare la nostra fattura mensile.
+
+02:42.440 --> 02:47.960
+E c'è una funzionalità davvero interessante che possiamo impostare questi parametri con i widget
+
+02:47.960 --> 02:54.630
+su una dashboard e lo facciamo qui nella console AWOS utilizzando gli strumenti di gestione sotto controllo cloud.
+
+02:56.440 --> 03:00.300
+Ora la prossima lezione sarà più vicina e ci immergeremo e come usarlo.
+
+03:00.300 --> 03:08.050
+Ma per ora continueremo con la nostra panoramica concettuale e in base alle metriche possiamo impostare le soglie
+
+03:08.050 --> 03:09.810
+per attivare gli allarmi.
+
+03:10.060 --> 03:18.250
+Quindi, se dico per facilità, possiamo impostare una soglia di metrica se l'utilizzo del CPQ è superiore all'80 percento,
+
+03:18.320 --> 03:20.560
+quindi Allerdyce attiva un allarme.
+
+03:20.560 --> 03:25.920
+Possiamo fare la stessa cosa per S-3, possiamo scegliere una metrica e quindi impostare una soglia su di essa.
+
+03:26.170 --> 03:32.920
+E anche qualcosa di estremamente prezioso è che per la nostra bolletta mensile attuale possiamo anche fissare una
+
+03:32.920 --> 03:34.310
+soglia su questo.
+
+03:34.330 --> 03:41.630
+Quindi, diciamo che vogliamo essere avvisati se la nostra fatturazione mensile corrente supera i 500 dollari o colpisce $ 500.
+
+03:41.740 --> 03:43.810
+Possiamo impostare un allarme per questo.
+
+03:43.810 --> 03:51.070
+E quando la nostra bolletta mensile attuale colpisce $ 500, allora possiamo dire di attivare un argomento S e S per inviarci un
+
+03:51.070 --> 03:56.240
+messaggio di testo o una e-mail che dice che la tua fattura mensile ha colpito 500.
+
+03:56.290 --> 04:02.740
+Allora forse forse voglio entrare e agire e cancellare o terminare alcune delle mie risorse in modo che
+
+04:02.740 --> 04:05.800
+non continui a sostenere spese per il mese.
+
+04:05.980 --> 04:12.820
+Quindi il cloud watch è un ottimo modo per essere in grado di monitorare tutti gli aspetti delle risorse che fornisci
+
+04:12.910 --> 04:17.290
+all'interno del tuo account AWOS e assicurarti che tutto venga utilizzato correttamente.
+
+04:19.120 --> 04:22.670
+Parliamo quindi rapidamente dei prezzi e della panoramica dei costi.
+
+04:22.720 --> 04:26.540
+Quindi c'è un uso gratuito del tier disponibile per il cloud watch che è fantastico.
+
+04:26.620 --> 04:32.740
+Ora in termini di come ti è stato effettivamente addebitato l'uso di cloud watch che ti viene addebitato
+
+04:32.740 --> 04:36.810
+per dashboard puoi avere più dashboard con molte metriche su ciascuna.
+
+04:36.880 --> 04:42.340
+Sono disponibili sia il monitoraggio regolare che i dettagli e si ottiene un addebito extra per il
+
+04:42.730 --> 04:44.340
+monitoraggio dettagliato per due istanze.
+
+04:44.350 --> 04:49.240
+È inoltre addebitato un costo per le metriche del cliente di Amazon Cloud in modo da poter creare le
+
+04:49.240 --> 04:52.420
+proprie metriche rispetto a quelle che avranno già fatto per te.
+
+04:52.420 --> 04:59.040
+Cloud Watch richiede i registri di sorveglianza del cloud e gli eventi di cloud watch o eventi personalizzati.
+
+04:59.080 --> 05:03.460
+Ora di nuovo i prezzi variano a seconda della regione in cui ti trovi.
+
+05:03.580 --> 05:07.440
+E come sempre prima di fare qualsiasi uso importante di cloud watch.
+
+05:07.510 --> 05:13.630
+Assicurati di seguire questo link qui e leggi i dettagli sui prezzi specifici, come per molti A. W.
+
+05:13.660 --> 05:18.250
+i servizi che lo utilizzano un po 'possono in genere essere molto economici, ma se inizierai
+
+05:18.250 --> 05:23.600
+a utilizzare qualcosa di molto, devi assicurarti di avere una piena comprensione di ciò per cui ti viene addebitato.
+
+05:24.370 --> 05:26.560
+Quindi, ancora una volta decem tutto.
+
+05:26.620 --> 05:33.890
+Il cloud watch è il modo in cui monitoriamo internamente le nostre risorse AWOS e vari aspetti del nostro
+
+05:34.150 --> 05:41.290
+account e ci consente di visualizzare le soglie delle metriche sulle metriche e quindi creare allarmi che
+
+05:41.290 --> 05:48.670
+possono attivare gli argomenti di s e s Allerdyce internamente nel console qui quando quelle soglie sono state colpite.
+
+05:48.670 --> 05:51.160
+Quindi con questo concluderemo questa lezione.
+
+05:51.280 --> 05:52.420
+Grazie per aver guardato.
+
+05:52.420 --> 05:53.260
+Ora puoi andare avanti.

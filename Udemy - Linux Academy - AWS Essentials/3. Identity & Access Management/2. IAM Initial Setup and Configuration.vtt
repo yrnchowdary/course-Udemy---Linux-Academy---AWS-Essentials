@@ -1,0 +1,397 @@
+WEBVTT
+
+00:00.490 --> 00:08.680
+Ciao e bentornati in questa lezione ci concentreremo su I am setup iniziale e configurazione gli argomenti che stiamo
+
+00:09.070 --> 00:16.660
+andando a toccare qui sono io sono le migliori pratiche di autenticazione a più fattori come creare un
+
+00:16.750 --> 00:17.630
+amministratore.
+
+00:17.680 --> 00:23.830
+Sono utente e gruppo e come creare una politica di password I am.
+
+00:24.280 --> 00:31.560
+Quindi la prima cosa che voglio fare qui nella console AWOS è ancora una volta entrare in quello
+
+00:31.560 --> 00:39.280
+che sono e quello che faremo qui è che parleremo della configurazione iniziale per l'identità e la gestione degli accessi.
+
+00:39.300 --> 00:47.520
+Quindi una parola che sentirai molto mentre usi AWOS è E. W. Le migliori pratiche e queste sono
+
+00:47.520 --> 00:53.910
+linee guida che raccomandano configurazioni di configurazioni e architettura allo scopo di avere un alto
+
+00:54.150 --> 00:57.180
+livello di accessibilità ed efficienza di sicurezza.
+
+00:57.180 --> 01:06.450
+Ora, quando creiamo un nuovo account root AWOS, è consigliabile eseguire le attività elencate in I am
+
+01:06.750 --> 01:09.510
+in stato di sicurezza.
+
+01:09.510 --> 01:14.550
+Quindi, se vedi qui sotto lo stato di sicurezza, abbiamo cinque compiti.
+
+01:14.550 --> 01:21.090
+Il primo dei quali è già stato controllato per noi e questo è dovuto al fatto che quando creiamo solo un
+
+01:21.090 --> 01:28.050
+account utente di base come abbiamo fatto qualche video fa, non c'erano le chiavi di accesso root che sono state generate in
+
+01:28.050 --> 01:32.910
+modo tale da essere già spuntate come eliminate perché non c'erano mai qualsiasi per cominciare.
+
+01:32.910 --> 01:39.180
+Tuttavia, al fine di soddisfare le best practice di AWOS, vogliamo ora completare e completare gli altri elementi
+
+01:39.180 --> 01:40.590
+di questo elenco.
+
+01:40.620 --> 01:47.790
+Innanzitutto attiveremo l'autenticazione a più fattori sul nostro account root.
+
+01:47.820 --> 01:54.670
+Quindi per l'autenticazione a più fattori Parliamo innanzitutto di cos'è l'autenticazione a più fattori.
+
+01:54.900 --> 02:02.400
+E come detto qui MFH è un'abbreviazione per l'autenticazione a più fattori ed è un ulteriore livello di
+
+02:02.400 --> 02:07.200
+sicurezza sul tuo account di root fornito da una terza parte.
+
+02:07.530 --> 02:15.730
+E prende la forma di un codice casuale a sei cifre che cambia continuamente che dovrai inserire.
+
+02:15.810 --> 02:20.100
+Oltre alla tua password quando accedi al tuo account di root.
+
+02:20.130 --> 02:22.800
+Quindi come si ottiene un codice MF.
+
+02:22.800 --> 02:29.310
+Bene, ci sono due modi in cui One è attraverso un dispositivo MFH virtuale che indica uno smartphone o un
+
+02:29.310 --> 02:34.860
+tablet per cui l'app comunemente utilizzata sia per iOS sia per Android è autenticatore di Google.
+
+02:34.860 --> 02:41.220
+Un'altra opzione è un portachiavi hardware che è un piccolo dispositivo fisico con un display che può essere collegato alla vostra
+
+02:41.220 --> 02:42.430
+catena di chiavi.
+
+02:42.570 --> 02:48.210
+E se questa è l'opzione che ti piace, puoi ordinarla direttamente da Amazon Web Services per
+
+02:48.210 --> 02:49.860
+questo particolare esempio qui.
+
+02:49.920 --> 02:57.510
+Creeremo un dispositivo di autenticazione multi-fattore virtuale utilizzando uno smartphone per dare rapidamente un tocco su
+
+02:57.510 --> 03:03.530
+come l'autenticazione a più fattori funziona da un punto di vista concettuale.
+
+03:03.780 --> 03:09.060
+Quando accedi al tuo account di root di solito fornisci un nome utente e una password,
+
+03:09.060 --> 03:11.400
+quindi fai clic su Accetto e accederai.
+
+03:11.400 --> 03:15.620
+Questo mette un altro passo in mezzo dove dobbiamo ancora inserire il nostro nome utente e password.
+
+03:15.750 --> 03:20.400
+Comunque dopo avremo bisogno del codice MFH.
+
+03:20.430 --> 03:27.450
+Dobbiamo quindi andare al key fob e ottenere il codice MFA oppure, se lo abbiamo configurato su uno
+
+03:27.480 --> 03:35.030
+smartphone o un tablet, possiamo aprire quell'applicazione che potrebbe essere autenticatore di Google e ottenere il codice MFA e inserirlo
+
+03:35.120 --> 03:38.400
+in quel momento " riusabile ad accedere all'account.
+
+03:38.490 --> 03:44.460
+Così crea un ulteriore livello di sicurezza in cui, se qualcuno dovesse scoprire o hackerare o entrare nelle nostre informazioni
+
+03:44.460 --> 03:49.680
+e ottenere il nome utente e la password, non sarebbero comunque in grado di accedere all'account a
+
+03:49.680 --> 03:53.750
+meno che non abbiano anche il codice di autenticazione a più fattori.
+
+03:56.860 --> 04:04.300
+Quindi, per configurare l'MFA, possiamo fare clic qui o qui e seguire le istruzioni fornite
+
+04:04.390 --> 04:06.220
+da A W-S.
+
+04:06.220 --> 04:11.040
+Quindi, fai clic qui per gestire MFA che selezioneremo su un dispositivo MFH virtuale.
+
+04:11.050 --> 04:15.940
+Ma se volessi ordinare il dispositivo hardware, puoi fare clic qui e seguire i passaggi successivi.
+
+04:15.940 --> 04:22.180
+Quindi per un dispositivo MFJ virtuale faremo clic su di esso per attivare il dispositivo MFH virtuale prima di installare
+
+04:22.180 --> 04:27.270
+un'applicazione compatibile con MFA AWOS sul PC dello smartphone dell'utente o su un altro dispositivo.
+
+04:27.280 --> 04:32.710
+Uso l'autenticatore di Google Ho già configurato sul mio telefono, quindi procederò da
+
+04:32.710 --> 04:35.240
+qui con i passaggi già completati.
+
+04:35.650 --> 04:41.530
+Quindi ciò che ci chiederà di fare è aprire l'autenticatore di Google sul telefono o sul
+
+04:41.950 --> 04:47.020
+dispositivo e scattare utilizzando la fotocamera il codice QR che è stato presentato.
+
+04:47.050 --> 04:48.360
+Quindi sono a fare questo ora.
+
+04:50.050 --> 04:55.570
+OK, è stata la tua scansione e hai detto che non puoi vedere che lo sto facendo, ma credimi che ho appena
+
+04:55.990 --> 04:57.300
+scansionato il codice QR.
+
+04:57.370 --> 05:02.740
+Ora devo inserire due codici di autenticazione successivi che mi vengono presentati sul mio telefono.
+
+05:07.560 --> 05:13.860
+Quindi c'è il primo e questi codici ruotano ogni 10 secondi circa, quindi devo aspettare qualche secondo
+
+05:13.860 --> 05:16.140
+prima che venga presentato il prossimo.
+
+05:24.420 --> 05:29.810
+OK Ho i miei due codici, quindi ora clicco per attivarlo così bene.
+
+05:29.810 --> 05:38.250
+Quindi il dispositivo MFA è stato associato con successo al clic Finish e quindi se aggiorno qui dovremmo vedere
+
+05:38.250 --> 05:41.960
+che abbiamo attivato il MFA sull'account root.
+
+05:42.150 --> 05:42.680
+Così perfetta.
+
+05:42.680 --> 05:49.380
+Così ora ogni volta che vado per accedere al mio account di root dovrò inserire il
+
+05:49.380 --> 05:56.850
+nome utente e la password e quindi aprire l'autenticatore di Google sul mio telefono e estrarre il codice
+
+05:56.850 --> 06:04.680
+MFA e inserirli come parte del processo di accesso dopo vogliamo dare un'occhiata alla creazione di singoli utenti I-AM.
+
+06:04.740 --> 06:12.150
+Quindi, quello che vogliamo realizzare qui è che la migliore pratica di AWOS è quella di non utilizzare mai l'account di root per l'uso
+
+06:12.150 --> 06:16.800
+quotidiano, quindi l'account con cui abbiamo effettuato l'accesso non è quello che dovremmo fare.
+
+06:16.800 --> 06:23.760
+Anche se il proprietario dell'account viene utilizzato giorno per giorno, ciò che dobbiamo fare è creare un
+
+06:23.760 --> 06:29.700
+altro utente per noi stessi e concedere a tale utente i diritti amministrativi.
+
+06:29.700 --> 06:33.540
+Quindi per questo possiamo solo seguire e andare a gestire gli utenti.
+
+06:33.690 --> 06:42.010
+Creerai un nuovo utente Chiamerò quell'utente Tom che sono io e deselezionerò generare un codice di accesso per ogni utente in questo
+
+06:42.100 --> 06:47.050
+momento perché non ne ho bisogno adesso e ho intenzione di toccare
+
+06:47.060 --> 06:52.240
+che cosa succederà dopo, ma salterò quei passaggi per quello per il momento.
+
+06:52.390 --> 06:59.200
+Ora che ho il mio utente, voglio fare clic sul mio utente e aggiungerò il criterio di accesso dell'amministratore a
+
+06:59.290 --> 07:00.170
+questo utente.
+
+07:00.170 --> 07:04.730
+Ora parlerò più dettagliatamente nelle prossime lezioni.
+
+07:04.750 --> 07:09.970
+Ma per ora sono solo un po 'in ritardo in
+
+07:09.970 --> 07:24.580
+questo modo in modo da poter controllare queste migliori pratiche e passare a parlare in particolare delle politiche e dei gruppi di ruoli degli utenti nelle lezioni successive.
+
+07:24.650 --> 07:30.170
+Quindi qui ho intenzione di allegare quella politica all'utente Tom e all'utente.
+
+07:30.170 --> 07:33.710
+Tom ora ha accesso amministrativo completo.
+
+07:34.510 --> 07:41.180
+Poi voglio andare alle credenziali di sicurezza e per qui voglio fare clic su Gestisci password perché ho bisogno di creare una
+
+07:41.180 --> 07:47.300
+password per me stesso per questo account in modo da poter accedere a qualcuno per assegnare una password personalizzata e
+
+07:47.300 --> 07:53.340
+posso solo creare qualsiasi password che io voglio per l'utente tempo che è quello che userò andando avanti.
+
+08:01.300 --> 08:01.850
+OK.
+
+08:02.040 --> 08:05.120
+Ora se torno alla dashboard qui vediamo che ora è controllato.
+
+08:05.120 --> 08:10.520
+Quindi abbiamo creato un individuo che sono un utente e abbiamo dato a quell'utente l'accesso amministrativo.
+
+08:10.560 --> 08:17.940
+In qualità di proprietario dell'account, possiamo accedere a un account utente non root e avere comunque accesso completo
+
+08:17.940 --> 08:22.290
+per modificare le modifiche o utilizzare qualsiasi aspetto dell'account AWOS.
+
+08:23.590 --> 08:24.980
+Ottimo così ora che è fatto.
+
+08:25.060 --> 08:33.470
+Vogliamo passare ai gruppi di utenti per assegnare i permessi, quindi con i gruppi di utenti può essere più
+
+08:33.530 --> 08:39.390
+comodo ed efficiente impostare gruppi e assegnare permessi come abbiamo fatto per l'utente.
+
+08:39.390 --> 08:47.000
+Tom al gruppo invece di gestire ogni singolo utente in modo da farlo di nuovo faremo clic su questo particolare elemento
+
+08:47.000 --> 08:49.320
+e fare clic su Gestisci gruppi.
+
+08:49.390 --> 08:58.030
+Ho intenzione di creare un nuovo gruppo che chiamerò questo gruppo admin, fare clic su Avanti e ora ho bisogno di assegnare un
+
+08:58.030 --> 09:04.240
+criterio a quel gruppo che assegnerò il criterio di accesso dell'amministratore e creare il gruppo.
+
+09:04.290 --> 09:10.890
+Così ora ho un gruppo che al momento non ha utenti, ma quel gruppo gli ha assegnato il
+
+09:10.890 --> 09:16.610
+criterio di accesso dell'amministratore e di nuovo lo esaminerò in dettaglio nei seguenti video.
+
+09:18.010 --> 09:24.770
+Tornando al e dove ora vediamo che è stato controllato per ultimo quello che vogliamo dare un'occhiata ora
+
+09:24.770 --> 09:33.020
+è come applicare e io sono la politica della password e parlo in modo specifico di cosa sono e sono la politica della
+
+09:33.080 --> 09:33.680
+password.
+
+09:34.010 --> 09:42.980
+Pertanto, la politica della password impone il formato e le regole di scadenza che devono essere seguite quando un utente crea o
+
+09:42.980 --> 09:45.010
+modifica la sua password.
+
+09:45.020 --> 09:52.790
+Queste regole includono la lunghezza della password requisiti del numero numero requisiti non alfanumerici password scadenza password riutilizzare i diritti utente per modificare la
+
+09:53.000 --> 10:00.590
+propria password e requisiti di ripristino amministrativo quindi in pratica quello che stiamo facendo è che sono sicuro che ci sono state molte
+
+10:00.590 --> 10:06.140
+volte nella tua vita quando tu Sono andato su un sito Web e loro ti chiedono di
+
+10:06.140 --> 10:10.470
+creare una password per digitare una password e sono stati come se
+
+10:10.470 --> 10:16.160
+fosse troppo breve e necessiti di otto caratteri o di un numero o di un simbolo nella
+
+10:16.160 --> 10:16.670
+password.
+
+10:16.670 --> 10:22.040
+Questo è quello che stiamo facendo qui stiamo creando le regole che devono essere seguite quando i nostri utenti creano
+
+10:22.040 --> 10:23.700
+le password per se stessi.
+
+10:24.920 --> 10:30.170
+Quindi potremmo fare qualcosa come richiedere che almeno una lettera maiuscola nella
+
+10:30.170 --> 10:36.750
+password richieda almeno una lettera minuscola o che almeno un numero richieda almeno un carattere non alfanumerico.
+
+10:36.920 --> 10:43.040
+E ciò che fanno è ovviamente questo rafforza la sicurezza delle password che i nostri utenti
+
+10:43.040 --> 10:44.210
+stanno per creare.
+
+10:44.210 --> 10:47.460
+Puoi anche inserire funzionalità come abilitare la scadenza della password.
+
+10:47.540 --> 10:52.310
+Quindi questo è qualcosa che potresti usare se volessi avere una sicurezza ancora più elevata in cui
+
+10:52.310 --> 10:55.620
+potresti dire dopo ogni 30 giorni o dopo ogni 90 giorni.
+
+10:55.760 --> 11:00.670
+Tutte le password scadranno e gli utenti dovrebbero creare nuove password.
+
+11:01.740 --> 11:07.560
+È anche possibile impedire il riutilizzo della password per almeno cinque volte, il che significa che l'utente non
+
+11:07.560 --> 11:11.620
+può utilizzare la stessa password finché non ha utilizzato cinque password diverse.
+
+11:11.670 --> 11:16.590
+E poi c'è anche l'opzione per la scadenza della password richiede il ripristino da parte dell'amministratore.
+
+11:16.770 --> 11:21.690
+Quindi puoi scegliere le regole che ti piacciono per la tua specifica politica sulla password.
+
+11:21.720 --> 11:28.000
+Non ci sono requisiti specifici tranne per il fatto che devi impostarlo con una sorta di regole.
+
+11:28.110 --> 11:34.630
+E tutto dipende dal livello di sicurezza che si vuole dettare la forza della password.
+
+11:34.650 --> 11:36.550
+Quindi lascerò questi come segue.
+
+11:36.600 --> 11:41.270
+E farò clic su applica una politica per le password e, se lo desideri, puoi sempre eliminare
+
+11:41.280 --> 11:44.380
+la politica della password ritorna qui e modificala in futuro.
+
+11:44.400 --> 11:50.720
+Quindi, tornando nella dashboard, ora vediamo che è stato spuntato e per noi qui abbiamo completato
+
+11:50.750 --> 11:56.160
+tutte le attività e abbiamo finito con la configurazione iniziale I am.
+
+11:56.510 --> 11:58.900
+E con questo concluderemo questa lezione.
+
+11:59.030 --> 12:00.140
+Grazie per aver guardato.
+
+12:00.140 --> 12:00.970
+Ora puoi andare avanti.

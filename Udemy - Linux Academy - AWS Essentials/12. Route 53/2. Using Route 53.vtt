@@ -1,0 +1,514 @@
+WEBVTT
+
+00:00.210 --> 00:01.650
+Ciao e bentornato.
+
+00:01.680 --> 00:02.140
+Tutto ok.
+
+00:02.160 --> 00:08.100
+In questa lezione ci sporcheremo le mani con la route 53 in cui andremo specificamente
+
+00:08.100 --> 00:15.240
+a registrare un dominio che imposta una zona host configurando set di record e traffico di routing verso
+
+00:15.240 --> 00:17.310
+il bilanciamento del carico elastico.
+
+00:17.560 --> 00:24.930
+Quindi, Howard, prima di passare a questo, ricapitoliamo quello che abbiamo concluso con l'ultima lezione per discutere di come useremo la
+
+00:24.960 --> 00:27.960
+route 53 e di cosa andremo a configurare.
+
+00:27.960 --> 00:30.790
+Quindi nella route 53 registreremo un dominio.
+
+00:30.910 --> 00:36.690
+Avremmo quindi creato una zona ospitata che includerà i nostri set di record DNS
+
+00:36.690 --> 00:39.260
+che verranno inviati al server DNS.
+
+00:39.540 --> 00:43.810
+Ciò consentirà ai clienti quando digitano la regola che stiamo per registrare.
+
+00:43.830 --> 00:51.120
+Saremo in grado di ottenere l'indirizzo IP associato a quel dominio ora che l'indirizzo IP sarà l'indirizzo IP del nostro sistema
+
+00:51.180 --> 00:53.280
+di bilanciamento del carico elastico.
+
+00:53.280 --> 00:59.040
+Quindi quando un cliente digita in RL andranno al server DNS otterranno l'indirizzo IP, l'indirizzo IP
+
+00:59.040 --> 00:59.930
+verrà rinviato.
+
+00:59.940 --> 01:06.180
+Il browser Web utilizzerà quindi quell'indirizzo IP che passa attraverso la route 53 e la route 53
+
+01:06.260 --> 01:10.590
+vedrà quel traffico e lo indirizzerà direttamente al bilanciamento del carico elastico
+
+01:10.590 --> 01:13.410
+rispetto al bilanciamento del carico elastico associato.
+
+01:13.500 --> 01:18.570
+Attualmente due server web distribuiranno quel traffico a uno dei due server web.
+
+01:18.570 --> 01:25.950
+Quindi alla fine, se tutto funziona correttamente, dovremmo mostrarci la pagina di test di Apache quando inseriamo l'U
+
+01:25.950 --> 01:32.080
+R L e quella è la stessa pagina di test che abbiamo configurato nella sezione
+
+01:32.090 --> 01:34.520
+C2 est di questo corso.
+
+01:35.410 --> 01:40.760
+Quindi ora entriamo nei processi attuali per trovare il percorso 53.
+
+01:40.780 --> 01:45.760
+Sarà sotto la rete e la consegna dei contenuti proprio sotto VPC quindi
+
+01:49.400 --> 01:56.360
+immediatamente abbiamo a che fare con un percorso vuoto 53 Non abbiamo configurato nulla ma la prima cosa che
+
+01:56.360 --> 02:01.970
+vogliamo fare è in realtà registrare un dominio così tanti cliccarci sopra e poi clicca sul
+
+02:01.970 --> 02:02.750
+dominio registrato
+
+02:02.750 --> 02:06.250
+Ora questo costerà soldi costa $ 12.
+
+02:06.260 --> 02:12.830
+Attualmente al momento di questa registrazione è necessario registrare un nuovo dominio o trasferire un dominio sulla
+
+02:12.830 --> 02:16.060
+route 53, quindi ora non è necessario seguirlo.
+
+02:16.100 --> 02:19.190
+Se non vuoi spendere i soldi, va benissimo.
+
+02:19.250 --> 02:23.570
+Ma ho intenzione di passare attraverso il processo qui e spendere i soldi in modo che tutti possano
+
+02:23.570 --> 02:24.570
+vedere esattamente come funziona.
+
+02:24.620 --> 02:31.580
+Ora ho già trovato un dominio web che possiamo usare chiamato Project Omega 1 che dovrebbe essere disponibile per il progetto
+
+02:31.580 --> 02:32.510
+su Omega.
+
+02:32.510 --> 02:39.190
+Sfortunatamente è già stato fatto, ma il progetto Omega 1 dot com è disponibile, quindi lo
+
+02:39.190 --> 02:42.360
+aggiungerò al carrello e clicco su Continua.
+
+02:43.030 --> 02:48.370
+Ora ho intenzione di inserire tutte le mie informazioni di contatto, quindi in questo momento sto per tagliare il video
+
+02:48.370 --> 02:50.580
+solo a causa delle mie informazioni private personali.
+
+02:50.710 --> 02:53.440
+Ma vai a compilare questo modulo.
+
+02:53.650 --> 02:59.620
+E una cosa che voglio che tu sappia è in fondo qui c'è questa opzione di protezione della
+
+02:59.860 --> 03:05.950
+privacy e questo è dove se qualcuno vuole cercare il proprietario di questo te Arel, allora posso scegliere
+
+03:05.950 --> 03:11.500
+di avere quell'informazione disponibile o averlo nascosto in modo che tutto dipenda dalla tua preferenza personale.
+
+03:11.500 --> 03:17.170
+Ma per gli scopi di questo video sceglierò di non nascondere le informazioni di contatto, quindi se qualcuno è andato
+
+03:17.170 --> 03:23.560
+a cercare un nome di dominio e ha digitato il prodotto Omega One dot com, sarebbero venuti fuori e sarebbero stati in grado
+
+03:23.560 --> 03:26.060
+di vedere e visualizzare le mie informazioni .
+
+03:26.170 --> 03:30.970
+E poi una volta che ho finito di compilare le informazioni, cliccherò su continua qui, metti una pausa
+
+03:30.970 --> 03:32.620
+un video ora e torno subito.
+
+03:33.070 --> 03:38.080
+OK, ho completato il resto del modulo e ora mi porta a una schermata di conferma dicendo
+
+03:38.080 --> 03:41.140
+grazie per aver registrato il dominio sulla route 53.
+
+03:41.140 --> 03:44.740
+Ora succedono un paio di cose e prima voglio sottolineare che non ho dovuto inserire
+
+03:44.740 --> 03:48.030
+un numero di carta di credito o altro in termini di pagamento.
+
+03:48.040 --> 03:54.850
+Basterà addebitare il mio account A alla canonica per $ 12 per la registrazione del dominio.
+
+03:54.850 --> 04:00.100
+Quindi se hai già un A. W. il set-up dell'account e la tua carta di credito
+
+04:00.100 --> 04:04.330
+sono messi lì e tu decidi di fare questo passo per te solo sapere che addebiterà direttamente il tuo account e ti
+
+04:04.330 --> 04:05.670
+verranno addebitati alla fine del mese.
+
+04:05.680 --> 04:10.360
+Quindi ora fai clic su vai su domini e vedrai che è in corso la registrazione del suo dominio.
+
+04:10.360 --> 04:11.880
+Ora potrebbe volerci un po 'di tempo.
+
+04:11.880 --> 04:15.400
+Può richiedere da 5 a 15 minuti a 20 minuti.
+
+04:15.460 --> 04:21.340
+Quindi interromperò di nuovo il video e tornerò una volta terminato questo processo.
+
+04:21.340 --> 04:27.040
+E ciò che sta effettivamente accadendo un po 'sotto la cappa qui è in realtà la creazione e l'aggiunta della
+
+04:27.040 --> 04:32.290
+zona ospitata e set di record iniziali per noi che è grande, il che significa che non dobbiamo
+
+04:32.290 --> 04:33.490
+entrare e farlo manualmente.
+
+04:33.490 --> 04:37.230
+Ma ci saranno alcune configurazioni manuali che dovremo fare nei prossimi passi.
+
+04:37.240 --> 04:41.100
+Ma tornerò una volta che il dominio avrà terminato la registrazione.
+
+04:41.140 --> 04:42.070
+Torno subito.
+
+04:42.400 --> 04:47.080
+Ok sono tornato e quello che ho fatto è che ho fatto clic su dashboard qui e ho
+
+04:47.080 --> 04:53.320
+portato questa nuova interfaccia per noi e vediamo qui che per Project Omega 1 dot com la registrazione del dominio ha avuto successo, il
+
+04:53.320 --> 04:55.510
+che è un grande significato può andare avanti
+
+04:55.510 --> 05:02.590
+Inoltre vedrai che le zone ospitate ora hanno il valore 1 e che sarà l'area in cui ci sposteremo in avanti in termini di
+
+05:02.590 --> 05:05.820
+impostazione della zona del tubo e dei set di record.
+
+05:05.840 --> 05:11.020
+Entriamo nelle zone ospitate o nelle zone ospitate che hanno più nomi di dominio e vedrai quelli
+
+05:11.020 --> 05:13.810
+elencati qui, ma faremo clic su Project Omega.
+
+05:13.810 --> 05:20.230
+Quindi questa è la zona ospitata per Project Omega e stiamo già vedendo che ci sono già due set di record qui
+
+05:20.230 --> 05:26.320
+e questo è ciò che AWOS ha fatto per noi quando hanno impostato la nostra zona ospitata e questi sono due
+
+05:26.320 --> 05:27.910
+diversi tipi di record DNS.
+
+05:27.910 --> 05:32.320
+Ora vi mostrerò un paio di cose qui, ma non ho intenzione di entrare nei dettagli
+
+05:32.320 --> 05:38.470
+nelle spiegazioni di tutti questi diversi tipi di record DNS che è davvero al di fuori dello scopo di questo corso per questo corso.
+
+05:38.480 --> 05:45.060
+Quello che voglio che tu sappia sulla route 53 è proprio come è usato per la registrazione del dominio e la gestione del DNS.
+
+05:45.100 --> 05:50.680
+Senza entrare nei dettagli nitidi, devi solo essere consapevole di quale percorso 53 fa e qual è il
+
+05:50.680 --> 05:51.630
+suo scopo.
+
+05:51.760 --> 05:56.380
+Tutto il resto che ti mostro qui è un po 'un bonus per darti un
+
+05:56.440 --> 06:01.840
+po' di più di quello che succede sotto la cappa quando digiti un indirizzo web dove sei nel
+
+06:01.840 --> 06:05.310
+browser e cosa succede e come accede effettivamente ai server web.
+
+06:05.350 --> 06:15.090
+Quindi ora che abbiamo registrato il nostro dominio, ora dobbiamo creare due record DNS per l'RL.
+
+06:15.130 --> 06:23.470
+Assicurati che vengano inviati ai server DNS e poi indirizzati anche al dominio web per il nostro ultimo bilanciamento del carico. Così
+
+06:23.680 --> 06:28.270
+facciamo tutto nello stesso processo di creazione dei set di record.
+
+06:28.270 --> 06:33.540
+Quindi quello che voglio fare è cliccare qui sopra creare recordset e creerò due set
+
+06:33.550 --> 06:41.170
+di dischi uno solo per Project Omega One dot com e poi farò questo primo uno per il progetto WWW Omega
+
+06:41.180 --> 06:41.720
+Dom.
+
+06:41.770 --> 06:45.970
+Quindi è necessario avere entrambi quelli coperti per tipo.
+
+06:45.970 --> 06:52.180
+Questi sono i diversi tipi di record setter e questo è un IPV per gli indirizzi che è solo un
+
+06:52.240 --> 06:54.040
+formato standard di indirizzo IP.
+
+06:54.040 --> 07:02.050
+Questo sarà un alias e l'obiettivo alias sarà ed è pre-compilato per noi il nostro sistema di bilanciamento del
+
+07:02.050 --> 07:03.150
+carico elastico.
+
+07:03.190 --> 07:08.110
+Quindi tutto ciò che devi fare è fare clic sul fatto che i criteri di routing saranno lasciati
+
+07:08.110 --> 07:13.660
+come semplici ma ci sono diversi tipi di politiche di routing che puoi implementare e per valutare lo stato del target.
+
+07:13.660 --> 07:18.490
+In genere si vorrebbe probabilmente che fosse sì, ma che avrà a che fare con il failover DNS oltre il quale è
+
+07:18.490 --> 07:20.360
+molto al di fuori dell'ambito di questo corso.
+
+07:20.470 --> 07:27.190
+Per ora mi limiterò a lasciarlo, non così semplice come quello che sto per creare, e poi torni indietro.
+
+07:27.190 --> 07:28.620
+Lo farò di nuovo.
+
+07:28.630 --> 07:33.310
+Ma lasciando questo vuoto e cliccando su Alias.
+
+07:33.310 --> 07:33.960
+Sì.
+
+07:34.000 --> 07:37.670
+Inseriremo il simbolo del bilanciamento del carico elastico e fare clic su Crea.
+
+07:37.810 --> 07:38.410
+Così perfetta.
+
+07:38.410 --> 07:47.170
+Ora abbiamo creato per digitare un set di record DNS e ciò che AWOS in route 53 sta facendo per noi in questo momento è
+
+07:47.400 --> 07:50.980
+che stanno inviando queste informazioni ai server DNS per noi.
+
+07:50.980 --> 07:52.780
+Quindi non dobbiamo farlo manualmente.
+
+07:52.780 --> 07:58.900
+Creiamo i set di dischi e un'ottima cosa sulla route 53 è che gestisce tutto ciò che ci serve
+
+07:58.990 --> 07:59.880
+per noi.
+
+07:59.890 --> 08:02.030
+Quindi ora tutto ciò che devo fare è aspettare.
+
+08:02.290 --> 08:07.780
+Non so forse circa 60 secondi a qualche minuto perché questi record DNS si propaghino
+
+08:07.780 --> 08:08.880
+nei server DNS.
+
+08:09.010 --> 08:15.420
+E quindi dovrei essere in grado di aprire il mio tipo di browser Web in Project Omega 1 dot com.
+
+08:15.460 --> 08:20.440
+E dovremmo vedere la pagina di test di Apache che mette in pausa un video e torno subito.
+
+08:20.710 --> 08:26.260
+Ok ho dato un po 'di tempo affinchè i record DNS si propagassero a vari server DNS, proviamo a
+
+08:26.530 --> 08:27.540
+fare un tentativo.
+
+08:27.580 --> 08:30.810
+Quindi incollare nel progetto Omega One dot com.
+
+08:30.910 --> 08:33.040
+Hit entrare e vedere cosa succede.
+
+08:33.040 --> 08:33.580
+Perfezionare.
+
+08:33.580 --> 08:35.920
+Questo è esattamente quello che volevamo accadesse.
+
+08:35.920 --> 08:40.960
+Il dominio web che ho registrato con il progetto route 53 Omega 1 punto com.
+
+08:41.080 --> 08:47.320
+L'ho inserito nel browser web e ha portato su Amazon Linux e le mie pagine di test Apache sono perfette, questo
+
+08:47.320 --> 08:49.330
+è esattamente ciò che volevamo accadesse.
+
+08:49.330 --> 08:52.660
+Quindi, per ribadire questo è ciò che sta accadendo ora.
+
+08:52.840 --> 08:57.150
+Se ricordi che sono troppo facili per i server web, posso portarli qui.
+
+09:03.590 --> 09:08.630
+I vari server Web che configuriamo con la pagina di test di Apache che sono associati al nostro
+
+09:08.630 --> 09:15.530
+sistema di bilanciamento del carico elastico Quindi se clicco sul bilanciamento del carico elastico e possiamo vedere le istanze ad esso associate che sono
+
+09:15.530 --> 09:21.020
+in realtà questi tre in modo che possiamo guardare a un esempio ID 1 0 8 a così 1
+
+09:23.860 --> 09:24.970
+0 8 a.
+
+09:24.970 --> 09:28.270
+Quindi se guardiamo questa istanza qui, questo è un indirizzo IP pubblico.
+
+09:28.270 --> 09:33.790
+Quindi, cosa sta succedendo, diciamo che questa istanza qui è questa istanza qui.
+
+09:33.800 --> 09:39.170
+Quindi quello che sta succedendo è che il cliente in questo caso questo ero io proprio
+
+09:39.170 --> 09:47.760
+qui quando ho digitato w w w punto progetto Omega 1 punto com è andato al server DNS ha chiesto al servizio DNS che hey ecco
+
+09:47.840 --> 09:50.370
+un punto com ho bisogno dell'indirizzo IP.
+
+09:50.690 --> 09:57.980
+Ha restituito l'indirizzo IP e il server DNS conosceva l'indirizzo IP perché la route 53 ha fornito al server
+
+09:58.070 --> 10:01.350
+DNS l'indirizzo IP del bilanciamento del carico elastico.
+
+10:01.460 --> 10:07.460
+Quindi una volta che l'informazione, una volta che l'indirizzo IP torna al cliente, il browser del cliente passa attraverso Internet
+
+10:07.460 --> 10:12.070
+e sa esattamente dove deve andare, in modo che i dati vengano trasmessi attraverso
+
+10:12.090 --> 10:16.810
+la route 53 attraverso il gateway Internet al classico rimbalzo basso o il classico bilanciamento
+
+10:16.830 --> 10:22.160
+del carico lo prende e in questo caso invierà il traffico a uno dei server web disponibili.
+
+10:22.160 --> 10:27.410
+Diciamo che questo server web qui invia le informazioni attraverso la nostra lista
+
+10:27.410 --> 10:33.680
+di controllo di accesso alla rete e poi nella sottorete attraverso il gruppo di sicurezza e
+
+10:33.740 --> 10:41.840
+quindi al nostro server web recupera le informazioni che in questo caso sono la pagina di test di Apache e la pagina
+
+10:41.840 --> 10:49.640
+di test di Apache le informazioni tornano indietro attraverso Internet al cliente e proprio qui di nuovo al mio browser web.
+
+10:49.890 --> 10:58.830
+Quindi spero che questo diventi chiaro in più o in una totalità di come l'architettura ad alta disponibilità tollerante ai
+
+10:58.830 --> 11:08.100
+guasti funziona all'interno di Amazon Web Services e quale sia uno degli usi principali di AWOS e questo è uno degli
+
+11:08.100 --> 11:14.700
+usi principali di AWOS che ospita Siti Web ad alta disponibilità fault tolerant che
+
+11:14.970 --> 11:21.150
+utilizzano gruppi di sicurezza di sicurezza per sottoreti di accesso alla rete elenchi
+
+11:21.150 --> 11:28.830
+di un classico gateway Internet Low Bouncer BPC è route 53 propagando informazioni ai server DNS e
+
+11:28.830 --> 11:33.690
+consentendo in definitiva al cliente di accedere al sito Web.
+
+11:33.700 --> 11:38.590
+OK, ora che stiamo finendo questa lezione in questa sezione diamo una rapida occhiata ai nostri requisiti
+
+11:38.590 --> 11:39.760
+per Project Omega.
+
+11:39.760 --> 11:45.200
+Quindi per la Sezione 11 avevamo bisogno di configurare un dominio web di configurazione che punta a progettare l'infrastruttura di
+
+11:45.210 --> 11:48.670
+Omega, così abbiamo dovuto registrare un nome di dominio sulla route 53.
+
+11:48.670 --> 11:51.340
+Abbiamo fatto ciò di cui avevamo bisogno per creare una zona ospitata.
+
+11:51.340 --> 11:56.230
+Ora una delle grandi cose è quando registri un dominio con il percorso 53 Crea
+
+11:56.230 --> 12:03.640
+una zona ospitata per te ma abbiamo quindi bisogno di creare set di record per entrambe le varianti di domini WW e non
+
+12:03.640 --> 12:10.750
+WW w che abbiamo creato questi due record quindi Raut i record per il bilanciamento del carico elastico che abbiamo fatto e
+
+12:10.750 --> 12:15.630
+quindi testare il dominio sono accessibili dal web che abbiamo fatto proprio qui.
+
+12:15.640 --> 12:21.280
+Quindi per ricapitolare questa è stata la sezione essenziale 11 di AWOS in cui abbiamo parlato della route 53.
+
+12:21.280 --> 12:25.120
+Abbiamo toccato argomenti che includono una panoramica del percorso 53.
+
+12:25.120 --> 12:30.580
+Abbiamo parlato dei server DNS e del loro scopo su come il tuo computer
+
+12:30.850 --> 12:39.010
+localizza un server web su Internet registrando un dominio web con route 53 e infine configurando route 53 per usare quel dominio
+
+12:39.010 --> 12:46.770
+sia popolando i server DNS con le informazioni appropriate e instradando il traffico in entrata a un elastico bilanciamento del carico.
+
+12:46.810 --> 12:52.330
+Così ora che abbiamo finito con questa sezione possiamo dare un'occhiata dato che abbiamo quasi integrato il
+
+12:52.330 --> 12:57.550
+nostro intero diagramma e ci sposteremo nell'ultima sezione successiva, che è Lamda, che è una nuova
+
+12:57.550 --> 12:58.650
+tecnologia davvero interessante.
+
+12:58.780 --> 13:02.890
+Ma per ora completeremo questa lezione e questa sezione.
+
+13:02.980 --> 13:04.060
+Grazie per aver guardato.
+
+13:04.060 --> 13:04.840
+Ora puoi andare avanti.

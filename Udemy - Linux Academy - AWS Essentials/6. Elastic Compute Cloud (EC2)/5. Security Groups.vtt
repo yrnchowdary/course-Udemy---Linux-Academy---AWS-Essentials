@@ -1,0 +1,223 @@
+WEBVTT
+
+00:00.390 --> 00:06.720
+Salve e bentornati in questa lezione, ci concentreremo sui gruppi di sicurezza, in particolare sui gruppi di
+
+00:06.720 --> 00:15.150
+sicurezza di panoramica concettuale delle definizioni dei gruppi di sicurezza e sulle regole in entrata e in uscita per i gruppi di sicurezza.
+
+00:15.190 --> 00:20.080
+Iniziamo quindi con una definizione semplificata di cosa sia un gruppo di sicurezza.
+
+00:20.080 --> 00:27.020
+Quindi i gruppi di sicurezza sono molto simili agli elenchi di controllo dell'accesso alla rete e consentono e negano il traffico.
+
+00:27.370 --> 00:33.160
+Tuttavia, i gruppi di sicurezza si trovano sul livello dell'istanza anziché sul livello secondario.
+
+00:33.160 --> 00:40.300
+Inoltre, il modo in cui consentire e negare il lavoro delle regole è diverso dagli elenchi di controllo dell'accesso alla rete.
+
+00:40.450 --> 00:45.940
+Quindi, di nuovo, pensate ai gruppi di sicurezza come a un firewall come a un livello di sicurezza, ma a
+
+00:46.000 --> 00:52.630
+quelli in cui il controllo dell'accesso alla rete elenca dove la sicurezza su alcuni gruppi di sicurezza di quel livello è la sicurezza a livello
+
+00:52.630 --> 00:53.240
+di istanza.
+
+00:53.440 --> 01:00.190
+Per quanto riguarda la definizione AWOS, un gruppo di sicurezza funge da firewall virtuale che controlla il traffico
+
+01:00.190 --> 01:02.100
+per una o più istanze.
+
+01:02.230 --> 01:08.920
+Quando si avvia l'istanza, si associano uno o più gruppi di sicurezza con l'istanza che si aggiungono regole a
+
+01:08.920 --> 01:16.030
+ciascun gruppo di sicurezza che consente il traffico verso o dalle relative istanze associate quando si modificano le regole per il
+
+01:16.030 --> 01:18.200
+gruppo di sicurezza in qualsiasi momento.
+
+01:18.220 --> 01:25.150
+Le nuove regole vengono automaticamente applicate a tutte le istanze associate al gruppo di sicurezza.
+
+01:25.150 --> 01:31.690
+Quando decidiamo se consentire al traffico di raggiungere un'istanza, valutiamo tutte le regole di tutti
+
+01:31.690 --> 01:34.720
+i gruppi di sicurezza associati all'istanza.
+
+01:34.720 --> 01:39.910
+Quindi, quello che voglio che tu togli da quest'ultima parte è che se ricordi
+
+01:39.910 --> 01:46.570
+con gli elenchi di controllo di accesso alla rete mentre stavano valutando le regole dal più basso al più alto
+
+01:46.570 --> 01:52.510
+il secondo, ha trovato una regola che applicava quella regola e tutte le regole rimanenti sono stati scartati.
+
+01:52.600 --> 01:59.650
+Nel caso di gruppi di sicurezza valuterà sempre tutte le regole per tutti i gruppi di
+
+01:59.650 --> 02:03.920
+sicurezza associati a un'istanza e poi deciderà cosa fare.
+
+02:06.680 --> 02:15.950
+Quindi, dando un'occhiata al nostro diagramma VPC, voglio ora inserire dove si trovano i gruppi di sicurezza, così come le informazioni arrivano nel
+
+02:15.950 --> 02:22.610
+VPC o fuori verso Internet se i dati sono diretti verso quell'istanza, se questo è in
+
+02:22.610 --> 02:29.290
+realtà un semplice due o già un istanza Sì sta per passare attraverso un gruppo di sicurezza.
+
+02:29.390 --> 02:35.810
+Quindi i suoi dati arrivano nel VPC e scorre attraverso una lista di controllo dell'accesso alla rete in un
+
+02:36.170 --> 02:42.880
+improvviso modo che prima di allora si arriva alla reale facilità con cui dovrà passare attraverso un gruppo di sicurezza.
+
+02:43.010 --> 02:50.750
+Quindi questo è dove si trova nel VPC in termini di flusso di dati in entrata e in uscita nello stesso modo quando l'informazione lascia una
+
+02:50.750 --> 02:56.270
+facile istanza la prima cosa che deve passare è il gruppo di sicurezza che può negare di nuovo l'informazione
+
+02:56.270 --> 03:00.320
+dall'uscita dalla E . S. ad esempio.
+
+03:00.320 --> 03:05.780
+Quindi tra gli elenchi di controllo dell'accesso alla rete e i gruppi di sicurezza hai due livelli di sicurezza
+
+03:05.780 --> 03:08.330
+tra le tue istanze e il mondo esterno.
+
+03:10.750 --> 03:13.540
+Quindi ora parliamo delle regole in entrata e in uscita.
+
+03:13.610 --> 03:20.390
+Pertanto, quando si crea un nuovo gruppo di sicurezza, viene negato tutto il traffico in entrata e tutto il traffico in uscita è
+
+03:20.600 --> 03:21.860
+consentito per impostazione predefinita.
+
+03:22.190 --> 03:28.250
+Diamo un'occhiata ai gruppi di sicurezza qui nella E. C a contro. Quindi qui sotto Sicurezza di rete.
+
+03:28.250 --> 03:30.260
+Clicca sui gruppi di sicurezza.
+
+03:30.260 --> 03:36.770
+Ora, quando crei in un vero account di notizie, esiste un gruppo di sicurezza predefinito che viene fornito
+
+03:36.770 --> 03:46.010
+come parte del tuo VPC e, per impostazione predefinita, la sicurezza predefinita viene fornita con le regole in entrata e in uscita consentite per tutti
+
+03:46.310 --> 03:48.120
+i tipi di traffico.
+
+03:48.140 --> 03:54.380
+Quindi, se dovessi creare un nuovo gruppo di sicurezza, vediamo subito che non ci sono regole in entrata, ma esiste
+
+03:54.440 --> 04:01.340
+una regola in uscita che consente tutto il traffico su tutti i protocolli e tutti gli intervalli di porte, ma per l'ingresso
+
+04:01.520 --> 04:03.680
+non c'è nulla per impostazione predefinita.
+
+04:03.680 --> 04:10.790
+Quindi a questo punto e passeremo alla diapositiva successiva qui è importante capire che tutto il traffico è negato a
+
+04:10.790 --> 04:17.960
+meno che non ci sia una regola di autorizzazione esplicita e non ci siano regole di denie che consentano solo regole.
+
+04:17.960 --> 04:20.770
+Quindi tutto è negato a meno che non lo permetta.
+
+04:20.870 --> 04:23.390
+E non c'è modo di negare esplicitamente qualcosa.
+
+04:23.390 --> 04:31.640
+Posso solo esplicitamente consentire qualcosa così quando aggiungo una regola diciamo che un agente SS ora consentirà il traffico
+
+04:31.640 --> 04:35.830
+S-sh in ingresso per questo particolare gruppo di sicurezza.
+
+04:35.840 --> 04:43.130
+Se dovessi applicare il gruppo di sicurezza a un'istanza facile per l'uscita tutto è permesso ma posso passare e limitare
+
+04:43.130 --> 04:49.490
+che posso semplicemente cambiare questo a S-sh e ora in entrata solo il traffico di SH sarà
+
+04:49.490 --> 04:53.400
+permesso a un traffico solo in uscita sarebbe permesso.
+
+04:57.720 --> 05:05.160
+Quindi dare un'occhiata a questo diagramma qui se non ci sono due istanze VPC in due sottoreti differenti e
+
+05:05.160 --> 05:11.760
+hanno due diversi gruppi di sicurezza uno che consente TTP e che non lo fa.
+
+05:11.760 --> 05:17.160
+Quindi, poiché il traffico verrebbe da Internet, qualcuno sta richiedendo informazioni che abbiamo ospitato
+
+05:17.160 --> 05:18.740
+sui nostri server.
+
+05:18.810 --> 05:25.220
+Se questo è il traffico HDTV e arriva e viene diretto in questo modo, raggiungerebbe la E. C ad esempio.
+
+05:25.350 --> 05:30.800
+Ma se dovesse venire in questo modo, non raggiungerebbe la E. S. ad esempio.
+
+05:30.840 --> 05:36.450
+Quindi è molto importante quando si ha a che fare con i gruppi di sicurezza e gli elenchi di controllo di accesso
+
+05:36.450 --> 05:39.600
+alla rete che si è ben consapevoli del tipo di traffico consentito.
+
+05:39.690 --> 05:46.290
+Perché di nuovo questo potrebbe diventare un'area di risoluzione dei problemi quando inizi a parlare
+
+05:46.290 --> 05:54.140
+di problemi di connettività o problemi di restrizione con i dati che entrano e escono dalle tue due istanze.
+
+05:54.490 --> 06:00.670
+Quindi, per ricapitolare rapidamente i gruppi di sicurezza sono molto simili al controllo dell'accesso alla rete è
+
+06:00.670 --> 06:06.010
+che consentono e negano il traffico e voglio sempre che tu pensi sia
+
+06:06.070 --> 06:14.830
+al controllo di accesso alla rete e ai gruppi di sicurezza come ai tuoi firewall virtuali come livelli di sicurezza e autorizzi o neghi
+
+06:14.890 --> 06:22.420
+specifici i tipi di traffico all'interno o all'esterno delle subnet e all'interno e all'esterno delle risorse AWOS che fornisci all'interno
+
+06:22.420 --> 06:27.890
+del tuo VPC e le migliori pratiche sono sempre per consentire solo il traffico richiesto.
+
+06:27.910 --> 06:35.440
+Quindi, se hai due istanze che stanno solo ospitando il traffico web, devi solo consentire a ciascun traffico GTP di entrare e
+
+06:35.530 --> 06:35.980
+uscire.
+
+06:35.980 --> 06:41.320
+Non vi è alcun motivo per consentire ad altri tipi di traffico di entrare e uscire perché ciò potrebbe
+
+06:41.320 --> 06:43.510
+solo aprire buchi di sicurezza nel sistema.
+
+06:43.600 --> 06:45.690
+Quindi con questo completeremo questa lezione.
+
+06:45.790 --> 06:46.930
+Grazie per aver guardato.
+
+06:46.930 --> 06:47.770
+Ora puoi andare avanti.

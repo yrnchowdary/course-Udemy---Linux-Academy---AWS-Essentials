@@ -1,0 +1,463 @@
+WEBVTT
+
+00:00.180 --> 00:07.110
+A bassa e Vulcan in questa lezione parleremo in modo specifico delle classi di archiviazione S3 che toccano argomenti
+
+00:07.110 --> 00:14.040
+che includono la descrizione delle definizioni di classe delle porte per ciascun oggetto di classe, la durata e la
+
+00:14.160 --> 00:18.600
+disponibilità e il modo di passare da una classe di memoria all'altra.
+
+00:18.960 --> 00:26.640
+Quindi, prima definiamo quali sono le classi di memoria e una classe di memoria rappresenta la classificazione
+
+00:26.640 --> 00:35.670
+assegnata a ciascun oggetto in S 3 Le classi di memoria disponibili includono ridondanza ridondante standard o accesso non frequente o
+
+00:35.670 --> 00:39.100
+S3 I. UN. e ghiacciaio.
+
+00:39.330 --> 00:46.500
+Ogni classe di memoria ha attributi diversi che impongono la durata dell'oggetto di disponibilità degli oggetti
+
+00:46.770 --> 00:51.680
+di costo di archiviazione e la frequenza di accesso all'oggetto.
+
+00:51.780 --> 00:59.220
+Ad ogni oggetto deve essere assegnata una classe di memoria e lo standard è impostato come classe di archiviazione predefinita.
+
+00:59.250 --> 01:02.900
+È possibile modificare la classe di archiviazione di un oggetto in qualsiasi momento.
+
+01:03.050 --> 01:06.210
+Beh, per la maggior parte, ma ci entrerò presto.
+
+01:06.210 --> 01:11.550
+Quindi ogni volta che carichi un oggetto su S-3 dovresti pensare a te stesso hmm.
+
+01:11.700 --> 01:18.690
+Quale classe di archiviazione è giusta per me e questo è ciò di cui parleremo nel resto di questa lezione.
+
+01:18.720 --> 01:26.120
+Quindi per le classi di archiviazione esaminiamo in dettaglio i dettagli di ciascuna.
+
+01:26.140 --> 01:30.740
+Primo standard e questo è progettato per l'archiviazione generale per tutti gli scopi.
+
+01:30.750 --> 01:34.250
+È l'opzione di archiviazione predefinita di S3.
+
+01:34.290 --> 01:41.280
+Ciò significa che quando carichi un oggetto su S-3, a meno che tu non lo modifichi deliberatamente durante la procedura
+
+01:41.280 --> 01:46.570
+di caricamento in una diversa classe di memoria, verrà caricato come classe di archiviazione standard.
+
+01:46.620 --> 01:52.290
+Ora per visualizzare la classe di archiviazione di un particolare oggetto basta fare clic su un bucket e
+
+01:52.350 --> 01:58.160
+se si guarda un oggetto proprio qui sotto la classe di archiviazione, si vedrà la classificazione della classe di archiviazione.
+
+01:58.170 --> 02:06.450
+Quindi continuare su standard ha una durabilità dell'oggetto di ciò che viene definito come 11 nove, perché ci sono
+
+02:06.450 --> 02:09.150
+undici nove nella loro percentuale.
+
+02:09.150 --> 02:15.210
+Anche per la disponibilità degli oggetti che è impostata al novantanove virgola novantanove per cento e lo standard
+
+02:15.210 --> 02:18.830
+è il più costoso tra le varie classi di memoria.
+
+02:19.610 --> 02:24.110
+Ora, se non sai cosa sono la durabilità Optik e la disponibilità degli oggetti, ci
+
+02:24.110 --> 02:27.920
+accingiamo a farlo nella prossima slide per ridurre lo storage di ridondanza.
+
+02:27.920 --> 02:35.480
+Questo è progettato per oggetti riproducibili non critici e noterete che ha una durabilità degli oggetti molto
+
+02:35.480 --> 02:36.390
+più bassa.
+
+02:36.590 --> 02:42.980
+Ma la stessa disponibilità di oggetti ed è meno costosa rispetto alla classe di archiviazione standard.
+
+02:42.980 --> 02:50.120
+Quindi stai ottenendo una classe di archiviazione meno costosa, ma stai rinunciando a parte della durata degli oggetti per un accesso
+
+02:50.210 --> 02:51.080
+non frequente.
+
+02:51.080 --> 02:58.370
+Questo è progettato per oggetti a cui non si accede frequentemente ma quando è necessario accedere a
+
+02:58.430 --> 03:00.910
+quell'oggetto deve essere immediatamente disponibile.
+
+03:01.160 --> 03:08.210
+E questo ha la stessa durabilità dello standard in quanto ha 11: 9 str, ma la disponibilità degli
+
+03:08.210 --> 03:14.300
+oggetti è leggermente inferiore a novantanove virgola nove percento rispetto al novantanove virgola novantanove percento.
+
+03:14.300 --> 03:21.530
+E questo è ancora più economico dello standard o è una classe di archiviazione.
+
+03:21.530 --> 03:27.980
+Infine abbiamo un ghiacciaio e questo è progettato per l'archiviazione a lungo termine e questo è un tipo molto speciale
+
+03:27.980 --> 03:29.380
+di classe di stoccaggio.
+
+03:29.630 --> 03:34.580
+In questo modo, se si memorizzano i file in Gleacher First Off, è estremamente economico.
+
+03:34.580 --> 03:42.680
+Solo pochi centesimi per gigabyte di spazio di archiviazione e ha una durata eccezionale, ma se vuoi recuperare gli oggetti
+
+03:42.770 --> 03:49.190
+archiviati nella classe di archiviazione del ghiacciaio devi inserire una richiesta e potrebbero essere necessarie
+
+03:49.190 --> 03:56.690
+diverse ore al giorno per recuperare quei file in modo che siano solo un bene per l'archiviazione di oggetti.
+
+03:56.690 --> 04:00.290
+Non hanno quasi mai intenzione di recuperare.
+
+04:00.410 --> 04:07.200
+E se devi recuperarli, stai bene aspettando almeno qualche ora.
+
+04:07.240 --> 04:12.040
+Quindi, parliamo della durata dell'oggetto nella disponibilità dell'oggetto.
+
+04:12.040 --> 04:17.490
+Questi sono concetti molto importanti quando si parla di oggetti S-3 così oggetti.
+
+04:17.530 --> 04:27.490
+La durata è la percentuale su un periodo di un anno in cui un file memorizzato in S-3 non andrà perso.
+
+04:27.550 --> 04:37.420
+In altre parole per la durabilità dell'oggetto di 11: 9 che significa che c'è un punto zero 0 0 0 0 0 0 0 0
+
+04:37.540 --> 04:45.650
+1 percento di possibilità che un file memorizzato in S-3 a undici nove di durabilità vada perso in un anno.
+
+04:45.940 --> 04:47.820
+Oppure possiamo guardarlo in questo modo.
+
+04:47.890 --> 04:53.830
+Se si dispone di diecimila file memorizzati come durabilità di tre e undici nove, è possibile che si verifichi
+
+04:53.830 --> 04:57.340
+la perdita di un file ogni dieci milioni di anni.
+
+04:57.700 --> 05:02.930
+Quindi la durata dell'oggetto ha a che fare con un file smarrito o corrotto.
+
+05:03.130 --> 05:09.340
+Maggiore è la durata, maggiori sono le probabilità che il file verso un S-3 non sia mai corrotto o
+
+05:09.340 --> 05:10.750
+non venga mai perso.
+
+05:12.110 --> 05:18.810
+La prossima è la disponibilità degli oggetti e questa è la percentuale su un periodo di un
+
+05:18.900 --> 05:27.170
+anno che un file memorizzato in S3 sarà ora accessibile per la disponibilità di oggetti di novantanove virgola nove percento che significa
+
+05:27.170 --> 05:35.000
+che c'è un punto zero o l'1% di possibilità che hai vinto " t essere in grado di accedere a un
+
+05:35.000 --> 05:44.390
+file memorizzato in S-3 entro un determinato anno o per ogni 10000 ore ci si può aspettare un totale di un'ora per cui un file
+
+05:44.450 --> 05:46.840
+potrebbe non essere disponibile per l'accesso.
+
+05:47.120 --> 05:51.470
+E so che sto scambiando la parola file e oggetto qui, ma lo faccio
+
+05:51.470 --> 05:57.080
+molto anch'io, ma quando dico file intendo oggetto quando dico oggetto intendo i loro termini che puoi usare
+
+05:57.080 --> 05:58.060
+come sinonimi.
+
+05:58.250 --> 06:05.840
+Ma ciò che è importante sapere su questi due termini è che la disponibilità degli oggetti ha a che fare con l'accesso a questo file, il che
+
+06:05.840 --> 06:08.050
+significa che quando clicco su di esso.
+
+06:08.060 --> 06:09.110
+È accessibile
+
+06:09.110 --> 06:10.070
+Posso scaricarlo.
+
+06:10.070 --> 06:13.460
+Posso modificare posso accedere al file.
+
+06:13.460 --> 06:17.570
+La durata deve fare in modo che il file sia effettivamente lì.
+
+06:17.690 --> 06:18.590
+È perso
+
+06:18.590 --> 06:19.520
+È corrotto
+
+06:19.520 --> 06:21.500
+È stato cancellato in qualche modo.
+
+06:21.710 --> 06:27.770
+Questa è una differenza di durata e disponibilità e ovviamente uno dei principali vantaggi dell'utilizzo di
+
+06:27.770 --> 06:31.340
+S3 è la sua estrema durata e disponibilità.
+
+06:31.340 --> 06:39.020
+E questo vale anche per l'affermazione WSS di avere sempre sistemi altamente disponibili e fault tolerant così
+
+06:39.020 --> 06:42.340
+altamente disponibili e altamente fault tolerant.
+
+06:42.530 --> 06:45.970
+Questo è il modo in cui dovresti pensare a questi due termini.
+
+06:46.040 --> 06:51.680
+Diamo uno sguardo più da vicino a cambiare o modificare effettivamente la classe di archiviazione di un file.
+
+06:51.680 --> 06:58.610
+Quindi, di nuovo, per impostazione predefinita tutti i nuovi oggetti caricati su S-3 sono impostati sulla classe di archiviazione standard.
+
+06:58.610 --> 07:02.080
+Quindi il file Project Omega 1 ha impostato lo standard.
+
+07:02.150 --> 07:07.010
+E se si guarda al progetto Omega file 2 anch'esso impostato sullo standard.
+
+07:07.010 --> 07:15.200
+Quindi, se vogliamo che i nuovi oggetti nuovi oggetti abbiano una classe di archiviazione diversa, è necessario impostare le impostazioni corrette
+
+07:15.200 --> 07:22.280
+prima o durante il processo di caricamento e puoi farlo impostando un'altra classe di memoria durante il
+
+07:22.280 --> 07:26.930
+processo di caricamento e utilizzare Ampe anche quello in un secondo.
+
+07:27.050 --> 07:30.140
+O utilizzando le politiche del ciclo di vita degli oggetti.
+
+07:30.200 --> 07:32.750
+E lo copriremo nella prossima lezione.
+
+07:32.840 --> 07:38.660
+Ma diamo un'occhiata al caricamento di un altro oggetto e come impostare una diversa classe di memoria durante il
+
+07:38.750 --> 07:39.770
+processo di caricamento.
+
+07:39.770 --> 07:46.190
+Quindi, se clicco su upload e seleziono un file e AWST mi piace di nuovo lo stesso file, non ho intenzione
+
+07:46.190 --> 07:50.630
+di caricare in questo momento, ma ti mostrerò come farlo invece di fare clic
+
+07:50.690 --> 07:55.730
+su Avvia caricamento subito se seleziono i dettagli impostati qui posso scegliere una diversa classe di archiviazione.
+
+07:55.850 --> 08:04.010
+Quindi, se ora clicco su Avvia caricamento, caricherà e imposterà la classe di accesso non frequente come classe di archiviazione
+
+08:04.010 --> 08:07.850
+per quel file durante il processo di caricamento.
+
+08:09.470 --> 08:14.660
+La successiva per la seguente classe di memoria è in via di standard, riduce la ridondanza e l'accesso raro.
+
+08:14.780 --> 08:21.260
+È possibile modificare manualmente la classe di memorizzazione degli oggetti tra di loro in qualsiasi momento, modificando la classe di
+
+08:21.270 --> 08:23.130
+archiviazione nelle proprietà degli oggetti.
+
+08:23.150 --> 08:27.510
+Quindi se clicco su questo oggetto clic su proprietà vai a.
+
+08:27.510 --> 08:28.610
+Dettagli qui
+
+08:28.730 --> 08:36.500
+Accertati che sia aperto Posso selezionare un accesso standard raro o ridurre la ridondanza semplicemente facendo clic su Salva
+
+08:36.500 --> 08:42.970
+e posso premere Aggiorna qui e vediamo che ora è passato a ridondanza ridotta.
+
+08:42.980 --> 08:49.850
+Questo può essere fatto anche in una cartella facendo clic su una cartella, fare clic su Proprietà.
+
+08:49.850 --> 08:53.000
+Posso modificare le modifiche in accesso non frequente.
+
+08:53.030 --> 08:58.310
+Posso fare clic su Salva e quindi tutti gli oggetti all'interno della cartella verranno modificati.
+
+08:58.310 --> 09:03.440
+Ora non imposta che è l'impostazione predefinita per la cartella, il che significa che se dovessi caricare un altro
+
+09:03.440 --> 09:08.180
+file in questa cartella ci vorrebbe qualsiasi proprietà che ho impostato durante il processo di caricamento.
+
+09:08.270 --> 09:14.060
+Ma se c'è una cartella e voglio solo cambiare tutto in una volta per una volta, allora
+
+09:14.060 --> 09:18.190
+posso farlo cambiando la classe di archiviazione a livello di cartella.
+
+09:18.350 --> 09:24.740
+Ora l'ultimo elenco parla del ghiacciaio perché è stato lasciato fuori da questa sezione.
+
+09:24.740 --> 09:29.770
+Qui siamo stati in grado di cambiare manualmente per spostare un oggetto nella classe di archiviazione Glacier.
+
+09:29.930 --> 09:32.270
+È necessario utilizzare i cicli di vita dell'oggetto.
+
+09:32.270 --> 09:41.210
+Non è possibile commutare manualmente una classe di memorizzazione oggetti su Glacier e la modifica a Glacier potrebbe richiedere
+
+09:41.210 --> 09:43.730
+anche uno o due giorni.
+
+09:43.730 --> 09:49.640
+Quando li cambio manualmente tra queste tre classi di memorizzazione, l'effetto è immediato e entreremo nei
+
+09:49.640 --> 09:55.510
+cicli di vita degli oggetti nella prossima lezione e dove approfondiremo questo in dettaglio.
+
+09:56.310 --> 10:02.130
+Torniamo ora alle classi di archiviazione fornite ora che abbiamo una migliore comprensione della durabilità degli oggetti
+
+10:02.130 --> 10:07.170
+e della disponibilità degli oggetti, parliamo solo di alcuni motivi per cui potresti scegliere
+
+10:07.170 --> 10:11.900
+di utilizzare queste diverse classi di memoria per oggetti particolari che potresti avere.
+
+10:12.000 --> 10:18.390
+Pertanto, per gli oggetti a cui si accede di frequente è necessario utilizzare standard con la
+
+10:18.420 --> 10:22.730
+massima durata degli oggetti e un alto livello di disponibilità.
+
+10:22.770 --> 10:30.360
+Pertanto, possono lavorare su file a cui si accede in modo continuo ogni giorno o file estremamente importanti e
+
+10:30.360 --> 10:37.410
+che richiedono un livello extra di durata, in modo che non vi sia più sicurezza per non
+
+10:37.410 --> 10:41.100
+essere persi o corrotti per ridurre la ridondanza.
+
+10:41.100 --> 10:48.350
+Questo è ottimo per i backup o per i file che possono essere riprodotti, quindi se si dispone di una copia di un file
+
+10:48.350 --> 10:53.080
+o diciamo una miniatura di un'immagine si dovrebbe ridurre la ridondanza perché è più economica.
+
+10:53.100 --> 10:59.880
+E se per qualche motivo con la durata inferiore del file o per essere perso o corrotto avresti
+
+11:00.120 --> 11:06.940
+il file originale da qualche altra parte probabilmente in standard che puoi fare un duplicato e sostituire il
+
+11:06.960 --> 11:11.910
+file scorso o corrotto in ridondanza ridotta per un accesso non frequente.
+
+11:11.910 --> 11:17.610
+Questo è progettato per oggetti a cui non si accede frequentemente ma che devono essere immediatamente disponibili al momento
+
+11:17.700 --> 11:18.120
+dell'accesso.
+
+11:18.120 --> 11:24.570
+Quindi, ciò che intendiamo con questo è che ha lo stesso livello di durata dello standard che significa che la stessa
+
+11:24.570 --> 11:27.650
+garanzia che i file non saranno persi o corrotti.
+
+11:27.990 --> 11:35.130
+Ma se questo è per file a cui puoi accedere una volta alla settimana o una volta al mese, conosci
+
+11:35.130 --> 11:41.730
+i file che sai che dovrai accedere ma non accedere molto frequentemente perché generalmente c'è un costo associato.
+
+11:41.730 --> 11:44.060
+Ogni volta che vuoi accedere al file.
+
+11:44.220 --> 11:50.460
+Quindi, a causa di ciò, è meno costoso ma è meno costoso, anche se accedete di nuovo ai
+
+11:50.460 --> 11:55.440
+file molto raramente se si accede al file ogni giorno, quindi si desidera il
+
+11:55.530 --> 11:59.140
+file nella classe di archiviazione standard per il ghiacciaio.
+
+11:59.160 --> 12:04.530
+Questo è ottimo per l'archiviazione di grandi volumi di archiviazione.
+
+12:04.530 --> 12:10.170
+Quindi pensa a un ospedale che potrebbe avere milioni e milioni di cartelle
+
+12:10.470 --> 12:18.180
+cliniche che devono conservare per ragioni normative, ma molti di quegli oggetti sono file che potresti conoscere 10-15 anni.
+
+12:18.450 --> 12:24.210
+Potrebbero esserci pezzi di informazione che non avranno mai più
+
+12:24.210 --> 12:24.920
+accesso.
+
+12:25.200 --> 12:30.340
+Quindi a causa di ciò possono metterlo nel ghiacciaio e ottenere un deposito estremamente economico.
+
+12:30.390 --> 12:36.090
+Ma se per qualche ragione devono recuperare le informazioni mediche di qualcuno che ha 15
+
+12:36.090 --> 12:41.760
+anni, non è qualcosa che deve essere tirato o essere disponibile immediatamente perché potrebbero
+
+12:41.760 --> 12:46.070
+essere necessarie diverse ore per recuperarlo dai server dei ghiacciai.
+
+12:46.960 --> 12:52.270
+Quindi il compromesso è che devi aspettare per poter accedere al file.
+
+12:52.390 --> 12:57.240
+Ma allo stesso tempo lo storage è estremamente estremamente economico.
+
+12:57.310 --> 13:00.270
+Questo è un breve riepilogo delle classi di archiviazione.
+
+13:00.280 --> 13:07.720
+Come passare da una classe di memoria all'altra e quali sono la durata e la disponibilità dell'oggetto e come
+
+13:07.930 --> 13:11.520
+influiscono su come utilizzare le diverse classi di memoria.
+
+13:11.530 --> 13:13.910
+Quindi con questo concluderò questo video.
+
+13:13.990 --> 13:15.130
+Grazie per aver guardato.
+
+13:15.130 --> 13:15.940
+Ora puoi andare avanti.

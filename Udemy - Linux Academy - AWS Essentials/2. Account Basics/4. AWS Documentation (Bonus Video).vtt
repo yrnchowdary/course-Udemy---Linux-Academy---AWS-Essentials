@@ -1,0 +1,235 @@
+WEBVTT
+
+00:00.240 --> 00:01.980
+Ciao e bentornato.
+
+00:02.010 --> 00:07.790
+Quindi ho deciso di creare un video aggiuntivo, qui possiamo chiamarlo un video bonus
+
+00:07.800 --> 00:13.220
+per la sezione sulle basi dell'account incentrato specificamente su una documentazione AWOS.
+
+00:13.230 --> 00:19.200
+Quindi, ecco la cosa sulla documentazione AWOS o qualsiasi documentazione tecnica è che è
+
+00:19.440 --> 00:25.980
+assolutamente necessario per poter sapere dove trovare le informazioni e come usare la documentazione perché
+
+00:25.980 --> 00:31.410
+non importa quante certificazioni hai per quanti anni hai usato un determinato prodotto
+
+00:31.410 --> 00:38.400
+o servizio, non importa quanto di un esperto tu possa essere considerato. Avresti sempre avuto bisogno
+
+00:38.400 --> 00:42.840
+di fare riferimento alla documentazione ad un certo punto.
+
+00:42.960 --> 00:45.930
+Uso sempre la documentazione AWOS.
+
+00:46.050 --> 00:47.630
+E 'un ottimo strumento.
+
+00:47.640 --> 00:53.670
+È una risorsa fantastica per rispondere alle domande che potresti avere e scoprire nuovi e diversi modi di fare le
+
+00:53.670 --> 00:56.560
+cose all'interno della U. S..
+
+00:56.580 --> 01:01.830
+Quindi voglio passare qualche minuto qui solo per mostrarti come accedere alla
+
+01:01.920 --> 01:07.910
+documentazione in modo più approfondito e mostrarti i diversi tipi di informazioni che puoi ottenere.
+
+01:08.310 --> 01:11.280
+Quindi, prima attraverso il progetto Omega.
+
+01:11.280 --> 01:18.150
+Ogni volta che entri in una sezione e vai a una lezione specifica, ci sarà
+
+01:18.150 --> 01:23.770
+sempre un collegamento in basso alla documentazione AWOS specifica per quella lezione.
+
+01:24.000 --> 01:29.730
+Così, ad esempio, per il gateway Internet avevo il link AWOS qui per la documentazione del gateway
+
+01:29.730 --> 01:33.480
+Internet che ti porta direttamente alla documentazione per il gateway internet.
+
+01:33.480 --> 01:43.260
+Quindi la stessa cosa per le sottoreti delle zone di disponibilità o per le lezioni specifiche del lago è proprio
+
+01:43.260 --> 01:48.640
+qui per portarti direttamente a quella parte della documentazione di AWOS.
+
+01:48.800 --> 01:54.290
+Quindi, lavorando al di fuori del progetto Omega, lo spingo qui di lato.
+
+01:54.290 --> 02:00.740
+Quando ti trovi in AWOS Console, come ho esaminato nel video precedente per accedere alla documentazione, tutto quello che devi
+
+02:00.740 --> 02:04.370
+fare è andare al supporto qui e fare clic sulla documentazione.
+
+02:04.370 --> 02:10.430
+Questo ti darà un elenco completo di tutti i servizi AWOS che potrai quindi cliccare e tuffarti
+
+02:10.430 --> 02:11.290
+nella documentazione.
+
+02:11.300 --> 02:15.800
+Ma una volta fatto ciò, le cose possono diventare un po 'confuse ed è qui che voglio immergermi un po'
+
+02:15.800 --> 02:16.540
+più a fondo.
+
+02:16.550 --> 02:21.410
+Quindi per la documentazione S-3 vedrete che in realtà ci sono diversi tipi di documentazione a
+
+02:21.410 --> 02:22.550
+cui potete rivolgervi.
+
+02:22.580 --> 02:29.510
+C'è la guida introduttiva Guida per gli sviluppatori di riferimento API nuova guida per l'utente console un'anteprima e solo una
+
+02:29.510 --> 02:31.070
+guida utente della console.
+
+02:31.070 --> 02:39.490
+Quindi ci sono un sacco di posti diversi che puoi visitare qui per ottenere informazioni e documentazione sull'S-3.
+
+02:39.520 --> 02:45.400
+Quindi, a meno che tu non sia uno sviluppatore o abbia bisogno di chiamate API specifiche, in genere
+
+02:45.400 --> 02:49.990
+quello che stai per fare è che vuoi consultare la Guida introduttiva. Avrà
+
+02:50.050 --> 02:55.860
+le informazioni di base sulle diverse funzionalità e sull'uso del Servizio AWOS in cui ti trovi attualmente.
+
+02:55.930 --> 03:01.840
+Ora è disponibile in diversi formati HDMI out of you online e un PDA e Kindle per il download e la
+
+03:01.840 --> 03:04.040
+visualizzazione off line per la maggior parte.
+
+03:04.060 --> 03:10.060
+Faccio sempre clic qui sulla Guida introduttiva al link Mel HVM e quindi qui a sinistra qui si
+
+03:10.060 --> 03:16.690
+ottiene una navigazione completa, quindi qui abbiamo iniziato Le basi di Amazon S3 registrarsi per Amazon S3 come creare un
+
+03:16.690 --> 03:22.600
+bucket add. aggiungere un oggetto a un bucket per visualizzare un oggetto per spostare un oggetto in
+
+03:22.600 --> 03:27.850
+modo tale che tu possa vedere qui è solo una specie di tutta una serie
+
+03:27.850 --> 03:31.720
+di informazioni che potresti aver bisogno per iniziare a utilizzare AWOS.
+
+03:31.900 --> 03:37.630
+Poi c'è un dove vado da qui è possibile guardare in scenari di uso comune
+
+03:37.810 --> 03:45.050
+per il backup e l'archiviazione delle applicazioni di hosting hosting del software di hosting avanzato Amazon S3 caratteristiche risorse di sviluppo.
+
+03:45.160 --> 03:52.120
+Quindi ci sono solo un sacco di informazioni qui che potresti aver bisogno di accedere ad un certo
+
+03:52.120 --> 03:59.660
+punto per capire meglio una funzione o una parte di un servizio mentre inizi a imparare esplorare e usare AWOS.
+
+03:59.710 --> 04:07.300
+Quindi, proprio come un altro esempio, possiamo immergerci in Amazon E. S. a questo punto possiamo andare alla guida per
+
+04:07.300 --> 04:13.690
+l'utente specifica qui per le istanze di Linux contro le istanze di Windows o usando una sezione semplice dall'interfaccia della riga di
+
+04:13.690 --> 04:20.420
+comando che era al di fuori dello scopo di questo corso ma per Linux possiamo cliccare su HVM El e qui parleremo su
+
+04:20.420 --> 04:23.810
+di te sai cos'è una semplice istanza di installazione per iniziare.
+
+04:23.810 --> 04:29.450
+Le migliori pratiche sono corrette su come impostare le migliori pratiche per la gestione delle risorse di archiviazione di sicurezza.
+
+04:29.450 --> 04:34.940
+Quindi ci sarà un gran numero di tutorial che potrai esaminare e leggere e
+
+04:35.720 --> 04:41.600
+approfondire con approfondimenti sulle immagini della macchina di Amazon, creando un back-up immediato al momento
+
+04:41.600 --> 04:42.040
+dell'esame.
+
+04:42.080 --> 04:49.070
+Sono i tipi di istanze specifiche che acquistano le opzioni per il ciclo di vita dell'istanza, così come puoi vedere qui questo è
+
+04:49.070 --> 04:55.550
+solo il punto in cui tutte le informazioni potrebbero dover continuare a conoscere un servizio specifico o aiutare a risolvere i problemi
+
+04:55.550 --> 05:02.960
+che potresti avere in AWOS Now un altro ottimo modo per accedere a una di queste risorse è solo per fare una rapida ricerca su
+
+05:02.960 --> 05:09.290
+Google, così posso solo fare E. S. alla
+
+05:09.980 --> 05:12.150
+documentazione di AWOS.
+
+05:13.950 --> 05:17.870
+E poi verrà in genere il primo risultato sarà qualcosa che sto
+
+05:17.910 --> 05:22.320
+cercando in vendita mi lasci direttamente a questa pagina invece di navigare attraverso la console.
+
+05:22.560 --> 05:28.920
+E come un'altra risorsa puoi anche usare Google solo per porre le domande specifiche che
+
+05:28.980 --> 05:35.610
+potresti avere su un servizio AWOS. Ci sono buone probabilità che un collegamento possa arrivare direttamente in
+
+05:35.610 --> 05:42.000
+una di queste aree secondarie che parlano in modo specifico del problema o la soluzione che
+
+05:42.000 --> 05:43.440
+si sta cercando.
+
+05:43.440 --> 05:49.050
+Quindi, volevo creare questo video per darti una visione più approfondita della documentazione
+
+05:49.050 --> 05:56.880
+perché, mentre impari e inizi a utilizzare AWOS, puoi usare la documentazione per essere in grado di utilizzarla come
+
+05:56.880 --> 06:02.570
+risorsa per rispondere alle domande che hai o risolvere i problemi è estremamente prezioso.
+
+06:02.580 --> 06:10.260
+Tutti quelli che lavorano in AWOS nel mondo reale nel loro lavoro useranno costantemente e faranno riferimento alla documentazione, quindi non
+
+06:10.270 --> 06:13.890
+è qualcosa di cui dovresti vergognarti o pensare che
+
+06:13.890 --> 06:20.340
+sia qualcosa che non dovresti dover usare per sapere che qualcosa è AWOS così grande ci sono così
+
+06:20.340 --> 06:27.420
+tanti servizi e funzionalità e tante piccole opzioni nitty grintose che nessuno sa tutto e dovrai sapere come accedere
+
+06:27.420 --> 06:31.260
+alla documentazione per trovare le cose velocemente e la documentazione.
+
+06:31.260 --> 06:37.540
+Se sarai un abile architetto o amministratore utente AWOS di successo.
+
+06:37.620 --> 06:39.630
+E con ciò concluderò questa lezione.
+
+06:39.720 --> 06:40.840
+Grazie per aver guardato.
+
+06:40.950 --> 06:41.820
+Ora puoi andare avanti.

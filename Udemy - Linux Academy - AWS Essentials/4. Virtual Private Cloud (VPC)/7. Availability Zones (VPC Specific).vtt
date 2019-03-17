@@ -1,0 +1,316 @@
+WEBVTT
+
+00:00.300 --> 00:09.290
+Ciao e bentornato ci stiamo avvicinando al traguardo della sezione BPC di questo corso essenziale di AWOS.
+
+00:09.390 --> 00:14.880
+Ma ora torneremo indietro attorno a due zone di disponibilità che
+
+00:14.880 --> 00:21.300
+ho toccato nella lezione di infrastruttura, ma stavolta parlerò di come sono specificatamente utilizzate
+
+00:21.300 --> 00:27.580
+nel VPC e cosa significano per subnet VPC e altri aspetti del VPC.
+
+00:27.610 --> 00:35.190
+Vado a toccare come funzionano le zone di disponibilità all'interno di un'alta disponibilità e tolleranza ai guasti di VPC
+
+00:35.470 --> 00:41.020
+e poi alla fine parleremo dei requisiti di Project Omega e ci assicureremo
+
+00:41.020 --> 00:45.890
+di aver fatto tutto ciò che dobbiamo fare per Progetto Omega.
+
+00:45.910 --> 00:51.840
+Quindi saltiamo subito e daremo un'occhiata più da vicino alla definizione delle zone di disponibilità.
+
+00:51.880 --> 00:56.500
+Ora so di aver già parlato di questo, ma lo faremo ancora una volta
+
+00:56.500 --> 01:00.640
+perché rivedere queste cose ancora e ancora sarà molto utile e importante.
+
+01:00.700 --> 01:08.480
+Quindi qualsiasi aiuto sarà una risorsa che si avvia come facile o già Sì deve essere inserito in una sottorete VPC.
+
+01:08.860 --> 01:13.470
+Qualsiasi data Subang che deve essere localizzata in una zona di disponibilità.
+
+01:13.660 --> 01:20.550
+È possibile e dovresti utilizzare più zone di disponibilità per creare ridondanza nella tua architettura.
+
+01:20.560 --> 01:25.300
+Questo è ciò che consente sistemi ad alta disponibilità e fault tolerant.
+
+01:25.300 --> 01:26.450
+Questi sono due termini.
+
+01:26.470 --> 01:35.900
+Sentirai all'infinito quando lavori con Amazon Web Services per una definizione più
+
+01:35.910 --> 01:36.990
+definita.
+
+01:36.990 --> 01:43.230
+Possiamo guardare ad AWOS e dicono che quando si crea un BPC si estende a tutte le zone di
+
+01:43.350 --> 01:44.780
+disponibilità in quella regione.
+
+01:44.940 --> 01:51.120
+Dopo aver creato un VPC, è possibile aggiungere uno o più repentini che in
+
+01:51.180 --> 02:00.690
+ciascuna zona di disponibilità ogni Subang deve risiedere interamente all'interno di una zona di disponibilità e non possono estendersi alle zone. Le
+
+02:00.720 --> 02:07.860
+zone di disponibilità sono posizioni distinte progettate per essere isolate dall'errore in altre zone di disponibilità, quindi
+
+02:07.860 --> 02:13.380
+se ti ricordi di nuovo la lezione sull'infrastruttura quando avevo disposto
+
+02:13.380 --> 02:20.010
+le zone di disponibilità ed erano geograficamente separate l'una dall'altra avviando istanze in zone di
+
+02:20.190 --> 02:25.740
+disponibilità separate, puoi proteggere la tua applicazione da guasti in una singola regione.
+
+02:25.740 --> 02:33.820
+Quindi questo è molto importante e questo è uno dei principali vantaggi dell'utilizzo dei servizi cloud in A W-S in generale.
+
+02:34.050 --> 02:39.720
+Quello che intendo con questo esatto è se guardiamo al nostro diagramma VPC che abbiamo due zone di disponibilità
+
+02:39.720 --> 02:44.900
+in questo diagramma sebbene in realtà abbiamo quattro zone di disponibilità per questo VPC da usare.
+
+02:45.300 --> 02:52.710
+Quello che vogliamo provare a fare quando costruiamo applicazioni e sistemi negli Stati Uniti è di avere risorse
+
+02:52.710 --> 02:56.010
+o duplicare le risorse in zone di disponibilità.
+
+02:56.010 --> 02:57.880
+Abbiamo risorse e uno di anziani.
+
+02:57.900 --> 03:00.960
+E vogliamo duplicati nell'altro.
+
+03:00.960 --> 03:07.570
+Quindi diciamo per esempio che abbiamo un sito Web che stavamo ospitando in una W-S.
+
+03:07.710 --> 03:11.850
+E per questo abbiamo un server web primario che lo supporta.
+
+03:11.850 --> 03:17.460
+Abbiamo già un database primario che fornisce contenuti e informazioni alla pagina web.
+
+03:17.460 --> 03:23.820
+Quindi, se un cliente accede o un sito Web, le loro informazioni arrivano attraverso il
+
+03:23.820 --> 03:32.460
+gateway Internet attraverso la tabella di routing a questo particolare server Web creato dal server Web e attraverso l'altra tabella di
+
+03:32.460 --> 03:39.600
+routing attraverso la tabella del router non connesso a Internet accederà a ciò che raccoglie le informazioni. Sito
+
+03:39.600 --> 03:42.770
+Web e inviare le informazioni al cliente.
+
+03:43.870 --> 03:51.320
+Ora in un'altra zona di disponibilità vogliamo avere un server Web di backup e un database di failover già.
+
+03:51.370 --> 03:57.130
+È importante averlo impostato nel caso in cui questa zona di disponibilità non funzioni.
+
+03:57.280 --> 04:03.880
+Quindi, se c'è un terremoto, un blackout o per qualche motivo il data center in questa
+
+04:03.880 --> 04:13.050
+zona di disponibilità fallisce o questi diventano inattivi. Bene, allora possiamo semplicemente passare alla nostra istanza di backup e al nostro database di backup
+
+04:13.050 --> 04:20.430
+e quindi il nostro downtime sarà basso o inesistente e i nostri clienti non avranno alcuna interruzione del servizio
+
+04:20.440 --> 04:25.110
+durante il tentativo di utilizzare e accedere al nostro sito Web.
+
+04:25.110 --> 04:32.430
+Quindi, tradizionalmente, se disponi di un data center o stai ospitando un server Web in casa o in un ufficio
+
+04:32.490 --> 04:38.210
+e che dove andare giù, potresti non avere un backup in una posizione geografica diversa.
+
+04:38.220 --> 04:46.350
+Ma qui queste due zone di disponibilità possono essere separate da 100 miglia a 50 miglia da 200 miglia a 500 miglia e qualcosa di
+
+04:46.710 --> 04:52.170
+disastroso può accadere in una zona di disponibilità e si possono avere backup in un'altra zona
+
+04:52.170 --> 04:58.200
+di disponibilità che può essere rapidamente predisposta e lanciata o può essere già predisposta e avviata e aspettando
+
+04:58.200 --> 05:03.570
+solo che succeda qualcosa qui e poi puoi fallire nei servizi che hai in una zona
+
+05:03.570 --> 05:04.720
+di disponibilità diversa.
+
+05:04.830 --> 05:10.050
+Questa è l'importanza delle zone di disponibilità e nella costruzione di un'architettura ad alta disponibilità
+
+05:10.350 --> 05:11.540
+e fault tolerant.
+
+05:12.000 --> 05:17.210
+Quindi, di nuovo, una delle poche cose su cui vogliamo concentrarci è l'alta disponibilità.
+
+05:17.430 --> 05:24.150
+Creare la tua architettura in modo tale che il tuo sistema sia sempre disponibile o abbia il minor
+
+05:24.150 --> 05:25.900
+tempo di inattività possibile.
+
+05:26.010 --> 05:32.580
+Quel che è l'abilità alta è questo e questo è qualcosa che qualcuno direbbe che posso sempre accedere ai
+
+05:32.580 --> 05:34.350
+miei dati nel cloud.
+
+05:34.350 --> 05:35.890
+È sempre disponibile
+
+05:35.910 --> 05:37.710
+È altamente disponibile
+
+05:37.740 --> 05:42.880
+Il mio sito web non si blocca mai ed è sempre disponibile per i miei clienti.
+
+05:42.930 --> 05:48.450
+Pertanto, quando qualcuno utilizza correttamente un'architettura ad alta disponibilità, è una cosa che,
+
+05:48.450 --> 05:56.170
+secondo loro, interpreterà la tolleranza tollerante, ovvero la capacità del sistema di resistere a guasti in uno o più
+
+05:56.170 --> 05:59.440
+dei suoi componenti e rimanere comunque disponibile.
+
+05:59.470 --> 06:05.980
+Quindi quello che suona il fault tolerant è qualcuno che dice che uno dei miei server web è fallito, ma
+
+06:06.040 --> 06:13.210
+il mio server di backup ha immediatamente preso il sopravvento o qualcosa nel mio sistema non riesce a ripararsi da solo e
+
+06:13.210 --> 06:14.950
+ci arriveremo nelle sezioni successive.
+
+06:15.160 --> 06:21.220
+Ma è molto importante capire il concetto di alta disponibilità e tolleranza ai guasti all'interno
+
+06:21.250 --> 06:22.230
+dell'architettura cloud.
+
+06:22.360 --> 06:28.450
+In questo modo, man mano che avanzi e inizi a utilizzare AWOS, puoi utilizzare le best practice per
+
+06:28.450 --> 06:32.730
+assicurarti che i tuoi sistemi siano altamente disponibili e tolleranti ai guasti.
+
+06:32.740 --> 06:39.850
+Quindi, ancora una volta riassumendo le zone di disponibilità, sono posizioni distinte progettate per essere isolate dai guasti e
+
+06:39.850 --> 06:46.360
+da altre zone di disponibilità e questo è il principale punto d'appoggio che è necessario conoscere sulle
+
+06:46.420 --> 06:47.990
+zone di disponibilità.
+
+06:49.280 --> 06:49.810
+OK.
+
+06:49.950 --> 06:56.070
+Quindi, visto che siamo giunti alla fine di questa sezione, diamo un'occhiata ai requisiti dell'infrastruttura del
+
+06:56.070 --> 07:00.760
+progetto Omega e vediamo se abbiamo soddisfatto tutto ciò che dobbiamo fare.
+
+07:00.960 --> 07:08.780
+Pertanto, per la Sezione 3 avevamo bisogno di un corretto instradamento del traffico all'interno e all'esterno del nostro cloud privato virtuale AWOS.
+
+07:08.880 --> 07:12.630
+Va bene così il primo Internet Gateway collegato al VPC.
+
+07:12.660 --> 07:15.010
+Bene diamo un'occhiata ai gateway Internet.
+
+07:15.270 --> 07:22.530
+Abbiamo un gateway Internet ed è collegato alla nostra tabella VPC un router con una route verso Internet.
+
+07:22.530 --> 07:29.430
+Diamo un'occhiata alle nostre tabelle di percorso una tabella di percorso dovrebbe essere questa proprio qui con un percorso
+
+07:29.430 --> 07:30.320
+verso Internet.
+
+07:30.630 --> 07:35.040
+Una tabella router senza una rotta verso Internet facendo clic sulla mia altra tabella di percorso.
+
+07:35.040 --> 07:40.830
+Non esiste un gateway Internet collegato, quindi non esiste una route per Internet così grande che
+
+07:41.040 --> 07:48.810
+soddisfi tale condizione alle sottoreti pubbliche ciascuna in una zona di disponibilità separata e a subnet private ciascuna in una zona
+
+07:49.020 --> 07:50.390
+di disponibilità separata.
+
+07:50.730 --> 07:59.190
+Di nuovo incontriamo questa condizione se guardiamo alle nostre sottoreti che abbiamo due sottoreti pubbliche e due private e sappiamo che poiché le due
+
+07:59.190 --> 08:04.980
+sottoreti pubbliche hanno una tabella router con un gateway Internet collegato e sono due sottotitoli privati
+
+08:05.010 --> 08:09.880
+a cui è associata una route con una tabella router che non ha un
+
+08:09.900 --> 08:11.370
+gateway Internet collegato.
+
+08:11.580 --> 08:17.670
+E se scorriamo il mouse e guardiamo le zone di disponibilità, vediamo qui che ognuna di esse
+
+08:17.670 --> 08:24.720
+si trova in una zona di disponibilità separata e, ancora una volta, crea un'architettura ad alta disponibilità e fault tolerant.
+
+08:25.080 --> 08:32.080
+Così grandioso abbiamo finito questa sezione in cui abbiamo parlato ampiamente di cloud privati virtuali.
+
+08:32.090 --> 08:38.370
+Ora c'è anche così tanto che non sono in grado di entrare in un corso più breve che si
+
+08:38.370 --> 08:45.960
+concentra solo sull'essenziale, ma spero che questo ti dia una buona panoramica di cosa sia un VPC utilizzato per come funziona e quali
+
+08:46.200 --> 08:53.490
+sono i suoi vari componenti sono in termini di come il flusso di dati è dentro e fuori dai PC e
+
+08:53.640 --> 08:57.440
+dentro e fuori da Amazon Web Services nel suo complesso.
+
+08:57.780 --> 09:06.450
+Quindi con questo torniamo al nostro schema principale e vediamo qui che abbiamo ora conquistato la sezione PC
+
+09:06.450 --> 09:08.010
+del progetto Omega.
+
+09:08.070 --> 09:15.590
+E ora inizieremo a tuffarci in servizi AWOS specifici a partire da S3.
+
+09:15.750 --> 09:19.710
+Quindi con questo completeremo questa lezione e completeremo questa sezione.
+
+09:19.800 --> 09:20.910
+Grazie per aver guardato.
+
+09:20.910 --> 09:21.750
+Ora puoi andare avanti.

@@ -1,0 +1,361 @@
+WEBVTT
+
+00:00.520 --> 00:01.040
+Ciao.
+
+00:01.100 --> 00:07.710
+E in questa lezione continueremo a costruire su basi VPC questa volta concentrandoci sulle subnet.
+
+00:07.710 --> 00:11.990
+Ora so che è da molto tempo che sono sicuro che potresti aver guardato qualcosa che è nelle
+
+00:11.990 --> 00:16.490
+lezioni precedenti e sul diagramma principale e chiedermi cosa diavolo sta succedendo con quelle e perché abbiamo aspettato così tanto
+
+00:16.490 --> 00:17.680
+per arrivare a loro .
+
+00:17.840 --> 00:23.330
+Bene in questa lezione parleremo in modo specifico delle definizioni di un
+
+00:23.330 --> 00:31.830
+sottoinsieme della funzione di sottoreti che comprendono le subnet pubbliche e private e come creare subnet Pubblico o Privato
+
+00:31.940 --> 00:37.880
+Iniziamo con alcune definizioni, quindi la definizione semplificata sarebbe improvvisa la sintassi per
+
+00:37.880 --> 00:41.640
+sottorete è una sottosezione di una rete.
+
+00:41.650 --> 00:48.530
+Quindi in questo senso generalmente un sobborgo che include tutti i computer in una posizione specifica.
+
+00:48.830 --> 00:56.420
+Quindi, tornando all'analogia della rete domestica che abbiamo utilizzato nella lezione di base VPC, voglio che tu pensi che
+
+00:56.420 --> 01:04.190
+il tuo Internet Service Provider sia una rete e che la tua rete domestica sia considerata un sottoinsieme della
+
+01:04.280 --> 01:07.610
+tua rete di fornitori di servizi Internet.
+
+01:07.610 --> 01:14.930
+Quindi il tuo provider di servizi Internet ti può pensare come una grande rete che attraversa la tua città o
+
+01:15.320 --> 01:23.120
+la tua città e la tua casa è una sottorete in quanto è la sua piccola rete all'interno di una rete più grande.
+
+01:23.120 --> 01:27.980
+Ora tecnicamente non è una grande analogia, ma solo concettualmente è così che voglio che tu
+
+01:27.980 --> 01:28.650
+ci pensi.
+
+01:28.850 --> 01:33.590
+E avrà più senso in un minuto in cui passerò alle prossime diapositive ma in
+
+01:33.590 --> 01:40.430
+termini di una definizione effettiva da AWOS quando crei un BPC, il che significa che il PC copre tutte le zone di
+
+01:40.430 --> 01:41.720
+disponibilità in una regione.
+
+01:41.720 --> 01:50.060
+Dopo aver creato un VPC, è possibile aggiungere una o più sottoreti in ciascuna zona di disponibilità ciascuna subnet deve risiedere interamente
+
+01:50.060 --> 01:55.090
+all'interno di una zona di disponibilità e non può estendersi a zone.
+
+01:55.490 --> 02:03.910
+Quindi, ancora una volta voglio sottolineare che il tuo VPC predefinito ha già un sottotitolo che è stato creato al suo interno in modo che possiamo
+
+02:03.910 --> 02:08.910
+vederlo cliccando su sottoreti o 7 che è qui nella regione del nord della Virginia.
+
+02:08.950 --> 02:16.120
+Il VPC verrà pre-popolato con quattro sottoreti perché ci sono quattro zone di disponibilità nella
+
+02:16.210 --> 02:19.080
+regione del nord della Virginia.
+
+02:19.270 --> 02:25.700
+Quindi se guardiamo all'improvviso che è qui possiamo vedere le zone di disponibilità in cui si trovano.
+
+02:25.700 --> 02:32.900
+Quindi selezionerò questo per nome e attualmente per ognuno di questi sette è che abbiamo improvvisamente che nell'Est degli Stati Uniti ci si
+
+02:32.900 --> 02:38.600
+trova a est, uno a est, uno a est e uno ad est a uno, a ovest.
+
+02:38.600 --> 02:41.910
+Quindi sono ciascuno all'interno di una zona di disponibilità separata.
+
+02:42.140 --> 02:48.800
+In questo modo possiamo fornire risorse in queste diverse sottoreti in modo che si
+
+02:48.800 --> 02:55.510
+trovino in zone di disponibilità diverse che creano disponibilità e ridondanza di tolleranza agli errori.
+
+02:55.520 --> 03:02.570
+Quindi, di nuovo guardando il nostro diagramma VPC, ecco un sottotitolo pubblico non un pubblico e altri sub pubblici che un privato
+
+03:02.570 --> 03:04.910
+qualcosa che e poi un'altra sottorete privata.
+
+03:05.210 --> 03:11.860
+Quindi ora ti starai chiedendo qual è la differenza tra una sottorete pubblica e una privata.
+
+03:12.630 --> 03:20.400
+Bene, la differenza principale tra i due è che le subnet pubbliche hanno una rotta verso Internet in
+
+03:20.730 --> 03:25.140
+cui le sottoreti private non hanno una rotta verso Internet.
+
+03:25.200 --> 03:28.530
+Qui ho tirato fuori una sottorete pubblica e qui una sottorete privata.
+
+03:28.530 --> 03:32.790
+Quindi se guardi qui ho appena preso questa parte qui e questa parte qui e solo
+
+03:32.790 --> 03:35.730
+una specie di mossa che appare sostituendola con quella del diagramma.
+
+03:35.910 --> 03:41.490
+E per una sottorete pubblica avrà un percorso.
+
+03:41.660 --> 03:46.210
+Sarà connesso a una tabella del router e la tabella del router avrà un gateway Internet
+
+03:46.210 --> 03:46.810
+collegato.
+
+03:46.840 --> 03:53.230
+Ciò consentirà alle informazioni e ai dati di fluttuare dentro e fuori dalla sottorete da e verso Internet
+
+03:53.800 --> 04:00.750
+un'impostazione privata che deve anche avere una tabella di router associata o avere il contrario attorno a un sottoinsieme
+
+04:00.760 --> 04:02.940
+associato a una tabella rotonda.
+
+04:03.220 --> 04:09.490
+Ma la tavola rotonda non può avere un gateway internet collegato.
+
+04:09.490 --> 04:17.590
+In questo modo, le informazioni passano da una sottorete a un'altra nel PC, ma non consentono al traffico di
+
+04:17.590 --> 04:23.380
+andare da e verso questa sottorete attraverso il gateway Internet e verso Internet.
+
+04:23.620 --> 04:30.180
+Quindi, in che modo funziona davvero praticamente nel console AWOS.
+
+04:30.270 --> 04:33.620
+Una seconda tabella di routing senza gateway Internet.
+
+04:33.780 --> 04:40.240
+Quindi facciamolo prima.
+
+04:40.320 --> 04:45.260
+Così ho aperto la sezione della tabella del router del VPC per creare una
+
+04:58.840 --> 05:05.160
+nuova tavola rotonda e quello che voglio fare ora è associare una sottorete con questa particolare tabella di router.
+
+05:05.260 --> 05:11.080
+Ma prima voglio assicurarmi di aver etichettato le cose correttamente, quindi so cosa è pubblico e cosa è
+
+05:11.080 --> 05:15.150
+privato o cosa voglio essere pubblico e cosa voglio essere privato.
+
+05:15.280 --> 05:20.520
+Quindi torniamo alle nostre sottoreti e in questo momento non hanno nomi.
+
+05:20.650 --> 05:26.110
+E quando crei una rete improvvisa devi dare l'improvviso che un nome, ma puoi anche entrare in qualsiasi
+
+05:26.110 --> 05:28.980
+momento per quelli predefiniti e dare loro un nome.
+
+05:29.050 --> 05:33.730
+Chiamiamo questo e abbineremo il nome e
+
+05:38.030 --> 05:47.940
+il contratto che abbiamo usato nel diagramma che chiameremo questa sottorete pubblica con un solo clic.
+
+05:53.240 --> 05:56.730
+Salva chiameremo questa sottorete pubblica
+
+06:01.520 --> 06:06.230
+per accedere alla sottorete privata di Cybernet.
+
+06:06.260 --> 06:09.480
+Quindi in pratica quello che ho fatto qui è come tornare al diagramma precedente.
+
+06:09.500 --> 06:16.250
+Ho appena etichettato le mie quattro sottoreti in modo che corrispondano a quello che sta succedendo qui, ma solo perché le
+
+06:16.250 --> 06:20.540
+ho etichettate di nuovo pubbliche e private non le rende pubbliche o private.
+
+06:20.660 --> 06:25.670
+Ciò che li rende pubblici o privati è se hanno una rotta verso Internet o non hanno una
+
+06:25.670 --> 06:26.630
+rotta verso Internet.
+
+06:26.630 --> 06:34.070
+Quindi attualmente tutte e quattro queste sottoreti hanno una rotta verso Internet perché se guardo
+
+06:34.160 --> 06:42.590
+la tabella del percorso per ognuna di esse tutte avranno una tabella router con un gateway internet collegato.
+
+06:42.600 --> 06:46.290
+Quindi sono tutte subnet attualmente pubbliche.
+
+06:46.290 --> 06:52.800
+Quindi per rendere pubblico qualcosa di privato ho bisogno di cambiare la tabella dei percorsi associata ai soggetti
+
+06:52.950 --> 06:58.990
+che voglio che sia privato il tavolo rotondo che non ha un gateway internet collegato a
+
+06:58.990 --> 07:03.600
+quello che ho appena creato non ha un gateway internet collegato .
+
+07:03.790 --> 07:08.260
+Ma ora ho bisogno di associare all'improvviso quello che voglio con questo particolare percorso.
+
+07:08.260 --> 07:14.200
+Quindi, sotto le tavole rotonde vorrei fare clic su associazioni di studenti che
+
+07:14.200 --> 07:21.100
+vorrei fare clic su di esso e quindi selezionerò i due che ho etichettato come privato.
+
+07:21.290 --> 07:26.470
+Quindi ora devo associarmi esplicitamente a questa tabella di rotte.
+
+07:26.600 --> 07:31.730
+E so che dice che 0 è esplicitamente associato a questa tabella del percorso.
+
+07:31.760 --> 07:39.300
+Consentitemi di ricollegare questa tabella di route predefinita per semplicità.
+
+07:39.460 --> 07:47.190
+Ma se guardo la tabella di routing predefinita e di nuovo ritorna a questa opzione principale qui non ho alcun
+
+07:47.190 --> 07:53.460
+improvviso che è esplicitamente assegnato o associato alla tabella di routing predefinita ma perché è il
+
+07:53.460 --> 07:53.960
+principale.
+
+07:53.980 --> 07:59.640
+Se ci sono soggetti che non sono esplicitamente associati a un'altra tabella di rotte, per default
+
+07:59.640 --> 08:01.250
+verrà associato a questo.
+
+08:01.260 --> 08:08.010
+Ma posso entrare qui solo per semplicità e renderlo bello e pulito e associare questi due direttamente o esplicitamente
+
+08:08.100 --> 08:10.720
+con la tabella di instradamento predefinita.
+
+08:11.650 --> 08:19.410
+E una volta terminato il caricamento, quello che avremo è qualcosa che sembra internamente così.
+
+08:19.450 --> 08:24.100
+Quindi abbiamo una subnet pubblica e una subnet pubblica per
+
+08:27.930 --> 08:29.330
+aggiornare qui.
+
+08:30.840 --> 08:37.440
+Quindi pro-pubblico qualcosa che una sottorete pubblica e quella sono associate a questa tabella di rotte qui che è questa
+
+08:37.710 --> 08:42.720
+tabella qui così entrambi sono associati a questa tavola rotonda che ha una rotta verso
+
+08:42.720 --> 08:43.310
+Internet.
+
+08:43.320 --> 08:49.630
+Quindi quelle sono sottoreti pubbliche per gli altri due i Sabbat privati che sono tre e quattro sono
+
+08:52.250 --> 08:57.800
+associati alla tabella di routing a cui non è collegato un gateway Internet che è questa
+
+08:57.800 --> 08:59.200
+tabella di percorso.
+
+08:59.210 --> 09:05.190
+Quindi, in termini di flusso effettivo di dati, se dovessimo dire che esiste già un'istanza Sì
+
+09:05.200 --> 09:14.600
+nei dati personali di Nat, entrerebbero e usciranno dalle sottoreti private utilizzando la tabella di instradamento senza un gateway Internet collegato ed essere ancora
+
+09:14.600 --> 09:19.350
+in grado di comunicare con istanze nel pubblico qualcosa che è.
+
+09:19.430 --> 09:27.270
+Ma non avrebbe più accesso o percorso a questa tabella di routing per uscire su Internet.
+
+09:27.410 --> 09:36.250
+Ma dovrà comunicare con l'altra tabella di rotte per indirizzare il traffico verso la sottorete pubblica.
+
+09:36.250 --> 09:42.310
+Quindi so che questo diventa un po 'confuso ma spero che questo diagramma abbia senso e sia solo
+
+09:42.310 --> 09:47.080
+molto fiducioso nel fatto che qualcosa che è associato a una tabella di rotte
+
+09:47.080 --> 09:53.300
+che non ha un gateway internet collegato saranno sottoreti private che significano quel traffico da e verso Internet non
+
+09:53.300 --> 09:59.980
+può verificarsi e alcune reti associate a una tabella di routing con un gateway Internet avranno traffico da e verso
+
+09:59.980 --> 10:00.430
+Internet.
+
+10:00.580 --> 10:06.820
+E indipendentemente dall'interno, saranno ancora in grado di comunicare tra di loro
+
+10:06.820 --> 10:13.110
+indipendentemente dal fatto che siano pubblici o privati purché siano all'interno dello stesso BPC.
+
+10:13.380 --> 10:19.980
+Quindi OK, so che è stato molto, ma diciamo tutto e parliamo in modo specifico di alcune delle regole
+
+10:19.980 --> 10:21.290
+che dobbiamo conoscere.
+
+10:21.300 --> 10:27.330
+Quindi le sottoreti devono essere associate a una tabella router ea qualcosa di pubblico che ha una rotta verso Internet.
+
+10:27.330 --> 10:31.650
+So che lo ripetiamo molto ma questo è qualcosa che devi conoscere e
+
+10:31.650 --> 10:38.880
+sentirti a tuo agio con la comprensione di una sottorete privata che non ha una rotta verso Internet e un improvviso che
+
+10:38.970 --> 10:41.640
+si trova in una specifica zona di disponibilità.
+
+10:41.640 --> 10:48.500
+Quindi, se guardiamo indietro al nostro diagramma, qui abbiamo zone di disponibilità all'improvviso che devono trovarsi solo in una zona
+
+10:48.500 --> 10:55.220
+di disponibilità in cui un VPC può estendersi su più zone di disponibilità, di cui otterremo di più in
+
+10:55.430 --> 10:56.370
+un secondo.
+
+10:56.570 --> 10:59.980
+Quindi con questo concluderò questa lezione.
+
+11:00.140 --> 11:01.250
+Grazie per aver guardato.
+
+11:01.250 --> 11:02.060
+Ora puoi andare avanti.

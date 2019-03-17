@@ -1,0 +1,133 @@
+WEBVTT
+
+00:00.420 --> 00:08.160
+Salve e bentornati alla Lezione 4 di I am here parleremo di I am group e policy specificatamente concentrati
+
+00:08.520 --> 00:14.430
+su come creare utilizzo e gestione I am group, comprensione e politiche e come
+
+00:14.430 --> 00:20.040
+si applicano ai gruppi nella lezione precedente abbiamo parlato di usi e politiche.
+
+00:20.040 --> 00:27.780
+Ora parleremo di gruppi e politiche e di nuovo sotto l'uso comune di I Am è di gestire le politiche e i
+
+00:27.780 --> 00:29.690
+ruoli dei gruppi di utenti.
+
+00:29.760 --> 00:34.650
+E questo qui parla del raggruppamento di gruppi e politiche.
+
+00:34.790 --> 00:43.420
+Quindi, da dove abbiamo lasciato l'ultima lezione, Kunaal Matt e Donna hanno avuto accesso individualmente per usare S-3.
+
+00:43.670 --> 00:49.550
+Quindi voglio fare una lista pulita qui e voglio mostrarti prima come rimuovere le politiche
+
+00:49.550 --> 00:56.200
+in cui puoi andare negli utenti, fare clic sull'utente stesso e quindi fare clic su politica separata.
+
+00:56.550 --> 00:58.790
+Quindi, se lo faccio ora per
+
+01:04.580 --> 01:10.210
+te Matt e Donna, ora abbiamo una lavagna pulita dove nessuno di questi ha attualmente accesso all'S-3.
+
+01:10.220 --> 01:14.620
+Quindi quello che voglio fare ora è creare un gruppo chiamato profondità.
+
+01:14.930 --> 01:23.450
+Quindi per quello quando fa clic su gruppi crea un nuovo gruppo e chiameremo questo dev.
+
+01:23.640 --> 01:29.470
+A questo punto non ho intenzione di allegare una politica al gruppo, ma ho intenzione di finire e creare quel
+
+01:29.470 --> 01:29.770
+gruppo.
+
+01:29.770 --> 01:32.750
+Quindi attualmente abbiamo un gruppo con zero utenti.
+
+01:32.890 --> 01:36.240
+Quello che vogliamo fare ora è spostarci.
+
+01:36.530 --> 01:40.740
+Q Ora Matt e Donna nel gruppo dev.
+
+01:40.780 --> 01:45.700
+Quindi per quello faremo clic sul gruppo Dev e quindi altri utenti qui faremo clic su Aggiungi utenti al
+
+01:45.700 --> 01:47.360
+gruppo e su cui fare clic.
+
+01:47.350 --> 01:49.300
+Donna Kunaal e Matt ora
+
+01:52.020 --> 02:01.290
+Kunaal Matt e Donna sono tutti nel gruppo dev, ma se qualcuno di loro fosse ora di provare ad accedere all'S-3,
+
+02:01.500 --> 02:03.110
+gli verrebbero negati.
+
+02:03.180 --> 02:11.280
+Dal momento che né il gruppo né nessuno di loro hanno individualmente la politica di accesso S-3 a loro
+
+02:11.280 --> 02:17.270
+assegnata, una delle cose carine e convenienti dei gruppi è quella di dare.
+
+02:17.290 --> 02:24.460
+Q. Ora Matt e donet accede a S-3 invece di dover assegnare politiche individuali.
+
+02:24.590 --> 02:30.200
+Ora Matt e Donna abbiamo solo bisogno di allegare la politica al gruppo stesso.
+
+02:30.310 --> 02:39.260
+Quindi qui sotto i permessi posso allegare una politica che faremo di nuovo la politica S-3.
+
+02:39.420 --> 02:47.010
+E collego la politica al gruppo non ai singoli utenti, ma poiché i singoli utenti fanno parte
+
+02:47.070 --> 02:48.450
+del gruppo.
+
+02:48.630 --> 02:52.020
+Tutti e tre hanno ora accesso a S-3.
+
+02:52.350 --> 02:58.220
+Quindi questo è un ottimo modo per semplificare il processo di concessione o limitazione dell'accesso.
+
+02:58.410 --> 03:06.000
+Quindi, ad esempio, cosa succederebbe se tornassi dagli utenti del gruppo e rimuovo Matt
+
+03:06.000 --> 03:07.580
+dal gruppo.
+
+03:07.710 --> 03:17.500
+Quello che succederebbe è che Matt perderebbe l'accesso a 3 ora e Donna avrà ancora accesso a noi attraverso la politica assegnata
+
+03:17.560 --> 03:20.070
+al gruppo a cui appartengono.
+
+03:20.110 --> 03:26.060
+Ma ora dal momento che Matt non è più nel gruppo come puoi vedere qui è solo ora Donna.
+
+03:26.080 --> 03:29.080
+Ora non ha più accesso a noi tre.
+
+03:29.390 --> 03:37.910
+Quindi per ripristinare l'accesso tutto ciò che dobbiamo fare è aggiungerlo di nuovo al gruppo.
+
+03:38.110 --> 03:45.010
+E proprio così Matt ha di nuovo accesso a S-3 e tutti i nostri sviluppatori hanno accesso a S-3.
+
+03:45.010 --> 03:50.060
+Questa è una rapida panoramica di gruppi e politiche e di come e perché vengono utilizzati.
+
+03:50.080 --> 03:52.160
+E con questo completeremo questa lezione.
+
+03:52.270 --> 03:53.410
+Grazie per aver guardato.
+
+03:53.410 --> 03:54.250
+Ora puoi andare avanti.

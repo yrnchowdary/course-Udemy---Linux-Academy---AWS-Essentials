@@ -1,0 +1,574 @@
+WEBVTT
+
+00:00.330 --> 00:05.630
+Salve e bentornati in questa lezione, ci concentreremo in particolare sul provisioning di
+
+00:05.910 --> 00:13.340
+un database già in contatto con argomenti che includono sottoreti private e tunnel S-sh su come avviare un
+
+00:13.360 --> 00:15.300
+database sequel già esistente.
+
+00:15.360 --> 00:18.930
+Come ti connetti a un database già uguale.
+
+00:18.960 --> 00:24.420
+E poi, infine, di nuovo un progetto di verifica dei requisiti Omega e questa sarà la lezione finale per
+
+00:24.420 --> 00:25.150
+questa sezione.
+
+00:26.660 --> 00:31.180
+Quindi, per iniziare, concettualmente intendiamo cosa faremo qui.
+
+00:31.310 --> 00:39.410
+Diciamo che abbiamo il nostro team di sviluppo e una volta creato il database RDX, sarà necessario
+
+00:39.410 --> 00:45.690
+poterlo accedere e sarà necessario farlo dai loro computer di lavoro in ufficio.
+
+00:45.690 --> 00:51.080
+Quindi saranno computer o avranno bisogno di accedere al database RLDS da computer che
+
+00:51.080 --> 00:55.350
+sono al di fuori del VPC, quindi arriveranno attraverso Internet.
+
+00:55.520 --> 00:59.630
+Ma una delle cose interessanti di cui abbiamo parlato a questo punto
+
+00:59.630 --> 01:05.210
+è che avvieremo un'istanza Sì già in un privato qualcosa che ora un sottoinsieme privato fino
+
+01:05.210 --> 01:12.230
+a questo punto abbiamo sempre affermato non ha un percorso verso Internet, il che significa che le persone che utilizzano i
+
+01:12.590 --> 01:18.270
+computer su Internet non possono accedere alle istanze di un sottotitolo privato e viceversa e un sottoinsieme
+
+01:18.290 --> 01:21.560
+privato non può accedere alle persone su Internet.
+
+01:21.590 --> 01:25.130
+Quindi c'è un modo per ovviare a questo.
+
+01:25.130 --> 01:33.490
+Per avere un modo speciale di entrare in una Subang privata che è chiamata S-sh tunneling.
+
+01:33.500 --> 01:41.590
+Quindi, quello che faremo qui è creare un tunnel attraverso la nostra sottorete
+
+01:41.680 --> 01:48.810
+pubblica e attraverso un'istanza facile all'istanza sì in una sottorete privata.
+
+01:48.850 --> 01:53.950
+E la ragione per cui possiamo farlo è che ci collegheremo pubblicamente alla nostra semplice
+
+01:53.950 --> 01:56.950
+istanza con quella che abbiamo creato nell'ultima sezione.
+
+01:57.130 --> 02:04.930
+Ma poi, una volta connesso a Easy to instance, ci collegheremo internamente attraverso l'istanza facile da istanza per essere
+
+02:04.930 --> 02:11.410
+già istanza Sì e puoi farlo perché se ti ricordi indipendentemente dal fatto che una
+
+02:11.410 --> 02:19.450
+tabella router abbia o meno un gateway internet associato internamente tutte le istanze possono comunicare e comunicare tra loro indipendentemente
+
+02:19.510 --> 02:25.020
+dal fatto che ci sia o meno una sottorete pubblica o privata.
+
+02:25.030 --> 02:32.410
+Quindi stiamo usando E. C per istanza come percorso per raggiungere un'istanza in una sottorete privata.
+
+02:32.410 --> 02:34.900
+E questo si chiama tunneling S-sh.
+
+02:35.850 --> 02:43.240
+OK, passiamo ora alla configurazione e al lancio del nostro già sequel database Yes.
+
+02:43.320 --> 02:49.920
+La prima cosa che dobbiamo fare in realtà è creare un gruppo di sottoreti, quindi dobbiamo identificare le
+
+02:49.920 --> 02:56.220
+nostre due sottoreti private e isolarle in un gruppo in cui ci sarà già un provisioning.
+
+02:56.600 --> 03:05.420
+Quindi il mio clic sui gruppi subnet qui e creare un subnet group per darci un nome o chiamarlo
+
+03:06.670 --> 03:17.250
+descrizione del sottogruppo essenziale o semplicemente copiare e incollare VPC abbiamo un solo BPC quindi ero come quelli per le zone di disponibilità.
+
+03:17.250 --> 03:22.320
+Ora ho bisogno di selezionare le due zone di disponibilità in cui si trovano le sottoreti private.
+
+03:22.320 --> 03:27.420
+Quindi in realtà non sono sicuro di non ricordare esattamente quale sia e quindi possiamo semplicemente aprirci
+
+03:27.420 --> 03:28.440
+in un'altra scheda.
+
+03:28.440 --> 03:36.560
+La sezione VPC e andare a dare un'occhiata e verificare quali zone di disponibilità sono per sottoreti private sono in SA
+
+03:36.830 --> 03:38.760
+fare clic su sottoreti.
+
+03:39.020 --> 03:42.230
+Sarò solo ordinare qui come una sottorete privata per una sottorete privata.
+
+03:42.260 --> 03:49.610
+Tre Quelli sono i due sottoinsiemi che vogliamo e quelli sono nelle zone di disponibilità una D ed una
+
+03:49.610 --> 03:56.840
+e quindi posso cliccare su una selezione di quelle che aggiungono quella al gruppo e quindi selezionarne una.
+
+03:57.040 --> 03:59.640
+Ed è come quella sottorete e aggiungerla al gruppo.
+
+03:59.660 --> 04:00.190
+OK.
+
+04:00.240 --> 04:08.170
+Perfect click Crea ora che abbiamo creato il nostro gruppo Sublette possiamo tornare alle istanze e lanciare il
+
+04:08.200 --> 04:17.180
+nostro database invece di selezionare il mio sequel e se vogliamo usare Free Teer che facciamo in questo caso devi
+
+04:17.180 --> 04:20.700
+selezionare il def test my siecle opzione.
+
+04:20.750 --> 04:23.160
+Qualcos'altro per la produzione.
+
+04:23.170 --> 04:25.370
+Ti verrà addebitato per.
+
+04:25.400 --> 04:30.920
+OK quindi ora una cosa carina che offrono qui è la possibilità di fare clic su questo
+
+04:30.920 --> 04:35.840
+interruttore qui e limiterà solo queste opzioni a quelle disponibili per il livello RTX gratuito.
+
+04:35.870 --> 04:41.570
+Quindi ha già pre-compilato questa parte con cose che possiamo usare senza essere addebitate.
+
+04:41.570 --> 04:47.270
+Abbiamo tuttavia un'opzione per la classe di istanza e la classe di istanza è molto simile
+
+04:47.270 --> 04:54.110
+alla classe di istanza facile e che si sta selezionando il CPQ e la configurazione hardware nella RAM per l'istanza.
+
+04:54.110 --> 04:57.850
+In questo caso è un'istanza di database, quindi selezionerò qui.
+
+04:59.110 --> 05:03.100
+Storz SSD di tipo generale che va bene, la memoria allocata va bene.
+
+05:03.100 --> 05:10.300
+Devo quindi fornire al database un identificatore di istanza un nome utente e una password, quindi chiamerò questo un
+
+05:10.330 --> 05:15.470
+database centrale o fornirò il nome utente di admin e la password molto
+
+05:19.960 --> 05:26.230
+importante che ricordi un nome utente e una password per l'istanza del tuo database perché questo
+
+05:26.350 --> 05:29.670
+è quello che userete per accedere ad esso.
+
+05:30.950 --> 05:37.600
+Quindi i prossimi passi per VPC Questo è il VPC che stiamo usando E 'l'unico che è selezionato per alcuni in quel
+
+05:37.600 --> 05:38.090
+gruppo.
+
+05:38.090 --> 05:44.300
+Assicurati di selezionare il gruppo di sottogruppi che abbiamo appena creato per essere accessibili pubblicamente, vogliamo che questo sia impostato
+
+05:44.300 --> 05:45.200
+su No.
+
+05:45.200 --> 05:51.290
+Perché ancora una volta se dovessimo mettere pubblicamente accessibile su questo che gli darebbe un indirizzo IP pubblico
+
+05:51.290 --> 05:56.720
+e non vogliamo che questo abbia un indirizzo IP pubblico, stiamo solo comunicando internamente con questa
+
+05:56.720 --> 06:02.540
+particolare istanza Sì già per la zona di disponibilità puoi selezionare nessuna preferenza perché sceglierà una zona
+
+06:02.540 --> 06:07.510
+di disponibilità in base alle sottoreti che abbiamo nel nostro gruppo di sottorete.
+
+06:07.790 --> 06:14.840
+E poi per i gruppi di sicurezza VPC una delle cose che devi fare molta attenzione qui è che
+
+06:14.840 --> 06:18.770
+già Sì comunica tramite la porta 3 3 0 6.
+
+06:18.800 --> 06:24.440
+Ciò significa che un gruppo di sicurezza che tu assegni a questa istanza già Sì deve
+
+06:24.440 --> 06:25.940
+avere quella porta aperta.
+
+06:25.970 --> 06:31.820
+Quindi, se faccio semplicemente clic su Crea un nuovo gruppo di sicurezza qui creerò un nuovo gruppo di
+
+06:31.910 --> 06:36.020
+sicurezza per me con 3 3 0 6 come opzione di autorizzazione.
+
+06:36.020 --> 06:41.630
+Quindi, dopo avrò dato un nome al database, userò lo stesso nome che ho fatto prima per l'identificatore che era
+
+06:41.630 --> 06:43.760
+il database degli elementi essenziali e poi
+
+06:46.530 --> 06:51.120
+guardando qui di seguito lasceremo il resto di queste opzioni come predefinite a Naledge, che ha
+
+06:51.120 --> 06:52.180
+lanciato il database
+
+06:56.240 --> 06:58.460
+e farà clic sulle istanze del database.
+
+06:58.460 --> 07:03.440
+Ora questo sta creando e ci vorrà un po 'di tempo mentre questo può
+
+07:03.440 --> 07:09.680
+richiedere da 5 a 10 minuti o più a seconda di ciò che è stato fornito, quindi interromperò
+
+07:09.680 --> 07:13.840
+la registrazione in questo momento e tornerò quando è completo OK.
+
+07:13.860 --> 07:19.820
+Sono tornato e come vedi qui sono già Sì, il mio semplice database è ora disponibile.
+
+07:19.980 --> 07:24.690
+Quindi, facciamo clic su di esso e dare un'occhiata ad alcune delle informazioni che ci fornisce.
+
+07:24.690 --> 07:30.180
+Quindi, prima facciamo clic qui su questa scheda e questo è dove troverai una grande quantità
+
+07:30.480 --> 07:37.980
+di informazioni per il tuo database incluse molte delle opzioni che abbiamo scelto quando stavamo lanciando l'istanza stessa, una delle cose che
+
+07:38.330 --> 07:43.470
+vuoi sapere qui sotto ci sono l'endpoint e la porta perché avremo bisogno di
+
+07:43.470 --> 07:46.620
+quelli per collegarci a questo in un secondo.
+
+07:46.620 --> 07:52.530
+Inoltre, una delle cose che devi sapere sull'utilizzo delle istanze di Yes già
+
+07:52.530 --> 08:02.740
+esistenti è che non ci sono interfacce utente nella console di AWOS, devi utilizzare software di terze parti per accedere e utilizzare effettivamente i database.
+
+08:02.760 --> 08:04.370
+Quindi ti mostrerò come farlo.
+
+08:04.380 --> 08:11.550
+Ora, mentre ci spostiamo nella prossima diapositiva di questa sezione, interromperò di nuovo
+
+08:11.550 --> 08:16.800
+il video perché inserirò un'altra applicazione sul nostro schermo.
+
+08:16.850 --> 08:22.580
+OK quindi sono tornato e quello che ho fatto qui è ovviamente qui ho il nostro documento di
+
+08:22.580 --> 08:29.330
+guida interattiva del progetto Omega sul lato sinistro qui questa è ancora la console AWOS quassù e userò questo tipo di
+
+08:29.330 --> 08:34.790
+jump in e afferrare alcune informazioni se necessario ma questo qui sotto è il mio sequel workbench
+
+08:34.790 --> 08:37.430
+che ho scaricato e installato sul mio computer.
+
+08:37.520 --> 08:42.330
+E questo è ciò che è necessario per accedere già sì.
+
+08:42.380 --> 08:46.510
+I miei database sequel in particolare il tipo che abbiamo lanciato ora.
+
+08:46.530 --> 08:52.880
+Se decidi di entrare e lanciare un altro database in app già esistenti, allora potrebbe essere necessario
+
+08:52.880 --> 08:58.660
+un diverso software e le istruzioni saranno in ciascuna di queste sezioni in una W-S.
+
+08:58.670 --> 09:01.310
+Se decidi di farlo da solo.
+
+09:01.790 --> 09:07.610
+Ma per questo esempio stiamo usando il miscibile già come database e ciò richiede nel mio sequel
+
+09:07.640 --> 09:12.110
+workbench o almeno quello è l'opzione più popolare da usare per accedere.
+
+09:12.110 --> 09:19.080
+Quindi apro il mio sequel workbench e ho bisogno di creare una nuova connessione nel mio sequel workbench, quindi
+
+09:19.080 --> 09:21.920
+cliccherò qui per aprire una nuova connessione.
+
+09:23.440 --> 09:24.900
+E ho la
+
+09:28.770 --> 09:34.310
+connessione per nominare così essenziale già Sì, lo chiamerò per il metodo di connessione.
+
+09:34.340 --> 09:38.450
+Vogliamo selezionare lo slash IP standard TCAP su SS H.
+
+09:38.450 --> 09:43.110
+Questo è ciò che ci permetterà di fare il tunnel SS.
+
+09:43.160 --> 09:44.090
+Quindi se
+
+09:46.890 --> 09:55.280
+ricordi che questo è quello che stiamo creando questo tunnel attraverso questo E. C ad esempio.
+
+09:55.630 --> 10:01.490
+Quindi, ora che abbiamo selezionato il nostro metodo di connessione, dobbiamo inserire
+
+10:01.510 --> 10:08.990
+l'hostname SSH hostname e questo sarà l'indirizzo IP pubblico di e che useremo per effettuare il tunneling.
+
+10:09.220 --> 10:14.470
+Quindi ho dovuto tornare alla console AWOS. Ho la mia scheda Ardi qui.
+
+10:14.480 --> 10:20.920
+Questa è la scheda VPC, ma ho intenzione di uscire da questo e andare in due e ho intenzione di
+
+10:20.950 --> 10:26.980
+prendere l'indirizzo IP pubblico della mia esecuzione facile per esempio questo è lì andiamo a rinfrescare la pagina.
+
+10:27.070 --> 10:30.380
+Ecco un'istanza in esecuzione e qui è il nostro indirizzo IP pubblico.
+
+10:30.380 --> 10:32.430
+Prenderò quella copia.
+
+10:32.800 --> 10:34.160
+Ridurrò questo backup.
+
+10:36.010 --> 10:37.810
+E lo inserirò qui.
+
+10:39.720 --> 10:41.480
+Per utente S-sh.
+
+10:41.490 --> 10:45.500
+Ora questo non lo abbiamo ancora fatto, ma ho intenzione di saltare e farlo ora.
+
+10:45.510 --> 10:50.630
+Tornando indietro qui alla console AWOS.
+
+10:50.770 --> 10:56.530
+Quindi torniamo all'istanza ora quando andate a connettervi a un'istanza e ricordate
+
+10:56.530 --> 11:03.620
+nella precedente sezione su e 2 abbiamo usato questo comando per accedere a S-sh nelle due istanze.
+
+11:03.650 --> 11:08.260
+Bene, se si guarda questo comando da vicino questo è in realtà il nome utente qui.
+
+11:08.260 --> 11:10.500
+Questo è il nome utente predefinito.
+
+11:10.510 --> 11:12.090
+Quindi questo è quello che
+
+11:16.360 --> 11:18.100
+ho bisogno di afferrare, lo metto qui.
+
+11:18.130 --> 11:24.190
+Non esiste una password per l'istanza facile, ma è necessario fornire il file chiave SS.
+
+11:24.190 --> 11:31.560
+Questo era il file chiave della penna dot che dovevamo usare il comando chmod quando si collegava a E. S. ad esempio.
+
+11:31.570 --> 11:38.020
+Lo troverò sul mio computer che è proprio qui nei miei download e clicco apri e ok o
+
+11:38.020 --> 11:43.210
+no OK, faccio semplicemente clic su open ed eccolo il prossimo sequel hostname.
+
+11:43.210 --> 11:45.410
+Questo è ora dove dobbiamo tornare qui.
+
+11:45.940 --> 11:47.430
+Ritorno al lato RDX.
+
+11:47.440 --> 11:52.610
+Ed è qui che prenderò lo scrittore e ne parlerò qui.
+
+11:52.660 --> 12:02.140
+Copia questo negli appunti e incollalo qui nel nome host per la mia porta del server sequel.
+
+12:02.140 --> 12:07.630
+Lo lasceremo come 3 3 0 6 per il nome utente e ho bisogno di inserire il nome utente che ho usato quando
+
+12:07.630 --> 12:12.460
+ho creato l'ultima istanza che era admin e quindi per la password ho intenzione di fare clic sul negozio nella
+
+12:12.460 --> 12:16.850
+catena di chiavi e questo andando a essere la password che ho creato quando ho creato l'istanza RTX
+
+12:20.630 --> 12:21.670
+farà clic su OK.
+
+12:21.840 --> 12:29.240
+E ora che abbiamo tutte le nostre informazioni impostate quello che voglio fare è testare la connessione OK e daremo questo
+
+12:29.270 --> 12:32.050
+un secondo mentre sta testando questo libro di
+
+12:36.090 --> 12:36.680
+connessione.
+
+12:36.810 --> 12:42.570
+Oh OK, quindi abbiamo un po 'di problemi qui abbiamo avuto un errore dicendo che non è riuscito a connettersi.
+
+12:42.570 --> 12:50.370
+Quindi, ogni volta che vediamo un problema di connessione non riuscita, la prima cosa che vogliamo fare è rivalutare o
+
+12:50.370 --> 12:57.570
+dare un'occhiata ai nostri gruppi di sicurezza. Lista di controllo dell'accesso alla rete. Roundtables e gateway internet.
+
+12:57.600 --> 13:04.380
+Assicurati che tutti funzionino correttamente o che i percorsi e le porte corretti siano aperti affinché i nostri
+
+13:04.380 --> 13:06.760
+dati possano fluire e comunicare correttamente.
+
+13:07.020 --> 13:09.090
+Quindi torniamo qui e diamo un'occhiata.
+
+13:09.090 --> 13:11.180
+Inizieremo con i gruppi di sicurezza.
+
+13:11.940 --> 13:16.230
+Torna di nuovo a E. C anche noi e diamo un'occhiata ai gruppi di sicurezza.
+
+13:16.410 --> 13:22.710
+Quindi, osservando questo, diamo prima un'occhiata al gruppo di sicurezza a cui abbiamo associato già l'istanza, che è proprio
+
+13:22.710 --> 13:27.840
+qui in occasione di un doppio controllo che puoi sempre tornare su RLDS e
+
+13:27.840 --> 13:34.260
+puoi guardare e vedere i gruppi di sicurezza qui già avviati Wizard one quindi già lanciato come Wizard one.
+
+13:34.290 --> 13:35.960
+Diamo un'occhiata qui.
+
+13:36.360 --> 13:42.410
+OK così per inbound abbiamo il mio sequel war è il tipo TCAP la porta corretta.
+
+13:42.820 --> 13:44.680
+OK, ecco cosa sta succedendo.
+
+13:45.000 --> 13:55.290
+Quando AWOS ha creato automaticamente questo gruppo di sicurezza per noi, ha limitato i dati di origine solo a
+
+13:55.380 --> 13:57.260
+questo indirizzo IP.
+
+13:57.270 --> 14:04.200
+Ora, dal momento che sto provando ad accedere dal mio personal computer che ha un indirizzo IP diverso da quello, quindi lo
+
+14:04.200 --> 14:07.590
+rifiuta perché l'indirizzo IP di origine non è lo stesso.
+
+14:07.590 --> 14:14.310
+Quindi tutto ciò che dobbiamo fare e questo dovrebbe funzionare è solo per cambiare questo a tutte le fonti.
+
+14:14.520 --> 14:20.840
+Cosa fare clic su Salva OK e torneremo qui e testeremo nuovamente questa connessione per vedere cosa succede.
+
+14:21.720 --> 14:23.330
+Ehi successo.
+
+14:23.340 --> 14:28.030
+Abbiamo reso la nostra connessione sequel così perfetta quindi faremo clic su OK.
+
+14:29.470 --> 14:32.180
+E ora abbiamo una connessione funzionante.
+
+14:33.830 --> 14:34.610
+E qui andiamo.
+
+14:34.610 --> 14:38.950
+E la signora hallyu userà e manipolerà il database RTX.
+
+14:39.380 --> 14:45.950
+Quindi ora tornando indietro qui abbiamo completato i passaggi di base per la connessione a un database già esistente.
+
+14:45.950 --> 14:53.600
+E solo per ricapitolare stiamo usando il tunnelling S-sh Quindi in questo momento questa connessione al database sono io seduto
+
+14:53.600 --> 15:00.350
+al mio computer fuori dal VPC andando su Internet attraverso il gateway internet attraverso la tabella del
+
+15:00.740 --> 15:05.820
+router attraverso gli elenchi di controllo dell'accesso di rete attraverso il gruppo
+
+15:05.920 --> 15:13.220
+di sicurezza in questi due server rispetto al server C-2 sta quindi comunicando attraverso un'altra tavola rotonda nella sottorete
+
+15:13.490 --> 15:19.580
+privata della nostra istanza già Sì e quindi le informazioni stanno tornando allo stesso modo.
+
+15:21.610 --> 15:27.520
+Quindi, prima di completare questa lezione nella sezione, diamo un'occhiata ai nostri requisiti di infrastruttura Omega e per
+
+15:27.550 --> 15:31.570
+questo abbiamo bisogno di un database per archiviare e catalogare i dati.
+
+15:31.570 --> 15:36.740
+Avevamo bisogno di un Ardi attivo come mio database sequel con uno stato di connessione verificato.
+
+15:36.760 --> 15:43.250
+Abbiamo quel database che deve essere in una Subang privata e accessibile tramite tunneling S-sh.
+
+15:43.270 --> 15:44.730
+Lo abbiamo fatto anche noi.
+
+15:44.920 --> 15:50.680
+Quindi, perfetto per essere un pesce, abbiamo soddisfatto tutti i requisiti del Progetto Omega.
+
+15:50.680 --> 15:57.890
+Quindi per ricapitolare in Ada come sezione essenziale 6 abbiamo imparato a conoscere RLDS e Dynamo D-B.
+
+15:58.030 --> 16:01.970
+Abbiamo avuto una buona panoramica delle offerte di base di database AWOS.
+
+16:02.020 --> 16:05.970
+Abbiamo concettualmente parlato di sequel e nessun database sequel.
+
+16:06.010 --> 16:12.430
+Abbiamo esaminato alcune opzioni di valutazione dei database e panoramiche e come effettuare il provisioning e la connessione a
+
+16:12.790 --> 16:16.520
+un database già esistente utilizzando il tunnel s s h.
+
+16:16.530 --> 16:20.700
+Quindi ora torniamo al nostro diagramma principale, stiamo davvero iniziando a riempirlo.
+
+16:20.730 --> 16:24.020
+E poi passeremo a S e S.
+
+16:24.030 --> 16:28.370
+Con ciò concluderò questa lezione e concluderò questa sezione.
+
+16:28.500 --> 16:29.730
+Grazie per aver guardato.
+
+16:29.730 --> 16:30.620
+Ora puoi andare avanti.

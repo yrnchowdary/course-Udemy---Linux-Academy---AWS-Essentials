@@ -1,0 +1,271 @@
+WEBVTT
+
+00:00.330 --> 00:01.920
+Ciao e bentornato.
+
+00:01.950 --> 00:09.600
+Ci stiamo muovendo abbastanza bene qui solo finendo S-3 ed E. C a due dei tre che chiamerei
+
+00:09.600 --> 00:12.580
+servizi AWOS di base.
+
+00:12.780 --> 00:20.880
+Ora attiviamo già Sì e Dynamo D. B e possiamo entrare qui e iniziare a parlare di offerte
+
+00:21.030 --> 00:22.790
+di un database WSS.
+
+00:22.980 --> 00:24.620
+Quindi già sì.
+
+00:24.780 --> 00:30.030
+E la dinamo D-B sarà la sezione 6 di AWOS essentials.
+
+00:30.120 --> 00:37.980
+Nello specifico, parleremo di una panoramica di un database del core WSS che offre una
+
+00:38.010 --> 00:46.020
+revisione concettuale del sequel rispetto a nessun database sequel di provisioning dei prezzi del database e
+
+00:46.350 --> 00:55.660
+connessione al nostro database e una breve introduzione o panoramica del tunneling S-sh. Quindi senza ulteriori indugi saltiamo nei
+
+00:55.660 --> 00:56.630
+database.
+
+00:56.650 --> 01:03.310
+Lezione 1 con le nozioni di base Sì e Dynamo DB in questa lezione e
+
+01:03.310 --> 01:13.740
+parleremo in modo specifico del sequel RDX versus dinamo D-B rispetto al sequel e finiremo con una panoramica dei prezzi di ciascuno nel mondo
+
+01:13.950 --> 01:15.360
+dei database.
+
+01:15.360 --> 01:21.870
+Esistono due categorie principali: database relazionali noti come sequel e database non relazionali noti
+
+01:21.930 --> 01:23.450
+come nessun sequel.
+
+01:23.610 --> 01:32.110
+Amazon offre servizi per entrambi i tipi di database già sì per i database Sequel e Dynamo D-B
+
+01:32.130 --> 01:34.620
+è per nessun database sequel.
+
+01:34.620 --> 01:41.190
+Ora, se guardiamo qui nella console AWOS sotto il database, vedrai già Sì e Dynamo
+
+01:41.310 --> 01:41.990
+D-B,
+
+01:45.710 --> 01:48.290
+sì Sì, clicchiamo qui sopra.
+
+01:51.970 --> 01:58.860
+Già Sì o servizio di database relazionale per elementi essenziali o definizione semplificata già sì è
+
+01:58.860 --> 02:06.070
+un servizio di database sequel che offre una vasta gamma di opzioni di database sequel tra cui scegliere.
+
+02:06.090 --> 02:14.800
+Per esempio ci sono molte diverse opzioni di sequel che includono Amazon Aurora My sequel di Mario D-B postgresql.
+
+02:14.920 --> 02:19.390
+Bene Oracle e Microsoft sequel server.
+
+02:19.620 --> 02:25.740
+Quindi se clicco qui per iniziare possiamo vedere qui posso selezionare tra tutte queste varie opzioni
+
+02:25.770 --> 02:29.760
+o quelli che sono chiamati motori di database o RDX.
+
+02:29.790 --> 02:38.460
+Quindi, facendo clic su uno di questi, posso quindi selezionare varie opzioni per ciascuno in termini di definizione di AWOS. Servizio di
+
+02:38.550 --> 02:45.030
+database relazionale Amazon o Amazon già sì è un servizio Web che semplifica la configurazione e
+
+02:45.030 --> 02:49.020
+il dimensionamento di un database relazionale nel cloud .
+
+02:49.020 --> 02:56.910
+Fornisce un ridimensionamento efficiente in termini di costi, che è un componente chiave di questa capacità ridimensionabile per un database
+
+02:56.910 --> 03:02.570
+relazionale standard del settore e gestisce le attività di amministrazione dei database comuni.
+
+03:02.610 --> 03:08.820
+Quindi, una delle grandi cose sull'utilizzo di RTX sul servizio web di Amazon è che non devi configurare
+
+03:08.820 --> 03:10.470
+tu stesso il server.
+
+03:10.470 --> 03:12.560
+Lo fa per te sul back-end.
+
+03:12.570 --> 03:18.420
+Stavi usando questo come servizio invece di dover configurare il tuo server installare il software da
+
+03:18.420 --> 03:21.510
+solo e gestire il sistema operativo sottostante.
+
+03:23.960 --> 03:33.620
+Per la dinamo D-B la definizione di essentials sarebbe dynamo D-B è un servizio di database sequel che, diversamente dal
+
+03:33.650 --> 03:39.530
+già presente, Dynamo DB non fornisce altre opzioni di software sequel.
+
+03:39.530 --> 03:45.280
+Quindi, già con Yes hai avuto un sacco di diversi motori tra cui puoi scegliere con Dynamo IDB.
+
+03:45.290 --> 03:51.920
+Questa è l'unica opzione del software sequel e sostituisce o è molto simile alla mia.
+
+03:51.980 --> 03:54.570
+DB Cassandra D-B o Oracle.
+
+03:54.590 --> 03:55.650
+Nessun sequel.
+
+03:56.410 --> 04:01.700
+In termini di definizione AWOS, Amazon dynamo IDB è veloce e flessibile.
+
+04:01.750 --> 04:08.140
+Nessun servizio di database sequel per tutte le applicazioni con latenza costante di un singolo millisecondo
+
+04:08.140 --> 04:09.550
+a qualsiasi scala.
+
+04:09.550 --> 04:11.580
+Quindi è estremamente veloce.
+
+04:11.740 --> 04:19.750
+Il suo modello di dati flessibile e le sue prestazioni affidabili lo rendono perfetto per il gioco mobile Adtech IO T e molte altre
+
+04:19.960 --> 04:21.980
+applicazioni ora in termini di
+
+04:24.560 --> 04:30.080
+differenza tra sequel e nessun sequel e quindi ha già in Dynamo DB Ci sono solo alcune
+
+04:30.230 --> 04:32.780
+differenze di base che devi essere consapevole di.
+
+04:32.780 --> 04:37.460
+Ora questo non è un corso di database quindi non ho intenzione di entrare nel nocciolo di ciascuno.
+
+04:37.460 --> 04:42.920
+Ma se stai cercando di capire quale potresti voler usare o questo è
+
+04:42.920 --> 04:50.960
+più per darti una comprensione generale di ciò che è già Sì o sequela le strutture del database memorizza i
+
+04:50.960 --> 04:58.430
+dati relativi nelle tabelle usando colonne e righe in modo molto tradizionale configurazione del database che viene in genere
+
+04:58.430 --> 05:05.080
+utilizzata per dati strutturati come un elenco di contatti in cui come dynamo essere senza sequel.
+
+05:05.250 --> 05:13.190
+I dati relativi a questo negozio in Jasen amano i documenti con valore di nome tipicamente usati per dati
+
+05:13.190 --> 05:16.130
+non strutturati come i documenti di catalogazione.
+
+05:16.160 --> 05:23.640
+Quindi c'è davvero una grande differenza nel modo in cui questi due database memorizzano le loro informazioni.
+
+05:23.720 --> 05:29.810
+E di nuovo nei costrutti di questo corso essenziale di AWOS non entreremo più in dettaglio
+
+05:29.870 --> 05:31.050
+in merito.
+
+05:31.100 --> 05:39.050
+Passando quindi, esaminiamo la panoramica dei prezzi e dei costi per già Sì e Dynamo IDB per l'arte.
+
+05:39.060 --> 05:47.680
+Sì, è disponibile l'uso di livello gratuito, ma è disponibile solo per tutti già come opzioni ad eccezione di Aurora.
+
+05:47.810 --> 05:54.140
+Quindi se vuoi usare RLDS e usare l'opzione di livello gratuito non puoi usare Aurora, devi
+
+05:54.140 --> 05:56.540
+selezionare uno degli altri motori.
+
+05:56.540 --> 05:58.270
+Quindi, come si fa a pagare per l'utilizzo di arte.
+
+05:58.280 --> 06:04.700
+Sì, il prezzo dipende da quello che scegli o se scegli Amazon Aurora o
+
+06:04.700 --> 06:09.660
+il mio sequel Mario D. B e così via dopo la classe di istanza.
+
+06:09.680 --> 06:14.310
+Ora questo è molto simile a quello di cui abbiamo parlato con E. C a tipi di istanza.
+
+06:14.390 --> 06:20.120
+Quindi questo è il tuo processore RAM tutti i vari componenti che compongono l'hardware che sta
+
+06:20.120 --> 06:21.770
+per eseguire il database.
+
+06:21.770 --> 06:29.540
+Anche i termini di acquisto sono molto simili a E. C finché non si dispone della memoria del database dei database su richiesta e su richiesta.
+
+06:29.540 --> 06:33.920
+La quantità di spazio di archiviazione necessario per l'IOPS associato all'archiviazione.
+
+06:33.920 --> 06:37.830
+Anche il trasferimento dei dati dentro e fuori di già Sì.
+
+06:37.880 --> 06:45.050
+E come sempre assicurati di controllare questo link qui prima di fare qualsiasi uso importante di RTX
+
+06:45.050 --> 06:49.670
+per assicurarti di aver capito per cosa ti viene addebitato.
+
+06:49.740 --> 06:57.390
+Passando a Dynamo D-B è disponibile l'uso gratuito del tier e per Dynamo IDB ti viene
+
+06:57.390 --> 07:06.990
+addebitata la capacità di throughput fornita che richiedi dinamo di memorizzazione dei dati indicizzati I flussi di DB riservano capacità e
+
+07:07.290 --> 07:10.700
+trasferimento dati all'interno e all'esterno di Dynamo.
+
+07:10.860 --> 07:17.270
+E ancora, dovresti assicurarti di comprendere appieno la struttura dei costi e dei prezzi andando ai
+
+07:17.270 --> 07:18.560
+prezzi Dynamo D-B.
+
+07:18.690 --> 07:23.480
+Prima di fare qualsiasi sollevamento pesante in Dynamo de.
+
+07:23.590 --> 07:29.560
+Quindi, per riassumere una cosa che voglio davvero che tu togli da questo è che per le offerte di database ce
+
+07:29.590 --> 07:30.510
+ne sono due.
+
+07:30.520 --> 07:32.600
+C'è già Sì.
+
+07:32.710 --> 07:40.630
+E dynamo D-B RDX è per database relazionali o sequel e Dynamo D-B è per database non relazionali
+
+07:40.630 --> 07:42.400
+o non sequel.
+
+07:42.400 --> 07:44.380
+E con questo concluderemo questa lezione.
+
+07:44.440 --> 07:45.520
+Grazie per aver guardato.
+
+07:45.520 --> 07:46.330
+Ora puoi andare avanti.

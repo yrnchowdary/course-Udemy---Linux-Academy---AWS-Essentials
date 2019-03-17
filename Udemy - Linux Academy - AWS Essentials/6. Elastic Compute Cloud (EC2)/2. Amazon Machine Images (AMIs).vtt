@@ -1,0 +1,187 @@
+WEBVTT
+
+00:00.390 --> 00:00.990
+Ciao.
+
+00:01.050 --> 00:08.310
+E in questa lezione parleremo di immagine della macchina di Amazon è anche noto come gli occhi di AM che toccano in modo specifico la
+
+00:08.310 --> 00:13.130
+definizione di una definizione a. m. -I panoramica.
+
+00:13.280 --> 00:17.550
+Sono componenti e a. m. -I categorie.
+
+00:21.130 --> 00:30.660
+Quindi cosa è un m. -I una definizione semplificata è un pacchetto preconfigurato richiesto per avviare un E C su istanza.
+
+00:30.670 --> 00:38.770
+Quindi il pacchetto preconfigurato richiesto per avviare un server virtuale nel cloud Amazon, incluso un sistema
+
+00:38.770 --> 00:39.650
+operativo.
+
+00:39.790 --> 00:49.480
+Soprattutto i pacchetti software e le altre impostazioni richieste per la definizione AWOS di un'immagine della macchina Amazon
+
+00:49.570 --> 00:56.680
+forniscono le informazioni necessarie per avviare un'istanza che è un server virtuale nel
+
+00:57.070 --> 01:04.960
+cloud specificato e a. m. -Io quando lanci un'istanza e puoi lanciare il maggior numero di istanze da un
+
+01:04.990 --> 01:06.180
+Am I di cui hai bisogno.
+
+01:06.400 --> 01:12.220
+Puoi anche avviare istanze da tutti i diversi alleati di cui hai bisogno.
+
+01:12.220 --> 01:19.660
+Quindi la cosa importante qui da capire è che a. m. -Sono un componente richiesto di un'istanza EASY TO
+
+01:20.050 --> 01:25.940
+ed è il pacchetto software di base che si installa nell'istanza principalmente il suo sistema operativo e si può avviare il
+
+01:26.290 --> 01:35.240
+maggior numero di istanze facili a piacere dallo stesso es. m. -IO.
+
+01:35.270 --> 01:41.540
+Quindi, per capire concettualmente Mei Diamo un'occhiata ai suoi componenti e ha tre componenti principali che è
+
+01:41.540 --> 01:47.480
+un modello di volume di root e questo includerebbe il tuo sistema operativo qualsiasi software applicativo
+
+01:47.480 --> 01:49.130
+che potrebbe essere incluso.
+
+01:49.130 --> 01:54.730
+Le autorizzazioni di avvio e il mapping dei dispositivi a blocchi sono mappature del disco rigido in abs.
+
+01:54.740 --> 02:00.740
+Quindi, se pensate a una semplice istanza oa un Linux facile da istanziare per il modello
+
+02:00.740 --> 02:09.050
+di volume di root che significherebbe il sistema operativo Amazon Linux compresi pacchetti software come server web Apache e quindi anche per
+
+02:09.050 --> 02:15.000
+la mappatura dei dispositivi a blocchi, questo potrebbe essere mappato a vari volumi .
+
+02:15.170 --> 02:22.820
+Ora la cosa bella o uno dei principali vantaggi delle immagini della macchina di Amazon è che puoi
+
+02:22.820 --> 02:30.060
+configurare questi componenti come preferisci e quindi creare la tua immagine della macchina Amazon da quel modello.
+
+02:30.200 --> 02:36.140
+E quando crei un a. m. -Sono semplicemente creando un modello che è possibile utilizzare per
+
+02:36.550 --> 02:46.100
+avviarne un altro con un'istanza che ha esattamente gli stessi componenti dell'originale Quindi se creo un E. S. ad esempio con
+
+02:46.190 --> 02:55.220
+questi a. m. -I impostazioni posso quindi creare la mia immagine della macchina di
+
+02:55.220 --> 03:04.370
+questa istanza, quindi posso usare quell'immagine della macchina per lanciare due tre quattro cinque sei diverse E. C due istanze tutte con le stesse identiche
+
+03:04.370 --> 03:05.270
+impostazioni.
+
+03:05.340 --> 03:14.480
+Quindi usare i miei occhi è un modo rapido per creare istanze aggiuntive in Amazon Web Services.
+
+03:16.610 --> 03:22.870
+Quindi, quando lo si avvia in modo semplice ad esempio, la prima cosa che si fa è selezionare un a. m. -IO.
+
+03:23.030 --> 03:29.990
+Quindi, ti mostrerò che da qui sul PC per console se faccio clic su Avvio istanza il primo
+
+03:29.990 --> 03:35.510
+passo sarà quello di scegliere un'immagine di macchina Amazon e vedrai qui sotto QuickStart.
+
+03:35.720 --> 03:38.410
+Ci saranno un sacco di immagini elencate.
+
+03:38.480 --> 03:45.620
+E il modo principale in cui questi sono designati sono dal sistema operativo, quindi sia che si tratti di
+
+03:45.830 --> 03:48.560
+Amazon Linux Redhat Susi Linux Windows.
+
+03:48.650 --> 03:50.500
+Diverse versioni di Windows.
+
+03:50.660 --> 03:56.960
+E quindi all'interno di ciascun tipo di sistema operativo è possibile visualizzare varie altre impostazioni e pacchetti
+
+03:56.960 --> 04:01.130
+software che potrebbero venire installati su quell'immagine della macchina di Amazon.
+
+04:01.310 --> 04:05.230
+Ora per a. m. ragazzi ci sono diversi tipi di categorie.
+
+04:05.300 --> 04:12.230
+Quindi il primo è Community am guys questi sono liberi di usare e generalmente con questi ragazzi si sta solo selezionando
+
+04:12.230 --> 04:18.140
+il sistema operativo che si intende che è la ragione principale per cui si dovrebbe usare gli occhi
+
+04:18.140 --> 04:24.650
+della comunità per uno specifico sistema operativo e pacchetti software di installazione di base e le impostazioni e quelle possono
+
+04:24.650 --> 04:30.470
+essere visualizzate in QuickStart o facendo clic su Community am eyes per i quali è possibile filtrare
+
+04:30.470 --> 04:33.590
+e selezionare le cose specifiche per le proprie esigenze.
+
+04:33.590 --> 04:40.670
+Il prossimo è il marketplace di AWOS e questi sono pagati per usare gli occhi di AM e generalmente vengono
+
+04:40.670 --> 04:43.320
+forniti pacchetti con software con licenza aggiuntiva.
+
+04:43.340 --> 04:50.540
+Quindi, dando un'occhiata al mercato AWOS, vedrai le semifine che sono confezionate con vari software
+
+04:50.570 --> 04:52.430
+di tipo enterprise.
+
+04:52.430 --> 04:56.440
+Ultimi sono i miei occhi e questi sono ragazzi che ti crei.
+
+04:56.630 --> 05:00.750
+Al momento non abbiamo nulla qui perché non abbiamo creato nulla, ma questo è
+
+05:00.750 --> 05:03.290
+qualcosa che faremo più avanti in questo corso.
+
+05:07.790 --> 05:14.450
+Quindi rivedere rapidamente a. m. -I è l'abbreviazione per l'immagine della macchina
+
+05:14.450 --> 05:20.330
+di Amazon e ciò che è necessario rimuovere da questo è che sono gli occhi quello che fornisce le informazioni necessarie
+
+05:20.330 --> 05:24.710
+per lanciare l'incenso e principalmente il sistema operativo almeno ai fini di questo corso introduttivo.
+
+05:24.710 --> 05:26.560
+Questo è fondamentale, ovviamente, per AWOS.
+
+05:26.690 --> 05:31.400
+Questo è il modo in cui voglio che tu pensi a Allys, che
+
+05:31.400 --> 05:37.430
+stai selezionando il tuo sistema operativo mentre passi a corsi più avanzati, quindi inizierai a conoscere i vari pacchetti
+
+05:37.430 --> 05:42.650
+di installazione delle impostazioni e i tipi di virtualizzazione che vengono anche con i miei occhi.
+
+05:42.740 --> 05:45.030
+Ma per ora questo concluderà questa lezione.
+
+05:45.140 --> 05:46.250
+Grazie per aver guardato.
+
+05:46.250 --> 05:47.030
+Ora puoi andare avanti.

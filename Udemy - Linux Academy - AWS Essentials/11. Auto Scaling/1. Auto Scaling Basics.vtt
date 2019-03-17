@@ -1,0 +1,265 @@
+WEBVTT
+
+00:01.020 --> 00:06.840
+Salve e bentornati in questa sezione, daremo un'occhiata al ridimensionamento automatico e al modo
+
+00:07.170 --> 00:12.880
+in cui aggiunge alta disponibilità e tolleranza agli errori alla nostra infrastruttura AWOS.
+
+00:12.900 --> 00:15.240
+Quindi tuffiamoci dentro e diamo un'occhiata.
+
+00:15.240 --> 00:21.460
+Quindi questa è la sezione 10 di AWOS essentials in cui ci stiamo concentrando sul ridimensionamento automatico.
+
+00:21.460 --> 00:26.460
+Includeremo argomenti specifici come la panoramica concettuale del ridimensionamento automatico del ridimensionamento automatico dei
+
+00:26.460 --> 00:33.360
+componenti e delle configurazioni di lancio della panoramica dei costi, il ridimensionamento automatico dei gruppi e il modo in
+
+00:33.360 --> 00:37.640
+cui sedersi e utilizzare il ridimensionamento automatico per la Lezione 1.
+
+00:37.650 --> 00:43.170
+Ci concentreremo sulle nozioni di base del ridimensionamento automatico in cui parleremo delle definizioni di ridimensionamento automatico
+
+00:43.230 --> 00:45.030
+e di una panoramica concettuale.
+
+00:45.090 --> 00:50.050
+Avremo quindi una seconda lezione di base come parte di questo stesso video.
+
+00:51.030 --> 00:57.990
+Quindi, che cos'è il ridimensionamento automatico per la definizione inessenziale, il ridimensionamento automatico automatizza il
+
+00:57.990 --> 01:06.210
+processo di aggiunta del ridimensionamento o dell'eliminazione del ridimensionamento alle istanze in base alla richiesta di traffico per l'applicazione.
+
+01:07.110 --> 01:13.650
+Per una definizione AWOS, il ridimensionamento automatico consente di avere il numero corretto di Amazon facile
+
+01:13.650 --> 01:18.860
+e questo è disponibile per gestire il carico della tua applicazione.
+
+01:19.050 --> 01:25.950
+Quando crei raccolte di semplici istanze denominate gruppi di ridimensionamento automatico, puoi specificare il numero minimo di istanze in ogni
+
+01:25.950 --> 01:32.490
+gruppo di ridimensionamento automatico e il ridimensionamento automatico garantisce che il tuo gruppo non vada mai al di sotto
+
+01:32.580 --> 01:33.740
+di questa dimensione.
+
+01:33.810 --> 01:40.020
+Puoi specificare il numero massimo di istanze in ogni gruppo di auto-skimming e anche ridimensionare o assicurarti che
+
+01:40.020 --> 01:43.230
+il tuo gruppo non superi mai questa dimensione.
+
+01:43.560 --> 01:50.400
+Se si specifica la capacità desiderata sia quando si crea il gruppo, sia quando vi è un intervallo di tempo dopo
+
+01:50.400 --> 01:55.110
+il ridimensionamento automatico, si assicura che il gruppo abbia questo numero di istanze.
+
+01:55.350 --> 02:02.370
+Se si specifica la politica di ridimensionamento, la pianificazione automatica può avviare o terminare le istanze in caso
+
+02:02.370 --> 02:05.660
+di aumento o diminuzione della domanda sull'applicazione.
+
+02:05.820 --> 02:11.540
+E questo è proprio quello su cui vogliamo concentrarci è che il nostro ridimensionamento aumenterà o diminuirà
+
+02:11.630 --> 02:18.600
+automaticamente il significato di un lancio o terminerà facilmente le istanze in base alla richiesta che gli utenti attuali della quantità
+
+02:18.600 --> 02:22.170
+corrente di utenti che utilizzano la tua applicazione web.
+
+02:22.260 --> 02:31.050
+E questo è uno dei componenti principali della creazione di alta disponibilità e tolleranza agli errori all'interno dell'architettura AWOS.
+
+02:31.110 --> 02:38.070
+Ora è chiaro che gli adeguamenti automatici del ridimensionamento automatico nel nostro diagramma VPC, il ridimensionamento automatico è un servizio, non
+
+02:38.130 --> 02:39.620
+una parte fisica dell'infrastruttura.
+
+02:39.690 --> 02:46.530
+Pertanto, il ridimensionamento automatico può estendersi su più sottoreti e più zone
+
+02:46.530 --> 02:51.090
+di disponibilità, ma rimarrà sempre all'interno del VPC.
+
+02:51.150 --> 02:58.320
+Ora per una revisione concettuale del ridimensionamento automatico Diamo un'occhiata a uno scenario molto simile a quello che abbiamo avuto nella sezione precedente quando abbiamo
+
+02:58.320 --> 03:02.700
+parlato del bilanciamento del carico elastico perché il classico bilanciamento basso e il ridimensionamento automatico
+
+03:02.880 --> 03:05.550
+sono davvero due cose che vanno di pari passo.
+
+03:05.550 --> 03:12.240
+Quindi, dato questo esempio, diciamo che abbiamo due server impostati ciascuno con una capacità massima di tre utenti con
+
+03:12.660 --> 03:16.430
+un bilanciamento del carico elastico, quindi nessun ridimensionamento automatico qui.
+
+03:16.500 --> 03:21.870
+Che cosa succederebbe quando questi utenti entrano e accedono al tuo sito Web, saranno equamente distribuiti
+
+03:21.870 --> 03:23.310
+tra i due server.
+
+03:23.310 --> 03:29.130
+E se hai una capacità massima di tre utenti e hai un totale di tre per server,
+
+03:29.130 --> 03:30.850
+tutto dovrebbe funzionare correttamente.
+
+03:31.080 --> 03:36.150
+E questo impedisce di nuovo un classico bilanciamento del carico da un server che sta diventando sovraccarico e
+
+03:36.150 --> 03:37.050
+potenzialmente in crash.
+
+03:37.410 --> 03:45.480
+Ma cosa succede ora se i tuoi due server con la capacità massima di tre utenti per server sono attualmente
+
+03:45.480 --> 03:51.780
+pieni, ma ci sono più utenti che tutti vogliono accedere alla tua applicazione web.
+
+03:52.020 --> 03:58.110
+Beh, quello che potrebbe accadere in quel caso è che la risposta facile è che si sovraccaricherà probabilmente si arresta o
+
+03:58.110 --> 03:59.620
+si esegue estremamente lentamente.
+
+03:59.760 --> 04:06.980
+E questo è ciò che vogliamo evitare un bilanciamento del carico elastico anche se distribuisce il traffico in modo uniforme.
+
+04:06.990 --> 04:08.900
+Non può fare nulla oltre a questo.
+
+04:09.090 --> 04:12.200
+Ed è qui che entra in gioco il ridimensionamento automatico.
+
+04:13.260 --> 04:20.300
+In questo esempio abbiamo il nostro sistema di bilanciamento del carico elastico, ma ora il ridimensionamento automatico è impostato per questa particolare applicazione.
+
+04:20.300 --> 04:26.520
+Quindi, se abbiamo due server con una capacità massima di tre utenti e quelli sono attualmente pieni
+
+04:26.520 --> 04:28.350
+e altri due utenti arrivano.
+
+04:28.410 --> 04:37.320
+Ciò che può fare il ridimensionamento automatico è aggiungere automaticamente un server aggiuntivo in base all'aumento della domanda per la
+
+04:37.380 --> 04:38.780
+nostra applicazione.
+
+04:39.030 --> 04:45.660
+Pertanto eseguirà automaticamente il provisioning e il lancio di un server Web all'interno di una delle nostre subnet e verrà
+
+04:45.660 --> 04:50.160
+automaticamente associato al bilanciamento del carico elastico o così ora questo classico servizio di
+
+04:50.160 --> 04:53.370
+bilanciamento del carico servirà il traffico tra tre istanze.
+
+04:53.460 --> 05:01.250
+Ora oltre all'aggiunta di server in base alla richiesta, il ridimensionamento automatico può anche rimuovere i server in base alla domanda.
+
+05:01.290 --> 05:07.680
+Pertanto, nei periodi in cui il traffico è elevato, i server vengono aggiunti, ma quando il traffico diminuisce, è possibile
+
+05:07.680 --> 05:13.290
+rimuovere i server e interromperli, il che è molto utile perché consente di risparmiare sui costi.
+
+05:13.290 --> 05:18.360
+Non vuoi che i server vengano lanciati nel tuo account AWOS che nessuno sta utilizzando.
+
+05:18.480 --> 05:24.810
+Questa è una panoramica concettuale di base del ridimensionamento automatico e del motivo per cui è stata utilizzata.
+
+05:24.840 --> 05:30.360
+Passando alle nozioni di base della seconda parte, parleremo dei componenti di ridimensionamento automatico e della valutazione dei costi e
+
+05:30.450 --> 05:32.930
+dei costi per i componenti di ridimensionamento automatico.
+
+05:32.930 --> 05:34.380
+Sono davvero due parti principali.
+
+05:34.380 --> 05:40.320
+La prima è la configurazione di avvio e questo è l'uso facile del modello quando il ridimensionamento automatico deve
+
+05:40.320 --> 05:43.580
+aggiungere un server aggiuntivo al gruppo di ridimensionamento automatico.
+
+05:43.590 --> 05:50.760
+Quindi, per fare in modo che il ridimensionamento automatico aggiunga una semplice istanza, è necessario sapere quale istanza si desidera aggiungere.
+
+05:50.760 --> 05:52.140
+Allora, qual è l'a. m. -IO.
+
+05:52.200 --> 05:53.400
+Qual è il tipo di istanza.
+
+05:53.400 --> 05:58.740
+Che tipo di spazio di archiviazione su quale tipo di software deve essere installato ha bisogno di tutte le informazioni
+
+05:58.740 --> 06:03.760
+in modo tale che quando viene lanciata un'istanza per te si stia avviando l'istanza corretta per te.
+
+06:04.020 --> 06:10.080
+Il prossimo è il gruppo di scansione automatica e queste sono tutte le regole e le impostazioni che governano quando
+
+06:10.080 --> 06:12.610
+è facile aggiungere o rimuovere automaticamente il server.
+
+06:12.870 --> 06:15.030
+Quindi questo è il tipo di istanza che vogliamo aggiungere.
+
+06:15.090 --> 06:21.610
+E queste sono le regole che governano quando le aggiungiamo e quando la rimuoviamo, diamo una rapida occhiata alla
+
+06:21.610 --> 06:24.070
+panoramica dei prezzi e dei costi.
+
+06:24.220 --> 06:27.730
+Quindi utilizzare il ridimensionamento automatico è assolutamente gratuito.
+
+06:28.720 --> 06:34.840
+Quindi non c'è alcun costo per impostare il ridimensionamento automatico e averlo attivo nel tuo account come mai ti
+
+06:34.840 --> 06:38.650
+verrà addebitato per le risorse che le disposizioni di ridimensionamento automatico.
+
+06:38.650 --> 06:42.630
+Quindi, se si dispone di un set di ridimensionamento che non ti costerà nulla.
+
+06:42.700 --> 06:48.550
+Ma se il ridimensionamento automatico lancia cinque server per te in base alla domanda, allora
+
+06:48.550 --> 06:56.030
+pagherai per quei 5 server supponendo che i server che avvia si posizionino al di sopra dell'assegnazione gratuita del tier.
+
+06:56.310 --> 06:59.250
+Questa è una rapida panoramica del ridimensionamento automatico.
+
+06:59.310 --> 07:04.740
+Concettualmente come comprendere il ridimensionamento automatico dei componenti e una panoramica dei costi.
+
+07:04.740 --> 07:06.870
+E con quello completerò questa lezione.
+
+07:06.870 --> 07:07.980
+Grazie per aver guardato.
+
+07:07.980 --> 07:08.850
+Ora puoi andare avanti.

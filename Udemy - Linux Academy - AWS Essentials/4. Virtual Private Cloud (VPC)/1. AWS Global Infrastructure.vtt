@@ -1,0 +1,205 @@
+WEBVTT
+
+00:00.390 --> 00:06.510
+Ciao e benvenuto all'inizio della sezione 3 di elementi essenziali di AWOS.
+
+00:06.760 --> 00:12.760
+In questa particolare sezione approfondiremo parte della vera carne di AWOS e penso che questo sia davvero il
+
+00:12.760 --> 00:15.770
+punto in cui inizia un sacco di divertimento.
+
+00:16.090 --> 00:20.890
+Quindi questo è ciò di cui parleremo in questa sezione.
+
+00:20.930 --> 00:23.380
+L'AWOS sul PC.
+
+00:23.450 --> 00:25.390
+Ora c'è molto che ho appena gettato qui.
+
+00:25.400 --> 00:32.810
+Ma ciò che realmente è è la spina dorsale dell'infrastruttura di qualsiasi sistema che decidiamo di
+
+00:32.900 --> 00:34.820
+costruire in un WS.
+
+00:35.090 --> 00:40.430
+E nel corso delle prossime lezioni ci immergeremo e parleremo di tutti questi
+
+00:40.430 --> 00:41.750
+diversi componenti.
+
+00:41.750 --> 00:44.720
+Quindi, senza ulteriori indugi, tuffiamoci.
+
+00:44.720 --> 00:52.730
+Quindi AWOS essentials sezione tre virtual private cloud o meglio conosciuto come VPC in breve.
+
+00:52.940 --> 01:00.350
+Pertanto, gli argomenti trattati in questa sezione includono una panoramica dell'introduzione VBC dell'infrastruttura globale AWOS e
+
+01:00.350 --> 01:08.760
+una spiegazione del modo in cui i dati viaggiano attraverso l'architettura AWOS che copre i gateway Internet e collegano
+
+01:09.000 --> 01:14.060
+gli elenchi e i sottolettori di controllo dell'accesso alla rete.
+
+01:14.120 --> 01:16.160
+Quindi passiamo alla Lezione 1.
+
+01:16.280 --> 01:22.730
+Infrastruttura globale AWOS in cui parleremo brevemente delle zone di disponibilità delle regioni e dei
+
+01:22.730 --> 01:23.880
+data center.
+
+01:23.880 --> 01:30.320
+Ora, se hai seguito il corso di concetti AWOS che offriamo qui al cademy di Linux, questo sarà un
+
+01:30.320 --> 01:33.270
+po 'di rehash e mi muoverò molto rapidamente.
+
+01:33.400 --> 01:41.300
+Ma l'infrastruttura globale di AWOS inizia con A W-S delle regioni e le regioni raggruppano le risorse AWOS
+
+01:41.540 --> 01:45.110
+situate in una posizione specifica e geografica.
+
+01:45.110 --> 01:52.310
+Quindi, osservando la mappa qui sotto che è fornita da Amazon, ognuno di questi punti qui circoli è
+
+01:52.370 --> 01:57.420
+una regione corrente o una regione in sospeso che stanno sviluppando.
+
+01:57.650 --> 02:04.670
+E queste regioni sono progettate per servire i clienti AWOS oi tuoi utenti che si trovano più vicini
+
+02:04.670 --> 02:12.440
+a una regione, quindi le regioni sono in realtà solo le aree o le aree in cui si trovano le risorse AWOS.
+
+02:12.440 --> 02:19.010
+Quindi, se ti trovi negli Stati Uniti sulla costa orientale, vuoi usare A. W. servizi che vengono effettivamente
+
+02:19.010 --> 02:22.280
+eseguiti su server in quell'area geografica.
+
+02:22.280 --> 02:29.080
+Quindi c'è meno latenza in termini di trasferimento di dati tra te e i server AWOS.
+
+02:29.270 --> 02:34.130
+Un altro lato di questo è che potresti trovarti negli Stati Uniti, ma se hai clienti
+
+02:34.130 --> 02:39.170
+che stai servendo a Tokyo, dì che hai un'applicazione web a cui gli utenti di Tokyo stanno accedendo.
+
+02:39.170 --> 02:42.440
+Non vuoi che debbano connettersi a un server web in North Virginia.
+
+02:42.440 --> 02:48.530
+Vuoi che siano in grado di accedere a un server di Tokyo che hai configurato e che esegua attraverso i
+
+02:48.590 --> 02:54.740
+tuoi account AWOS in modo che gli utenti di Tokyo possano accedere al Web là fuori con la minore latenza possibile.
+
+02:54.740 --> 03:03.110
+Ora ogni regione è composta da più zone di disponibilità ora le zone di disponibilità disponibili sono zone geograficamente
+
+03:03.170 --> 03:11.180
+isolate all'interno di una regione che ospita una risorsa e le zone di disponibilità sono dove sono localizzati
+
+03:11.290 --> 03:19.190
+specifici data center AWOS fisici e più zone di disponibilità in ogni regione forniscono ridondanza per le
+
+03:19.310 --> 03:22.040
+risorse AWOS in quel regione.
+
+03:22.040 --> 03:28.850
+Quindi quello che intendo è che in Nord Virginia ci saranno più zone di disponibilità e questi
+
+03:28.850 --> 03:33.430
+sono in realtà centri dati specifici che sono separati regionalmente.
+
+03:33.440 --> 03:40.830
+Quindi, ciò che questo consente è di dire, ad esempio, che stai memorizzando i dati in un bucket Amazon S3.
+
+03:41.030 --> 03:46.180
+Il servizio S3 sta eseguendo il backup dei file su più zone di disponibilità.
+
+03:46.250 --> 03:53.360
+Quindi, diciamo che c'è un terremoto o un incendio o un'interruzione dell'alimentazione nella zona 1 delle disponibilità, ma sarai comunque in grado di
+
+03:53.360 --> 03:58.970
+accedere ai tuoi file perché sono stati sottoposti a backup dalla zona di disponibilità a una zona di
+
+03:58.970 --> 03:59.930
+disponibilità 3.
+
+03:59.990 --> 04:06.200
+Quindi le zone di disponibilità multiple forniscono ridondanza per la A. W. come risorse.
+
+04:06.350 --> 04:14.950
+E questo fa parte di AWOS è un'architettura a tolleranza di errore altamente disponibile e quindi eseguire il drill-down in ogni zona
+
+04:14.950 --> 04:21.760
+delle disponibilità è dove si trova un vero centro dati fisico che è dove tutto l'hardware reale
+
+04:21.760 --> 04:25.090
+è quello che esegue Amazon Web Services.
+
+04:25.240 --> 04:31.840
+Quindi tutti i fili che collegano i computer, i server, i server, tutti i componenti che fanno funzionare
+
+04:31.840 --> 04:34.050
+il cloud, si trovano qui.
+
+04:34.150 --> 04:39.010
+Ed è stato abbastanza divertente trovarlo davvero interessante quando ci riferiamo ad Amazon Web Services e
+
+04:39.010 --> 04:41.170
+servizi simili come il cloud computing.
+
+04:41.170 --> 04:44.570
+Quando tutto sta realmente accadendo nei data center tradizionali.
+
+04:44.890 --> 04:51.490
+Così ora, quando guardi al centro dati attuale, ritorni davvero a questo che è lo schema con cui abbiamo lavorato fino
+
+04:51.490 --> 04:57.960
+ad ora nella sua interezza e tutto ciò che voglio che tu prenda da questo è che in questi veri
+
+04:58.000 --> 05:04.350
+e propri data center è dove tutto questo è effettivamente in atto in modo che il tuo VPC sia facilmente
+
+05:04.350 --> 05:05.790
+accessibile dai tuoi database.
+
+05:05.800 --> 05:11.670
+S e s s 3 am tutte le cose che fai quando usi la console qui.
+
+05:11.830 --> 05:17.950
+Giusto, ti stai solo collegando e utilizzando i sistemi che si trovano in un centro dati fisico che si
+
+05:18.010 --> 05:24.000
+trovano in una zona di disponibilità che si trova in una regione da qualche parte nel mondo.
+
+05:24.010 --> 05:28.060
+Al momento sono attualmente nella regione del nord della Virginia.
+
+05:28.060 --> 05:34.810
+Ciò significa che se utilizzo qui dei servizi, ciò che sto facendo in realtà è l'avvio e l'utilizzo di servizi
+
+05:35.110 --> 05:40.910
+proprio qui nel North Virginia in una di queste zone di disponibilità nel centro dati fisico.
+
+05:41.380 --> 05:49.450
+Quindi con una rapida panoramica dell'infrastruttura globale AWOS, che inizia il processo di apprendimento
+
+05:49.450 --> 05:55.390
+di AWOS VPC e con questo concluderemo questa lezione.
+
+05:55.480 --> 05:56.500
+Grazie per aver guardato.
+
+05:56.500 --> 05:57.400
+Ora puoi andare avanti.

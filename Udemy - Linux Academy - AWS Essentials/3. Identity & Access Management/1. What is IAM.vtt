@@ -1,0 +1,148 @@
+WEBVTT
+
+00:00.420 --> 00:02.180
+Ciao e bentornato.
+
+00:02.220 --> 00:08.940
+Ora che abbiamo completato la sezione uno in cui abbiamo creato un account AWOS, è ora di passare
+
+00:09.000 --> 00:10.520
+alla Sezione 2.
+
+00:10.710 --> 00:14.430
+Quindi attiviamo questa sezione del progetto Omega.
+
+00:14.490 --> 00:21.570
+Qui vediamo il nostro team omega e questo è il nostro team di sviluppatori che comprende Matt coo
+
+00:21.570 --> 00:27.240
+now e Donna e attraverso il resto del corso terremo in considerazione diverse cose guardando
+
+00:27.240 --> 00:36.480
+attraverso l'obiettivo del team di sviluppatori o configurando i servizi e le funzionalità AWOS per consentire il team Omega per lavorare e costruire il progetto
+
+00:37.140 --> 00:38.960
+per questa particolare sezione.
+
+00:39.010 --> 00:41.140
+Anche noi ci immergiamo.
+
+00:41.280 --> 00:48.660
+Io sono o identità e gestione degli accessi gli argomenti che saranno trattati in questa sezione
+
+00:48.660 --> 00:58.750
+includono cosa sono io sono impostato una configurazione e una spiegazione su come utilizzare le politiche e i ruoli dei gruppi di utenti.
+
+00:58.950 --> 01:01.790
+Quindi passiamo ora alla lezione uno.
+
+01:01.830 --> 01:07.840
+Quello che sono e che parleremo in modo specifico di ciò che sono è l'uso comune di me.
+
+01:07.980 --> 01:12.530
+Qualsiasi discussione sull'utente root.
+
+01:12.580 --> 01:14.350
+Quindi cosa sono
+
+01:14.350 --> 01:19.540
+Prima di saltare a questo, diamo un'occhiata alla console AWOS su dove trovarlo.
+
+01:19.570 --> 01:20.440
+Sono.
+
+01:20.440 --> 01:22.360
+Quindi sappiamo dove accedervi.
+
+01:22.370 --> 01:28.570
+Quindi, proprio qui sotto la sicurezza e l'identità di identità e sicurezza che dovrebbe essere un indizio su ciò
+
+01:28.570 --> 01:30.210
+che specificamente questo servizio sarà.
+
+01:31.930 --> 01:35.560
+E questo qui è il principale console per l'identità e la gestione degli accessi.
+
+01:35.620 --> 01:44.440
+Così sono dove gestisci i tuoi utenti AWOS e il loro accesso agli account e ai servizi AWOS.
+
+01:44.470 --> 01:48.570
+Quindi l'uso comune di I Am è di gestire i gruppi di utenti.
+
+01:48.760 --> 01:58.420
+Sono politiche e ruoli di accesso e approfondiremo questi usi comuni nelle lezioni successive.
+
+01:58.540 --> 02:04.000
+Ora qualcosa di cui voglio fare una nota speciale qui è che l'utente creato
+
+02:04.060 --> 02:08.110
+quando hai creato AWOS un conteggio è chiamato l'utente root.
+
+02:08.110 --> 02:14.800
+Quindi, per essere molto chiari su questo quando ti sei iscritto a AWOS quando inserisci i dati della tua carta di credito e il
+
+02:15.040 --> 02:20.330
+tuo indirizzo e il tuo numero di telefono e inserisci un indirizzo e-mail e hai creato una password.
+
+02:20.470 --> 02:24.670
+Quelle sono le credenziali di accesso per l'utente root.
+
+02:24.700 --> 02:33.700
+Ora, per impostazione predefinita, l'utente root ha diritti amministrativi completi e accesso a ogni parte dell'account AWOS per impostazione
+
+02:34.240 --> 02:35.020
+predefinita.
+
+02:35.020 --> 02:43.150
+Tutti i nuovi utenti creati nell'account AWOS vengono creati senza accesso a servizi J-ws tranne
+
+02:43.150 --> 02:50.860
+per la possibilità di accedere per tutti gli altri utenti oltre alle autorizzazioni dell'utente
+
+02:50.860 --> 02:55.850
+root che devono concedere l'accesso ad altre risorse AWOS.
+
+02:56.880 --> 03:01.070
+Quindi, proprio come un esempio, sono attualmente connesso come utente root.
+
+03:01.080 --> 03:06.180
+Questa era l'email e la password che uso quando ho creato l'account AWOS.
+
+03:06.360 --> 03:14.460
+Ma se dovessi tornare alla pagina principale della console AWOS posso selezionare un accesso a uno qualsiasi di
+
+03:14.520 --> 03:21.180
+questi servizi AWOS e posso farlo di default perché di nuovo l'utente root ha
+
+03:21.180 --> 03:29.430
+di nuovo accesso amministrativo ad ogni singolo servizio e l'abilità per avviare la disposizione cancella modificare qualsiasi cosa
+
+03:29.430 --> 03:31.590
+nell'account è l'account principale.
+
+03:31.680 --> 03:36.690
+Qualsiasi altro account che creiamo per tutti gli utenti che vogliamo nel nostro account come gli account
+
+03:36.690 --> 03:39.630
+che creeremo per il nostro team di sviluppo omega.
+
+03:39.720 --> 03:47.100
+Iniziamo con autorizzazioni zero, ovvero non saranno in grado di accedere o modificare nulla nell'account del
+
+03:47.100 --> 03:51.090
+vicino a meno che non concediamo espressamente l'autorizzazione.
+
+03:51.210 --> 03:55.860
+E stiamo andando a discutere in dettaglio come farlo nelle seguenti lezioni.
+
+03:56.100 --> 04:00.210
+Quindi per ora è tutto ciò che devi sapere su cosa sono.
+
+04:00.330 --> 04:02.140
+Quindi ora puoi completare questo video.
+
+04:02.220 --> 04:03.240
+Grazie per aver guardato.
+
+04:03.270 --> 04:04.110
+Ora puoi andare avanti.

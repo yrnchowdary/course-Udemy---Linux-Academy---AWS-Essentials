@@ -1,0 +1,169 @@
+WEBVTT
+
+00:01.180 --> 00:01.760
+Ciao.
+
+00:01.820 --> 00:08.260
+E in questa lezione ci concentreremo sull'indirizzamento IP in particolare sulle definizioni di indirizzamento IP.
+
+00:08.270 --> 00:15.770
+Panoramica concettuale dell'indirizzamento IP e degli indirizzi IP pubblici o privati che saranno l'obiettivo
+
+00:15.830 --> 00:18.080
+principale di questa lezione.
+
+00:18.440 --> 00:25.340
+Quindi, qual è l'indirizzamento IP per una definizione semplificata, fornisce una facile istanza con un
+
+00:25.520 --> 00:27.050
+indirizzo IP pubblico.
+
+00:27.050 --> 00:33.410
+Ora, se non conosci esattamente cosa sia un indirizzo IP, diamo un'occhiata a una definizione semplificata
+
+00:33.410 --> 00:39.390
+di questo e questo è un indirizzo IP è l'indirizzo delle istanze sulla rete.
+
+00:39.530 --> 00:44.870
+Quindi un rapido esempio di questo è pensare al traffico di rete come a un pezzo di posta ordinaria.
+
+00:44.990 --> 00:51.470
+Quindi pensa a un indirizzo IP come a un tuo indirizzo di casa, qualcuno che tenti di recapitare la
+
+00:51.500 --> 00:58.030
+posta a casa tua avrà bisogno del tuo indirizzo per trovare la tua posizione e consegnare la posta senza un indirizzo.
+
+00:58.040 --> 01:04.370
+In questo caso, essendo l'indirizzo IP, l'operatore postale non sarebbe mai in grado di trovare la tua casa e consegnare
+
+01:04.430 --> 01:05.320
+la posta.
+
+01:05.570 --> 01:11.000
+Quindi ogni volta che pensi a un indirizzo IP, pensaci un po 'come il tuo indirizzo di casa.
+
+01:11.000 --> 01:19.770
+È il modo in cui le persone possono trovarti o, in questo caso, trovare per esempio.
+
+01:20.080 --> 01:25.930
+Quindi ora sta per accedere all'indirizzamento IP pubblico e privato per impostazione predefinita.
+
+01:25.960 --> 01:35.590
+Tutte le istanze facili hanno un indirizzo IP privato Gli indirizzi IP privati consentono alle istanze di comunicare tra loro
+
+01:35.590 --> 01:42.070
+purché si trovino nello stesso VPC o in una rete privata più ampia.
+
+01:42.070 --> 01:50.500
+Quindi gli indirizzi IP vengono utilizzati per le comunicazioni interne all'interno del VPC per gli indirizzi IP pubblici.
+
+01:50.680 --> 01:59.740
+È possibile avviare due istanze con o senza un indirizzo IP pubblico per impostazione predefinita in base alle impostazioni della
+
+01:59.860 --> 02:00.780
+subnet VPC.
+
+02:00.790 --> 02:07.750
+Pertanto, in base alle impostazioni della subnet VPC, è possibile avviare facilmente istanze con
+
+02:08.050 --> 02:17.020
+o senza un indirizzo IP in quanto per l'istanza sono necessari indirizzi IP pubblici pubblici per comunicare con Internet.
+
+02:17.050 --> 02:18.620
+Quindi è molto importante.
+
+02:20.160 --> 02:27.690
+Quindi, se vuoi che la tua istanza sia in grado di comunicare al di fuori del tuo VPC, deve avere un
+
+02:27.690 --> 02:28.910
+indirizzo IP pubblico.
+
+02:29.010 --> 02:35.460
+Quindi, come un altro lato, il VPC e le sottoreti predefiniti sono configurati in modo tale che ogni nuova istanza
+
+02:35.460 --> 02:42.150
+che viene fornita abbia un indirizzo IP pubblico, in modo tale che sia l'impostazione predefinita per due istanze fuori dalla scatola.
+
+02:42.150 --> 02:45.430
+Finché utilizzi il valore predefinito VPC.
+
+02:45.930 --> 02:51.420
+Quindi, per ricapitolare questo, diamo un'occhiata a tutto ciò che è necessario ad esempio per comunicare
+
+02:51.510 --> 02:52.320
+con Internet.
+
+02:52.320 --> 02:56.610
+Quindi qui abbiamo facile istanza e qui abbiamo Internet.
+
+02:56.610 --> 03:01.830
+Questo è tutto ciò di cui ha bisogno la metrica per comunicare con Internet o avere flussi di dati
+
+03:01.830 --> 03:04.020
+in entrata e in uscita su Internet.
+
+03:04.020 --> 03:11.370
+Quindi aggiungi la semplice istanza di cui hai bisogno di un indirizzo IP pubblico, quindi i gruppi di sicurezza dell'istanza devono
+
+03:11.370 --> 03:15.560
+avere regole che consentano il traffico in entrata e in uscita.
+
+03:15.820 --> 03:22.480
+Quindi, al controllo dell'accesso di rete, questo livello richiede di nuovo regole che consentano il traffico all'interno e all'esterno dell'istanza
+
+03:22.480 --> 03:27.520
+che deve essere associata a una tabella router e che la tabella router deve essere
+
+03:27.520 --> 03:29.560
+associata a un gateway Internet.
+
+03:29.560 --> 03:34.550
+Quindi i dati o le informazioni possono raggiungere Internet o viceversa.
+
+03:34.690 --> 03:43.120
+Ma se uno di questi elementi questi componenti sono questi passaggi non è configurato correttamente, le informazioni non saranno in grado di fluire
+
+03:43.120 --> 03:48.550
+tra Internet e il tuo facile all'istante Quindi questi sono tutti i punti di errore
+
+03:48.550 --> 03:52.370
+o dovrei dire di più i punti che devo guardare.
+
+03:52.380 --> 03:58.270
+Se riscontri dei problemi con gli errori di restrizione, è possibile che tu stia tentando di accedere a Internet
+
+03:58.300 --> 04:00.850
+ma non disponi di un indirizzo IP pubblico.
+
+04:00.850 --> 04:07.120
+O forse le regole in entrata o in uscita sui gruppi di sicurezza o gli elenchi di controllo dell'accesso alla rete
+
+04:07.120 --> 04:13.690
+non sono impostati per consentire quel tipo specifico di traffico o forse la semplice istanza non è associata a una tabella router
+
+04:13.690 --> 04:17.700
+o forse la tabella del router non ha un gateway internet collegato.
+
+04:17.710 --> 04:23.230
+Queste sono tutte le aree che devi considerare o pensare quando stavi analizzando il tuo VPC e la
+
+04:23.230 --> 04:26.630
+tua rete interna in termini di flusso di dati e comunicazioni.
+
+04:28.520 --> 04:35.930
+Quindi, ancora una volta rapidamente l'indirizzamento IP fornisce un'istanza facile con un indirizzo IP pubblico e pensa sempre a
+
+04:35.930 --> 04:43.370
+un indirizzo IP come il tuo indirizzo di facile istanza o il suo indirizzo stradale è come viene identificato è
+
+04:43.380 --> 04:47.320
+come le informazioni vengono fornite ad esso sulla rete .
+
+04:48.430 --> 04:50.360
+E con questo concluderemo questa lezione.
+
+04:50.410 --> 04:51.490
+Grazie per aver guardato.
+
+04:51.490 --> 04:52.350
+Ora puoi andare avanti.

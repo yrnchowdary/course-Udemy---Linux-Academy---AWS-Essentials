@@ -1,0 +1,226 @@
+WEBVTT
+
+00:00.600 --> 00:02.130
+Ciao e bentornato.
+
+00:02.160 --> 00:11.520
+Ora che abbiamo completato la copertura di ciò che considererei i tre servizi principali di AWOS in S3 C2 e
+
+00:11.610 --> 00:15.670
+già tagliato dynamo D. B e la via dei database.
+
+00:15.690 --> 00:22.620
+Ora passeremo ad alcuni degli altri servizi forniti da AWOS che ritengo siano molto importanti
+
+00:22.710 --> 00:24.310
+e estremamente utili.
+
+00:24.410 --> 00:31.620
+Stiamo utilizzando il monitoraggio e la manutenzione del tuo account AWOS e di qualsiasi architettura o software che decidi di
+
+00:31.620 --> 00:33.270
+distribuire al suo interno.
+
+00:33.270 --> 00:37.000
+Quindi per prima cosa daremo un'occhiata a S e S.
+
+00:37.170 --> 00:38.900
+Quindi tuffiamoci dentro
+
+00:38.940 --> 00:46.590
+Quindi questa è la sezione 7 di AWOS essenziale che riguarda il servizio di notifica semplice più comunemente denominato
+
+00:46.650 --> 00:54.390
+S e S. Verrà illustrata un'introduzione alla panoramica S e S panoramica concettuale di S e S come utilizzare sns,
+
+00:54.390 --> 00:59.610
+tra cui come creare abbonamenti di annunci di argomenti e inviare messaggi.
+
+00:59.610 --> 01:02.080
+Quindi iniziamo con Lezione 1.
+
+01:02.100 --> 01:08.690
+Non appena le nozioni di base su cui andremo a coprire le definizioni S e S una panoramica concettuale non appena il
+
+01:08.700 --> 01:13.150
+flusso di lavoro e le componenti coprono una panoramica dei costi e dei costi.
+
+01:13.170 --> 01:19.740
+Quindi per prima cosa iniziamo con ciò che è S e S la definizione essenziale è una A. W. un servizio che consente
+
+01:19.740 --> 01:26.790
+di automatizzare l'invio di notifiche via e-mail o SMS in base agli eventi che si
+
+01:26.850 --> 01:35.010
+verificano nel tuo account WS per la definizione di AWOS, il servizio di notifica semplice è un servizio
+
+01:35.010 --> 01:42.760
+Web che coordina e gestisce la consegna o l'invio di messaggi agli endpoint o clienti in Amazon.
+
+01:42.780 --> 01:50.410
+Non appena ci sono due tipi di clienti, gli editori e gli abbonati fanno riferimento anche come produttori
+
+01:50.410 --> 01:51.570
+e consumatori.
+
+01:51.760 --> 01:58.810
+Gli editori comunicano in modo asincrono con gli abbonati producendo e inviando un messaggio a un argomento che è un punto di accesso logico e
+
+01:58.930 --> 02:04.910
+gli abbonati al canale di comunicazione i. e. server web.
+
+02:04.930 --> 02:07.520
+L'indirizzo email è Amazon come scusa.
+
+02:07.690 --> 02:15.610
+Le funzioni lambda di AWOS consumano o ricevono il messaggio o la notifica su
+
+02:15.670 --> 02:24.790
+uno dei protocolli supportati i. e. Amazon ci chiede HGT s e mail s m s o lambda quando sono iscritti all'argomento.
+
+02:24.910 --> 02:33.290
+Quindi, in poche parole, un semplice servizio di notifica è un servizio di notifica ed è specifico per la parte essenziale.
+
+02:33.290 --> 02:39.520
+Ci concentreremo solo sull'invio di e-mail e messaggi di testo in base agli eventi che si verificano
+
+02:39.550 --> 02:41.110
+nel tuo account AWOS.
+
+02:42.490 --> 02:46.580
+Quindi diamo un'occhiata ad alcuni esempi di utilizzo S o S o flusso di lavoro.
+
+02:46.690 --> 02:53.260
+Quindi, diciamo per esempio, abbiamo una semplice istanza e ora aggiungiamo che per esempio sta funzionando
+
+02:53.260 --> 02:53.740
+bene.
+
+02:53.770 --> 02:56.150
+Il che significa che non c'è bisogno di azione.
+
+02:56.620 --> 03:00.410
+Ma cosa succede all'improvviso se la E. C a crash istantanei.
+
+03:01.400 --> 03:06.950
+Bene, se non c'è nulla sul posto da notificare all'amministratore di sistema, l'amministratore di sistema non lo
+
+03:06.950 --> 03:07.880
+saprebbe mai.
+
+03:08.030 --> 03:13.640
+Ed è qui che ESA entra in gioco in concomitanza con il servizio di cui parleremo
+
+03:13.640 --> 03:16.760
+nella prossima sezione che è il cloud watch.
+
+03:17.030 --> 03:24.240
+Tuttavia, impostare cosa succede è che quando si verifica un arresto anomalo di facile istanza, è possibile configurare Cloud Watch.
+
+03:24.240 --> 03:30.290
+Quindi monitora costantemente le tue istanze quando rileva che un'istanza si è arrestata in modo anomalo
+
+03:30.350 --> 03:39.080
+può attivare un allarme che l'allarme può quindi attivare una notifica in modo semplice in S e S e quindi sns invia un
+
+03:39.080 --> 03:45.460
+messaggio all'amministratore di sistema l'amministratore di sistema quindi viene avvisato può poi entra e aggiusta il server
+
+03:45.650 --> 03:48.560
+e poi tutto andrà di nuovo bene.
+
+03:48.770 --> 03:54.830
+Quindi questo è fondamentalmente il flusso di lavoro e come si sta parlando di ora e cloud watch
+
+03:54.830 --> 03:57.170
+di cui parleremo nella prossima sezione.
+
+03:57.170 --> 04:04.640
+Lavorato insieme per monitorare le risorse all'interno del tuo account AWOS e inviarti notifiche basate
+
+04:04.910 --> 04:12.760
+su parametri di soglia o cose che hai impostato come trigger per gli allarmi e le notifiche.
+
+04:14.550 --> 04:19.680
+Dando un'occhiata all'esson base come componenti ci sono tre cose su cui voglio che tu ti
+
+04:19.680 --> 04:20.440
+concentri qui.
+
+04:20.460 --> 04:26.550
+Per prima cosa abbiamo argomenti ed è così che etichettiamo e raggruppiamo diversi endpoint che invii messaggi a quello
+
+04:27.300 --> 04:27.840
+successivo.
+
+04:27.840 --> 04:34.500
+I nostri abbonamenti e questi sono gli endpoint reali a cui un argomento invia i messaggi.
+
+04:34.500 --> 04:41.520
+IO. e. l'indirizzo e-mail o il numero di telefono del nostro amministratore di sistema e quindi gli editori degli editori sono i diritti
+
+04:41.790 --> 04:41.990
+umani.
+
+04:42.000 --> 04:48.090
+Sarebbe me o il cloud watch alarm o qualunque evento che dia s e s il messaggio che
+
+04:48.090 --> 04:49.450
+deve essere inviato.
+
+04:49.890 --> 04:55.190
+Quindi in genere quello che facciamo è creare un argomento e un argomento può essere facile da fallire.
+
+04:55.380 --> 05:02.370
+Quindi, per gli abbonati che sarebbero coloro che vorremmo inviare il messaggio a essere il vero punto finale stesso
+
+05:02.370 --> 05:08.940
+che è l'indirizzo email dell'amministratore di sistema o il numero di telefono, allora il publisher sarà il messaggio
+
+05:08.940 --> 05:10.290
+che verrà inviato.
+
+05:10.290 --> 05:15.810
+Quindi potrebbe essere un editore automatizzato o potrebbe essere in realtà io seduto al computer che digita un
+
+05:15.840 --> 05:17.890
+messaggio e che manda l'invio all'argomento.
+
+05:18.060 --> 05:25.200
+Ma che si tratti di un allarme di un club o di un umano che digita un messaggio, inviamo il
+
+05:25.250 --> 05:28.320
+messaggio all'argomento e l'argomento lo invia agli endpoint.
+
+05:30.080 --> 05:36.560
+Quindi diamo una rapida occhiata ai prezzi che l'uso gratuito di tier è disponibile per Asinus e ti viene addebitato l'uso di Esson ass da
+
+05:36.560 --> 05:45.320
+parte degli editori che indicano il numero di richieste SNL. e. il messaggio che deve essere inviato alle consegne delle
+
+05:45.320 --> 05:52.660
+notifiche al numero di abbonati a cui è inviato il messaggio e al trasferimento dei dati in entrata e in uscita da asinus.
+
+05:52.850 --> 05:59.240
+E come sempre prima di fare qualcosa di importante con qualsiasi U. S. servizio si dovrebbe sempre rivedere
+
+05:59.270 --> 06:03.510
+le informazioni dettagliate sui prezzi sul sito Web di Amazon.
+
+06:03.520 --> 06:10.660
+Quindi, ancora una volta rivedere il semplice servizio di notifica è solo che si tratta di un semplice servizio di notifica
+
+06:11.050 --> 06:17.140
+e che usarlo almeno al suo livello base è molto facile da configurare e lo esamineremo nella
+
+06:17.200 --> 06:18.050
+prossima lezione.
+
+06:18.070 --> 06:20.060
+Quindi con questo concluderò questa lezione.
+
+06:20.140 --> 06:21.250
+Grazie per aver guardato.
+
+06:21.250 --> 06:22.120
+Ora puoi andare avanti.

@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00.340 --> 00:06.510
+Una parte bassa di questa lezione parleremo di bucket e oggetti in particolare su come
+
+00:06.510 --> 00:15.070
+creare una benna con le regole di denominazione del bucket caricando oggetti che creano una cartella e navigando nelle proprietà S-3.
+
+00:16.610 --> 00:22.730
+Quindi, per prima cosa rivisitiamo questo diagramma della lezione precedente poiché questo è ciò che stiamo per costruire
+
+00:22.730 --> 00:30.020
+in S3, quindi possiamo vedere un esempio di come creare un bucket aggiungere una cartella e quindi caricare un oggetto a
+
+00:30.110 --> 00:34.520
+livello di bucket e quindi carica anche un oggetto in una sottocartella.
+
+00:34.520 --> 00:39.420
+Quindi, per fare ciò, la prima cosa che dobbiamo fare è creare un bucket S3.
+
+00:39.460 --> 00:46.570
+Quindi qui nella console Andiamo a S-3 e poiché attualmente non ho usato S3 in questo account, mi
+
+00:46.570 --> 00:53.320
+verrà immediatamente richiesto di creare un bucket e la prima cosa che devo fare è dare un
+
+00:53.320 --> 00:54.640
+nome al bucket.
+
+00:54.650 --> 00:59.320
+Ora ci sono alcune cose che sono molto importanti da capire e conoscere qui e cioè che i
+
+00:59.320 --> 01:01.690
+nomi dei bucket devono seguire una serie di regole.
+
+01:01.720 --> 01:07.870
+Queste sono le regole di base e i nomi dei bucket devono essere univoci in tutti gli AWOS.
+
+01:08.050 --> 01:17.270
+Ciò che intendo è che per tutti gli utenti di tutto il mondo che utilizzano AWOS utilizzando i nomi dei bucket S3 non è
+
+01:17.290 --> 01:18.400
+possibile duplicarli.
+
+01:18.400 --> 01:27.130
+Quindi, se ho un secchio chiamato il mio secchio S-3 nel mio account, non puoi avere un secchio nel tuo account chiamato il
+
+01:27.130 --> 01:28.630
+secchio di Maia.
+
+01:29.080 --> 01:36.290
+Tutto deve essere unico in tutti gli account di tutti gli utenti di tutto il mondo per AWOS.
+
+01:36.400 --> 01:41.750
+In modo che possa creare un po 'un problema in quanto potresti non essere in grado di avere un nome secchio che si desidera.
+
+01:41.770 --> 01:47.740
+Quindi molte volte devi diventare creativo con i nomi dei bucket I nomi dei bucket devono avere un
+
+01:47.740 --> 01:54.850
+minimo di tre e un massimo di 63 caratteri nel bucket di lunghezza denominato può contenere solo lettere minuscole e trattini
+
+01:54.970 --> 02:01.030
+in modo da non poter avere lettere maiuscole nel tuo bucket nome e anche i nomi dei bucket
+
+02:01.030 --> 02:03.640
+non possono essere formattati come indirizzi IP.
+
+02:04.090 --> 02:06.730
+OK, allora creiamo un secchio.
+
+02:06.730 --> 02:13.640
+Chiamerò questo progetto Omega bucket one e vediamo se questo è preso. Vedi già fatto un errore lì ho
+
+02:13.640 --> 02:15.990
+messo un capitale solo per abitudine.
+
+02:21.730 --> 02:23.890
+E poi dobbiamo selezionare una regione.
+
+02:23.890 --> 02:33.070
+Quindi selezionerò U. S. standard e fare clic su Crea OK buono in modo che il nome del bucket
+
+02:33.070 --> 02:38.280
+non sia stato preso, quindi sono stato il primo a richiedere il nome del bucket a tutti gli utenti che utilizzano S-3 in tutto il mondo.
+
+02:38.320 --> 02:39.700
+Quindi va bene.
+
+02:39.700 --> 02:45.160
+Quindi ora parliamo di caricare o importare un oggetto in un bucket per fare ciò che vogliamo navigare
+
+02:45.160 --> 02:46.090
+nel bucket.
+
+02:46.090 --> 02:48.450
+Quindi lo facciamo semplicemente cliccando qui.
+
+02:48.460 --> 02:55.750
+Ora siamo dentro il secchio e possiamo andare direttamente qui al pulsante di caricamento e fare clic su Aggiungi file.
+
+02:58.100 --> 03:03.310
+Vado alla scheda Documenti e ho intenzione di caricare il file Omega del progetto.
+
+03:03.360 --> 03:06.710
+Un clic OK avvia caricamento.
+
+03:08.590 --> 03:12.460
+E ci siamo andati che è stato caricato nel mio secchio.
+
+03:12.460 --> 03:16.000
+Quindi è davvero così semplice caricare su S-3.
+
+03:16.030 --> 03:19.810
+Quindi cliccando di nuovo alla radice ecco il mio progetto Omega bucket.
+
+03:19.840 --> 03:24.870
+E qui dentro c'è il mio progetto Omega uno ora per creare una cartella.
+
+03:24.940 --> 03:34.290
+Tutto quello che devo fare è cliccare su Crea una cartella e posso chiamare questa cartella, ora i nomi delle cartelle possono essere in maiuscolo e
+
+03:34.290 --> 03:37.980
+avere regole molto diverse rispetto ai nomi dei bucket.
+
+03:38.160 --> 03:43.020
+Così posso quindi navigare nella cartella e quindi posso caricare un oggetto direttamente nella cartella facendo
+
+03:43.020 --> 03:44.940
+lo stesso processo di prima.
+
+03:45.800 --> 03:48.150
+E basta caricare il file Omega del progetto
+
+03:54.680 --> 03:55.310
+su OK.
+
+03:55.400 --> 03:56.570
+Quindi tornando qui.
+
+03:56.570 --> 03:59.950
+Ora ho fondamentalmente installato questa struttura.
+
+04:00.050 --> 04:03.950
+Quindi ho qui il mio secchio che probabilmente è un secchio.
+
+04:03.950 --> 04:08.260
+Poi nel secchio ho un oggetto che è il progetto Omega file uno.
+
+04:08.270 --> 04:10.380
+Ho una sottocartella che è una cartella.
+
+04:10.580 --> 04:14.150
+E poi dentro la cartella ho un altro oggetto.
+
+04:14.150 --> 04:19.080
+Quindi, davvero, creare le cartelle di bucket e caricare oggetti è davvero così semplice.
+
+04:20.060 --> 04:24.920
+Dopodiché, diamo un'occhiata alle cartelle di bucket in Proprietà oggetto, perché in questo
+
+04:24.920 --> 04:29.780
+modo utilizzerete e modificherete le cartelle e gli oggetti di bucket andando avanti.
+
+04:29.780 --> 04:32.810
+Quindi torna al livello del secchio.
+
+04:32.810 --> 04:37.670
+Se seleziono un bucket senza fare clic sul nome ma clicco su di esso qui e poi
+
+04:38.000 --> 04:40.970
+su Proprietà, verrà visualizzato questo elenco di varie opzioni.
+
+04:41.000 --> 04:43.550
+E ci tufferemo in alcuni di questi.
+
+04:43.550 --> 04:45.120
+Nelle prossime lezioni.
+
+04:45.560 --> 04:50.450
+Quindi la parte superiore delle proprietà sarà sempre informazioni generali sul bucket il bucket assegna
+
+04:50.450 --> 04:56.570
+alla regione la data di creazione il proprietario che è chi ha creato il bucket e poi scenderà al
+
+04:56.570 --> 05:02.630
+resto di queste ci sono molte diverse caratteristiche e funzioni che possiamo usare qui in S-3 a livello di
+
+05:02.690 --> 05:03.160
+benna.
+
+05:03.230 --> 05:08.540
+E parleremo in modo specifico delle versioni delle autorizzazioni e dei cicli di
+
+05:08.660 --> 05:12.290
+vita nei prossimi video, quindi navigeremo nel secchio.
+
+05:12.290 --> 05:17.440
+Se clicco sulla cartella Ora se clicchi sulla cartella ma solo sulla linea lo evidenzia.
+
+05:17.450 --> 05:23.930
+E poi se clicco su proprietà posso visualizzare le proprietà per la cartella che in questo caso sono
+
+05:23.930 --> 05:26.990
+solo informazioni generali e dettagli per un oggetto.
+
+05:26.990 --> 05:33.120
+Posso fare la stessa cosa che posso fare clic su un oggetto qui e posso visualizzare le proprietà per l'oggetto.
+
+05:33.120 --> 05:38.820
+Ora le proprietà per l'oggetto variano un po 'ma ho il bucket che si trova nel collegamento del nome.
+
+05:38.840 --> 05:41.040
+Ci arriveremo in una lezione successiva.
+
+05:41.040 --> 05:46.500
+E poi le dimensioni l'ultima volta che è stata modificata l'ultima volta e alcune altre informazioni
+
+05:46.500 --> 05:51.630
+sul file e poi i metadati delle autorizzazioni dettagliate che inseriremo nelle prossime lezioni.
+
+05:51.690 --> 05:58.770
+Ma quello che voglio che tu faccia da qui è come navigare in S-3 in termini di accesso alle proprietà a
+
+05:58.770 --> 06:03.780
+livello di benne che accedono alle proprietà anche a livello di cartelle e oggetti.
+
+06:03.780 --> 06:08.340
+Sarà molto importante per te capire quando andrai avanti e inizierai a usare S3.
+
+06:08.640 --> 06:11.080
+Quindi con questo concluderemo questa lezione.
+
+06:11.100 --> 06:12.210
+Grazie per aver guardato.
+
+06:12.210 --> 06:12.990
+Ora puoi andare avanti.

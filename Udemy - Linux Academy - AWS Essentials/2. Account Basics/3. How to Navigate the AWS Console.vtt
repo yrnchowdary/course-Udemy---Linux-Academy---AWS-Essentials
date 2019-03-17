@@ -1,0 +1,205 @@
+WEBVTT
+
+00:00.910 --> 00:01.430
+Ciao.
+
+00:01.480 --> 00:08.630
+E in questa lezione Lezione 3 delle nozioni di base parleremo della navigazione dei cons AWOS. faremo un tour generale della console AWOS
+
+00:08.650 --> 00:14.390
+includendo come trovare i servizi e le funzionalità di base per questo tour.
+
+00:17.510 --> 00:24.920
+Daremo un'occhiata ai servizi AWOS per i quali il supporto per l'accesso alla documentazione attiva la
+
+00:25.700 --> 00:29.750
+selezione della regione e trova le impostazioni dell'account.
+
+00:29.750 --> 00:36.230
+Ora, prima di passare alla ricerca di queste cose, voglio sottolineare che la console AWOS è qualcosa
+
+00:36.290 --> 00:41.060
+che Amazon Web Services ha testato AB con versioni diverse nell'ultimo paio di
+
+00:41.060 --> 00:42.430
+settimane e mesi.
+
+00:42.650 --> 00:47.990
+Ora sono tornato indietro e ora sto registrando nuovamente questo video perché ora hanno aggiornato la
+
+00:47.990 --> 00:54.370
+console ancora una volta con quello che sembra essere la loro decisione finale e sarà la console stabile che avanza.
+
+00:54.800 --> 01:00.050
+Tuttavia, mentre visualizzi il resto del corso, noterai che tra alcuni
+
+01:00.050 --> 01:05.360
+video e persino alcuni video specifici vedrai la modifica della versione della console.
+
+01:05.360 --> 01:10.280
+Ora non preoccuparti di questo, perché se stai seguendo e anche se stai guardando un video con
+
+01:10.280 --> 01:16.400
+una versione precedente della console noterai che sarai ancora in grado di trovare tutti i servizi e le funzionalità pertinenti
+
+01:16.430 --> 01:19.160
+e tutto il resto di cui parlerò qui.
+
+01:19.220 --> 01:21.370
+Potrebbero essere in un posto leggermente diverso.
+
+01:21.380 --> 01:26.030
+Ma se ti guardi intorno dovresti essere in grado di trovare quello che
+
+01:26.030 --> 01:31.290
+stai cercando dato che non ci saranno grosse differenze fondamentali tra le diverse versioni della console.
+
+01:31.580 --> 01:32.210
+OK.
+
+01:32.360 --> 01:37.520
+Detto questo in questa nuova versione della console Diamo un'occhiata prima a come trovare vari servizi
+
+01:37.520 --> 01:40.490
+AWOS e possiamo farlo in molti modi diversi.
+
+01:40.520 --> 01:46.160
+Prima in cima a questa barra di navigazione qui sotto i servizi puoi sempre fare clic su
+
+01:46.160 --> 01:50.060
+questo e verrà visualizzato tutti i vari servizi raggruppati per categoria.
+
+01:50.050 --> 01:57.000
+Così sotto live e C-2 e Lamda sotto storage S3 e glacier sotto database.
+
+01:57.010 --> 02:01.540
+Dinamo RTX D-B con contenuto di rete VPC nella route 53.
+
+02:01.730 --> 02:06.320
+Quindi, se mai vuoi trovare o navigare a un servizio specifico, puoi semplicemente fare clic
+
+02:06.320 --> 02:08.130
+sul pulsante servizi per aprirlo.
+
+02:08.150 --> 02:14.090
+Puoi anche usare qui la barra di ricerca dei servizi AWOS in modo da poter digitare e C2 e puoi farlo.
+
+02:14.090 --> 02:16.390
+Fare clic su di esso e navigare verso quel servizio.
+
+02:16.400 --> 02:21.830
+Puoi anche aprire qui i servizi visitati di recente per visualizzare i servizi più recentemente visitati che
+
+02:21.830 --> 02:23.000
+hai appena utilizzato.
+
+02:23.000 --> 02:28.130
+Inoltre è possibile aprire tutti i servizi qui, che sta per far apparire esattamente lo stesso elenco
+
+02:28.130 --> 02:29.510
+qui sotto i servizi.
+
+02:29.510 --> 02:33.910
+Ma qui è solo sulla console principale in contrasto con un menu a discesa.
+
+02:33.980 --> 02:36.850
+Quindi per navigare in uno qualsiasi di questi servizi è facile.
+
+02:36.860 --> 02:42.470
+Tutto quello che devi fare è cliccare su di esso e sarai ora nella parte orientale della console per tornare indietro.
+
+02:42.470 --> 02:47.720
+Puoi sempre fare semplicemente clic su questo cubo per tornare alla console o se ti trovi in un determinato
+
+02:47.720 --> 02:52.990
+servizio un modo molto semplice e pratico per navigare è solo per fare clic su questo menu a discesa qui.
+
+02:53.210 --> 02:56.330
+E poi puoi fare clic su un altro servizio a cui potresti voler accedere.
+
+02:56.420 --> 03:00.950
+E ancora puoi sempre tornare alla console principale facendo semplicemente clic sul cubo nell'angolo in alto
+
+03:00.980 --> 03:01.710
+a sinistra.
+
+03:02.790 --> 03:08.490
+Per il supporto e la documentazione direttamente qui e il supporto è possibile fare clic su questo menu a discesa qui e si
+
+03:08.520 --> 03:10.230
+può andare al centro di supporto.
+
+03:10.230 --> 03:15.270
+È qui che puoi porre domande per ottenere risposte su vari problemi tecnici che potresti avere con
+
+03:15.270 --> 03:16.190
+una W-S.
+
+03:16.200 --> 03:23.040
+È possibile accedere ai moduli per porre domande e anche qui è possibile fare clic sulla documentazione per aprire tutti
+
+03:23.040 --> 03:30.090
+i servizi offerti da AWOS e quindi fare clic su di esso per accedere alla documentazione che i servizi Web Amazon
+
+03:30.090 --> 03:33.300
+forniscono per un particolare servizio per la selezione
+
+03:36.880 --> 03:41.170
+della Regione e questo è qualcosa che parleremo di una lezione futura.
+
+03:41.260 --> 03:44.050
+Ma fai rapidamente passare da una regione all'altra.
+
+03:44.050 --> 03:49.420
+Tutto quello che devi fare è navigare sul tuo prossimo supporto dove si dice North
+
+03:49.420 --> 03:56.170
+Virginia e potrebbe dirti qualcosa di diverso per te, ma è qui che puoi passare dall'uso di diverse regioni ed
+
+03:56.170 --> 03:57.380
+è davvero semplice.
+
+03:59.890 --> 04:05.450
+Tuttavia, in genere, per impostazione predefinita, probabilmente troverai ora la regione del Nord Virginia per Impostazioni account, dove
+
+04:05.490 --> 04:10.040
+intendi visualizzare le informazioni di fatturazione dei tuoi dati dell'account e così via.
+
+04:10.040 --> 04:15.020
+Fai semplicemente clic sul tuo nome qui e sotto il menu a discesa puoi accedere al mio account, la mia bacheca
+
+04:15.050 --> 04:18.280
+di fatturazione, le mie credenziali di sicurezza o dove puoi anche uscire.
+
+04:18.440 --> 04:24.470
+Quindi, faccio semplicemente clic sul mio account qui è possibile visualizzare e modificare le impostazioni dell'account è possibile visualizzare e
+
+04:24.500 --> 04:31.100
+modificare le informazioni di contatto e si può anche visualizzare le fatture per ogni mese per i bilanci di bilancio del mese
+
+04:31.100 --> 04:31.660
+precedente.
+
+04:31.670 --> 04:38.930
+Tutto ciò che puoi impostare, incluse le tue preferenze, le impostazioni fiscali dei crediti, qualsiasi cosa tu abbia bisogno di
+
+04:38.930 --> 04:43.730
+trovare o utilizzare in termini di impostazioni o preferenze dell'account, puoi semplicemente fare clic
+
+04:43.730 --> 04:47.410
+sul tuo nome qui e andare al mio account.
+
+04:47.480 --> 04:54.200
+Quindi questo è un breve tour di AWOS. e come navigare e trovare la documentazione di vari
+
+04:54.200 --> 04:57.720
+servizi supportano la selezione della regione e le impostazioni dell'account.
+
+04:57.740 --> 04:59.850
+Quindi con questo concluderò questa lezione.
+
+04:59.870 --> 05:00.950
+Grazie per aver guardato.
+
+05:00.950 --> 05:01.810
+Ora puoi andare avanti.

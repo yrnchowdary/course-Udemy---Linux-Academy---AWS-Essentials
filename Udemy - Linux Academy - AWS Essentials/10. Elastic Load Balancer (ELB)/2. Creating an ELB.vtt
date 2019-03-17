@@ -1,0 +1,199 @@
+WEBVTT
+
+00:00.300 --> 00:06.210
+Lo e in questa lezione ci concentreremo sulla creazione di un bilanciamento del carico elastico classico
+
+00:06.210 --> 00:12.420
+che tocca specificamente come creare il classico bilanciamento del carico elastico passo dopo passo e gruppi di
+
+00:12.420 --> 00:16.680
+sicurezza e protocolli di comunicazione per il bilanciamento del carico elastico.
+
+00:16.750 --> 00:23.470
+Quindi, per iniziare, vediamo dove accedere e creare il bilanciamento del carico elastico e la console AWOS e che è
+
+00:23.500 --> 00:25.720
+fatto sotto E. C a
+
+00:28.680 --> 00:30.470
+nel facile da con ..
+
+00:30.660 --> 00:35.700
+Se scorri verso il basso nella barra di navigazione a sinistra, vedrai il bilanciamento del carico in modo
+
+00:35.700 --> 00:41.900
+che possiamo fare clic sui bilanciatori del carico e la prima cosa che vorrai fare è fare clic su Crea bilanciamento del carico.
+
+00:41.930 --> 00:44.870
+Ora ci sono due diversi tipi di bilanciamento del carico.
+
+00:44.870 --> 00:49.910
+I bilanciatori di carico delle applicazioni e i classici bilanciatori di carico per
+
+00:49.910 --> 00:55.250
+gli scopi di questo corso ci limiteremo ad attenuare i classici bilanciamenti del carico.
+
+00:55.320 --> 01:00.120
+Quindi per la configurazione di base dobbiamo dare un nome al nostro
+
+01:00.120 --> 01:03.870
+bilanciatore di carico, quindi chiamerò questo Elby essenziale.
+
+01:04.060 --> 01:10.840
+Quindi dovrai selezionare il VPC per avviare il bilanciamento del carico e ho solo una VPC Wrapper a tale
+
+01:10.840 --> 01:11.450
+scopo.
+
+01:11.470 --> 01:14.010
+Questo sarà un bilanciamento del carico esterno.
+
+01:14.020 --> 01:16.120
+Non abbiamo bisogno che sia interno.
+
+01:16.210 --> 01:22.480
+E ciò che è molto importante qui con il bilanciamento del carico elastico e protocolli di comunicazione è che
+
+01:22.660 --> 01:28.810
+si seleziona il protocollo appropriato per il tipo di traffico che verrà gestito dal servizio di bilanciamento del
+
+01:28.810 --> 01:32.580
+carico poiché questo verrà impostato per gestire il traffico web.
+
+01:32.650 --> 01:40.720
+Vogliamo che il protocollo di comunicazione della proteina sia HTP sulla porta 80 che è.
+
+01:40.720 --> 01:48.070
+Quindi, dopo possiamo assegnare gruppi di sicurezza e questo molto simile a un gruppo di sicurezza su un'istanza facile
+
+01:48.100 --> 01:54.070
+o su un'istanza già esistente, dobbiamo avere entrambe le regole in entrata e in uscita sul
+
+01:54.070 --> 01:58.710
+gruppo di sicurezza che verrà applicato al bilanciamento del carico elastico.
+
+01:58.720 --> 02:06.130
+Quindi, per ragioni di discussione, creiamo un nuovo gruppo di sicurezza che chiameremo questo gruppo di sicurezza Elby
+
+02:06.130 --> 02:12.030
+e desidero assicurarmi di assegnare HTP e la porta 80 come protocollo per i
+
+02:17.640 --> 02:23.700
+controlli di integrità. Questo è un ulteriore vantaggio dell'utilizzo un bilanciamento del carico elastico o
+
+02:23.790 --> 02:27.790
+lo abbiamo toccato nella definizione AWOS della lezione precedente.
+
+02:27.930 --> 02:34.840
+Se i saldi di un carico elastico sono soggetti a tassazione, in modo semplice, ad esempio, non è più salutare o
+
+02:34.840 --> 02:40.170
+non è più disponibile, quindi non è più in grado di offrire traffico a tale livello.
+
+02:40.180 --> 02:47.170
+Quindi è qui che impostiamo i parametri che determineranno se il bilanciamento del carico elastico è giudicato e
+
+02:47.290 --> 02:54.820
+facile da istanziare o meno per il protocollo rosa, possiamo impostarlo su TCAP poiché al momento non disponiamo di
+
+02:54.820 --> 02:56.800
+un sito Web attivo.
+
+02:56.800 --> 03:03.460
+Non abbiamo un indice che il file team elth per il bilanciamento del carico elastico verifichi nuovamente, quindi useremo solo
+
+03:03.460 --> 03:10.300
+un controllo C di TP in modo che possa eseguire il ping e assicurarsi che le due istanze siano presenti, quindi
+
+03:10.330 --> 03:15.850
+possiamo ridurre e dettagli imposta il tempo di risposta sull'intervallo, quindi la soglia non salutare e
+
+03:15.910 --> 03:17.250
+la soglia sana.
+
+03:17.440 --> 03:24.640
+Quindi questi sono i controlli di salute che devi passare o non essere considerati sani o meno.
+
+03:24.720 --> 03:30.990
+Quindi dopo faremo clic per aggiungere due istanze qui è ora dove è possibile aggiungere o associare facile insistere che si ha con
+
+03:31.020 --> 03:33.280
+il proprio sistema di bilanciamento del carico elastico.
+
+03:33.300 --> 03:39.030
+Pertanto, le due istanze facili da selezionare qui sarebbero le istanze in cui il classico servizio di bilanciamento
+
+03:39.030 --> 03:40.790
+del carico invierà il traffico.
+
+03:40.800 --> 03:46.230
+Ora in realtà lascerò questo vuoto per ora non aggiungerò nessuna istanza facile perché
+
+03:46.260 --> 03:54.270
+utilizzerò il mio bilanciamento del carico elastico come parte del mio gruppo di scansione automatica nella prossima sezione, quindi cercheremo di
+
+03:54.270 --> 03:59.970
+tornare indietro attorno all'assegnazione effettiva di due istanze al bilanciamento del carico elastico che verrà
+
+03:59.970 --> 04:03.450
+eseguita tramite un processo automatizzato tramite ridimensionamento automatico.
+
+04:04.280 --> 04:06.510
+Quindi dopo possiamo aggiungere i tag se vogliamo.
+
+04:06.530 --> 04:11.000
+Per ora lascerò questo spazio vuoto, ma questo è qualcosa che puoi fare se lo desideri e
+
+04:11.270 --> 04:11.930
+io esaminerò
+
+04:14.610 --> 04:15.580
+e creerò OK.
+
+04:15.950 --> 04:22.320
+E ora, proprio così, ho il mio bilanciamento del carico elastico e qui sotto, come con molti altri
+
+04:22.340 --> 04:27.470
+servizi e AWOS, hai molte informazioni sui componenti del bilanciamento del carico elastico.
+
+04:27.570 --> 04:33.150
+Sono presenti istanze associate al bilanciamento del carico elastico, nonché i controlli di integrità
+
+04:33.150 --> 04:39.120
+impostati in cui è possibile passare sempre qui e modificare i parametri del controllo dello stato.
+
+04:39.180 --> 04:44.250
+Quindi questa è una panoramica generale su come creare un bilanciamento del carico elastico e torneremo a
+
+04:44.280 --> 04:49.110
+rivedere il bilanciamento del carico elastico un po 'nella prossima sezione quando passeremo al ridimensionamento automatico.
+
+04:49.110 --> 04:55.440
+Ma per ora concludiamo questa lezione e questa sezione in cui questa era la Sezione 9 di AWOS
+
+04:55.440 --> 05:01.560
+in cui abbiamo appreso il classico bilanciamento del carico elastico fondamentalmente un'introduzione al bilanciamento del carico elastico una
+
+05:01.770 --> 05:08.460
+panoramica concettuale dei benefici del bilanciamento del carico elastico e casi d'uso del bilanciamento del carico elastico panoramica dei prezzi
+
+05:08.670 --> 05:15.060
+di costo su come creare un sistema di bilanciamento del carico elastico e sicurezza Elby in cui abbiamo parlato
+
+05:15.060 --> 05:20.550
+dei gruppi di sicurezza e dobbiamo assicurarci che le porte appropriate abbiano consentito le regole.
+
+05:20.730 --> 05:26.340
+Quindi, tornando al nostro schema principale, ora stiamo davvero iniziando a riempire questo aspetto e la successiva costruzione del
+
+05:26.340 --> 05:30.050
+bilanciamento del carico elastico si sarebbe spostata verso il ridimensionamento automatico.
+
+05:30.210 --> 05:33.800
+Quindi con quello completerò questa lezione e completerò questa sezione.
+
+05:33.900 --> 05:34.950
+Grazie per aver guardato.
+
+05:34.950 --> 05:35.780
+Ora puoi andare avanti.

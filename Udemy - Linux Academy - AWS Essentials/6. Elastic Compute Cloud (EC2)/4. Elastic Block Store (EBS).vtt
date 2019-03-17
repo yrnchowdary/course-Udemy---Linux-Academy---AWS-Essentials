@@ -1,0 +1,289 @@
+WEBVTT
+
+00:00.480 --> 00:07.530
+Salve e bentornati in questa lezione parleremo in modo specifico del negozio di blocchi elastici comunemente
+
+00:07.530 --> 00:09.060
+indicato come eBay.
+
+00:09.060 --> 00:09.610
+Sì.
+
+00:09.810 --> 00:17.270
+Stiamo andando a toccare il percorso IOPS delle definizioni PBS rispetto ai volumi e alle istantanee aggiuntivi.
+
+00:19.440 --> 00:22.820
+Quindi per iniziare parliamo della definizione di eBay.
+
+00:22.830 --> 00:29.040
+Sì, una definizione semplificata è Ebay è un volume di archiviazione per due istanze.
+
+00:29.130 --> 00:37.440
+Quindi qui voglio che tu pensi che sia un disco rigido per una definizione WSS. Il negozio di blocchi elastici fornisce volumi di
+
+00:37.680 --> 00:45.060
+storage a livello di blocco per l'uso con E. C due istanze I volumi UBS sono volumi di archiviazione altamente
+
+00:45.060 --> 00:50.950
+disponibili e affidabili che possono essere collegati a qualsiasi istanza in esecuzione che si trova nella stessa zona di disponibilità.
+
+00:51.150 --> 00:57.810
+I volumi allegati a un'istanza vengono esposti come un volume di archiviazione che persiste
+
+00:58.110 --> 01:03.680
+indipendentemente dalla durata dell'istanza e lo toccheremo nuovamente in pochi minuti.
+
+01:06.600 --> 01:11.670
+Quindi, prima di muoverci ulteriormente, parliamo del deposito dei blocchi elastici e di come è usato.
+
+01:11.790 --> 01:17.520
+Parliamo prima di IOPS perché questo è qualcosa che, sebbene sia un po 'più di una funzionalità avanzata,
+
+01:17.520 --> 01:20.530
+è qualcosa che almeno vuole solo che tu sappia.
+
+01:20.670 --> 01:22.520
+Quindi cosa sono
+
+01:22.680 --> 01:26.250
+Si trova per le operazioni di output in ingresso al secondo.
+
+01:26.250 --> 01:34.020
+Una definizione semplificata di ciò è la quantità di dati che possono essere scritti o recuperati dal volume di
+
+01:34.140 --> 01:35.640
+UBS al secondo.
+
+01:35.640 --> 01:41.910
+AWOS definisce IOPS come unità di misura che rappresenta le operazioni di output in input al secondo.
+
+01:41.910 --> 01:48.000
+Le operazioni sono misurate in bit Kibby e la tecnologia di azionamento sottostante determina la quantità massima
+
+01:48.000 --> 01:52.400
+di dati che un tipo di volume conta come un singolo IO.
+
+01:52.560 --> 02:02.710
+Quindi la dimensione dell'IO è catodo 256 Bit di Kibby per i volumi SSD e 1024 Kibby che è per i volumi HDD perché
+
+02:02.940 --> 02:09.480
+i volumi di Hannele sono piccoli o random IO molto più efficienti dei volumi HDD.
+
+02:09.960 --> 02:11.650
+Quindi cosa significa tutto questo.
+
+02:11.760 --> 02:18.200
+Fondamentalmente più IOPS significa migliori prestazioni del volume più veloci per leggere le velocità di scrittura.
+
+02:18.420 --> 02:24.960
+Che cosa determina la quantità di IOPS Il fattore di contribuzione più importante è la dimensione del volume dell'ABS.
+
+02:24.990 --> 02:30.240
+Quindi più grande è la dimensione della memoria e si danno ai byte più IOPS il volume
+
+02:34.350 --> 02:34.970
+ha OK.
+
+02:35.160 --> 02:40.320
+Quindi, ora che abbiamo un po 'di materiale tecnico, parliamo di route contro
+
+02:40.350 --> 02:41.500
+volumi aggiuntivi.
+
+02:41.550 --> 02:49.830
+Quindi diciamo chiaramente che ogni due istanze devono avere un volume che può essere o meno IBS quindi IBS non
+
+02:49.830 --> 02:57.000
+è l'unico tipo di archiviazione offerto da Amazon Web Services per istanze facili ma è il
+
+02:57.000 --> 03:04.920
+più comunemente usato, ecco perché noi sto solo parlando di questo tipo qui ora nel PC per console.
+
+03:04.980 --> 03:10.140
+Puoi andare in un negozio di plastica e visualizzare i tuoi volumi andando
+
+03:10.140 --> 03:16.410
+direttamente sul tuo classico box store e facendo clic sui volumi e, se lo desideri, puoi creare
+
+03:16.410 --> 03:23.860
+un volume indipendente da un'istanza facile o durante il processo di creazione dell'istanza se vai in alcune schermate alla conservazione.
+
+03:23.940 --> 03:32.740
+Qui è dove si seleziona il volume di root per il tuo PC per istanza e per impostazione predefinita si tratta di un volume
+
+03:33.030 --> 03:33.980
+di eBay.
+
+03:34.320 --> 03:40.550
+Quindi, per impostazione predefinita, i volumi radice EBIZ sono impostati per essere eliminati quando l'istanza viene terminata.
+
+03:40.550 --> 03:46.570
+Tuttavia è possibile scegliere di mantenere il volume dopo la chiusura.
+
+03:46.590 --> 03:53.130
+Quindi, uno dei principali vantaggi dei volumi IBSA rispetto ai vecchi tipi di volumi
+
+03:53.130 --> 04:00.860
+di storage utilizzati da AWOS è che i volumi IBS possono persistere oltre la vita di facile istanza.
+
+04:00.870 --> 04:06.210
+Quindi se vedi proprio qui dice cancellazione alla terminazione e questo viene verificato ciò significa che quando invece
+
+04:06.210 --> 04:07.050
+lo interrompiamo.
+
+04:07.260 --> 04:08.610
+Questa è la rotta B-S.
+
+04:08.640 --> 04:11.990
+Anche il volume verrà cancellato.
+
+04:12.000 --> 04:18.420
+Ma se dovessi deselezionare questo, posso terminare l'istanza e questo LBA come volume di root sarebbe ancora lì nel mio
+
+04:18.420 --> 04:24.610
+conteggio che potrei quindi collegare a un altro E. C ad esempio.
+
+04:24.660 --> 04:31.710
+Ora, se voglio, posso anche aggiungere un volume aggiuntivo e un volume IBS al mio E. S. ad esempio durante il processo
+
+04:31.710 --> 04:38.160
+di creazione di easy to instance o potrei sempre creare un volume ABS in qualsiasi
+
+04:38.250 --> 04:40.840
+momento successivo e collegarlo all'istanza C2.
+
+04:45.140 --> 04:52.040
+Questo significa che possiamo scambiare i volumi EBIZ tra diversi facili due pollici staccandoli da uno e
+
+04:52.130 --> 04:54.080
+collegandoli a un altro.
+
+04:54.080 --> 05:00.360
+Quindi, se dovessi creare questo e ad esempio e ho il mio volume di root e poi ho il mio volume addizionale
+
+05:00.380 --> 05:02.160
+in abs proprio come ho qui.
+
+05:02.390 --> 05:07.760
+A quel punto potrò in un secondo momento creare una seconda istanza facile, magari
+
+05:08.060 --> 05:15.010
+solo con un volume di root, ma posso quindi aggiungere questo come volume separato dall'istanza 1 e spostarlo nell'istanza 2.
+
+05:15.140 --> 05:21.110
+Quindi è una funzionalità davvero interessante poter fondamentalmente prendere i dischi rigidi e spostarli o
+
+05:21.110 --> 05:23.010
+scambiarli da un'istanza all'altra.
+
+05:24.220 --> 05:27.520
+E quando pensi alla radice rispetto ai volumi aggiuntivi.
+
+05:27.520 --> 05:33.250
+Quello che voglio che tu pensi è che se hai un computer a casa probabilmente hai un
+
+05:33.250 --> 05:35.140
+disco rigido incorporato nel computer.
+
+05:35.170 --> 05:39.520
+Quindi, se dovessi prendere quel computer e gettarlo nella spazzatura o il computer
+
+05:39.520 --> 05:45.670
+dovesse rompersi, molto probabilmente perderai anche il volume a meno che tu non stia effettivamente aprendo il tuo computer e
+
+05:45.670 --> 05:47.130
+togli quel disco rigido.
+
+05:47.260 --> 05:49.960
+Quindi pensaci allo stesso modo qui con il tuo volume di root.
+
+05:49.960 --> 05:56.470
+Questo è il disco rigido integrato nel tuo computer e hai la possibilità di terminare
+
+05:56.500 --> 06:02.320
+o quando buttare fuori l'istanza avresti l'opportunità di aprire il computer e
+
+06:02.320 --> 06:08.350
+tirare fuori quel disco rigido e salvarlo per in seguito, deselezionando questo qui.
+
+06:08.410 --> 06:12.700
+Ma se continui a controllare che sarà simile a te che stai prendendo il tuo computer in questo
+
+06:12.700 --> 06:16.070
+momento e buttandolo nella spazzatura e avendo il disco rigido dentro vai con esso.
+
+06:16.210 --> 06:19.810
+Con i volumi aggiuntivi è come avere un disco rigido esterno.
+
+06:19.810 --> 06:25.390
+Quindi, se hai una chiavetta USB o una scheda a stato solido che forse si collega al computer
+
+06:25.430 --> 06:31.390
+ma è esterna e cosa si può fare con una pen drive o un disco rigido esterno è semplicemente scollegarlo
+
+06:31.390 --> 06:34.870
+dal computer e collegarlo in un altro computer in qualsiasi momento.
+
+06:34.960 --> 06:36.230
+E questo è come è qui.
+
+06:36.250 --> 06:41.730
+Avere un volume IBS in più.
+
+06:41.940 --> 06:45.630
+Quindi, più avanti, quello che voglio inserire sono le istantanee.
+
+06:45.630 --> 06:52.310
+Quindi quali sono le istantanee e quelle possono essere visualizzate proprio qui sotto i volumi del negozio di elastici.
+
+06:54.550 --> 07:01.090
+Un'istantanea è un'immagine di un e-book come volume che può essere memorizzata come backup del volume o utilizzata
+
+07:01.090 --> 07:02.850
+per creare un duplicato.
+
+07:02.890 --> 07:09.580
+Un'istantanea non è un volume LDS attivo non è possibile allegare o scollegare un'istantanea a un'istanza facile
+
+07:09.980 --> 07:12.040
+o per ripristinare un'istantanea.
+
+07:12.040 --> 07:16.630
+È necessario creare un nuovo volume CBS utilizzando l'istantanea come modello.
+
+07:16.750 --> 07:24.010
+Quindi, se ho un volume EBIZ e creo uno snapshot che è fondamentalmente un duplicato o una replica
+
+07:24.010 --> 07:30.760
+che posso usare come backup per archiviare e in futuro potrò lanciare un nuovo volume CBS e
+
+07:30.910 --> 07:38.200
+creare e usare lo snapshot per popolare il volume EBIZ con tutte le informazioni presenti nel volume PBS
+
+07:38.200 --> 07:38.940
+originale.
+
+07:39.190 --> 07:44.950
+Quindi i benefici delle istantanee sono di avere una grande risorsa per i backup e avere uno snapshot perché non
+
+07:44.950 --> 07:49.490
+è un Eby attivo dal vivo poiché il volume è anche molto più economico.
+
+07:53.320 --> 07:53.760
+Va bene.
+
+07:53.780 --> 07:59.150
+Quindi riassumiamo tutto con CBS e quando ci pensi su vs di nuovo, basta pensarlo come un disco
+
+07:59.150 --> 07:59.710
+fisso.
+
+08:00.640 --> 08:02.800
+E con questo concluderemo questa lezione.
+
+08:02.890 --> 08:04.180
+Grazie per aver guardato.
+
+08:04.180 --> 08:05.080
+Ora puoi andare avanti.

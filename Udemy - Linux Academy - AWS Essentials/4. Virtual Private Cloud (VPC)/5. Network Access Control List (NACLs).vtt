@@ -1,0 +1,430 @@
+WEBVTT
+
+00:00.410 --> 00:00.930
+Ciao.
+
+00:00.990 --> 00:07.710
+E in questa lezione continuerai a costruire su basi VPC e capirai come funzionano i PC dando
+
+00:07.710 --> 00:10.930
+un'occhiata all'elenco di controllo dell'accesso alla rete.
+
+00:10.980 --> 00:16.200
+Parleremo in modo specifico delle sue definizioni di funzione su come creare un elenco di
+
+00:16.200 --> 00:21.930
+controllo di accesso alla rete e, soprattutto, sulla gestione delle regole dell'elenco di controllo di accesso alla rete.
+
+00:21.930 --> 00:27.980
+Quindi, prima diamo un'occhiata a quale sia la definizione per un elenco di controllo di accesso alla rete.
+
+00:28.020 --> 00:32.050
+E ancora una volta la definizione AWOS è abbastanza semplice in questo caso.
+
+00:32.100 --> 00:39.150
+Quindi, saltiamo giù fino a che un elenco di controllo di accesso alla rete è un livello opzionale di sicurezza
+
+00:39.150 --> 00:46.820
+per il tuo VPC che accede a un firewall per controllare il traffico in entrata e in uscita da una o più sottoreti.
+
+00:46.950 --> 00:54.180
+Facciamo quindi una breve nota che il VPC predefinito ha già un elenco di controllo di accesso alla
+
+00:54.270 --> 00:57.720
+rete in atto e associato alle sottoreti predefinite.
+
+00:57.750 --> 01:04.650
+Quindi, per trovare e modificare la tua lista di controllo di accesso alla rete, possiamo cliccare sulla lista di
+
+01:04.650 --> 01:10.530
+controllo dell'accesso alla rete qui o sotto sicurezza sul lato sinistro clicca sulla rete ACLC.
+
+01:10.590 --> 01:19.170
+Qui abbiamo la nostra lista di controllo di accesso alla rete predefinita e ha le quattro subnet predefinite associate che
+
+01:19.170 --> 01:22.500
+possiamo vedere qui che sono associate Ora
+
+01:25.250 --> 01:30.290
+in termini di come si adatta e funziona all'interno del VPC.
+
+01:30.290 --> 01:35.050
+Si trova davvero tra la tavola rotonda e una qualsiasi di queste sottoreti ad essa associate.
+
+01:35.240 --> 01:42.140
+Quindi, quando il traffico arriva attraverso la tabella del router prima che entri in una sottorete, si aprirà l'elenco di controllo di accesso
+
+01:42.140 --> 01:47.150
+alla rete o se qualche informazione sta lasciando un sottotitolo che colpirà un elenco di controllo
+
+01:47.150 --> 01:51.600
+di accesso alla rete prima di poter passare a una tabella del router .
+
+01:53.600 --> 01:59.630
+Quindi, in particolare, quello che vogliamo sapere sugli elenchi di controllo di accesso alla rete è che hanno entrambe le regole in entrata
+
+01:59.630 --> 02:04.340
+e in uscita e quelle sono categorie separate che significa che puoi avere determinate regole per il traffico
+
+02:04.340 --> 02:08.440
+in entrata e altre regole che possono essere diverse per il traffico in uscita.
+
+02:08.450 --> 02:14.840
+Ora è molto importante sapere che per il controllo di accesso di rete predefinito questo è quello che
+
+02:14.840 --> 02:16.780
+è stato creato per noi.
+
+02:16.910 --> 02:21.370
+Per impostazione predefinita, tutto il traffico è consentito in entrambe le direzioni.
+
+02:21.440 --> 02:27.260
+Quindi se diamo una rapida occhiata a queste regole qui che spiegherò in un secondo
+
+02:27.290 --> 02:35.270
+sia in entrata che in uscita, c'è un permesso esplicito qui che verrà valutato per primo e permetterà a tutto il
+
+02:35.390 --> 02:36.080
+traffico.
+
+02:36.230 --> 02:43.850
+Quindi, se vogliamo fornire una protezione a livello di sottorete, dovremo modificarli se continuiamo a
+
+02:43.850 --> 02:48.470
+utilizzare l'elenco di controllo di accesso alla rete predefinito.
+
+02:50.610 --> 02:53.090
+Ora come funzionano queste regole.
+
+02:53.310 --> 02:59.660
+Bene per le regole in entrata e in uscita ci sono delle regole che governano il modo in cui funzionano.
+
+02:59.660 --> 03:05.840
+La prima regola da tenere presente è che le regole vengono valutate in base al numero di regole dal più basso
+
+03:06.020 --> 03:07.250
+al più alto.
+
+03:07.250 --> 03:14.480
+La seconda è che la prima regola valutata che si applica al tipo di traffico viene immediatamente applicata ed eseguita
+
+03:14.540 --> 03:20.720
+indipendentemente dalle regole che seguono dopo che il significato ha un numero di regola più alto.
+
+03:20.990 --> 03:26.450
+Quindi potrebbe essere un po 'difficile da capire in questo momento poiché abbiamo solo due regole che sono qui e in
+
+03:26.450 --> 03:28.590
+realtà solo una regola che possiamo modificare.
+
+03:28.730 --> 03:37.520
+Quindi questa regola con un numero di 100 sta permettendo tutto il tipo di traffico sotto tutti gli intervalli
+
+03:37.820 --> 03:41.090
+di protocollo Allport da qualsiasi fonte sottostante.
+
+03:41.090 --> 03:45.120
+Ecco una regola per cui non possiamo cancellare la modifica del modificatore.
+
+03:45.170 --> 03:47.910
+E questo è considerato un problema.
+
+03:48.050 --> 03:55.850
+E ciò significa che se non permettiamo specificamente il traffico, verrà negato.
+
+03:56.090 --> 04:07.870
+Quindi, se dovessi modificare questo e rimuovere la regola allow all, allora tutte le informazioni che ora entrano nella subnet
+
+04:07.870 --> 04:11.880
+saranno negate e non posso rimuoverlo.
+
+04:11.980 --> 04:20.710
+Quindi, se voglio che qualsiasi dato sia in grado di entrare o se fosse una regola in uscita lasciare un sottoinsieme, devo
+
+04:20.800 --> 04:24.490
+aggiungere esplicitamente una regola che permetta di farlo.
+
+04:24.910 --> 04:35.220
+Quindi, se aggiungo una regola, chiamiamo questa regola 80 e renderò questo HTP e lo accetterò da tutte le
+
+04:35.250 --> 04:36.370
+fonti.
+
+04:38.580 --> 04:42.220
+E lasciarlo come consentire un clic di salvare.
+
+04:42.360 --> 04:48.890
+Ora per i dati che arrivano è di tipo HTP o traffico web di base.
+
+04:49.110 --> 04:55.050
+Arriverà alla lista di controllo di accesso alla rete e al controllo di accesso alla rete che inizierà
+
+04:55.050 --> 05:01.530
+a valutare dal più basso al più alto. Quindi guarderà questo e dirà ok ecco la nostra prima regola è
+
+05:01.530 --> 05:05.490
+il nostro tipo di traffico HTP TPM che sta per dire sì.
+
+05:05.490 --> 05:11.610
+E qual è la regola che la regola è consentita e invierà immediatamente il traffico o le liste di
+
+05:11.610 --> 05:13.700
+controllo di ciò che viene dopo.
+
+05:13.740 --> 05:21.120
+Quindi per dettagliarlo in modo più esplicito Aggiungiamo un'altra regola o inseriamo questo numero di regola 90.
+
+05:21.190 --> 05:23.170
+Sarà una regola
+
+05:25.790 --> 05:33.790
+HTP da qualsiasi fonte e questa sarà una regola di negazione click save.
+
+05:33.980 --> 05:40.830
+Quindi anche se ora ho una regola che dice negare qualsiasi traffico al futuro è ancora permesso.
+
+05:40.850 --> 05:46.850
+Perché di nuovo la prima regola valutata che si applica al tipo di traffico viene immediatamente applicata
+
+05:46.910 --> 05:53.960
+ed eseguita e le regole vengono valutate in base al numero di regole dal più basso al più alto In modo
+
+05:53.960 --> 05:59.390
+che il traffico HGTV entri nella lista di controllo dell'accesso alla rete inizia a scorrere
+
+05:59.390 --> 06:07.730
+verso il basso nell'elenco arriva alla primissima regola che SCDP consente di attraversare indipendentemente dal fatto che questa regola denie sia presente o meno.
+
+06:07.730 --> 06:16.380
+Ora se dovessi cambiare questi numeri se dovessi mettere la regola di negazione a 70 ora qualsiasi traffico HDTV che dovesse entrare nella lista
+
+06:16.380 --> 06:21.570
+di controllo di accesso alla rete verrebbe negato perché questo sarebbe valutato prima che
+
+06:21.660 --> 06:27.030
+eseguisse immediatamente quella regola e il il traffico verrebbe negato indipendentemente dal fatto che dopo
+
+06:27.030 --> 06:30.280
+di esso abbiamo una regola di autorizzazione HTP.
+
+06:30.510 --> 06:35.440
+Quindi queste proprietà si applicano sia per le regole in entrata che in uscita.
+
+06:37.330 --> 06:42.720
+Quindi ora parliamo del nostro valore predefinito rispetto a un nuovo elenco di controllo di accesso alla rete.
+
+06:42.760 --> 06:47.620
+E prima di creare un nuovo elenco di controllo dell'accesso alla rete, torniamo indietro
+
+06:47.620 --> 06:56.360
+qui e cambiamo questi numeri, riportiamo questo valore a 90 in modo che il traffico possa entrare, quindi ora stiamo permettendo al traffico HDTV
+
+06:56.450 --> 07:05.180
+di entrare nella sottorete, quindi creare un nuovo elenco di controllo di accesso alla rete facendo clic su crea ACL di rete qui e
+
+07:05.180 --> 07:07.770
+daremo un nome che chiameremo essenziale.
+
+07:09.760 --> 07:16.230
+Elementi essenziali in un clic C-L Crea.
+
+07:16.230 --> 07:23.190
+OK, ora abbiamo una nuova lista di controllo di accesso alla rete e una delle cose di cui vogliamo essere molto chiari qui
+
+07:23.190 --> 07:29.460
+è che quando si crea un nuovo elenco di controllo di accesso alla rete per impostazione predefinita viene negato tutto.
+
+07:29.460 --> 07:37.250
+Quindi, se guardi qui non esiste una regola di consenso per le regole uomo e in uscita, tutto è impostato in modo
+
+07:37.250 --> 07:44.990
+da negare come con il nostro elenco di controllo di accesso di rete predefinito che ha consentito il traffico in ingresso e
+
+07:44.990 --> 07:46.970
+in uscita per impostazione predefinita.
+
+07:47.000 --> 07:52.010
+Quindi è solo una cosa davvero importante da ricordare quando inizi a utilizzare il tuo
+
+07:52.010 --> 07:57.980
+account AWOS nel caso in cui tu abbia qualche tipo di connettività o di restrizione quando tenti di
+
+07:58.010 --> 08:01.900
+accedere a Internet o agli elementi collocati all'interno del tuo PC.
+
+08:02.330 --> 08:09.470
+Quindi al momento entrambe queste sottoreti sono attualmente assegnate o associate al nostro PPC predefinito poiché abbiamo tutte
+
+08:09.470 --> 08:13.150
+le nostre subnet associate al nostro VPC predefinito.
+
+08:13.160 --> 08:21.600
+Quindi adesso il traffico HDTV sarebbe permesso in una di queste sottoreti.
+
+08:21.850 --> 08:29.950
+Se dovessimo cambiarlo o associare una delle nostre subnet al nuovo elenco di controllo di accesso alla rete, tutto il
+
+08:29.950 --> 08:37.630
+traffico verrebbe negato poiché non abbiamo alcuna regola di autorizzazione nelle nostre regole in entrata o in uscita.
+
+08:37.660 --> 08:44.470
+Quindi se dovessi andare ad associare all'improvviso che è cliccare su modifica e selezionare una di queste sottoreti o
+
+08:44.470 --> 08:49.570
+selezionarlo qui e fare clic su Salva vedremo che questo numero cambierà a tre.
+
+08:49.600 --> 08:53.400
+E questo diventerà uno.
+
+08:53.490 --> 08:59.220
+Quindi, ora che questa rete è associata a questo elenco di controllo dell'accesso alla rete, nessun traffico
+
+08:59.220 --> 09:03.120
+può entrare o uscire perché non ci sono regole di autorizzazione.
+
+09:03.130 --> 09:10.580
+Ora se dovessi aggiungere alcune regole, diciamo che metterò questo al numero 90 e lo metteremo come SS H.
+
+09:10.780 --> 09:13.800
+E consentiremo da
+
+09:16.700 --> 09:32.520
+tutte le fonti di fare clic su Salva consenti e faremo la stessa cosa per consentire 90 S-sh in uscita.
+
+09:32.540 --> 09:41.290
+Così ora sul nostro nuovo elenco di controllo di accesso alla rete SS H sarà consentito sia in entrata che in uscita dalla sottorete.
+
+09:41.550 --> 09:45.540
+E poi il nostro catchall qui in basso negherà tutto il resto del traffico.
+
+09:45.540 --> 09:51.150
+Quindi se il traffico HTP dovesse entrare e noi andiamo in questo modo e dobbiamo andare a questo qualcosa in cui
+
+09:51.150 --> 09:51.990
+sarebbe permesso entrare.
+
+09:52.080 --> 09:57.540
+Ma se dovesse andare in questo modo il traffico HGTV verrebbe negato perché guarderebbe questa regola
+
+09:57.540 --> 10:01.590
+e dire che il tipo HTP si applica a questa regola.
+
+10:01.590 --> 10:06.440
+Dì no perché questa regola per il tipo S-sh che per tutto il resto del traffico.
+
+10:06.440 --> 10:13.070
+C'è una regola denie quindi so che abbiamo speso un sacco di tempo sul nitty grintoso qui di utilizzare l'elenco di controllo di
+
+10:13.070 --> 10:14.070
+accesso alla rete.
+
+10:14.210 --> 10:21.110
+Ma la sicurezza è una delle cose principali che devi assolutamente sapere quando inizi a utilizzare AWOS in modo specifico, non dal punto
+
+10:21.350 --> 10:25.790
+di vista delle persone che tenteranno di hackerare o entrare nel tuo sistema, ma
+
+10:25.820 --> 10:32.390
+più da un problema di connettività che significa che quando inizi a eseguire il provisioning più semplice per istanze già come database
+
+10:32.390 --> 10:40.370
+di istanze e davvero iniziare ad utilizzare altri servizi come il controllo dell'accesso alla rete, potrebbe essere una barriera nascosta per te in quanto potresti non
+
+10:40.520 --> 10:45.950
+essere in grado di accedere a qualcosa e non sai perché e molte volte avrà a che fare
+
+10:45.950 --> 10:51.230
+con gli elenchi di controllo dell'accesso alla rete o con i gruppi di sicurezza, cosa che stiamo
+
+10:51.230 --> 10:53.880
+andando a toccare in una sezione futura.
+
+10:54.050 --> 10:59.810
+Quindi assicurarti di avere questi set correttamente per il tipo di traffico che vuoi utilizzare può
+
+10:59.870 --> 11:06.200
+aumentare notevolmente la tua sicurezza, ma diventa un'area in cui devi essere molto attento a fare in modo
+
+11:06.200 --> 11:09.840
+che le connessioni siano corrette per il traffico muoversi liberamente.
+
+11:10.610 --> 11:17.810
+Quindi, ancora una volta voglio solo che tu sia molto attento a come il traffico scorre attraverso un VPC da Internet fino a
+
+11:17.810 --> 11:20.320
+quel livello e poi dall'improvviso quel livello.
+
+11:20.330 --> 11:25.960
+Ritornare a Internet e il ruolo che gli elenchi di controllo di accesso alla rete giocano in questo.
+
+11:25.970 --> 11:33.040
+Quindi, ancora una volta per ricapitolare sul controllo dell'accesso alla rete, la definizione è un livello facoltativo di sicurezza.
+
+11:33.110 --> 11:38.450
+Quindi non è necessario disporre di un set di sicurezza che è possibile impostare per consentire tutto il traffico
+
+11:38.450 --> 11:41.360
+e quindi non si ha il controllo dell'accesso alla rete.
+
+11:41.480 --> 11:46.760
+Ma se stai ospitando solo un server web, forse l'unico traffico che vuoi consentire a
+
+11:46.760 --> 11:54.530
+quella sottorete sarebbe il traffico HGP HDTV che non consente ad alcun altro traffico di entrare nel tuo server web o solo
+
+11:54.530 --> 12:00.500
+una maggiore sicurezza e che sarebbe considerata una best practice per consentire solo il traffico che è
+
+12:00.650 --> 12:01.540
+assolutamente necessario.
+
+12:01.550 --> 12:06.380
+Quindi un paio di regole e dettagli che andiamo a sapere e ricapitolare è che le regole vengono valutate dal più basso
+
+12:06.380 --> 12:08.620
+al più alto in base al numero di regole.
+
+12:08.660 --> 12:14.060
+La prima regola trovata che si applica al tipo di traffico viene applicata immediatamente a
+
+12:14.060 --> 12:20.720
+prescindere da qualsiasi regola che segue dopo che ha un numero di regola più alto, l'elenco di controllo di accesso
+
+12:20.720 --> 12:26.120
+alla rete predefinito consente il traffico verso le sottoreti predefinite e anche dalle sottoreti predefinite.
+
+12:26.210 --> 12:34.370
+E ogni nuovo elenco di controllo di accesso alla rete che crei negherà tutto il traffico per impostazione predefinita e le sottoreti possono essere associate
+
+12:34.550 --> 12:38.840
+a un solo elenco di controllo di accesso alla rete alla volta.
+
+12:38.870 --> 12:44.090
+Se ricordi quando ho associato questo improvviso che con questa rete l'ho controllato, l'ho rimosso automaticamente
+
+12:44.090 --> 12:50.330
+da questo elenco di controllo di accesso alla rete e l'ho assegnato a questo così improvviso che può essere associato
+
+12:50.330 --> 12:58.670
+solo a un elenco di controllo di accesso alla rete alla volta e in una rete l'elenco di controllo di accesso consente o impedisce al traffico
+
+12:58.670 --> 13:00.370
+di entrare in una sottorete.
+
+13:00.380 --> 13:08.000
+Una volta dentro all'improvviso quell'altra A. W. come risorse che significano come E. Le due istanze C possono
+
+13:08.000 --> 13:14.120
+avere ulteriori livelli di sicurezza per se stessi che significano la sicurezza di cui parleremo nelle lezioni future, ma
+
+13:14.600 --> 13:20.830
+ricordiamo sempre che si tratta di elenchi di controllo di accesso alla rete che forniscono accesso a livello di sottorete.
+
+13:21.290 --> 13:23.190
+E con questo completeremo questa lezione.
+
+13:23.210 --> 13:24.240
+Grazie per aver guardato.
+
+13:24.290 --> 13:25.130
+Ora puoi andare avanti.

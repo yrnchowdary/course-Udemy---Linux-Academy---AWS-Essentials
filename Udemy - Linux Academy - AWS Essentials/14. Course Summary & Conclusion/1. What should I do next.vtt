@@ -1,0 +1,211 @@
+WEBVTT
+
+00:01.210 --> 00:09.260
+Complimenti per aver completato il corso di AWOS essentials proposto da Linux Academy.
+
+00:09.320 --> 00:15.580
+Ora probabilmente hai appena trascorso le ultime due settimane seguendo il corso di AWOS essentials e apprendendo
+
+00:15.610 --> 00:21.990
+molto su AWOS, ma ora probabilmente ti starai chiedendo cosa dovrei fare dopo quale sarà il prossimo passo.
+
+00:22.000 --> 00:23.560
+Mi piace davvero AWOS.
+
+00:23.710 --> 00:27.840
+Mi piace imparare su AWOS Cosa posso fare per saperne di più.
+
+00:27.940 --> 00:32.510
+Bene, questo è quello di cui ti parlerò qui in questa particolare lezione.
+
+00:34.000 --> 00:41.570
+Quindi adesso hai completato il nostro corso essenziale di AWOS ea questo punto potresti aver già completato il corso di concetti AWOS, ma se non lo hai
+
+00:41.570 --> 00:46.870
+fatto hai iniziato proprio da A. W. corso essenziale che va
+
+00:46.870 --> 00:54.670
+bene lo considereremo come anche il completamento del corso del concept AWOS in quanto il corso di base copre
+
+00:54.670 --> 00:59.520
+tutto ciò che copre anche il corso sui concetti di AWOS.
+
+00:59.560 --> 01:05.680
+Quindi considereremo che in questo momento hai completato il corso per i concetti di biz ADL e il corso
+
+01:05.680 --> 01:12.010
+di AWOS essentials e sei pronto per passare al grande ragazzo che sei pronto a passare all'architetto di soluzioni certificate
+
+01:12.150 --> 01:12.780
+AWOS.
+
+01:12.870 --> 01:19.960
+Quindi corso di livello di merda e poi come corso di livello intermedio che è stato progettato
+
+01:20.080 --> 01:26.290
+per fornire un apprendimento AWOS approfondito per prepararti all'esame di livello associato AWA CSA.
+
+01:26.290 --> 01:34.390
+Quindi, innanzitutto se il tuo obiettivo è quello di prendere e passare una certificazione AWOS, questo è il prossimo passo logico.
+
+01:34.400 --> 01:40.180
+Ora questa è una delle tre certificazioni di livello associativo, c'è questo
+
+01:40.540 --> 01:44.970
+amministratore certificato e amministratore certificato di sysops certificati.
+
+01:45.010 --> 01:48.610
+Generalmente lo consigliamo per le persone che stanno ancora imparando.
+
+01:48.640 --> 01:55.690
+Otto degli Stati Uniti che studiano e prendono l'architetto delle soluzioni AWOS per primi perché
+
+01:55.690 --> 02:03.310
+offrono davvero il curriculum e il programma più ampio per insegnarti di più su AWOS in termini
+
+02:03.340 --> 02:12.160
+di servizi e caratteristiche e ti dà davvero la migliore base per capire una voce nel mondo delle certificazioni AWOS.
+
+02:12.160 --> 02:19.330
+Così come con A. W. Essenzialmente, la caratteristica principale era Project Omega
+
+02:19.330 --> 02:26.680
+e spero che tu abbia apprezzato lo strumento di apprendimento interattivo visivo come parte del corso ora con queste soluzioni certificate AWOS,
+
+02:26.710 --> 02:30.680
+architetto, livello di corso associato, ho anche qualcosa di nuovo per te.
+
+02:30.700 --> 02:37.630
+Questo è chiamato i documenti di Orione e poiché il progetto Omega era lineare nel passare da una lezione
+
+02:37.630 --> 02:44.110
+all'altra, i documenti di Orione non erano lineari in quanto non stavamo effettivamente costruendo un progetto, ma
+
+02:44.350 --> 02:49.650
+stavamo imparando in modo molto visivo modo interattivo molto simile al prodotto Omega.
+
+02:49.690 --> 02:56.350
+Tutti i vari servizi e funzionalità di AWOS e in particolare quello che devi sapere per
+
+02:56.590 --> 02:58.400
+superare l'esame AWA CSA.
+
+02:58.540 --> 03:00.700
+Ma quali sono esattamente i documenti di Orione.
+
+03:00.700 --> 03:08.410
+Bene, passiamo e ti darò una rapida dimostrazione di cosa sono i documenti di Orione.
+
+03:08.410 --> 03:12.760
+Dunque, ecco i documenti di Arayan e la prima cosa che non hai
+
+03:12.760 --> 03:18.070
+notato è che è costruita sulla stessa piattaforma ed è completamente interattiva, ma il layout sarà molto diverso.
+
+03:18.190 --> 03:24.820
+Prima di tutto, essendo la base del progetto che indica tutti i vari elementi delineati sul lato sinistro, qui non è
+
+03:24.820 --> 03:30.460
+lineare in quanto disponiamo di tutti i servizi in modo che possiamo parlare al più alto livello che
+
+03:30.460 --> 03:35.610
+l'account AWOS fa clic su un particolare conteggio e quindi tuffati in tutti i vari servizi.
+
+03:35.610 --> 03:41.560
+Solo a titolo di esempio possiamo dare un'occhiata allo storage e qui impareremo tutto come ghiacciaio Thring e
+
+03:41.560 --> 03:48.130
+parleremo di come i dati fluiranno in S3 in tutti i vari modi in cui possiamo ottenere dati da e verso
+
+03:48.140 --> 03:48.690
+S3.
+
+03:48.700 --> 03:56.290
+E poi con quello in S3 stesso possiamo parlare di tutte le varie caratteristiche e servizi di S-3 di cui
+
+03:56.290 --> 03:57.800
+andremo a conoscenza.
+
+03:57.820 --> 04:01.930
+Quindi diciamo che vogliamo parlare della versione di un oggetto e avremo un'intera lezione sulla versione dell'oggetto che possiamo fare
+
+04:01.930 --> 04:05.800
+clic su di esso e possiamo conoscere il controllo delle versioni degli oggetti e il punto chiave che
+
+04:05.800 --> 04:06.560
+dobbiamo conoscere qui.
+
+04:06.670 --> 04:12.300
+Possiamo parlare di tre elementi essenziali nei vari elementi essenziali che abbiamo bisogno di sapere sull'S-3 e
+
+04:12.310 --> 04:17.470
+lo abbiamo sviluppato in modo molto visivo per ognuno dei servizi di cui abbiamo bisogno
+
+04:17.470 --> 04:20.000
+nel corso dell'architetto delle soluzioni certificate.
+
+04:20.200 --> 04:25.750
+Possiamo anche dare un'occhiata al lato fisico e al networking delle cose e possiamo scavare nelle regioni e
+
+04:25.750 --> 04:30.190
+nelle zone di disponibilità in qualsiasi momento possiamo fermarci o possiamo fare clic su
+
+04:30.460 --> 04:35.470
+questo per conoscere le regioni in cui possiamo continuare a scavare nel regioni nei data center
+
+04:35.470 --> 04:42.130
+e dare un'occhiata al reale networking VPC e imparare come tutte queste cose si incastrano in un modo molto più dettagliato
+
+04:42.130 --> 04:45.980
+di quello che abbiamo fatto durante il corso di AWOS essentials.
+
+04:46.060 --> 04:51.190
+Anche andando oltre e osservando vari tipi di architettura in termini di disponibilità elevata e fault
+
+04:51.190 --> 04:57.370
+tolerant o con host bastion e networking Nat e vedendo come sono stati configurati tutti questi elementi e in realtà
+
+04:57.370 --> 05:01.240
+li esamineremo, stiamo andando a costruisci tutti questi diversi tipi di architettura
+
+05:01.510 --> 05:05.200
+per metterli alla prova e mostrarti come costruire ognuno di essi.
+
+05:05.200 --> 05:10.270
+E ancora una volta ognuna di queste sarà cliccabile e
+
+05:10.270 --> 05:15.440
+produrrà informazioni pertinenti in cui dovrai studiare e conoscere l'esame AWA CSA.
+
+05:15.640 --> 05:22.690
+Quindi questa è la documentazione di Arayan ed è molto più grande per dimensioni e portata rispetto a Project
+
+05:22.690 --> 05:29.590
+Omega e dovrebbe davvero aiutare a fornire un ottimo strumento di apprendimento visivo per studiare e superare l'esame
+
+05:29.590 --> 05:32.300
+di architetto delle soluzioni certificate AWOS.
+
+05:32.300 --> 05:36.560
+Quindi, ancora una volta congratulazioni per aver completato il corso essenziale di AWOS.
+
+05:36.590 --> 05:42.260
+E spero davvero che tu abbia acquisito una profonda comprensione e una conoscenza fondamentale di AWOS e delle sue
+
+05:42.260 --> 05:47.930
+funzionalità principali e spero davvero che tu venga con noi nel corso di architetti di soluzioni certificate AWOS
+
+05:47.930 --> 05:54.050
+che abbiamo a tua disposizione qui su di te per me, che di nuovo è presentato da Linux Academy dotcom
+
+05:54.320 --> 05:57.310
+e sarò anche il tuo istruttore per quel corso.
+
+05:57.320 --> 05:59.290
+Quindi, ancora una volta congratulazioni.
+
+05:59.360 --> 06:02.610
+E con questo ora puoi completare questa lezione e questo corso.
+
+06:02.690 --> 06:03.810
+Grazie per aver guardato.

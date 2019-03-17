@@ -1,0 +1,439 @@
+WEBVTT
+
+00:00.650 --> 00:02.150
+Ciao e bentornato.
+
+00:02.180 --> 00:07.730
+Sono molto entusiasta di iniziare questa sezione perché ci immergiamo molto di più nella carne di Amazon Web Services
+
+00:07.730 --> 00:11.420
+questa volta concentrandoci su E. C anche.
+
+00:11.600 --> 00:17.450
+Quindi, senza ulteriori indugi, facciamo clic qui sopra prima di Omega e accendiamo questa sezione e ci tuffiamo
+
+00:17.450 --> 00:18.310
+proprio dentro.
+
+00:19.610 --> 00:26.750
+Quindi, Elastic Compute Cloud, comunemente indicato come e c, è ciò che copriremo in AWOS in
+
+00:26.740 --> 00:28.610
+una sezione centrale 5.
+
+00:28.700 --> 00:35.780
+Tratteremo gli argomenti e includeremo una panoramica delle immagini delle macchine Amazon AWOS Elastic Compute
+
+00:35.810 --> 00:36.740
+Cloud.
+
+00:36.740 --> 00:42.650
+Avremo anche una revisione dei componenti del tipo di istanza che copriremo con le basi e le istantanee
+
+00:42.680 --> 00:44.120
+del volume di IBS.
+
+00:44.120 --> 00:51.320
+Come usi i gruppi di sicurezza con E. Indirizzamento da C a IP e infine avvio e accesso a
+
+00:51.420 --> 00:53.060
+un'istanza facile da eseguire.
+
+00:53.120 --> 00:56.780
+Quindi iniziamo con la nostra prima lezione E. C alle basi.
+
+00:56.780 --> 01:03.070
+E in questa lezione parleremo specificamente di E. C due definizioni una panoramica concettuale di E. C troppo facile per
+
+01:03.080 --> 01:10.460
+componenti e parlare di ciò che costituisce E. C alle opzioni di acquisto comuni è un
+
+01:10.490 --> 01:15.790
+aspetto molto importante di questo e anche una panoramica generale dei prezzi.
+
+01:15.920 --> 01:23.000
+Quindi partiamo con alcune definizioni così facili da essere un'abbreviazione per Elastic Compute Cloud per
+
+01:23.000 --> 01:24.690
+una definizione semplificata.
+
+01:24.710 --> 01:28.150
+Pensa a un semplice computer desktop di base.
+
+01:28.190 --> 01:29.640
+È davvero tutto facile da usare.
+
+01:29.660 --> 01:32.200
+È solo un computer che stai usando.
+
+01:32.270 --> 01:33.470
+Questo è solo da qualche altra parte.
+
+01:33.470 --> 01:39.980
+Si tratta di un cloud computer Amazon che hai deciso di utilizzare e in sostanza ha le stesse parti interne del
+
+01:40.700 --> 01:45.830
+computer che stai utilizzando in questo momento per guardare questo video in una forma molto semplificata.
+
+01:45.830 --> 01:47.490
+Pensa semplicemente a quello.
+
+01:47.510 --> 01:50.900
+È un computer per una definizione più approfondita.
+
+01:50.900 --> 01:58.850
+Diamo un'occhiata alla definizione di AWOS Amazon Elastic Compute Cloud Amazon E. S. per fornire capacità di elaborazione
+
+01:58.850 --> 02:07.460
+scalabile nel cloud di servizi Web Amazon tramite Amazon, è facile eliminare la necessità di investire in anticipo sull'hardware
+
+02:07.520 --> 02:12.870
+in modo da poter sviluppare e distribuire le applicazioni più rapidamente.
+
+02:13.160 --> 02:14.330
+Puoi usare Amazon.
+
+02:14.360 --> 02:21.980
+Facile da avviare tanti o pochi server virtuali necessari per configurare sicurezza e networking e
+
+02:21.980 --> 02:23.600
+gestire lo storage.
+
+02:23.600 --> 02:32.630
+Amazon ti consente di scalare verso l'alto o verso il basso per gestire le modifiche ai requisiti o ai picchi di popolarità.
+
+02:32.630 --> 02:36.020
+Ridurre la necessità di prevedere il traffico.
+
+02:36.080 --> 02:42.170
+Quindi quello che voglio che tu togli davvero da questo è ripensare a E. S. come un computer nel
+
+02:42.170 --> 02:42.770
+cloud.
+
+02:42.800 --> 02:45.660
+Aggiungi un data center Amazon che stai utilizzando.
+
+02:45.680 --> 02:47.210
+E 'così semplice.
+
+02:47.210 --> 02:52.370
+Ora ci sono molte diverse varianti di E. S. a quello che puoi usare ed
+
+02:52.370 --> 02:54.630
+è quello che copriremo nel resto di questa sezione.
+
+02:54.920 --> 03:01.370
+Ma ricordate anche che lo scopo di due è che è scalabile, il che significa che può
+
+03:01.370 --> 03:09.860
+facilmente crescere di dimensioni, se necessario, ed è possibile lanciare il maggior numero di strumenti SETI o di nuovo i nostri server virtuali di
+
+03:10.220 --> 03:11.520
+cui avete bisogno.
+
+03:11.570 --> 03:12.620
+Quindi è scalabile.
+
+03:12.620 --> 03:15.060
+Puoi aumentare la quantità di potenza di calcolo di cui hai bisogno.
+
+03:15.070 --> 03:22.040
+Fondamentalmente su richiesta o istantaneamente e puoi lanciarne quanti ne vuoi.
+
+03:22.070 --> 03:23.210
+Semplice come quella.
+
+03:23.240 --> 03:23.600
+Grande.
+
+03:23.660 --> 03:25.930
+Andiamo avanti.
+
+03:26.140 --> 03:32.530
+Quindi concependo concettualmente E. S. anche io voglio che tu immagini solo il tuo computer di
+
+03:32.530 --> 03:34.510
+base e quali sono i componenti che lo compongono.
+
+03:34.510 --> 03:36.980
+Bene, hai anche il tuo sistema operativo.
+
+03:37.000 --> 03:40.210
+In questo caso ci riferiremo solo a Linux o Windows.
+
+03:40.240 --> 03:42.870
+Hai una C-p per la tua potenza di elaborazione.
+
+03:42.880 --> 03:47.830
+Hai un disco rigido nella tua memoria locale hai una scheda di rete qualcosa che ti permette di
+
+03:47.890 --> 03:49.030
+collegarti a Internet.
+
+03:49.330 --> 03:55.900
+Hai un firewall per sicurezza e c'è anche Ram e questi dovrebbero essere componenti con cui hai
+
+03:55.900 --> 03:57.780
+già una certa familiarità.
+
+03:57.790 --> 04:05.830
+Ora spostando il tutto su una semplice istanza e sui suoi componenti, confrontiamo questi due diagrammi anziché
+
+04:06.190 --> 04:08.030
+un sistema operativo.
+
+04:08.140 --> 04:17.820
+Durante la configurazione di un'istanza facile, hai un Mei al posto di C. P pensi al tipo istantaneo invece di un disco
+
+04:17.820 --> 04:18.780
+rigido.
+
+04:18.780 --> 04:23.320
+Pensa a e B. S. invece di una scheda di rete.
+
+04:23.340 --> 04:27.060
+Pensa a un indirizzamento IP anziché a un firewall.
+
+04:27.080 --> 04:34.140
+Pensa ai gruppi di sicurezza e sia per il tuo computer di casa che per E. C due istanze c'è solo RAM
+
+04:34.140 --> 04:35.220
+diritta.
+
+04:35.220 --> 04:41.820
+Ora questo è un confronto troppo semplificato tra i due, ma non è troppo lontano in termini di scelte che
+
+04:41.820 --> 04:46.550
+è necessario effettuare al momento di decidere quale tipo di facile istanza da avviare.
+
+04:46.590 --> 04:52.170
+E concettualmente il modo in cui voglio davvero che tu capisca questo è che
+
+04:52.170 --> 04:58.410
+non c'è davvero un'enorme differenza tra E. C ad esempio e un computer che hai a casa
+
+04:58.410 --> 05:05.310
+e facile da istanziare è solo un computer virtuale nel cloud che usi e pervasione e ha molti degli stessi componenti che
+
+05:05.310 --> 05:11.580
+il tuo computer desktop o computer portatile ha solo con alcune lievi variazioni in la sua struttura di denominazione e
+
+05:11.580 --> 05:16.620
+il modo in cui le cose sono categorizzate e raggruppate e passeremo attraverso tutte queste opzioni
+
+05:16.650 --> 05:17.990
+nelle prossime lezioni.
+
+05:20.340 --> 05:25.420
+Ora una cosa importante da capire su E. C è anche che ci sono diverse opzioni di acquisto.
+
+05:25.440 --> 05:29.180
+Quindi passiamo alla console qui e ti mostrerò come accedere a E. S. pure.
+
+05:29.190 --> 05:36.360
+Ed è in realtà la prima opzione qui sotto calcolo e questo sarà il tuo hub per l'avvio e il
+
+05:36.450 --> 05:42.240
+mantenimento di tutte le tue istanze E C due Attualmente abbiamo zero istanze in esecuzione.
+
+05:42.330 --> 05:47.850
+E alla fine di questa sezione avremo predisposto almeno una semplice istanza.
+
+05:47.850 --> 05:53.790
+Ora in termini di avvio di ogni due istanze ci sono diverse opzioni tra cui è possibile scegliere.
+
+05:54.330 --> 05:59.490
+E questi tre sono i più comuni i primi e probabilmente quelli che userete
+
+05:59.490 --> 06:06.430
+di più all'inizio sono istanze On-Demand, quindi l'acquisto On-Demand vi consente di scegliere qualsiasi tipo di istanza che vi
+
+06:06.430 --> 06:09.860
+piace e fornire o terminare in qualsiasi momento .
+
+06:09.880 --> 06:11.270
+Significato su richiesta.
+
+06:11.430 --> 06:14.490
+È l'opzione di acquisto più costosa.
+
+06:14.490 --> 06:19.980
+Ma per quello ottieni la massima flessibilità in termini di poterli lanciare quando vuoi
+
+06:19.980 --> 06:22.050
+o cancellarne uno quando vuoi.
+
+06:22.050 --> 06:28.830
+L'addebito è avvenuto solo quando l'istanza è in esecuzione e fattura di ora in ora e puoi
+
+06:28.920 --> 06:37.980
+effettuare nuovamente il provisioning su richiesta in qualsiasi momento per gli acquisti riservati di istanze riservate che ti consentono di acquistare un istante
+
+06:37.980 --> 06:42.930
+per un periodo di tempo predefinito di uno o tre anni.
+
+06:42.930 --> 06:48.000
+Ciò consente uno sconto significativo rispetto all'uso su richiesta.
+
+06:48.000 --> 06:55.110
+È possibile selezionare e pagare anticipatamente in anticipo o no in anticipo e, una volta acquistata un'istanza di riserva, la
+
+06:55.170 --> 07:02.280
+si possiede per il periodo di tempo selezionato e si è responsabili dell'intero prezzo, indipendentemente dalla frequenza con cui lo
+
+07:02.280 --> 07:03.300
+si utilizza.
+
+07:03.300 --> 07:06.860
+Quindi è molto importante capire la differenza tra le esigenze di on.
+
+07:06.900 --> 07:12.900
+Se ho solo bisogno di un'istanza per un'ora o due ore o un giorno posso comprarlo, posso pagare per quello che uso
+
+07:12.900 --> 07:14.240
+e ho quella flessibilità.
+
+07:14.250 --> 07:20.830
+Ma è l'opzione di acquisto più costosa riservata consente un grande sconto.
+
+07:20.910 --> 07:27.660
+Ma sto pagando un costo garantito che sarà o il costo per un anno o tre anni e
+
+07:27.660 --> 07:33.450
+una volta che mi iscrivo per quell'istanza riservata sono bloccato a possedere quell'istanza per quel
+
+07:33.450 --> 07:36.220
+tempo e a pagare l'intero importo.
+
+07:37.350 --> 07:43.740
+Ora, a livello operativo, vi è la determinazione dei prezzi a pronti, ora i prezzi a pronti sono un modo per
+
+07:43.740 --> 07:51.830
+fare un'offerta su un tipo di istanza e solo pagare e utilizzare tale istanza quando il prezzo a pronti è uguale o inferiore al prezzo di offerta.
+
+07:51.840 --> 08:00.660
+Ciò consente ad Amazon di vendere l'utilizzo di istanze inutilizzate per brevi periodi di tempo a un prezzo scontato a prezzi
+
+08:01.140 --> 08:06.390
+scontati fluttuato in base all'offerta e alla domanda nel mercato spot.
+
+08:06.390 --> 08:12.570
+Ti viene addebitata solo una volta al minuto e quando hai un'offerta attiva, un'istanza ti viene fornita quando
+
+08:12.570 --> 08:19.450
+il prezzo spot è uguale o inferiore al prezzo di offerta e le istanze provvisorie vengono automaticamente annullate quando
+
+08:19.470 --> 08:23.430
+il prezzo spot è superiore al prezzo di offerta .
+
+08:23.430 --> 08:30.900
+Supponiamo, ipoteticamente, di pagare $ 2 l'ora per un'istanza on demand che puoi inserire in un prezzo di offerta o in
+
+08:30.900 --> 08:36.720
+un prezzo a pronti per dire 20 centesimi all'ora per lo stesso tipo di istanza.
+
+08:36.900 --> 08:43.950
+E se il mercato spot per quel tipo di istanza scende sotto 20 centesimi all'ora, verrà automaticamente avviato
+
+08:43.950 --> 08:50.220
+e fornito l'istanza per te e avrai quell'istanza da utilizzare al prezzo di 20 centesimi all'ora
+
+08:50.220 --> 08:55.510
+per tutto il tempo che il prezzo spot è sotto il prezzo dell'offerta.
+
+08:55.890 --> 09:03.970
+Ma il secondo il prezzo va oltre il prezzo della tua offerta, quindi perderai l'accesso all'utilizzo di tale E. C al server.
+
+09:04.410 --> 09:11.100
+Quindi con questa opzione puoi ottenere il prezzo più basso all'ora, ma hai anche la minore quantità di flessibilità, il che significa
+
+09:11.370 --> 09:16.680
+che in una determinata settimana forse avrai accesso a un semplice istante al tuo prezzo per poche
+
+09:16.680 --> 09:20.870
+ore, forse lo farai sii fortunato e avrai accesso per qualche giorno.
+
+09:21.030 --> 09:25.800
+Ma è il prezzo di mercato che determina che non è la tua richiesta.
+
+09:26.010 --> 09:30.870
+E nella console per selezionare questi diversi tipi di opzioni di acquisto sono presenti istanze in
+
+09:30.870 --> 09:34.430
+cui è possibile avviare un'istanza su richiesta di richieste spot.
+
+09:34.470 --> 09:40.270
+Puoi inserire un prezzo a pronti e riservare istanze dove puoi entrare e acquistare una riserva.
+
+09:40.270 --> 09:45.800
+Quindi questi sono i tre principali modi in cui è possibile acquistare E. C alle istanze.
+
+09:45.990 --> 09:50.460
+Ed è importante capire e conoscere la differenza tra i tre nel resto del corso
+
+09:50.460 --> 09:52.600
+con cui lavoreremo su richiesta e.
+
+09:52.620 --> 09:58.300
+E quando inizi a imparare AWOS questa sarà probabilmente l'opzione più comune che scegli.
+
+09:59.510 --> 10:03.500
+In termini di prezzi specifici, come ti viene addebitato l'utilizzo di E. S. pure.
+
+10:03.620 --> 10:09.590
+Bene, ti viene addebitata una base su quale opzione di acquisto selezioni che abbiamo appena esaminato.
+
+10:09.860 --> 10:14.870
+Si addebita anche in base al tipo di istanza e in questo caso si tratta della capacità di elaborazione
+
+10:14.870 --> 10:15.280
+dell'istanza.
+
+10:15.290 --> 10:22.100
+Pensa al CPQ e rientrano in diverse categorie che includono l'ottimizzazione generalizzata dell'ottimizzazione del GPS ottimizzando
+
+10:22.100 --> 10:26.480
+l'ottimizzazione della memoria e l'archiviazione ottimizzano ciò che andremo a
+
+10:26.480 --> 10:29.130
+includere in dettaglio in questa lezione.
+
+10:29.150 --> 10:36.770
+C'è anche IBS ottimizzato a. m. -Scrivo il trasferimento dei dati dentro e fuori l'istanza
+
+10:36.770 --> 10:39.320
+e anche i prezzi possono variare in base alla regione.
+
+10:39.430 --> 10:47.440
+È disponibile l'uso di livello gratuito per E. C 2 per l'opzione di acquisto On Demand e solo un tipo
+
+10:47.530 --> 10:52.780
+di istanza specifico e vedremo che in pratica quando entriamo nel provisioning e in seguito più
+
+10:52.840 --> 10:54.520
+avanti in questa sezione.
+
+10:54.850 --> 11:01.870
+E come sempre prima di fare qualsiasi uso importante di E. C per favore segui questo link e controlla tutti
+
+11:01.870 --> 11:08.020
+i vari modi in cui puoi essere caricato perché può essere molto economico da usare e usando il
+
+11:08.020 --> 11:14.830
+livello gratuito puoi fare molto senza pagare nulla ma alcuni dei tipi più alti e istanziati e le capacità di
+
+11:14.980 --> 11:19.000
+stoccaggio diventano estremamente costose e possono costare un sacco di soldi.
+
+11:19.000 --> 11:25.360
+Quindi devi stare molto attento a ciò che lanci e fornisci mentre usi E. C anche.
+
+11:25.810 --> 11:28.030
+Quindi con questo concluderemo questa lezione.
+
+11:28.120 --> 11:29.170
+Grazie per aver guardato.
+
+11:29.170 --> 11:29.980
+Ora puoi andare avanti.

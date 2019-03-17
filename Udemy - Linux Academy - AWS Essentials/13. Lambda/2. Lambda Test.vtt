@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00.300 --> 00:06.660
+Ciao e bentornati in questa lezione, apprendi anche tu la lezione: faremo un test
+
+00:06.660 --> 00:14.460
+di agnello in cui copriremo la creazione di una funzione di agnello e testeremo la funzione di un agnello.
+
+00:14.630 --> 00:20.360
+Quindi la prima cosa che vogliamo fare ora che siamo qui in AWOS Lamda e nel caso tu stia cercando un
+
+00:20.360 --> 00:22.790
+agnello AWOS che è in fase di elaborazione.
+
+00:22.800 --> 00:27.070
+Quindi sotto SETI vedrai l'opzione per entrare in LAMDA.
+
+00:27.140 --> 00:32.180
+Quindi inizieremo ora cosa faremo semplicemente eseguiremo una funzione lambda preimpostata che
+
+00:32.180 --> 00:39.100
+è disponibile per gli utenti AWOS con cui giocare e in pratica imparare come usare Lamda e
+
+00:39.210 --> 00:41.510
+setup e funzioni di test.
+
+00:41.510 --> 00:43.790
+Quindi questa sarà una funzione di ciao mondo.
+
+00:43.790 --> 00:48.620
+Quindi quello che ho intenzione di fare è nel tipo ancora terminale in hello world e
+
+00:48.680 --> 00:51.770
+selezionerò il ciao mondo Python blueprint come vengono chiamati.
+
+00:51.800 --> 00:57.710
+Quindi questo è un progetto per un arto, la funzione dopo posso decidere se voglio configurare i
+
+00:57.730 --> 00:58.300
+trigger.
+
+00:58.310 --> 01:01.650
+Questo significa cose come Asinus o cloud watch.
+
+01:01.760 --> 01:08.000
+Posso configurare per attivare e avviare una funzione lambda ed eseguire il codice in base agli eventi che
+
+01:08.000 --> 01:10.690
+si verificano in altre parti di AWOS.
+
+01:10.700 --> 01:14.620
+Per ora però lascerò questo vuoto perché non ho intenzione di creare un trigger.
+
+01:16.520 --> 01:21.530
+Quindi vogliamo configurare la funzione Voglio assegnare un nome a una funzione, quindi chiameremo questo progetto
+
+01:21.530 --> 01:22.180
+Omega test.
+
+01:25.260 --> 01:31.380
+E poiché stiamo usando un progetto già pre-compilato qui sotto possiamo vedere il codice che verrà eseguito e
+
+01:31.380 --> 01:37.020
+questo è solo uno script molto semplice che per ragioni al di fuori dell'ambito ovviamente non ho
+
+01:37.020 --> 01:43.200
+intenzione di entrare i dettagli come sto facendo questo per mostrarti come funziona lambda ma molte cose che
+
+01:43.200 --> 01:48.270
+vuoi notare e ricordare come uno è il runtime che sarà il linguaggio che il
+
+01:48.300 --> 01:52.620
+codice che hai posto qui deve essere e quindi deve corrispondere.
+
+01:52.630 --> 01:56.880
+Questo è stato scritto bene in Python e assicuratevi che Python sia selezionato come
+
+02:01.530 --> 02:05.310
+runtime come cose che le variabili d'ambiente non avrebbero attualmente usato.
+
+02:05.350 --> 02:09.830
+Ora per ogni funzione lambda deve esserci un ruolo che viene creato.
+
+02:09.840 --> 02:15.870
+Ora la maggior parte delle volte e con questo esempio è possibile creare un nuovo ruolo da un modello, il
+
+02:15.870 --> 02:21.300
+che significa che creerà automaticamente il ruolo per te in base a quali interpretazioni lambda sono necessarie.
+
+02:21.300 --> 02:26.340
+E posso dare un nome così chiamerò questo ruolo di Lamhe.
+
+02:26.560 --> 02:31.870
+Successivamente possiamo osservare le impostazioni di Advance e qui è possibile avere un po 'di
+
+02:31.930 --> 02:35.830
+personalizzazione in termini di quantità di memoria allocata alla funzione lambda.
+
+02:35.920 --> 02:41.830
+E questo è qualcosa che puoi effettivamente scegliere e ciò che questo farà quando il tuo codice
+
+02:42.070 --> 02:48.100
+verrà eseguito assegnerà la quantità di memoria che vuoi usare che aumenterà o diminuirà la durata necessaria
+
+02:48.100 --> 02:49.880
+per eseguire il codice.
+
+02:49.900 --> 02:55.990
+Quindi al momento c'è un po 'di granularità che puoi effettivamente scegliere quando
+
+02:55.990 --> 03:04.570
+crei la tua funzione. Infine puoi decidere se lanciare il tuo codice all'interno di un VPC o non usare VPC.
+
+03:04.580 --> 03:10.180
+Quindi c'è questa opzione solo per sbarazzarsi del VPC del tutto quando si esegue questo tipo di calcolo.
+
+03:10.190 --> 03:16.510
+E infine per K. M. massa di cui non abbiamo parlato in questo corso Beckham è il servizio di
+
+03:16.510 --> 03:18.510
+gestione delle chiavi AWOS e questo ha a che fare con la crittografia.
+
+03:18.530 --> 03:21.340
+Quindi ci sono anche opzioni per questo.
+
+03:21.530 --> 03:27.620
+Quindi, dopo possiamo cliccare su Avanti, possiamo rivedere la funzione delle opzioni che abbiamo scelto
+
+03:27.620 --> 03:33.600
+e quindi fare clic su Crea funzione per creare la nostra funzione lambda.
+
+03:33.610 --> 03:38.980
+E se non si è specificamente nella funzione, è sempre possibile accedere alle funzioni e quindi fare clic sulla
+
+03:38.980 --> 03:40.750
+funzione per immergersi in essa.
+
+03:40.780 --> 03:45.280
+E quello che stiamo per fare qui è testare la funzione e ci darà un
+
+03:45.370 --> 03:48.810
+output di scrittura in uscita come indicato dal comando print qui.
+
+03:48.820 --> 03:54.520
+Quindi è una funzione molto semplice e molto semplice, ma lo stiamo facendo di nuovo solo per mostrare, dimostrare
+
+03:54.550 --> 03:56.070
+e testare la piattaforma.
+
+03:56.080 --> 04:02.180
+Quindi quando clicco su test, mi sta chiedendo di assicurarmi che questo sia il modello e questo è
+
+04:02.240 --> 04:04.640
+il codice che voglio eseguire per salvare.
+
+04:04.670 --> 04:06.010
+Sì e prova.
+
+04:06.320 --> 04:08.390
+E poi mi darà un'uscita qui sotto.
+
+04:08.390 --> 04:11.680
+Quindi questo era l'output l'output del valore 1.
+
+04:11.720 --> 04:18.270
+Questo in realtà non è niente di speciale da guardare o informativo in termini di output effettivo della funzione.
+
+04:18.470 --> 04:23.570
+Ma ciò che è interessante ora è che puoi guardare in basso puoi vedere che la durata è stata di
+
+04:23.570 --> 04:27.860
+quattro punti ad un millisecondo. Ecco quanto tempo ci è voluto per eseguire il codice.
+
+04:28.310 --> 04:32.810
+E poi sono stato fatturato per una durata di cento millisecondi.
+
+04:32.810 --> 04:39.560
+L'edificio passerà ogni 100 millisecondi fino ai 100 millisecondi più prossimi, quindi sulla mia bolletta
+
+04:39.560 --> 04:47.930
+AWOS mensile per eseguire questo codice tutto quello che sto per costruire è di 100 millisecondi di tempo di
+
+04:47.930 --> 04:48.830
+calcolo.
+
+04:48.920 --> 04:56.100
+Ora, in confronto, se volessi eseguire questo codice su un server facile, dovrei selezionare un AM in cui ho dormito
+
+04:56.100 --> 04:59.980
+in questo tipo di memoria, passando attraverso tutta quella configurazione.
+
+05:00.020 --> 05:06.680
+Avvia la semplice istanza di attesa per il suo log di revisione nell'installazione di istanza facile,
+
+05:06.680 --> 05:14.230
+qualsiasi applicazione avessi bisogno di eseguire il codice e quindi avere l'istanza sempre disponibile per ogni volta che volevo
+
+05:14.240 --> 05:15.560
+eseguire il codice.
+
+05:15.570 --> 05:23.040
+Ora qui in Lamda tutto ciò che ho fatto è stato spendere 30 secondi creando una funzione eseguita la funzione.
+
+05:23.210 --> 05:27.530
+E ora questa funzione è qui per quando voglio eseguirla.
+
+05:27.550 --> 05:33.170
+E posso puntare altri servizi AWOS a questa funzione come trigger o posso averla come back-end per
+
+05:33.170 --> 05:35.710
+qualsiasi applicazione web che potrei voler distribuire.
+
+05:35.930 --> 05:44.390
+Quindi è semplicissimo qui per avviare e gestire le applicazioni, pagando solo esattamente ciò di cui hai bisogno.
+
+05:44.390 --> 05:49.100
+Quindi, di nuovo, puoi passare alla scheda di monitoraggio qui e questo è dove puoi mostrare il numero di
+
+05:49.140 --> 05:53.680
+invocazioni che è il numero di richieste la durata di quanto tempo ci sono voluti gli errori che
+
+05:53.680 --> 05:55.590
+potresti avere una manetta che potresti avere.
+
+05:55.730 --> 06:02.340
+È semplicemente fantastico vedere questo tipo di informazioni di alto livello proprio qui nell'interfaccia lammed it.
+
+06:02.370 --> 06:10.190
+Quindi questa è solo una rapida panoramica di lambda e la terra è davvero al di fuori della portata di un argomento essenziale,
+
+06:10.200 --> 06:16.280
+ma ho deciso di includere Lamda in questo corso perché volevo solo che tu ne fossi consapevole.
+
+06:16.320 --> 06:19.520
+Non è qualcosa che probabilmente userete immediatamente.
+
+06:19.530 --> 06:24.630
+È davvero molto più di una funzionalità avanzata e qualcosa che sarà usato più in futuro
+
+06:24.630 --> 06:26.020
+che in questo momento.
+
+06:26.130 --> 06:31.680
+Ma è qualcosa che sta davvero iniziando a prendere le gambe qui in quanto il computer Servilius sta iniziando a
+
+06:31.680 --> 06:33.900
+essere qualcosa di cui si sente parlare molto.
+
+06:33.900 --> 06:40.740
+Quindi volevo davvero che tu fossi consapevole di ciò che è e di cosa sia il computing dei servizi e quale
+
+06:40.740 --> 06:43.080
+sia il suo potenziale per il futuro.
+
+06:43.080 --> 06:49.680
+Dunque, diamo un'occhiata al nostro progetto Omega, quindi il nostro requisito finale era quello di testare la
+
+06:49.680 --> 06:55.620
+possibilità di utilizzare la tecnologia Servilius per Project Omega in cui dovevamo creare ed eseguire
+
+06:55.620 --> 06:58.680
+una funzione che abbiamo appena fatto qui.
+
+06:58.680 --> 07:02.390
+Quindi con questo concluderemo il progetto Omega.
+
+07:02.430 --> 07:06.570
+Concluderemo questa lezione e concluderemo questa sezione.
+
+07:06.570 --> 07:10.230
+Quindi ora torniamo al nostro schema principale.
+
+07:10.230 --> 07:17.160
+Possiamo vedere qui che la nostra intera infrastruttura è stata costruita tutta la nostra architettura da Project
+
+07:17.190 --> 07:17.800
+Omega.
+
+07:18.030 --> 07:24.180
+E voglio solo congratularmi per essere arrivato così lontano e stare con me in questo viaggio mentre
+
+07:24.180 --> 07:30.150
+esploravamo Amazon Web Services e gli elementi essenziali che è necessario conoscere per essere operativi.
+
+07:30.150 --> 07:34.500
+Quindi con questo concluderò questa lezione e questa sezione.
+
+07:34.500 --> 07:35.670
+Grazie per aver guardato.
+
+07:35.670 --> 07:36.510
+Ora puoi andare avanti.

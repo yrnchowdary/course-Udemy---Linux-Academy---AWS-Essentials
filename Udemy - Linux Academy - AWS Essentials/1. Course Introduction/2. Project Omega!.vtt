@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.330 --> 00:03.570
+Ciao e benvenuto nel progetto Omega.
+
+00:03.570 --> 00:07.320
+Quindi adesso stai probabilmente dicendo a te stesso cosa è il progetto Omega.
+
+00:07.320 --> 00:09.890
+Quindi tuffiamoci nel progetto.
+
+00:09.900 --> 00:16.350
+Omega è un progetto di sviluppo classificato che verrà creato ed eseguito utilizzando Amazon Web Services
+
+00:16.770 --> 00:18.040
+in questo momento.
+
+00:18.060 --> 00:22.200
+Conosciamo solo i requisiti di infrastruttura del progetto Omega.
+
+00:22.200 --> 00:27.240
+Non sono state divulgate informazioni specifiche su cosa sia o cosa faccia.
+
+00:27.270 --> 00:29.310
+Tutto ha bisogno di sapere le basi.
+
+00:29.320 --> 00:33.040
+E proprio ora ci sono solo alcune cose che non abbiamo bisogno di sapere.
+
+00:33.830 --> 00:41.690
+Ma abbiamo un lavoro da fare come gli architetti AWOS a cui è stato affidato il compito di creare l'infrastruttura di base del
+
+00:41.750 --> 00:48.160
+progetto Omega in modo che il team di sviluppo possa iniziare a lavorare sul coraggio del progetto.
+
+00:48.170 --> 00:51.310
+Quindi cosa sarà richiesto per Project Omega.
+
+00:51.440 --> 00:54.670
+Bene, ci hanno dato pochissime informazioni su Project Omega.
+
+00:54.680 --> 01:03.440
+Tuttavia, ci è stato detto in termini generali quanto è necessario uno nell'account AWOS agli account utente per il
+
+01:03.440 --> 01:12.110
+team di sviluppo con accesso ai servizi AWOS principali tre corretto instradamento del traffico all'interno e all'esterno del cloud
+
+01:12.200 --> 01:20.630
+privato AWOS per una posizione per l'archiviazione di massa di cinque file server ospitare ed eseguire il progetto omega
+
+01:20.660 --> 01:25.330
+6 un database per memorizzare e catalogare i dati.
+
+01:25.530 --> 01:33.230
+7 un modo per inviare notifiche e-mail o messaggi di testo per proiettare i membri del team di
+
+01:33.230 --> 01:41.270
+Omega sulla base di eventi che possono verificarsi con l'infrastruttura di Project Omega mangiato per monitorare internamente parti dell'infrastruttura di
+
+01:41.300 --> 01:49.400
+Omega del progetto 9 automatizzare il processo di distribuzione del traffico degli utenti esterni in entrata in modo uniforme attraverso
+
+01:49.400 --> 01:58.310
+il progetto Omegas AWOS risorse 10 automatizzano il processo di scalabilità o ridimensionamento delle risorse AWOS in base alla domanda di traffico
+
+01:58.310 --> 02:05.600
+11 configurazione e configurazione di un dominio Web che punta a proiettare l'infrastruttura di Omega e 12
+
+02:05.600 --> 02:11.690
+test la possibilità di utilizzare la tecnologia di elenco dei server per Project Omega.
+
+02:11.690 --> 02:15.630
+Quindi, dato tutto ciò, c'è ancora un grosso problema centrale.
+
+02:15.770 --> 02:21.300
+Tuttavia, non sappiamo abbastanza su AWOS per svolgere questi compiti.
+
+02:21.380 --> 02:25.970
+Fortunatamente per noi le persone dietro Project Omega ci hanno lasciato con una guida.
+
+02:25.970 --> 02:31.560
+Questa guida è un nuovo formato interattivo che fornirà un'esperienza di apprendimento più coinvolgente.
+
+02:31.760 --> 02:37.760
+Seguendo la guida ci verrà insegnato l'essenziale necessario per utilizzare AWOS e impostare l'infrastruttura di
+
+02:38.090 --> 02:40.160
+base per Project Omega.
+
+02:40.180 --> 02:40.730
+Tutto ok.
+
+02:40.760 --> 02:42.110
+Quindi iniziamo.

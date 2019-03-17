@@ -1,0 +1,397 @@
+WEBVTT
+
+00:00.330 --> 00:01.630
+Ciao e bentornato.
+
+00:01.660 --> 00:06.180
+Ci stiamo avvicinando alla fine, eccoci nella nostra penultima sezione in
+
+00:06.180 --> 00:08.480
+cui parleremo della route 53.
+
+00:08.700 --> 00:17.160
+Quindi andiamo avanti e accendiamo questa sezione e ci immergiamo così per la sezione 11 di AWOS essenziale parleremo della
+
+00:17.160 --> 00:24.270
+route 53 Specificamente andremo a toccare una panoramica dei server DNS di route 53 come il tuo
+
+00:24.270 --> 00:30.990
+computer localizza un server web su Internet registrando un dominio web e configurando anche route
+
+00:30.990 --> 00:33.430
+53 per utilizzare quel dominio.
+
+00:36.850 --> 00:37.740
+Itinerario 53.
+
+00:37.750 --> 00:45.490
+Il primo capitolo, incentrato sulle nozioni di base sulla route 53, verrà trattato in modo specifico sui server DNS della route 53, in
+
+00:45.850 --> 00:51.660
+cui si capisce in che modo i server Web si trovano su Internet e tracciano la panoramica dei
+
+00:55.070 --> 00:56.090
+prezzi 53.
+
+00:56.090 --> 01:03.350
+Parliamo in modo specifico di ciò che è route 53 per inessentials o easy definition route 53 dove è possibile calcolare
+
+01:03.350 --> 01:09.360
+e gestire i domini Web per i siti Web in cui vengono ospitate le applicazioni su AWOS.
+
+01:09.440 --> 01:15.410
+Quindi, in generale, qualunque cosa tu pensi della route 53, pensa solo che cinquantatré è dove vai a gestire i domini
+
+01:15.640 --> 01:16.940
+web in una W-S.
+
+01:17.000 --> 01:24.410
+Ora espandendoci possiamo dare un'occhiata alla definizione AWOS e AWOS lo definisce come route 53 esegue tre funzioni
+
+01:24.410 --> 01:29.200
+principali su cui hai già toccato la registrazione del dominio.
+
+01:29.210 --> 01:36.710
+Amazon route 53 consente di registrare nomi di dominio come ad esempio dot com o Lenox Academy dot com o
+
+01:36.710 --> 01:38.380
+progetto Omega dot com.
+
+01:38.720 --> 01:39.280
+Il prossimo.
+
+01:39.320 --> 01:49.020
+Ti consente di gestire il servizio DNS Domain Name System in modo che Amazon route 53 traduca i nomi di
+
+01:49.020 --> 02:00.660
+dominio come esempio dot com in indirizzi IP come 1 9 2 0 2 1 Amazon route 53 risponde alle query DNS utilizzando una rete
+
+02:00.660 --> 02:05.840
+globale di server DNS autorevoli che riduce la latenza .
+
+02:06.000 --> 02:12.150
+E ci tufferemo un po 'di più nella spiegazione del DNS in arrivo è il controllo
+
+02:12.210 --> 02:17.700
+della salute Amazon route 53 invia richieste automatiche su Internet alla tua applicazione
+
+02:17.700 --> 02:23.400
+per verificare che sia raggiungibile e funzionale Puoi usare qualsiasi combinazione di questi funzioni.
+
+02:23.400 --> 02:31.160
+Ad esempio, è possibile utilizzare Amazon route 53 come registro o dominio Web e servizio DNS.
+
+02:31.410 --> 02:38.160
+Oppure puoi utilizzare Amazon route 53 come servizio DNS per un dominio registrato con un
+
+02:38.340 --> 02:40.220
+altro registrar di domini.
+
+02:40.220 --> 02:46.160
+OK, quindi ora basandoci su ciò che abbiamo qui per il percorso 53.
+
+02:46.300 --> 02:53.770
+Diamo un'occhiata a un esempio generale per capire come i domini e il DNS si adattano per rendere i siti
+
+02:53.800 --> 02:55.650
+Web accessibili ai visitatori.
+
+02:55.660 --> 03:03.340
+Quindi questa sarà una spiegazione del motivo per cui esiste un servizio come route 53 e perché è necessario quindi diciamo che abbiamo un
+
+03:03.340 --> 03:07.420
+visitatore generale di un sito Web sei seduto al computer e vuoi andare
+
+03:07.420 --> 03:09.690
+a Lenox Academy dot com .
+
+03:09.940 --> 03:16.540
+Cosa succede internamente quando un utente entra in W. W. Linux Academie dot com in un browser web.
+
+03:16.540 --> 03:23.050
+Quindi se dovessi semplicemente mettere i link cademy dotcom qui o Linux cademy dotcom qui
+
+03:23.050 --> 03:28.020
+cosa succede sotto la cappa per poi restituirmi quel contenuto web.
+
+03:28.090 --> 03:33.930
+Così ora è in realtà prendere il ruolo del computer e del computer quando scrivo in Linux cademy dotcom pensa
+
+03:33.940 --> 03:35.030
+a se stesso.
+
+03:35.140 --> 03:37.580
+So che l'utente vuole che ottenga il sito Web.
+
+03:37.600 --> 03:43.360
+Linux cademy dot com, ma non ho idea di dove si trova il server host su Internet.
+
+03:43.420 --> 03:45.410
+Ho bisogno dell'indirizzo
+
+03:45.430 --> 03:48.310
+Questo è ciò che il computer dice a se stesso.
+
+03:48.310 --> 03:50.640
+Quindi cosa succede allora.
+
+03:50.650 --> 03:58.180
+Quindi qui ora abbiamo il server Linux Academie che ha un indirizzo IP un indirizzo IP pubblico e abbiamo
+
+03:58.180 --> 04:03.150
+il computer che abbiamo inserito w w w links Academie dot com.
+
+04:03.160 --> 04:10.000
+Ora la connessione tra i due non può essere stabilita perché il computer non conosce l'indirizzo IP
+
+04:10.060 --> 04:16.270
+del server Linux Academie e il computer ha bisogno dell'indirizzo IP per instradare attraverso Internet a
+
+04:16.600 --> 04:17.760
+quel server.
+
+04:18.010 --> 04:22.750
+Prendere le informazioni per il sito Web e quindi inviarlo al computer per
+
+04:22.750 --> 04:23.830
+visualizzarlo all'utente.
+
+04:23.860 --> 04:30.820
+Quindi ci deve essere una terza parte qui ci deve essere qualcosa in qualche modo per il computer
+
+04:30.910 --> 04:34.030
+per ottenere l'indirizzo IP del server Linux Academie.
+
+04:34.240 --> 04:37.620
+Ed è qui che entrano in gioco i server DNS.
+
+04:37.630 --> 04:46.280
+Quindi un server DNS è un database di domini di siti Web e i relativi browser Web di indirizzi IP corrispondenti.
+
+04:46.480 --> 04:52.250
+Inviami il nome di dominio del server DNS e restituisco l'indirizzo IP corretto.
+
+04:52.360 --> 04:57.340
+Quindi intendono l'utente o il computer può trovare il server su Internet.
+
+04:57.670 --> 05:03.850
+Quindi quando scrivo o se digiti Linux Academie dot com nel tuo computer se il
+
+05:03.850 --> 05:11.470
+tuo computer non conosce l'indirizzo IP per il server cademy Linux, invierà la richiesta a uno dei molti server
+
+05:11.740 --> 05:13.590
+DNS disponibili su Internet.
+
+05:13.780 --> 05:16.060
+Quindi voglio che tu pensi a un server DNS come questo.
+
+05:16.060 --> 05:20.860
+Pensa al telefono cellulare che potresti avere e pensa ai contatti che hai programmato sul tuo telefono cellulare
+
+05:20.860 --> 05:26.440
+quando decidi che vuoi chiamare o mandare messaggi a qualcuno che non riesci a ordinare o trovare tramite il loro
+
+05:26.440 --> 05:28.960
+numero di telefono che usi il linguaggio comune.
+
+05:28.960 --> 05:31.100
+Basta usare il loro nome.
+
+05:31.110 --> 05:37.090
+Tuttavia, per consentire al telefono di connettersi alla rete cellulare e trovare la posizione corretta per inviare quella telefonata
+
+05:37.090 --> 05:43.120
+o un messaggio di testo, è necessario utilizzare il numero di telefono e non il nome della persona che
+
+05:43.120 --> 05:45.550
+si utilizza per memorizzare le informazioni in.
+
+05:45.550 --> 05:47.500
+Quindi la stessa cosa sta succedendo qui.
+
+05:47.530 --> 05:53.530
+Linux cademy dot com è il nome della persona nei tuoi contatti e l'indirizzo IP è il loro numero di
+
+05:53.680 --> 05:54.910
+telefono nei tuoi contatti.
+
+05:55.120 --> 06:02.590
+Ma stiamo solo dicendo al computer di prendermi Linux Academie dot com ma sul nostro computer non abbiamo il numero
+
+06:02.590 --> 06:07.300
+di telefono corrispondente o l'indirizzo IP corrispondente in questa istanza, quindi deve
+
+06:07.300 --> 06:09.430
+andare alla lista dei contatti.
+
+06:09.430 --> 06:16.360
+In questo caso si tratta di un server DNS gestito da una terza parte che ha un database sia della lingua comune che
+
+06:16.790 --> 06:18.360
+dei nomi di dominio.
+
+06:18.360 --> 06:21.790
+Cademy dot com di Leonie e indirizzo IP corrispondente.
+
+06:21.850 --> 06:25.970
+Quindi chiediamo al server DNS. Ehi, ecco Linux, possiamo dot com.
+
+06:26.020 --> 06:27.930
+Devo conoscere l'indirizzo IP.
+
+06:28.000 --> 06:29.140
+Dice OK bene.
+
+06:29.140 --> 06:30.750
+Ho quell'informazione per te.
+
+06:30.820 --> 06:32.020
+Ecco l'indirizzo IP.
+
+06:32.020 --> 06:34.360
+Invia di nuovo quell'indirizzo IP.
+
+06:34.360 --> 06:39.280
+E poi succede che dovremmo essere in grado di accedere al server Linux Academie.
+
+06:39.280 --> 06:45.640
+Ora dovremmo notare che gli amministratori web devono registrare il loro dominio web e l'indirizzo IP con i provider DNS se vogliono
+
+06:45.880 --> 06:49.600
+che gli utenti trovino il loro sito web senza conoscere l'indirizzo IP.
+
+06:49.600 --> 06:56.170
+Quindi, se si imposta un dominio e un server Web, è necessario registrare il nome di dominio
+
+06:56.200 --> 07:05.100
+e l'indirizzo IP corrispondente con uno o più provider di server DNS, quindi una volta che l'intera transazione ha luogo e si ottiene
+
+07:05.130 --> 07:10.290
+l'indirizzo IP dai server DNS, allora quello la connessione può essere effettuata e
+
+07:10.290 --> 07:16.560
+le informazioni possono essere inviate avanti e indietro perché avendo l'indirizzo IP il computer ora sa
+
+07:16.560 --> 07:19.840
+come instradarsi correttamente al server e viceversa.
+
+07:19.980 --> 07:22.750
+Quindi con quell'esempio ora spiegato.
+
+07:22.800 --> 07:30.060
+Diamo un'occhiata al nostro diagramma VPC e capiamo esattamente cosa sta succedendo quando i clienti possono
+
+07:30.150 --> 07:33.710
+venire e vogliono accedere al progetto Omega.
+
+07:33.710 --> 07:37.930
+Quindi, per prima cosa vediamo ora che abbiamo la route 53 nel diagramma.
+
+07:37.970 --> 07:44.840
+Quindi, quando usiamo la route 53 La prima cosa che faremo è registrare un nome di dominio, quindi diciamo che vogliamo
+
+07:44.840 --> 07:48.800
+registrare il progetto Omega dot com o che non è disponibile.
+
+07:48.820 --> 07:51.930
+Un'altra variante del progetto Omega dot com.
+
+07:52.190 --> 07:59.810
+Quando effettuiamo la registrazione utilizzando la route 53, è necessario inviare le informazioni ai server DNS in modo che i server DNS
+
+07:59.900 --> 08:03.870
+dispongano del nome di dominio Web e dell'indirizzo IP corrispondente.
+
+08:04.070 --> 08:10.970
+Così ora, quando un cliente digita il progetto Omega dot com o qualsiasi altra variante che andremo a
+
+08:11.090 --> 08:15.410
+registrare nel prossimo video, quello che faremo succederà su Internet.
+
+08:15.410 --> 08:22.280
+La richiesta verrà inviata al server DNS, il server DNS invierà di nuovo l'indirizzo IP, quindi
+
+08:22.280 --> 08:27.980
+il cliente passerà attraverso Internet attraverso la route 53 attraverso il gateway internet.
+
+08:28.250 --> 08:33.050
+E alla fine quello che succederà è che l'indirizzo IP che viene dato al server DNS
+
+08:33.050 --> 08:39.140
+sarà l'indirizzo IP del nostro sistema di bilanciamento del carico elastico perché nel sistema di bilanciamento del carico elastico distribuirà il
+
+08:39.170 --> 08:44.720
+traffico in entrata verso i vari server web che abbiamo ospitato usando il bilanciamento del carico elastico e
+
+08:44.810 --> 08:46.920
+il nostro gruppo di ridimensionamento automatico.
+
+08:46.940 --> 08:52.280
+Ecco come si inserisce questo nel quadro generale dell'architettura AWOS.
+
+08:52.670 --> 08:56.480
+Così velocemente ricapitoleremo per il percorso 53.
+
+08:56.480 --> 09:01.720
+Ricorda solo che è per la gestione dei nomi di dominio e dei record DNS.
+
+09:01.730 --> 09:07.100
+E quando si pensa ai record DNS, basta pensare a una rubrica o elenchi di contatti
+
+09:07.100 --> 09:13.310
+in cui si dispone di un'informazione, ma è necessaria una corrispondente informazione che indica che un indirizzo IP
+
+09:13.310 --> 09:18.200
+può essere correttamente instradato su Internet per trovare il server che stai cercando.
+
+09:19.420 --> 09:23.100
+Infine, basta toccare rapidamente sulla route 53.
+
+09:23.230 --> 09:25.160
+Panoramica dei prezzi e dei costi.
+
+09:25.210 --> 09:29.100
+Ora alcune di queste saranno caratteristiche più avanzate che non userete subito, ma voglio
+
+09:29.110 --> 09:33.610
+solo che tu sia consapevole di ciò che sono e puoi sempre andare al link qui sotto
+
+09:33.610 --> 09:36.570
+per vedere queste cose poste fuori in modo più dettagliato.
+
+09:36.670 --> 09:40.600
+Ma tieni presente che l'uso del tier gratuito non è disponibile per il percorso 53.
+
+09:40.600 --> 09:46.240
+Qualsiasi cosa tu faccia con la route 53 avrà un costo e ti verranno addebitati in base al numero di zone
+
+09:46.240 --> 09:48.770
+pubblicate che andremo a toccare e alla prossima lezione.
+
+09:49.000 --> 09:51.370
+Flusso di traffico per politica.
+
+09:51.370 --> 09:57.490
+Routing basato sulla latenza delle query standard Geo DNS esegue i controlli di integrità delle query.
+
+09:57.550 --> 10:03.610
+E infine per registrare o trasferire un dominio sulla route 53.
+
+10:03.760 --> 10:11.230
+In sintesi, ecco una rapida spiegazione del percorso 53 nozioni di base che includono una panoramica del DNS e di come
+
+10:11.350 --> 10:17.650
+i browser Web trovano le informazioni corrette o l'indirizzo IP necessario per accedere ai server Web su
+
+10:17.650 --> 10:18.430
+Internet.
+
+10:18.430 --> 10:20.300
+E con questo concluderemo questo video.
+
+10:20.380 --> 10:21.550
+Grazie per aver guardato.
+
+10:21.550 --> 10:22.390
+Ora puoi andare avanti.

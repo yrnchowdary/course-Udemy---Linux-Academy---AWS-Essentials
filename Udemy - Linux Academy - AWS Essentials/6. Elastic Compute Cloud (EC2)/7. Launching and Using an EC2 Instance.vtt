@@ -1,0 +1,565 @@
+WEBVTT
+
+00:00.360 --> 00:06.480
+Salve e bentornati in questa lezione, passeremo effettivamente attraverso questi passaggi di provisioning ed
+
+00:06.510 --> 00:08.370
+e ad esempio.
+
+00:08.400 --> 00:15.270
+Quindi una guida passo passo su come avviare una semplice istanza e su come accedere all'ECV ad
+
+00:15.360 --> 00:17.900
+esempio utilizzando il protocollo SS h.
+
+00:18.150 --> 00:20.880
+Quindi, senza ulteriori indugi, iniziamo.
+
+00:21.090 --> 00:27.660
+Quindi, la prima cosa che dobbiamo fare è passare alla console di istanza EASY TO dove sono già presenti e
+
+00:27.660 --> 00:33.600
+quindi fare clic sull'istanza di avvio. Ecco come avvieremo un'istanza on demand. Devo selezionare un Am I per
+
+00:33.650 --> 00:42.150
+il quale sto andando selezionare Amazon Linux a. m. -Io manterremo tutto ciò che facciamo
+
+00:42.150 --> 00:50.970
+free tier quindi selezionerò lo scopo generale al tipo di istanza micro e qui per la configurazione dei dettagli dell'istanza non
+
+00:50.970 --> 00:55.610
+abbiamo ancora attraversato questa pagina, ma passerò brevemente attraverso questi opzioni.
+
+00:55.620 --> 01:01.650
+Ora in alto qui è possibile selezionare per creare più di un'istanza durante questo processo, quindi se si desidera
+
+01:01.650 --> 01:07.530
+creare tre quattro cinque o dieci copie di questa istanza allo stesso tempo è possibile farlo qui per la
+
+01:07.920 --> 01:08.490
+rete.
+
+01:08.490 --> 01:11.890
+Qui è dove si seleziona il BPC in cui si desidera avviare.
+
+01:12.000 --> 01:18.450
+E per alcuni questo è dove è possibile selezionare le sottoreti o una sottorete specifica che si desidera avviare il
+
+01:18.450 --> 01:20.130
+PC alla fine dell'istanza.
+
+01:20.190 --> 01:25.580
+Quindi voglio essere sicuro che visto che questo sarà un pubblico di facile istanza, intendendo che volevo avere
+
+01:25.590 --> 01:30.360
+accesso a Internet, ho bisogno di lanciarlo in una delle mie due subnet pubbliche perché
+
+01:30.360 --> 01:36.360
+sono i subaffittori pubblici ad essere associati ad un tabella del router che ha una rotta verso il gateway internet
+
+01:36.360 --> 01:38.520
+qui per l'indirizzo IP assegnato automaticamente.
+
+01:38.520 --> 01:44.010
+Utilizzerà le impostazioni predefinite per la sottorete, che è un abilitazione automatica che assegna un indirizzo
+
+01:44.010 --> 01:48.580
+IP pubblico, ma è sempre possibile cambiarlo in base alle varie impostazioni.
+
+01:49.740 --> 01:52.200
+Per il resto di questi li lascerò come predefinito.
+
+01:52.200 --> 01:58.620
+Comunque quello che farò dopo è qui sotto i dettagli avanzati, questo non è qualcosa che devi fare.
+
+01:58.620 --> 02:04.440
+Questa è un'opzione ma ho intenzione di farlo eseguire il seguente script bash.
+
+02:04.440 --> 02:11.910
+E ciò che fa è che ci permette di eseguire alcuni comandi e installare software e aggiornamenti durante
+
+02:11.910 --> 02:15.570
+il processo di configurazione del PC, ad esempio.
+
+02:15.570 --> 02:19.170
+Quindi tutto ciò che sta facendo qui sono solo alcuni comandi di Linux.
+
+02:19.200 --> 02:24.780
+Sta per aggiornare il programma di installazione e quindi installare il server Web Apache.
+
+02:24.780 --> 02:32.010
+Ora ciò che questo farà ci permetterà di testare la connettività internet di R E C ad esempio e ti mostrerò
+
+02:32.040 --> 02:36.160
+questo quando arriveremo a quel punto più avanti in questa lezione.
+
+02:36.570 --> 02:38.880
+Successivamente vogliamo aggiungere spazio di archiviazione.
+
+02:39.090 --> 02:41.640
+Di default, dobbiamo avere un volume di root.
+
+02:41.640 --> 02:49.860
+Lo lascerò come SSD generico con una dimensione di 8 gigabyte, ma aggiungerò un volume aggiuntivo solo a scopo
+
+02:49.860 --> 02:55.860
+dimostrativo a questa semplice istanza, in modo che possiamo andare avanti in seguito e
+
+02:55.860 --> 03:03.470
+dare un'occhiata a come che riflette in E. Dopo il console, se ti piace, puoi
+
+03:03.470 --> 03:12.290
+aggiungere un tag che non devi, ma inserirò un valore qui solo per dare un nome all'istanza.
+
+03:12.450 --> 03:19.800
+Successivamente, dobbiamo configurare il nostro gruppo di sicurezza in modo che selezionando un gruppo di sicurezza per l'istanza sia possibile creare un nuovo
+
+03:19.800 --> 03:25.290
+gruppo di sicurezza o selezionare un gruppo di sicurezza esistente per il gruppo di sicurezza esistente.
+
+03:25.290 --> 03:31.710
+Abbiamo solo il gruppo di sicurezza predefinito fornito con il nostro VPC in cui è consentito tutto il traffico sia
+
+03:31.740 --> 03:33.460
+in entrata che in uscita.
+
+03:33.540 --> 03:40.200
+Ma creerò un nuovo gruppo di sicurezza perché desidero avere l'S-sh in ingresso come opzione, ma
+
+03:40.200 --> 03:47.640
+voglio anche avere l'opzione TTP in ingresso come opzione, perché è così che posso accedere alla nostra istanza
+
+03:47.850 --> 03:50.030
+facile tramite l'indirizzo IP pubblico.
+
+03:53.140 --> 04:00.460
+Quindi ora con la firma di questo gruppo di sicurezza questi sono gli unici due tipi di protocolli di comunicazione che
+
+04:00.460 --> 04:07.360
+saranno consentiti attraverso il gruppo di sicurezza a E. C ad esempio.
+
+04:07.480 --> 04:12.350
+Successivamente avvieresti e avvii la semplice istanza.
+
+04:12.370 --> 04:21.450
+Ora ecco un ulteriore Lehre di sicurezza di cui non ho ancora parlato e questa è la coppia di chiavi pubblica
+
+04:21.450 --> 04:22.800
+e privata.
+
+04:23.130 --> 04:28.740
+Questo deve essere utilizzato per ogni istanza che si crea ed è richiesto quando lo si desidera.
+
+04:28.740 --> 04:34.230
+SS age e wodde in un biennio facile da istanziare dopo che è stato creato.
+
+04:34.410 --> 04:35.480
+Quindi ecco cosa devi fare.
+
+04:35.480 --> 04:39.000
+Puoi scegliere una coppia di chiavi esistente o crearne una nuova.
+
+04:39.000 --> 04:43.750
+Al momento non abbiamo una coppia di chiavi esistente in questo account, quindi creerò una nuova coppia di chiavi.
+
+04:43.830 --> 04:44.870
+Ho intenzione di dare questo nome.
+
+04:44.880 --> 04:52.970
+Chiamerò la coppia di chiavi essenziali e scaricherò questa coppia di chiavi.
+
+04:52.970 --> 04:58.310
+È molto importante, quindi è ora scaricato sul mio computer e devo prendere nota di dove questo
+
+04:58.310 --> 05:02.910
+è stato scaricato e che è solo la mia directory di download predefinita.
+
+05:03.440 --> 05:09.960
+Successivamente, vogliamo avviare l'istanza e faremo clic su Visualizza istanza.
+
+05:09.970 --> 05:15.890
+Ora, quello che sta succedendo ora è che Amazon sta ora avviando una configurazione di questa
+
+05:15.890 --> 05:22.000
+istanza per noi e passerà attraverso diverse fasi e richiederà alcuni minuti per essere completamente fornita per noi.
+
+05:22.070 --> 05:25.760
+Quindi interromperò il video e tornerò tra circa un minuto o due.
+
+05:25.760 --> 05:30.010
+Una volta completato, ok bentornato.
+
+05:30.080 --> 05:36.680
+Il SC di istanza è stato completamente predisposto e lanciato e ha superato i controlli di stato ed è ora
+
+05:36.800 --> 05:37.990
+attivo e funzionante.
+
+05:38.000 --> 05:43.550
+Diamo un'occhiata a un paio di componenti chiave qui nel facile da console e per questo voglio
+
+05:43.550 --> 05:44.800
+che guardiamo qui.
+
+05:44.900 --> 05:47.260
+Quindi ho intenzione di presentare un po 'questo.
+
+05:47.260 --> 05:49.670
+Ci sono alcune informazioni che possiamo raccogliere qui.
+
+05:49.670 --> 05:56.840
+Uno è l'indirizzo IP pubblico dell'indirizzo IP privato, è possibile visualizzare qui i gruppi di sicurezza e la zona delle
+
+05:56.840 --> 06:02.150
+disponibilità che è stata lanciata in questa subnet, facile da istanziare, in cui è
+
+06:02.150 --> 06:03.940
+stata avviata l'istanza facile.
+
+06:04.040 --> 06:09.780
+E molte altre informazioni riguardanti vari componenti di facile istanza.
+
+06:09.780 --> 06:17.960
+Quindi, da quando ho usato questo script bash per installare il server web Apache su questo facile istanza dovremmo essere in grado
+
+06:17.960 --> 06:23.260
+di ottenere la pagina di test di Apache se navigo verso l'indirizzo IP pubblico.
+
+06:23.270 --> 06:25.860
+Quindi proviamo e vediamo cosa succede.
+
+06:28.770 --> 06:29.160
+Perfezionare.
+
+06:29.160 --> 06:29.670
+Eccoci qui.
+
+06:29.670 --> 06:32.250
+Questa è la pagina di test di Apache.
+
+06:32.280 --> 06:38.820
+In tal modo si conferma che RTC su istanza è stato predisposto correttamente e tutte le
+
+06:38.820 --> 06:45.570
+connessioni di tutte le rotte tra E. C ad esempio e Internet essendo questo
+
+06:45.570 --> 06:51.230
+il mio computer che sto accedendo dal mio ufficio è configurato e funziona correttamente.
+
+06:51.240 --> 06:57.390
+Quindi ora diamo un'occhiata a come accedere effettivamente a questo E. C ad esempio e per quello ho intenzione
+
+06:57.390 --> 07:01.260
+di inserire l'interfaccia della riga di comando o il terminale qui.
+
+07:01.260 --> 07:06.000
+Quindi sono in pausa un video e riconfigura lo schermo in modo da poter inserire tutto in una volta.
+
+07:06.000 --> 07:06.850
+Torno subito.
+
+07:09.490 --> 07:09.920
+OK.
+
+07:09.930 --> 07:16.290
+Ora sono tornato e come puoi vedere qui ho un po 'schiacciato il web browser un po' qui e
+
+07:16.290 --> 07:23.180
+ho lasciato spazio alle mie applicazioni terminali così posso accedere alla riga di comando per accedere al esempio in questo caso
+
+07:23.190 --> 07:29.760
+il Linux facile da istanza per ottenere le istruzioni corrette posso fare clic sul mio facile per istanza e quindi
+
+07:29.760 --> 07:34.980
+fare clic su Connetti e cosa sta per fare è che mi darà una serie
+
+07:34.980 --> 07:37.770
+di istruzioni che ho bisogno di seguire.
+
+07:37.920 --> 07:45.420
+Il primo è che in realtà devo modificare le autorizzazioni sul file di coppie di chiavi che ho creato e
+
+07:45.510 --> 07:49.020
+scaricato in precedenza quando stavo lanciando l'istanza facile.
+
+07:49.080 --> 07:54.420
+E così il comando che deve essere eseguito è il presidente del comando 400 per modificare le autorizzazioni
+
+07:54.420 --> 07:56.170
+sulla coppia di chiavi essenziale.
+
+07:56.270 --> 08:00.900
+File PAM ma prima devo navigare nella directory che ho scaricato.
+
+08:00.900 --> 08:03.350
+Gli elementi essenziali tengono il loro file su OK
+
+08:07.700 --> 08:12.380
+e lì possiamo vedere il file della coppia di chiavi e in realtà ho scritto che con esso extra.
+
+08:12.380 --> 08:14.030
+Quindi devo essere consapevole di questo.
+
+08:14.120 --> 08:19.700
+Quindi posso letteralmente copiare e incollare ed eseguire questo comando per modificare le autorizzazioni in modo che
+
+08:19.700 --> 08:26.890
+le autorizzazioni siano ora state modificate e ora ho bisogno di eseguire questo comando qui per accedere all'istanza che ti chiede Sei
+
+08:30.070 --> 08:31.780
+sicuro di voler continuare .
+
+08:31.780 --> 08:32.670
+Scrivi Sì.
+
+08:33.770 --> 08:34.430
+E noi andiamo.
+
+08:34.430 --> 08:39.700
+Ora sono alla linea di comando per accedere a questa particolare istanza E2.
+
+08:39.710 --> 08:45.280
+Quindi, per ricapitolare questa istanza proprio qui, ora sono connesso qui.
+
+08:45.380 --> 08:48.020
+Posso farcela con qualunque cosa desideri.
+
+08:48.020 --> 08:54.540
+Ora per disconnettersi dall'istanza puoi semplicemente digitare exit e ora sono disconnesso dall'istanza.
+
+08:54.560 --> 09:00.970
+Quindi questa è solo una rapida panoramica di una volta che hai creato e predisposto e facile da
+
+09:00.980 --> 09:07.580
+istanziare o Linux facile da istanziare è come accedi a h nell'istanza di Linux in modo da poterlo fare con
+
+09:07.580 --> 09:08.710
+quello che vuoi.
+
+09:09.230 --> 09:14.180
+OK, quindi ora sbarazzarsi della riga di comando, così quando una pausa un video e tornare indietro.
+
+09:14.870 --> 09:21.920
+OK, quindi ora prima che finisca questa lezione e finisca questa sezione, prendiamoci un minuto per sperimentare un po 'con varie
+
+09:21.950 --> 09:27.860
+connessioni con gli elenchi di controllo dell'accesso alla rete della tabella del router e il gruppo di sicurezza
+
+09:27.860 --> 09:33.830
+per vedere cosa succede quando cambio una di quelle impostazioni come influenza la mia capacità di accedere al
+
+09:34.220 --> 09:39.340
+mio ad esempio da un computer esterno che è ciò che sta accadendo qui.
+
+09:39.350 --> 09:44.530
+Quindi, se sparo verso la sezione PC della console diamo
+
+09:48.000 --> 09:50.270
+un'occhiata a tavole rotonde.
+
+09:50.580 --> 09:56.520
+Quindi attualmente sto passando attraverso questa tabella di instradamento perché è qualcosa che questa sottorete
+
+09:56.520 --> 10:03.840
+pubblica che ho lanciato i due per istanza in è associata a questa tavola rotonda e questa tavola rotonda
+
+10:03.840 --> 10:05.860
+ha l'Internet Gateway allegato.
+
+10:05.880 --> 10:11.900
+Quindi, cosa succederebbe se venissi qui e rimuoverò il gateway Internet da questa tabella del router
+
+10:14.240 --> 10:19.300
+in modo semplice, ad esempio ora non ha più una route per Internet.
+
+10:19.430 --> 10:24.030
+Quindi, se aggiorno questa pagina qui, ora sta per girare.
+
+10:24.070 --> 10:30.530
+Girerà e girerà e dato abbastanza tempo tornerà con un errore.
+
+10:30.860 --> 10:38.460
+Quindi, se torno indietro ora aggiunto aggiungere un altro percorso, rimettere il gateway Internet in fare clic
+
+10:45.360 --> 10:46.660
+su Salva.
+
+10:46.760 --> 10:49.290
+Questo è ancora in rotazione, ma se lo
+
+10:51.950 --> 10:54.740
+interrompe e lo aggiorna immediatamente carica di nuovo la pagina.
+
+10:55.070 --> 11:02.960
+Quindi la stessa cosa può succedere se ora vado in una lista di controllo di accesso alla rete, doppio controllo qui credo che questa sia
+
+11:02.980 --> 11:07.930
+la lista di controllo di accesso alla rete che è associata a questa sottorete e
+
+11:07.930 --> 11:14.050
+posso verificarla andando sotto alcuni associati in rete e vedere questo pubblico qualcosa che è associato a questo elenco di
+
+11:14.380 --> 11:16.040
+controllo di accesso alla rete.
+
+11:16.180 --> 11:24.010
+Quindi posso entrare negli elenchi di controllo di accesso alla rete e se faccio clic su di esso e se rimuovo solo la regola
+
+11:24.010 --> 11:28.270
+che consente a tutto il traffico in entrata dovrebbe verificarsi la stessa cosa.
+
+11:28.270 --> 11:35.410
+Ora, se torno indietro a questa pagina di test e clicco su refresh, girerò, girerò e girerò e non
+
+11:35.410 --> 11:42.520
+potrò accedere alla pagina di test perché la connessione ora o la rotta tra le due istanze e il
+
+11:42.550 --> 11:47.080
+mio computer dell'ufficio sono state ora interrotte del VPC Quindi torno indietro
+
+11:49.800 --> 11:51.220
+e risolvo questo
+
+12:02.220 --> 12:07.680
+problema e ti mostro tutto questo solo per rinforzare tutto ciò di cui abbiamo
+
+12:07.890 --> 12:15.510
+parlato finora con PC e due istanze e tutto il routing che avviene internamente all'interno di un WS e come
+
+12:15.630 --> 12:20.290
+i componenti o le risorse all'interno del PC sono connessi a Internet.
+
+12:21.760 --> 12:23.770
+Quindi la stessa cosa può essere applicata.
+
+12:23.770 --> 12:30.250
+Se dovessi andare ai gruppi di sicurezza o tornare a E. C to I può fare clic sui gruppi di
+
+12:30.250 --> 12:34.660
+sicurezza e questo è il gruppo di sicurezza che attualmente ho allegato all'istanza e,
+
+12:34.660 --> 12:38.110
+tra l'altro, aggiorniamocelo di nuovo, assicurandoti di averlo caricato di nuovo.
+
+12:38.140 --> 12:44.610
+Ora, se vado alle regole in-bound, vedo che sto permettendo a TTP di entrare nell'istanza.
+
+12:44.740 --> 12:52.000
+Quindi e GTP è il tipo di traffico che viene utilizzato quando richiedo questa pagina di test utilizzando l'indirizzo
+
+12:52.060 --> 12:53.170
+IP pubblico.
+
+12:53.170 --> 12:58.090
+Quindi, se rimuovo questa regola, non dovrei avere accesso alla pagina di test.
+
+12:58.090 --> 12:59.480
+Quindi proviamo.
+
+12:59.500 --> 13:01.760
+Escludiamo la regola con un clic di salvataggio.
+
+13:01.900 --> 13:07.470
+E questo dovrebbe applicarsi immediatamente al traffico che entra e esce dall'istanza TO.
+
+13:07.480 --> 13:09.000
+Quindi faccio clic su Aggiorna ora.
+
+13:09.910 --> 13:15.850
+E ancora non è caricato la pagina sta andando a spendere spendere e girare e alla fine
+
+13:15.900 --> 13:17.080
+caricare un errore.
+
+13:17.410 --> 13:20.710
+Quindi posso tornare indietro e aggiungere un'altra regola.
+
+13:20.710 --> 13:30.260
+Metti di nuovo HTP in click save e poi aggiorna di nuovo e immediatamente carica la pagina.
+
+13:30.310 --> 13:37.120
+Quindi questa è stata una panoramica completa su come avviare una semplice istanza, quindi su
+
+13:37.120 --> 13:44.140
+come connettersi alle due istanze in questo esempio utilizzando un'istanza Linux e SSH come protocollo di
+
+13:44.320 --> 13:53.200
+connessione, ma anche utilizzando il server Web Apache come piattaforma di test per testare la connessione tramite protocollo HTP da
+
+13:53.200 --> 13:57.970
+una fonte esterna o da un computer esterno al VPC.
+
+13:58.120 --> 14:03.500
+E poi sei passato attraverso e ti ho mostrato diversi esempi di come la modifica o
+
+14:03.520 --> 14:11.620
+la disconnessione del router tramite la tabella del router o l'elenco di controllo di accesso alla rete o gruppi di sicurezza possono impedire le connessioni.
+
+14:11.680 --> 14:17.170
+Pertanto, tieni sempre presente se hai problemi di connettività riguardo alla possibilità che vi siano
+
+14:17.170 --> 14:25.850
+problemi con il tuo gruppo di sicurezza di accedere alle regole dell'elenco di controllo dell'accesso alla rete e alle tabelle di routing e ai gateway Internet.
+
+14:26.110 --> 14:30.040
+Quindi, con tutto ciò che viene detto diamo un'occhiata al nostro progetto Omega.
+
+14:30.040 --> 14:31.940
+Requisiti dell'infrastruttura
+
+14:31.950 --> 14:39.540
+Quindi per questa sezione avevamo bisogno di un server per ospitare ed eseguire il progetto Omega e in particolare uno in esecuzione
+
+14:39.730 --> 14:41.590
+su istanza utilizzando Amazon Linux.
+
+14:41.590 --> 14:42.400
+Io sono
+
+14:42.400 --> 14:45.070
+Lo abbiamo con le installazioni del server Apache.
+
+14:45.070 --> 14:52.910
+Abbiamo questo e verifica che possiamo accedere alla pagina di Apache che abbiamo fatto così bene che abbiamo
+
+14:52.930 --> 14:57.440
+soddisfatto tutti i requisiti per Project Omega in questa sezione.
+
+14:57.530 --> 15:00.840
+Quindi riassumiamo questa sezione.
+
+15:00.850 --> 15:08.470
+Questa era la sezione 5 essenziale di AWOS in cui abbiamo trattato la nuvola di calcolo elastica altrimenti nota come E. S.
+
+15:08.480 --> 15:09.510
+pure.
+
+15:09.580 --> 15:14.600
+Abbiamo coperto una panoramica di E. C anche noi abbiamo parlato delle immagini delle macchine di Amazon.
+
+15:14.680 --> 15:17.080
+Abbiamo esaminato i componenti di tipo istanziato.
+
+15:17.080 --> 15:23.950
+Abbiamo parlato dei volumi e delle istantanee IBSA su come utilizzare i gruppi di sicurezza con E. S. indirizzamento IP pubblico o
+
+15:23.950 --> 15:25.090
+privato.
+
+15:25.090 --> 15:30.140
+E alla fine abbiamo lanciato e bloccato in un facile istanza.
+
+15:30.250 --> 15:36.070
+Quindi, finendo la sezione, possiamo tornare al nostro schema principale e poi ci tufferemo in
+
+15:36.070 --> 15:41.140
+già Sì e Dynamo D-B che sono i servizi di database di AWOS.
+
+15:41.140 --> 15:45.250
+Quindi con questo completeremo questa lezione e completeremo questa sezione.
+
+15:45.370 --> 15:46.490
+Grazie per aver guardato.
+
+15:46.570 --> 15:47.440
+Ora puoi andare avanti.

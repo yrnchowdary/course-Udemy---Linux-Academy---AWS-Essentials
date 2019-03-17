@@ -1,0 +1,145 @@
+WEBVTT
+
+00:00.480 --> 00:07.110
+Salve e bentornati in questa lezione parleremo di istanze temporali in modo
+
+00:07.110 --> 00:14.930
+specifico tipi di istanze e componenti di tipi di istanze che iniziano con le definizioni.
+
+00:14.930 --> 00:21.470
+Parliamo di cosa è un tipo di istanza per una definizione semplificata il tipo di istanza è
+
+00:21.470 --> 00:26.860
+il C-p tu il potere di calcolo della tua istanza per una definizione AWOS.
+
+00:26.960 --> 00:33.950
+Quando si avvia un'istanza, il tipo di istanza che si specifica determina l'hardware del computer host utilizzato
+
+00:34.310 --> 00:41.540
+per l'istanza ogni tipo di istanza offre diverse capacità di memoria e archiviazione e sono raggruppati in
+
+00:41.540 --> 00:47.460
+famiglie di istanze in base a queste funzionalità selezionare un tipo di istanza.
+
+00:47.470 --> 00:53.930
+In base ai requisiti dell'applicazione o del software che si prevede di eseguire sulla propria istanza.
+
+00:54.200 --> 01:00.320
+Quindi quando pensi all'istanza digita la categoria principale che voglio che tu pensi sia il CPQ è
+
+01:00.320 --> 01:06.320
+la potenza di calcolo, ma rappresenta anche gli altri componenti hardware che costituiscono il server virtuale che
+
+01:06.320 --> 01:07.810
+stai per avviare.
+
+01:08.660 --> 01:13.880
+Quindi ora parliamo dei componenti dei tipi di istanza e per farlo.
+
+01:13.880 --> 01:17.650
+Diamo anche un'occhiata a quello nel PC per console.
+
+01:17.810 --> 01:23.450
+Quindi, per avere una buona visione di tutte le varie opzioni che lanciamo un'istanza selezioneremo un
+
+01:23.450 --> 01:28.460
+AM, lasceremo qui i link Amazon solo come esempio per arrivare a questa
+
+01:28.460 --> 01:35.230
+schermata qui che è la secondo passo quando si avvia un'istanza in cui dobbiamo selezionare il tipo di istanza.
+
+01:35.250 --> 01:38.980
+Quindi passiamo attraverso tutte queste diverse opzioni.
+
+01:39.000 --> 01:44.850
+Il primo è la famiglia e questo è un modo di categorizzare i tipi di istanza in base a ciò che sono ottimizzati
+
+01:44.850 --> 01:45.530
+per fare.
+
+01:45.540 --> 01:47.700
+Quindi hai categorie generali.
+
+01:47.820 --> 01:54.540
+Quindi per la famiglia hai un tipo di istanza di uso generale hai un tipo di
+
+01:54.540 --> 02:01.530
+istanza ottimizzata per calcolo GP calcoli ottimizzato memoria ottimizzata per l'archiviazione e queste sono tutte categorie progettate per
+
+02:01.530 --> 02:08.400
+scopi specifici a seconda del tipo di applicazione o software che stai per eseguire o usa questa
+
+02:08.490 --> 02:09.420
+istanza per.
+
+02:09.480 --> 02:11.670
+Quindi all'interno di ogni famiglia hai un tipo.
+
+02:11.670 --> 02:15.510
+Questa è la sottocategoria per ogni tipo di famiglia.
+
+02:15.510 --> 02:21.750
+Quindi questa è una designazione di denominazione con in ogni famiglia che rappresenta quindi il resto della
+
+02:22.410 --> 02:24.120
+configurazione per l'uso VCP.
+
+02:24.120 --> 02:29.910
+Queste sono la quantità di C. virtuale P. usa quello per esempio il tipo ha la memoria successiva.
+
+02:29.910 --> 02:31.540
+Questa è la quantità di RAM.
+
+02:31.710 --> 02:38.860
+Ad esempio, il tipo avrà ad esempio la memorizzazione del volume di archiviazione dell'istanza locale che indica il disco
+
+02:38.860 --> 02:39.520
+rigido.
+
+02:39.670 --> 02:43.100
+E qui puoi vedere varie opzioni come solo EBE.
+
+02:43.150 --> 02:53.340
+O SSD successivo è abs ottimizzato disponibile a questo indica se Eby come ottimizzazione è un'opzione per il tipo di istanza che si sta per selezionare e
+
+02:53.340 --> 02:59.100
+l'ultima è ora le prestazioni e questa è la valutazione delle prestazioni di rete in
+
+02:59.100 --> 03:02.330
+base alla sua velocità di trasferimento dei dati.
+
+03:02.370 --> 03:07.410
+Fondamentalmente la capacità della larghezza di banda dentro e fuori dell'istanza.
+
+03:07.410 --> 03:12.690
+Quindi, come puoi vedere, ci sono molti tipi diversi di tipi di istanze che puoi
+
+03:12.690 --> 03:15.570
+scegliere con molte configurazioni e impostazioni diverse.
+
+03:15.660 --> 03:20.950
+E come probabilmente puoi immaginare ci sono grandi differenze di prezzo tra questi due.
+
+03:20.970 --> 03:26.300
+Quello che più comunemente userete almeno inizierà con AWOS sarà il tipo di
+
+03:26.310 --> 03:31.070
+istanza micro T2 perché questa è l'opzione di livello gratuito.
+
+03:33.110 --> 03:38.710
+Quindi continuando a riassumerlo quando pensiamo a un tipo di istanza, pensate
+
+03:38.720 --> 03:44.420
+al CPI che pensate dell'hardware sottostante che sta per alimentare il vostro facile accesso
+
+03:44.450 --> 03:51.560
+incluso il tipo e la quantità di processori la quantità di memoria del tipo di ottimizzazione per l'archiviazione
+
+03:51.560 --> 03:57.670
+e la capacità di larghezza di banda dell'istanza stessa in modo che concluderemo questa lezione.
+
+03:57.750 --> 03:58.770
+Grazie per aver guardato.
+
+03:58.770 --> 03:59.630
+Ora puoi andare avanti.

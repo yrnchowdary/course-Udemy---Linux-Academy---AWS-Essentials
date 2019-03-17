@@ -1,0 +1,418 @@
+WEBVTT
+
+00:00.650 --> 00:06.140
+Salve e bentornati in questa lezione ci immergeremo nell'impostazione del ridimensionamento automatico. In particolare,
+
+00:06.140 --> 00:12.920
+andremo a toccare le configurazioni di avvio, i gruppi di ridimensionamento automatico, il ridimensionamento automatico delle metriche e delle
+
+00:13.100 --> 00:19.200
+soglie e gli avvisi di ridimensionamento automatico e non appena si attivano i trigger per iniziare.
+
+00:19.200 --> 00:26.250
+La prima cosa che dobbiamo fare è creare una configurazione di avvio in modo da gestire nuovamente il ridimensionamento automatico, andando
+
+00:26.250 --> 00:34.150
+nuovamente a NZC nella barra di navigazione a sinistra, possiamo scorrere verso il basso fino all'auto staling e ci sono due opzioni per avviare
+
+00:34.160 --> 00:35.870
+la configurazione o il ridimensionamento.
+
+00:35.900 --> 00:41.440
+È necessario configurare una configurazione di avvio prima di poter creare un gruppo di ridimensionamento automatico.
+
+00:41.450 --> 00:42.700
+Quindi inizieremo qui.
+
+00:50.330 --> 00:56.780
+Quindi la prima cosa che dobbiamo fare quando configuriamo una configurazione di avvio è selezionare un am I
+
+00:56.790 --> 00:58.640
+e selezioneremo Amazon Linux.
+
+00:58.640 --> 01:07.680
+Sto selezionando un tipo di istanza che manterremo questo livello gratuito con la configurazione di micro-lancio T-2, e daremo
+
+01:07.690 --> 01:09.080
+questo nome.
+
+01:09.130 --> 01:11.600
+Chiamalo essenziale.
+
+01:11.660 --> 01:15.030
+Avvia la configurazione o Elsy per la configurazione di avvio.
+
+01:15.350 --> 01:19.160
+Andremo qui e fare clic su dettagli avanzati perché ci sono un paio di cose che vogliamo
+
+01:19.160 --> 01:19.610
+fare qui.
+
+01:19.610 --> 01:26.250
+Uno vogliamo accertarci che per il tipo di indirizzo IP che stiamo assegnando un indirizzo IP pubblico.
+
+01:26.270 --> 01:31.970
+Quindi, se l'assegnazione di un indirizzo IP pubblico a ogni istanza e l'attivazione di tale opzione
+
+01:31.970 --> 01:38.750
+o l'utilizzo di default assegnano solo un indirizzo IP pubblico all'istanza se il BPC e la sottorete predefiniti sono
+
+01:38.750 --> 01:46.220
+configurati per impostazione predefinita e lo sarà perché sceglieremo la nostra sottorete pubblica fa parte di questa configurazione di ridimensionamento automatico e
+
+01:46.220 --> 01:48.160
+del gruppo di ridimensionamento automatico.
+
+01:48.170 --> 01:52.220
+Quindi lo faremo automaticamente per noi, ma se non sei mai sicuro
+
+01:52.220 --> 01:56.870
+di poter sempre fare clic su Assegna un indirizzo IP pubblico che impone tale opzione.
+
+01:56.960 --> 02:04.730
+Poi mi piacerà come ho fatto in E. S. alla lezione di provisioning inserisci
+
+02:04.730 --> 02:11.720
+qui lo script bash che aggiornerà l'installer sulla nostra istanza Linux e installerà il server web
+
+02:11.960 --> 02:20.000
+Apache in modo che, una volta avviato tutto, possiamo testare l'accesso a istanze facili da un computer esterno.
+
+02:20.000 --> 02:21.410
+Successivo per aggiungere spazio di archiviazione.
+
+02:21.440 --> 02:23.860
+Lo lascerò solo come rotta predefinita.
+
+02:23.920 --> 02:26.070
+Volume.
+
+02:26.290 --> 02:31.360
+Ora per il gruppo di sicurezza possiamo creare un nuovo gruppo di sicurezza chiamato
+
+02:31.420 --> 02:38.410
+scalabilità automatica Gruppo di sicurezza 1 e attualmente l'unica regola di consenso che è qui è l'età SS di 22 che
+
+02:38.410 --> 02:44.950
+vorremmo se intendessimo SS età o accedere a questa istanza facile che possiamo benissimo anche servire al traffico web.
+
+02:44.950 --> 02:49.790
+Dovremo consentire il TTP.
+
+02:50.470 --> 02:55.110
+Successivamente andiamo a rivedere e quindi creare la configurazione di avvio ora.
+
+02:55.160 --> 03:01.120
+E con questo dato che stiamo automatizzando il processo di provisioning facile alle istanze, dobbiamo assegnare una
+
+03:01.150 --> 03:03.650
+coppia di chiavi a due semplici istanze.
+
+03:03.760 --> 03:11.730
+E selezionerò lo stesso che ho creato e riutilizzato in R E C alla sezione successiva.
+
+03:11.750 --> 03:15.480
+Questo passa direttamente alla creazione del gruppo di ridimensionamento automatico.
+
+03:15.590 --> 03:21.490
+Quindi passeremo a questa sezione e la prima cosa che dobbiamo fare è ottenere questo
+
+03:21.490 --> 03:30.850
+nome di gruppo, quindi chiamerò questo gruppo di ridimensionamento automatico dei centrali la dimensione del gruppo. Questa è la quantità di istanze con cui il gruppo
+
+03:30.940 --> 03:31.750
+deve iniziare.
+
+03:31.750 --> 03:36.130
+Ora questo non significa che sarà il minimo o il massimo, ma sarà
+
+03:36.130 --> 03:37.920
+l'importo con cui inizieremo.
+
+03:37.990 --> 03:42.840
+Quindi ho intenzione di impostare questo a tre istanze per iniziare il prossimo.
+
+03:42.850 --> 03:44.170
+Seleziona il tuo V. P. vedere.
+
+03:44.170 --> 03:45.520
+L'abbiamo già selezionato.
+
+03:45.640 --> 03:47.800
+E poi dobbiamo selezionare le sottoreti.
+
+03:47.800 --> 03:52.300
+Ora di nuovo sarà facile rispondere che vogliamo servire il traffico web in modo
+
+03:52.300 --> 03:54.560
+che debbano essere nelle sottoreti pubbliche.
+
+03:54.580 --> 04:02.360
+È quasi come qualcosa di pubblico che una sottorete pubblica e poi vogliamo andare per avanzare i dettagli e questo
+
+04:02.360 --> 04:08.830
+è estremamente importante perché qui dobbiamo selezionare per ricevere il traffico da uno o più bilanciatori
+
+04:08.830 --> 04:09.760
+di carico.
+
+04:09.760 --> 04:14.770
+Quindi è qui che dobbiamo selezionare il bilanciamento del carico che abbiamo creato nella sezione precedente in modo che
+
+04:14.770 --> 04:19.350
+entrambi i nostri bilanciatori del carico nel ridimensionamento automatico lavorino insieme per un controllo dello stato.
+
+04:19.360 --> 04:25.510
+Passeremo a Elby perché il bilanciamento del carico elastico sta già facendo controlli sanitari per noi.
+
+04:25.530 --> 04:31.200
+Successivamente possiamo configurare i criteri di Schelling e le politiche di ridimensionamento.
+
+04:31.210 --> 04:37.630
+È qui che impostiamo le soglie per aumentare o diminuire in base alla domanda di traffico.
+
+04:37.630 --> 04:43.540
+Quindi, per prima cosa dobbiamo scegliere cosa scalare tra ora inizieremo con tre istanze ma diciamo che vogliamo
+
+04:43.540 --> 04:48.490
+ridimensionare o dire che sappiamo per certo che avremo bisogno di una quantità minima di istanze
+
+04:48.490 --> 04:50.460
+per eseguire il nostro applicazione.
+
+04:50.470 --> 04:57.180
+Diciamo che vogliamo un minimo di due significati che non consentiremo mai che ci siano meno di due istanze.
+
+04:57.290 --> 05:03.650
+Ma allo stesso tempo possiamo mettere un limite massimo e questo è un ottimo modo per prevenire il provisioning di 10 15
+
+05:03.650 --> 05:08.270
+20 istanze senza che tu lo sappia e puoi sempre tornare indietro e modificarle in qualsiasi
+
+05:08.270 --> 05:08.570
+momento.
+
+05:08.570 --> 05:11.650
+Quindi ha messo un massimo alle cinque.
+
+05:11.670 --> 05:17.450
+Quindi dobbiamo impostare le soglie per aumentare e diminuire in base alla domanda.
+
+05:17.450 --> 05:20.260
+Quindi per prima cosa esamineremo le dimensioni del gruppo aumentate.
+
+05:20.430 --> 05:25.660
+Quindi, per quello che dobbiamo fare è aggiungere un nuovo allarme.
+
+05:25.820 --> 05:31.580
+Ed è qui che possiamo selezionare se vogliamo inviare una notifica a uno specifico non appena l'argomento, ma
+
+05:31.580 --> 05:35.650
+in realtà lo faremo nella parte successiva, quindi ho intenzione di deselezionarlo.
+
+05:35.660 --> 05:38.090
+Ma puoi farlo qui.
+
+05:38.120 --> 05:45.320
+Quindi quello che sto facendo qui ora è che dirò quando mai l'utilizzo medio dell'E. S. due istanze che
+
+05:45.320 --> 05:52.430
+sono attualmente in diretta è maggiore di quanto diciamo il 70 percento.
+
+05:52.430 --> 05:56.810
+Ciò significa che c'è una buona quantità di traffico nelle nostre due semplici
+
+05:56.900 --> 06:03.330
+istanze e non sono ancora eccessivamente sovraccarichi, ma stanno iniziando a raggiungere il punto in cui vogliamo aumentare la capacità.
+
+06:03.440 --> 06:08.630
+Quindi, per almeno un periodo consecutivo di cinque minuti, puoi modificarlo nuovamente in tutti i
+
+06:08.810 --> 06:14.480
+periodi di minuti o ore che preferisci, quindi lascerò passare un periodo consecutivo di cinque minuti e
+
+06:14.480 --> 06:16.950
+quindi questo è il nome dell'allarme.
+
+06:17.120 --> 06:24.170
+Quindi ora succederà che in qualsiasi momento ci sia abbastanza traffico sulla nostra applicazione che ha portato la
+
+06:24.410 --> 06:29.510
+media di utilizzo del CPI a tutte le risposte superiori al 70%.
+
+06:29.510 --> 06:37.210
+Questo è il momento in cui il ridimensionamento automatico ora aggiungerà un ulteriore server facile al nostro gruppo di ridimensionamento automatico.
+
+06:37.430 --> 06:42.770
+Ora per diminuire dobbiamo fare esattamente la stessa cosa nella direzione opposta.
+
+06:42.860 --> 06:49.550
+Quindi deselezionerò la notifica qui, ma diremo quando l'utilizzo medio è inferiore
+
+06:49.580 --> 06:52.910
+o uguale al 30 percento.
+
+06:52.910 --> 07:00.320
+Ciò significa che se abbiamo tre o quattro istanze attualmente attive e sono tutte utilizzate meno del 30
+
+07:00.320 --> 07:06.770
+percento significa che possiamo rilasciare una delle due semplici istanze e distribuire il carico tra le
+
+07:06.770 --> 07:11.410
+istanze rimanenti e non avere quelle istanze rimanenti essere sovraccarico.
+
+07:14.290 --> 07:19.270
+Quindi ora che abbiamo le nostre due soglie impostate per aumentare e diminuire possiamo
+
+07:19.270 --> 07:27.110
+passare a configurare le notifiche e qui possiamo aggiungere una notifica e possiamo inviarlo al nostro avviso di ridimensionamento automatico del gruppo
+
+07:27.200 --> 07:34.170
+non appena l'argomento ogni volta che il ridimensionamento automatico avvia un istante termina un istante o prova a lanciare
+
+07:34.190 --> 07:37.800
+un istante o prova a terminare un'istanza e fallisce.
+
+07:38.000 --> 07:43.460
+Quindi queste sono grandi notifiche da ottenere perché sai cosa sta facendo il ridimensionamento automatico e quando aggiunge o
+
+07:43.490 --> 07:49.250
+rimuove le istanze e questi avvisi verranno inviati al mio gruppo di ridimensionamento automatico non appena il prossimo argomento sarà
+
+07:50.850 --> 07:52.680
+possibile aggiungere tag se lo desideri.
+
+07:52.680 --> 08:00.260
+Ho intenzione di lasciare questo spazio vuoto e quindi possiamo esaminare e creare il gruppo di ridimensionamento automatico.
+
+08:00.370 --> 08:02.440
+Ora, se passiamo alle istanze, ora
+
+08:07.850 --> 08:15.860
+vediamo che dal momento che impostiamo il numero iniziale di istanze su tre istanze, il ridimensionamento automatico ora sta avviando e
+
+08:15.860 --> 08:20.510
+fornendo tre E. S. due istanze per noi.
+
+08:20.840 --> 08:26.620
+Quindi interromperò un video per un secondo e tornerò una volta che saranno state fatte le previsioni OK.
+
+08:26.620 --> 08:27.510
+Ben tornato.
+
+08:27.550 --> 08:33.850
+Le tre istanze che il ridimensionamento automatico ha per noi hanno completato la configurazione e la configurazione.
+
+08:33.850 --> 08:37.450
+Quindi ora selezioniamo uno di loro prenderà l'indirizzo IP pubblico.
+
+08:37.450 --> 08:44.970
+E se vado a quel mio browser, dovremmo essere in grado di vedere la pagina di test di Apache e perfezionarci.
+
+08:44.970 --> 08:48.590
+Quindi proviamo un altro poiché dovrebbero essere tutti duplicati l'uno dell'altro.
+
+08:48.860 --> 08:51.780
+Dovrei essere in grado di afferrare questo indirizzo IP pubblico qui.
+
+08:54.200 --> 08:56.920
+E perfetto
+
+08:57.010 --> 09:02.080
+Quindi ora una delle grandi cose sul bilanciamento del carico elastico di un
+
+09:02.080 --> 09:06.130
+ridimensionamento automatico è che manterrà sempre le soglie minime.
+
+09:06.130 --> 09:13.420
+Quindi, se dovessi entrare qui e terminare manualmente due di queste istanze, vedremo la fornitura del
+
+09:13.690 --> 09:19.700
+ridimensionamento automatico un'istanza aggiuntiva per assicurarci di tornare a un minimo di due.
+
+09:19.750 --> 09:27.430
+Quindi, se vado qui per terminare la data dell'istanza, questi due clic terminano che terminano e quelli relativi ai limiti del
+
+09:27.430 --> 09:34.240
+carico elastico e il ridimensionamento automatico attraverso i controlli dello stato di salute sarà quindi la visione di Reaper
+
+09:34.410 --> 09:35.960
+E. S. per questo è per noi.
+
+09:35.960 --> 09:41.610
+Quindi quello che sto facendo qui è che sostanzialmente sto imitando questi server in modo anomalo o sovraccarico.
+
+09:43.090 --> 09:47.490
+Quindi questo potrebbe richiedere alcuni minuti perché dovrà passare attraverso i controlli di aiuto,
+
+09:47.490 --> 09:54.340
+ma ho intenzione di mettere in pausa un video e tornare quando iniziamo a vedere le altre istanze in fase di provisioning OK.
+
+09:54.340 --> 09:54.940
+Siamo tornati.
+
+09:54.940 --> 09:59.300
+E se vedi qui ora le due risposte che ho terminato sono state chiuse.
+
+09:59.440 --> 10:05.980
+E proprio qui ora puoi vedere un'inizializzazione di istanza più semplice. Questo è attualmente sottoposto a
+
+10:05.980 --> 10:13.210
+provisioning forzato dal ridimensionamento automatico per soddisfare la nostra soglia minima di dover vedere sempre due istanze in
+
+10:13.210 --> 10:16.320
+esecuzione all'interno del gruppo di ridimensionamento automatico.
+
+10:16.320 --> 10:22.900
+Ok, quindi diamo un'occhiata ai nostri requisiti di infrastruttura Omega per questa sezione per la Sezione
+
+10:22.900 --> 10:23.690
+10.
+
+10:23.690 --> 10:30.630
+Dobbiamo automatizzare il processo di ridimensionamento o ridimensionamento delle risorse AWOS in base alle richieste di traffico.
+
+10:30.630 --> 10:36.020
+Nello specifico, è necessario disporre di una configurazione di avvio e gruppi di ridimensionamento automatico configurano la
+
+10:36.020 --> 10:43.160
+fornitura in modo semplice alle istanze in base alla richiesta di traffico e la notifica del gruppo di ridimensionamento automatico è abilitata che
+
+10:43.160 --> 10:48.640
+attiverà un argomento S e S quando le istanze vengono aggiunte o terminate dal gruppo di ridimensionamento automatico.
+
+10:48.650 --> 10:50.750
+Anche noi l'abbiamo fatto.
+
+10:50.750 --> 10:57.290
+Così grandioso abbiamo soddisfatto tutti i requisiti per Project Omega in questa sezione.
+
+10:57.370 --> 11:04.570
+Quindi per ricapitolare nella sezione 10 di AWOS essentials ci siamo concentrati sul ridimensionamento automatico in cui abbiamo esaminato una panoramica concettuale
+
+11:04.600 --> 11:11.350
+del ridimensionamento automatico dei componenti di scaling automatico e delle configurazioni di lancio della panoramica dei costi gruppi di ridimensionamento
+
+11:11.350 --> 11:14.860
+automatico e come impostare e utilizzare il ridimensionamento automatico.
+
+11:16.970 --> 11:22.400
+Quindi, ora che abbiamo finito con il ridimensionamento automatico, ci stiamo avvicinando
+
+11:22.460 --> 11:28.500
+molto alla configurazione di Project Omega e alla comprensione di tutti questi vari componenti.
+
+11:28.660 --> 11:36.340
+Successivamente andremo nella route 53 e toccheremo come Amazon Web Services gestisce i nomi di dominio e
+
+11:36.340 --> 11:37.290
+DNS.
+
+11:37.420 --> 11:41.620
+Ma per ora concluderemo questa lezione e concluderemo questa sezione.
+
+11:41.620 --> 11:42.780
+Grazie per aver guardato.
+
+11:42.820 --> 11:43.710
+Ora puoi andare avanti.

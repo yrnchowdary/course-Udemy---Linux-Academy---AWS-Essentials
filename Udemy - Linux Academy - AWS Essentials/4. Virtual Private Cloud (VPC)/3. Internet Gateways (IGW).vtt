@@ -1,0 +1,211 @@
+WEBVTT
+
+00:00.180 --> 00:06.960
+Ciao e in questa lezione svilupperemo le basi VPC e questa volta parleremo specificamente dei gateway
+
+00:07.050 --> 00:12.930
+Internet e identificheremo in modo specifico la funzione di definizione del gateway Internet del
+
+00:12.930 --> 00:19.110
+gateway Internet che collega e scollega un gateway Internet creando un gateway Internet e alcune
+
+00:19.110 --> 00:21.690
+regole base del gateway Internet.
+
+00:23.900 --> 00:31.090
+Quindi Internet Gateway è anche noto come GW vedrà questa abbreviazione molto per una definizione semplice.
+
+00:31.160 --> 00:36.530
+Si tratta di una combinazione di hardware e software che fornisce alla rete
+
+00:36.590 --> 00:44.630
+privata un percorso verso il mondo esterno che significa Internet per il VPC in termini di definizione AWOS. Un
+
+00:44.630 --> 00:48.520
+gateway Internet è ridimensionato orizzontalmente e altamente disponibile.
+
+00:48.530 --> 00:56.090
+Il componente PC che consente la comunicazione tra istanze nel PC e Internet non impone quindi alcun rischio
+
+00:56.090 --> 01:01.490
+di disponibilità o limiti di larghezza di banda sul traffico di rete.
+
+01:01.490 --> 01:07.070
+Quindi, solo alcune di queste due definizioni sono davvero veloci per la definizione semplice.
+
+01:07.070 --> 01:11.000
+Pensa al gateway internet come al tuo modem via cavo.
+
+01:11.000 --> 01:13.360
+O come il modem utilizzato per connettersi a Internet.
+
+01:13.400 --> 01:18.800
+È il modo in cui entrare o uscire dalla tua rete privata.
+
+01:18.800 --> 01:25.160
+E con la definizione AWOS voglio davvero che tu ti concentri su ridondante e altamente disponibile e permetta
+
+01:25.160 --> 01:29.560
+la comunicazione tra le istanze nel tuo PC e verso Internet.
+
+01:29.750 --> 01:37.250
+Detto questo, diamo nuovamente un'occhiata al nostro diagramma VPC e comprendiamo i gateway Internet e diamo uno
+
+01:37.670 --> 01:44.420
+sguardo indietro alla dashboard VPC sulla console e dove si trova il gateway Internet.
+
+01:44.420 --> 01:49.520
+Quindi qui sotto il club virtuale privato la navigazione puoi fare clic su uno di questi qui o su uno
+
+01:49.520 --> 01:53.390
+qualsiasi di questi qui per fare una specie di immersione più profonda nei componenti VPC.
+
+01:53.480 --> 01:57.350
+Ma per ora proprio qui faremo clic sui gateway Internet e dare un'occhiata.
+
+01:57.350 --> 01:59.750
+Quindi ecco il nostro Internet Gateway.
+
+01:59.750 --> 02:05.120
+Questo è il gateway predefinito che è stato creato quando abbiamo creato il nostro account e abbiamo creato
+
+02:05.120 --> 02:08.130
+il BPC predefinito per noi e ha un ID.
+
+02:08.240 --> 02:12.170
+Lo stato è allegato e indica il VPC a cui è collegato.
+
+02:12.170 --> 02:17.230
+Se guardi qui il VPC che è collegato a e in Seabee 5 C.
+
+02:17.270 --> 02:22.880
+Quindi ora se passo a VPC vedrai che il VPC che attualmente abbiamo in questo account finisce
+
+02:22.940 --> 02:24.990
+in S. B 5 C.
+
+02:25.100 --> 02:31.890
+Quindi questi stanno solo usando i numeri ID identificativi VPC così come gli identificatori del gateway Internet.
+
+02:31.910 --> 02:37.550
+Giusto per capire e collegare i due insieme in modo da sapere quale componente è
+
+02:37.610 --> 02:40.190
+assegnato a quale VPC e viceversa.
+
+02:40.580 --> 02:46.880
+Quindi cliccando sul gateway internet stesso puoi vedere qualche informazione in più qui e non ci sono
+
+02:46.880 --> 02:48.080
+molte informazioni qui.
+
+02:48.140 --> 02:54.700
+Ancora una volta ci dice che è disponibile è allegato ed è collegato a questo particolare VPC.
+
+02:54.860 --> 03:01.550
+E ciò che intendo quando dico allegato è che ciò significa che è attualmente collegato al VPC e vengono
+
+03:01.610 --> 03:03.010
+fornite le rotte.
+
+03:03.050 --> 03:08.080
+Ora posso facilmente venire qui e staccato dal VPC.
+
+03:08.450 --> 03:15.260
+Quindi, quando faccio clic su distacca dal PC, ciò che è successo in pratica è che è appena passato dal VPC.
+
+03:15.320 --> 03:16.840
+È ancora nel mio account.
+
+03:16.970 --> 03:19.330
+Ma ora lo ho rimosso dal VPC.
+
+03:19.400 --> 03:26.130
+E ciò che è accaduto ora è che qualsiasi cosa all'interno del VPC queste istanze o qualsiasi altra risorsa AWOS che
+
+03:26.130 --> 03:31.790
+avrei avuto ora non avrebbe alcuna via di uscita verso Internet in modo che fossero ancora in grado
+
+03:31.790 --> 03:35.970
+di comunicare tra loro e io entrerò in quello nella prossima lezione.
+
+03:36.140 --> 03:40.390
+Ma non avrebbero modo di accedere al mondo esterno.
+
+03:40.610 --> 03:47.530
+Quindi posso fare una delle due cose come me per creare un nuovo gateway Internet e collegarlo
+
+03:47.530 --> 03:50.540
+o posso semplicemente ricollegare questo particolare gateway.
+
+03:50.800 --> 03:57.100
+E se voglio solo ricollegarlo posso solo ripetere che è qui che in allegato a VPC selezionare qualsiasi
+
+03:57.100 --> 04:00.340
+VPC attualmente ho solo un VPC nel mio account.
+
+04:00.340 --> 04:01.380
+Fai clic su Allega.
+
+04:01.820 --> 04:04.500
+E così è tornato.
+
+04:04.510 --> 04:10.670
+E il nostro BPC ha un percorso verso Internet per creare un gateway Internet aggiuntivo.
+
+04:10.780 --> 04:14.680
+Ho appena fatto clic qui per creare un gateway Internet. Ho intenzione di dargli un nome.
+
+04:14.800 --> 04:24.520
+Chiamerò questo essenziale gateway internet che lo creerò e lì è stato creato ha un nome e che è disponibile per essere
+
+04:24.520 --> 04:29.950
+allegato a qualsiasi altro VPC che decido di creare in futuro.
+
+04:29.950 --> 04:35.860
+Ora un paio di cose che vogliamo sapere sui gateway Internet oltre al fatto che forniscono la
+
+04:35.860 --> 04:42.640
+nostra connessione a Internet per VPC è che solo un gateway Internet può essere collegato a un PC alla
+
+04:42.640 --> 04:43.190
+volta.
+
+04:43.200 --> 04:47.690
+Quindi puoi avere due o tre gateway Internet su un VPC che potresti avere solo uno.
+
+04:47.770 --> 04:49.780
+Quindi non posso allegare questo qui.
+
+04:49.960 --> 04:51.570
+Quindi se vado ad allegare.
+
+04:52.030 --> 04:52.300
+Destra.
+
+04:52.300 --> 04:57.040
+Non mi darà un'opzione per collegarlo perché non ho un VPC che
+
+04:57.040 --> 05:04.210
+al momento non ha un gateway internet collegato e un gateway Internet non può essere rimosso da un
+
+05:04.330 --> 05:12.220
+PC mentre ci sono A. attivi W. come risorse nel VPC come una lesione ad esempio o un database RDX.
+
+05:12.220 --> 05:17.650
+Quindi, se al momento disponevamo di risorse live provate nel VPC e il modo per staccarlo mi avrebbe
+
+05:17.650 --> 05:21.180
+dato un errore dicendo che non mi avrebbe permesso di farlo.
+
+05:21.430 --> 05:25.440
+Quindi questa è una rapida recensione di cosa sia un gateway internet.
+
+05:25.600 --> 05:27.630
+E con questo concluderemo questo video.
+
+05:27.700 --> 05:28.780
+Grazie per aver guardato.
+
+05:28.780 --> 05:29.590
+Ora puoi andare avanti.

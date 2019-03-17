@@ -1,0 +1,385 @@
+WEBVTT
+
+00:00.480 --> 00:06.780
+Salve e bentornati in questa lezione, ci concentreremo sulle metriche e sugli allarmi del cloud watch e in particolare sull'uso
+
+00:06.780 --> 00:10.030
+del cloud watch per creare un dashboard del cloud watch.
+
+00:10.080 --> 00:16.530
+E poi esploreremo le metriche e aggiungiamo i widget alla dashboard come creare allarmi e infine
+
+00:16.530 --> 00:20.200
+come creare allarmi che innescano i trigger di s.
+
+00:22.500 --> 00:28.710
+Quindi, prima diamo un'occhiata alla console di sorveglianza cloud qui e impariamo un po 'sulla navigazione e su
+
+00:28.740 --> 00:30.070
+come trovare tutto.
+
+00:30.090 --> 00:36.110
+Quindi sul lato sinistro qui hai dove puoi trovare i tuoi allarmi cruscotti registri e metriche.
+
+00:36.120 --> 00:41.880
+Quindi iniziamo andando ai dashboard in modo che possiamo creare un dashboard facendo clic su create dashboard.
+
+00:41.880 --> 00:46.590
+Daremo questo nome, lo chiameremo dashboard essenziale e successivamente
+
+00:49.820 --> 00:56.870
+potremo selezionare un tipo di widget da aggiungere al dashboard per questo particolare esempio o
+
+00:56.930 --> 01:00.260
+semplicemente selezionare una metrica di linea.
+
+01:00.480 --> 01:06.210
+Quindi ora quello che dobbiamo fare è selezionare la metrica per la quale vogliamo creare il widget.
+
+01:06.210 --> 01:08.400
+Diamo quindi un'occhiata a due parametri.
+
+01:08.490 --> 01:14.490
+Ma una cosa che dovremmo sapere è che queste metriche sono popolate in base alle
+
+01:14.490 --> 01:17.890
+risorse attualmente disponibili nel nostro account AWOS.
+
+01:17.940 --> 01:22.320
+Quindi ci sono più metriche disponibili per altri servizi ma semplicemente non abbiamo nessuno
+
+01:22.320 --> 01:25.320
+di quei servizi attualmente attivi o provati nell'account.
+
+01:25.320 --> 01:31.650
+Diamo un'occhiata a E. C due metriche per istanze di metrica e
+
+01:31.650 --> 01:38.030
+ciò che vediamo qui è suddiviso per nome di istanza sul lato sinistro o ID di istanza.
+
+01:38.240 --> 01:41.350
+E poi ci sono i nomi delle metriche che possiamo dare un'occhiata.
+
+01:41.390 --> 01:47.900
+Quindi concentriamoci qui sul nostro E. S. elementi essenziali facili da istanziare e vi è l'ID istanza per
+
+01:47.900 --> 01:54.500
+quello e quindi l'utilizzo della CPQ metrica perché si tratta di una metrica che viene comunemente utilizzata per E. C per esempio il
+
+01:54.590 --> 01:55.580
+monitoraggio.
+
+01:55.760 --> 02:05.120
+Quindi possiamo vedere qui in questo dato periodo di tempo e puoi passare dall'utilizzo del CPQ per questa
+
+02:05.200 --> 02:05.740
+istanza.
+
+02:05.740 --> 02:11.920
+Ora l'utilizzo del CPQ è molto basso perché dopo aver prevenuto questa istanza non l'abbiamo ancora
+
+02:11.920 --> 02:12.690
+utilizzata.
+
+02:12.850 --> 02:17.560
+Ma puoi vedere alcune delle attività più intense e questo è il momento in cui potrei aver registrato altri
+
+02:17.560 --> 02:22.810
+video in questo corso in cui stavo accedendo a E. C ad esempio.
+
+02:22.870 --> 02:27.710
+Quindi diciamo che voglio impostare l'utilizzo in un periodo di tempo di un giorno.
+
+02:28.150 --> 02:34.390
+Quindi questo è il giorno passato che posso guardare negli ultimi tre giorni la scorsa settimana e ovviamente questa istanza è
+
+02:34.390 --> 02:36.210
+stata creata solo per alcuni giorni.
+
+02:36.220 --> 02:39.290
+Quindi avere così tanto tempo ha senso ora.
+
+02:39.340 --> 02:44.930
+Quindi torniamo all'ultimo giorno e fai clic su Crea widget.
+
+02:44.960 --> 02:50.470
+Quindi ora nella mia dashboard qui ho questo widget che posso ridimensionare se voglio e posso creare
+
+02:50.470 --> 02:56.630
+e rilasciare un gruppo di altri widget su questo dashboard e posso categorizzarli in modo tale che se voglio
+
+02:56.720 --> 03:01.790
+monitorare molte risorse o servizi diversi AWOS Posso creare diversi cruscotti per loro e quindi
+
+03:01.790 --> 03:07.190
+inserire metriche specifiche in modo da poter sempre tornare indietro e avere questi cruscotti creati e pre-compilati
+
+03:07.190 --> 03:13.720
+per me, così posso sempre venire qui e visualizzare le metriche per monitorare cosa sta succedendo all'interno del mio AWOS account.
+
+03:14.000 --> 03:20.180
+Ora in termini di creazione di allarmi di allarme o dove stiamo andando a impostare una soglia e quindi ottenere un
+
+03:20.210 --> 03:21.260
+avviso basato sull'allarme.
+
+03:21.260 --> 03:28.290
+Quindi diciamo che per questa istanza di utilizzo VCP ho voluto ottenere un allarme in qualsiasi momento.
+
+03:28.310 --> 03:32.000
+L'utilizzo di Sipa è andato oltre il punto 0 4%.
+
+03:32.000 --> 03:37.550
+Quindi posso impostare un allarme e ogni volta che l'utilizzo salirà di picco sopra quella soglia,
+
+03:37.550 --> 03:39.840
+si visualizzerebbe qui come un allarme.
+
+03:39.860 --> 03:46.910
+Quindi diamo un'occhiata a come fare che vado agli allarmi Posso fare di nuovo clic su Crea allarme Posso passare a due parametri
+
+03:47.060 --> 03:53.780
+per istanza Vado nello stesso istante a mangiare l'essenziale E. C ad esempio e trova di nuovo
+
+03:53.960 --> 03:55.350
+l'utilizzo Sipa.
+
+03:57.390 --> 04:04.350
+Farò clic su di esso e quindi farò clic su Avanti, quindi ora è dove ho impostato la mia soglia di
+
+04:04.350 --> 04:07.640
+allarme, quindi darò un nome e lo chiamerò essenziale.
+
+04:08.480 --> 04:15.290
+Vedi la descrizione dell'allarme CPQ.
+
+04:15.290 --> 04:17.780
+Posso solo copiare e incollare e rendere la stessa cosa.
+
+04:17.780 --> 04:20.500
+Ora qui è dove ho effettivamente impostato la soglia.
+
+04:20.630 --> 04:27.950
+Quindi voglio che questo allarme si attivi ogni volta che l'utilizzo di Cp è maggiore o uguale a minore o
+
+04:27.950 --> 04:34.130
+uguale ao maggiore o minore di o maggiore o uguale a me lo renderò estremamente basso solo
+
+04:34.130 --> 04:36.250
+così possiamo avere questo innesco
+
+04:36.260 --> 04:42.890
+Mi limiterò a mettere il punto 0 0 5% da estremamente basso e lo sto facendo
+
+04:42.890 --> 04:48.520
+allo scopo di far scattare automaticamente questo allarme per un periodo consecutivo.
+
+04:48.560 --> 04:54.830
+Quindi imposta qui il periodo e ciò significa che per far scattare l'allarme deve essere al di
+
+04:54.830 --> 04:59.840
+sopra della soglia per questo numero di periodi consecutivi di cinque minuti.
+
+04:59.840 --> 05:05.980
+Questo sarebbe solo un periodo di cinque minuti in cui la C-pizzazione è maggiore o uguale al
+
+05:05.980 --> 05:07.880
+punto 0 0 5 percento.
+
+05:08.030 --> 05:09.580
+Quindi puoi cambiare questo oggi.
+
+05:09.600 --> 05:11.150
+I nostri minuti
+
+05:11.540 --> 05:16.490
+E poi, ovviamente, se lo volevi, sai dire che cinque giorni o una settimana hai messo un giorno e poi sette per impostare i periodi di record di
+
+05:16.580 --> 05:22.100
+un giorno che equivalevano a una settimana rispetto a C. P. l'utilizzo dovrebbe essere al
+
+05:22.100 --> 05:26.030
+di sopra di tale soglia prima che innescherebbe l'allarme.
+
+05:26.030 --> 05:31.100
+Per questo esempio, facciamo solo un minuto perché le statistiche cambino anche da standard a personalizzate e puoi
+
+05:31.100 --> 05:35.460
+impostarle a un valore medio massimo di una somma minima o di campioni di dati.
+
+05:35.720 --> 05:39.910
+Ora per le azioni questo è dove dichiari ciò che vuoi che questo allarme sia.
+
+05:39.910 --> 05:45.500
+Ora può essere un allarme o può anche essere qualcosa che dice hey se è all'interno di questa soglia o
+
+05:45.500 --> 05:48.360
+colpisce la soglia, quindi lo stato è in realtà OK.
+
+05:48.530 --> 05:53.430
+Quindi può essere un qualcosa di brutto che vuoi essere avvisato che questo è male
+
+05:53.430 --> 05:58.820
+che devi andare a sistemare qualcosa o puoi semplicemente impostarlo dove dice hey che arriva se è all'interno
+
+05:58.820 --> 06:04.650
+di questo intervallo di soglia, quindi in realtà è un buono o uno stato OK successivo per inviare notifica a.
+
+06:04.670 --> 06:12.970
+È qui che puoi impostarlo per notificare o attivare i tuoi argomenti S e S, così posso ad esempio impostare questo
+
+06:12.970 --> 06:20.590
+come avviso ASG come argomento AS e puoi vedere l'elenco email degli abbonati che fanno parte di esso.
+
+06:20.800 --> 06:26.860
+E quando premo creare un allarme, la prima cosa che vedrai è che cadrà in dati
+
+06:26.890 --> 06:27.280
+insufficienti.
+
+06:27.280 --> 06:33.220
+E questo perché non ha ancora avuto abbastanza tempo per determinare se la soglia è stata soddisfatta o meno.
+
+06:33.370 --> 06:39.490
+Quindi ci vorrà circa un minuto per raccogliere le informazioni e quindi
+
+06:39.580 --> 06:43.140
+decidere se attivare o meno l'allarme.
+
+06:43.390 --> 06:47.830
+Quindi, mentre questo è in fase di elaborazione, parliamo in modo specifico della creazione di allarmi
+
+06:47.830 --> 06:50.920
+perché è qualcosa che probabilmente dovresti sicuramente impostare sul tuo account.
+
+06:52.240 --> 06:56.980
+Quindi, facendo clic sugli avvisi di fatturazione, la prima cosa che dirà è che non sono state trovate metriche di fatturazione.
+
+06:57.010 --> 07:00.560
+Per iniziare, visita la console di fatturazione dell'account.
+
+07:00.580 --> 07:07.080
+Quindi, fai clic sulle preferenze nel dolore di navigazione a sinistra e quindi fai clic su Ricevi avvisi di fatturazione.
+
+07:07.090 --> 07:08.280
+Quindi passiamo oltre.
+
+07:08.290 --> 07:14.080
+Aprirò la console dell'account e potrai anche scoprire che, semplicemente andando al tuo nome
+
+07:14.080 --> 07:21.790
+qui e cliccando sul mio account, vorremmo andare alle preferenze e quindi fare clic su Ricevi avvisi di fatturazione
+
+07:21.790 --> 07:23.070
+e premi Salva.
+
+07:23.070 --> 07:25.610
+Preferenze.
+
+07:25.650 --> 07:31.120
+Questo accenderà la nostra capacità di monitorare la fatturazione del nostro account.
+
+07:31.180 --> 07:35.110
+Quindi torna qui se ora faccio clic sulla fatturazione di nuovo o l'aggiornamento
+
+07:40.450 --> 07:43.500
+è ora cambiato e posso creare un avviso di fatturazione.
+
+07:43.720 --> 07:49.900
+Quindi, se segui queste istruzioni, in sostanza ciò che ti sta dicendo di fare è che quando i miei addebiti totali
+
+07:49.900 --> 07:55.540
+AWOS per il mese superano diciamo solo $ 10 per dire che vogliamo tenerlo molto basso dal momento che
+
+07:55.540 --> 07:58.410
+vogliamo utilizzare questo account principalmente per il livello gratuito.
+
+07:58.420 --> 08:05.380
+Voglio essere avvisato ogni volta che le spese di fatturazione mensili superano i $ 10, così mi assicuro che non
+
+08:05.380 --> 08:12.010
+mi vengano addebitati molti soldi per l'utilizzo di un US, quindi posso impostarlo a 10 e potrei inviarlo a
+
+08:12.010 --> 08:14.950
+Sentinel's S e Fatturazione non appena argomento.
+
+08:15.160 --> 08:20.980
+E ora quando tento di creare allarme in qualsiasi momento in cui la nostra
+
+08:20.980 --> 08:27.130
+fatturazione mensile attuale raggiunge $ 10, riceverò messaggi dagli endpoint dell'abbonamento che ho in questo argomento.
+
+08:27.140 --> 08:31.030
+OK, quindi ora vediamo che entrambi gli allarmi hanno lo stato OK.
+
+08:31.050 --> 08:36.940
+Ciò significa che la soglia non viene attualmente soddisfatta su una di queste due fatturazioni di metriche.
+
+08:36.970 --> 08:41.780
+Ovviamente non siamo andati oltre i $ 10 di un canone mensile stimato per questo mese, quindi va bene.
+
+08:41.960 --> 08:48.460
+E la stessa cosa per la CPA sui nostri due centesimi e se clicco su questo possiamo vedere qui
+
+08:48.470 --> 08:54.080
+e dice che un punto dati di 0. 0 non era maggiore o uguale alla soglia del punto 0 0 0 5.
+
+08:54.200 --> 09:00.590
+Quindi in questo momento immagino che non ci sia assolutamente zero utilizzo su quel particolare
+
+09:00.590 --> 09:04.260
+facile da istanza, quindi non sta attivando l'allarme.
+
+09:04.310 --> 09:09.350
+Quindi ora diamo un'occhiata ai nostri requisiti di infrastruttura Omega per questa sezione.
+
+09:09.380 --> 09:13.770
+Quindi avevamo bisogno di un modo per monitorare internamente parti dell'infrastruttura di progetto di Omega.
+
+09:13.970 --> 09:20.390
+Un allarme di creazione di watch cloud configurato per attivare l'argomento di fatturazione S e S quando gli attuali
+
+09:20.390 --> 09:23.870
+addebiti AWOS mensili raggiungono $ 10 e l'abbiamo fatto.
+
+09:23.870 --> 09:25.940
+Lo prepariamo e lo abbiamo proprio qui.
+
+09:25.970 --> 09:32.450
+C'è un altro allarme che ho impostato solo per scopi dimostrativi, in modo che possiamo finire questa lezione e riassumiamo ciò
+
+09:32.510 --> 09:34.920
+che abbiamo imparato qui in questa sezione.
+
+09:35.060 --> 09:36.580
+E questa era la Sezione 8.
+
+09:36.620 --> 09:42.260
+Orologio cloud in cui ci concentriamo specificamente su un'introduzione del cloud, osserviamo una panoramica concettuale dei prezzi
+
+09:42.260 --> 09:45.230
+e della panoramica dei costi del cloud watch.
+
+09:45.260 --> 09:54.240
+Abbiamo parlato di metriche e allarmi e di allarmi per attivare le tematiche di s e s. Come abbiamo appena concluso,
+
+09:54.240 --> 10:00.750
+quello che considererei sono due tipi di servizi di monitoraggio e avviso per AWOS.
+
+10:00.750 --> 10:08.880
+Entreremo ora in due servizi che hanno a che fare con la scalabilità e l'elasticità di tolleranza ai guasti
+
+10:09.000 --> 10:10.470
+ad alta disponibilità.
+
+10:10.470 --> 10:17.580
+E lo inizieremo nella prossima sezione quando parliamo di PLB o bilanciamento del carico elastico.
+
+10:17.850 --> 10:21.590
+Ma per ora questo concluderà questa lezione e concluderà questa sezione.
+
+10:21.690 --> 10:22.770
+Grazie per aver guardato.
+
+10:22.770 --> 10:23.640
+Ora puoi andare avanti.

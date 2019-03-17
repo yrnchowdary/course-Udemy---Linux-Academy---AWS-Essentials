@@ -1,0 +1,361 @@
+WEBVTT
+
+00:00.300 --> 00:08.810
+Ciao e in questa lezione approfondiremo le nozioni di base del PC, in particolare le definizioni di PC
+
+00:08.880 --> 00:18.070
+relative al VPC concettuale, i componenti del PC e il flusso di dati e l'accesso a un VPC nella console AWOS.
+
+00:18.090 --> 00:20.700
+Quindi inizierò con quell'ultima parte prima.
+
+00:20.700 --> 00:28.320
+Quindi da queste parti nella console AWOS accedere al PC e utilizzare un modificatore per modificare le varie cose
+
+00:28.320 --> 00:30.780
+di cui parleremo nelle prossime lezioni.
+
+00:30.810 --> 00:36.480
+Basta scorrere verso il basso in rete e fare clic sul PC e questa sarà la
+
+00:36.480 --> 00:39.870
+sezione su cui ci concentreremo per le prossime lezioni.
+
+00:41.970 --> 00:48.180
+Quindi, per iniziare, cos'è un VPC VPC abbrevia per un cloud privato virtuale.
+
+00:48.450 --> 00:55.350
+E qui ho fornito una definizione semplificata e in una definizione W-S per la definizione semplificata questo è
+
+00:55.350 --> 01:02.310
+davvero più il modo in cui voglio che concettualmente pensiate o capiate i PC allo scopo di apprendere semplicemente
+
+01:02.310 --> 01:03.530
+quello che sono.
+
+01:03.540 --> 01:09.270
+E per gli scopi di questa lezione, parleremo della definizione AWOS che
+
+01:09.270 --> 01:17.400
+diventa un po 'più avanzata, ma per definizione semplice un VPC è una sottosezione privata di AWOS che controlli
+
+01:17.610 --> 01:24.780
+in cui puoi inserire risorse AWOS come una semplice istanza e database hai il pieno controllo su
+
+01:24.780 --> 01:31.010
+chi ha avuto accesso alle risorse AWOS che hai posto all'interno del tuo VPC.
+
+01:31.020 --> 01:38.520
+Ora con la definizione di AWOS Amazon virtual private cloud o Amazon BPC consente di eseguire il provisioning di una
+
+01:38.610 --> 01:45.540
+sezione logicamente isolata del cloud di servizi Web Amazon in cui è possibile avviare risorse AWOS e una
+
+01:45.540 --> 01:47.290
+rete virtuale definita dall'utente.
+
+01:47.400 --> 01:53.520
+Hai il controllo completo sul tuo ambiente di rete virtuale, compresa la selezione della propria
+
+01:53.520 --> 01:59.680
+gamma di indirizzi IP, creazione di sottoreti e configurazione di tabelle di percorso e gateway di rete.
+
+01:59.700 --> 02:01.170
+Ora una nota speciale qui.
+
+02:01.170 --> 02:07.650
+Quando crei un account AWOS che abbiamo già fatto, viene creato un BPC predefinito per te.
+
+02:07.800 --> 02:14.220
+Quindi se guardi qui nel tuo account vedrai che c'è già 1 BPC, questo è il tuo VPC
+
+02:14.220 --> 02:21.990
+predefinito ed è pre-fatto con le subnet. Lista di controllo degli accessi. I gateway di Internet eseguono le tabelle di tutto
+
+02:21.990 --> 02:25.280
+ciò che serve per far funzionare il VPC.
+
+02:25.290 --> 02:29.110
+Ma discuteremo di tutti questi componenti.
+
+02:29.280 --> 02:36.420
+Ora, se hai seguito il nostro corso di concept AWOS, ricorderai che ho creato un'analogia tra Facebook e un
+
+02:36.420 --> 02:44.490
+VPC che rivedrò rapidamente qui, nel modo in cui voglio che tu pensi al PC è molto simile al modo in
+
+02:44.490 --> 02:49.430
+cui potresti pensa a Facebook in termini di come sono concepiti concettualmente.
+
+02:49.440 --> 02:52.990
+Quindi con Facebook hai la tua home page, il tuo amico ha una home page.
+
+02:53.310 --> 03:01.620
+E potrei avere una home page e nella tua home page puoi postare foto di video o post di foto giuste e puoi decidere chi
+
+03:01.980 --> 03:05.650
+ha accesso per visualizzare il tuo post e chi no.
+
+03:05.760 --> 03:09.990
+È molto simile allo stesso modo quando pensi al tuo VPC e ad Amazon.
+
+03:09.990 --> 03:12.630
+Ognuno ha il proprio BPC ne ha uno.
+
+03:12.630 --> 03:13.410
+Ne ho una.
+
+03:13.410 --> 03:14.960
+I nostri amici ne avranno uno.
+
+03:14.960 --> 03:21.690
+E nel nostro VBC metteremo cose come E. C due istanze sono già come database e avremo
+
+03:21.690 --> 03:28.140
+una protezione attorno a quella in cui possiamo consentire solo a certe persone che non permetteremo né escludiamo altri.
+
+03:28.350 --> 03:32.260
+Quindi questo è un modo molto semplice per vedere cos'è un VPC.
+
+03:32.280 --> 03:37.260
+Ma penso che sia un'analogia molto buona per qualcuno che sta solo cercando di capire il
+
+03:37.260 --> 03:40.810
+concetto di base di ciò che un PC è ora.
+
+03:40.830 --> 03:43.020
+Facendo un ulteriore passo avanti
+
+03:43.110 --> 03:47.530
+Diamo un'occhiata a un modo diverso di spiegare concettualmente cos'è un VPC.
+
+03:47.670 --> 03:53.150
+E per questo voglio che tu pensi alla tua rete domestica, che tu ci abbia mai pensato o meno.
+
+03:53.160 --> 04:00.840
+Se hai accesso a Internet in casa hai la tua rete privata e quali sono i componenti comuni di una
+
+04:00.930 --> 04:02.030
+rete domestica.
+
+04:02.070 --> 04:07.470
+Hai dei cavi che entrano nella tua casa dalla strada che ti connette al tuo fornitore di
+
+04:07.470 --> 04:08.220
+servizi Internet.
+
+04:08.340 --> 04:12.420
+Hai un modem che è la tua connessione o gateway per Internet.
+
+04:12.510 --> 04:19.950
+Hai di nuovo cavi che collegano il tuo modem al router, hai un router o uno switch che è il dispositivo
+
+04:19.950 --> 04:26.370
+che ti permette di connettere i dispositivi alla rete e indirizza il traffico verso altri dispositivi sulla
+
+04:26.700 --> 04:29.490
+rete o attraverso il modem verso Internet.
+
+04:29.490 --> 04:32.830
+Lo stesso si applica al traffico che entra nella rete.
+
+04:33.000 --> 04:37.950
+E infine i telefoni cellulari dei computer o altri dispositivi intelligenti di tua proprietà.
+
+04:37.950 --> 04:43.620
+Quindi voglio che tu capisca concettualmente la tua rete domestica e che tu abbia i tuoi dispositivi sul computer
+
+04:43.620 --> 04:46.870
+o sul telefono in cui potresti guardare questo video adesso.
+
+04:47.130 --> 04:53.280
+E quelli sono collegati a un router che può avere un punto di accesso wireless o può essere cablato nel
+
+04:53.370 --> 04:59.340
+router è collegato a un modem e il tuo modem è ben collegato al tuo provider Internet che ti
+
+04:59.340 --> 05:01.120
+permette di collegarti a Internet.
+
+05:01.170 --> 05:08.100
+Così hai questo flusso di dati ogni volta che invii o richiedi informazioni da qualcosa di
+
+05:08.160 --> 05:15.750
+esterno alla tua rete privata domestica, ma la tua rete privata privata è privata, il che significa che nessuno
+
+05:15.750 --> 05:25.170
+può entrare nella tua rete domestica a meno che non abbiano le tue password per accedere al router e connetterti alla tua rete.
+
+05:25.170 --> 05:31.290
+Quindi ora esaminiamo un paio di esempi di scenari con ciò che potrebbe accadere se alcune
+
+05:31.290 --> 05:34.070
+parti della rete domestica dovessero diventare disabilitate.
+
+05:34.260 --> 05:40.860
+Quindi, se dovessi rimuovere o scollegare il cavo DSL o il modem in fibra che avevi che ti connette
+
+05:40.860 --> 05:41.760
+a Internet.
+
+05:42.030 --> 05:48.390
+Bene, allora internamente puoi effettivamente comunicare con i dispositivi usando il router.
+
+05:48.600 --> 05:54.510
+Il router stesso non ha bisogno di una connessione Internet per consentire a un computer nella rete di parlare con un
+
+05:54.510 --> 05:55.080
+altro.
+
+05:55.140 --> 06:00.030
+In questo modo è possibile condividere file tra il computer e il telefono utilizzando un router senza avere
+
+06:00.030 --> 06:01.220
+una connessione Internet attiva.
+
+06:02.180 --> 06:10.700
+Tuttavia, se lo spostiamo e il tuo router wireless o cablato è scollegato o disabilitato, in realtà avresti comunque una connessione Internet in
+
+06:10.700 --> 06:15.440
+arrivo a casa tua o nella tua rete privata perché il modem
+
+06:15.440 --> 06:21.800
+sarebbe comunque connesso al tuo provider Internet ma il tuo telefono ma il tuo computer o il
+
+06:21.800 --> 06:25.590
+telefono non avrebbe modo di connettersi effettivamente al modem.
+
+06:25.700 --> 06:31.610
+Quindi hai bisogno di ognuno di questi componenti per avere una rete funzionante
+
+06:31.610 --> 06:34.970
+perfettamente funzionante e dotata di connessione internet.
+
+06:35.060 --> 06:42.290
+Quindi ora riorganizziamo queste informazioni in qualcosa che assomiglia più al nostro diagramma VPC sulla nostra
+
+06:42.350 --> 06:43.570
+pagina principale.
+
+06:43.610 --> 06:45.560
+Quindi qui abbiamo internet
+
+06:45.560 --> 06:52.070
+Le informazioni fluiscono attraverso e si connettono al nostro modem in fibra DSL via cavo, che è il
+
+06:52.070 --> 06:59.480
+punto di ingresso nella nostra casa per la nostra rete privata che viene poi collegata a un router o switch che fornisce
+
+06:59.690 --> 07:03.020
+il percorso ai vari dispositivi che potremmo aver collegato.
+
+07:03.110 --> 07:08.720
+E per molti di noi ci rendiamo anche conto di avere un firewall in funzione che è un livello di
+
+07:08.720 --> 07:10.730
+sicurezza all'interno della nostra rete privata.
+
+07:10.760 --> 07:15.140
+Quindi con questa immagine in mente e questa comprensione della nostra rete domestica.
+
+07:15.260 --> 07:19.470
+Ora diamo un'occhiata a quali sono i componenti del PC.
+
+07:19.940 --> 07:25.640
+Bene, se passiamo avanti e indietro molto velocemente qui vedremo cose molto simili.
+
+07:25.640 --> 07:28.400
+Prima l'internet qui è lo stesso.
+
+07:28.580 --> 07:38.430
+Poi abbiamo il nostro cavo DSL o modem in fibra e ora abbiamo per VPC un gateway internet dopo
+
+07:38.430 --> 07:44.790
+abbiamo una tabella router e che sostituisce il nostro router o switch.
+
+07:44.970 --> 07:49.190
+Poi, invece di un firewall, c'è un elenco di controllo di accesso alla rete.
+
+07:50.340 --> 07:56.080
+E invece di un laptop o un cellulare abbiamo due istanze.
+
+07:56.280 --> 08:02.490
+Quindi faccio questo confronto perché voglio che tu sia in grado di concettualizzare facilmente quello che sta succedendo qui
+
+08:02.490 --> 08:03.730
+con un VPC.
+
+08:03.900 --> 08:09.900
+Quindi, proprio come con la nostra rete domestica, abbiamo la connessione Internet che arriva a casa nostra tramite
+
+08:09.900 --> 08:17.250
+il nostro modem via cavo, quindi la connessione a un router o switch che indirizzerà il traffico a dispositivi specifici a seconda del
+
+08:17.250 --> 08:19.100
+dispositivo che stiamo utilizzando attualmente.
+
+08:19.110 --> 08:20.790
+E c'è un livello di sicurezza.
+
+08:20.850 --> 08:22.740
+È esattamente la stessa cosa nel VPC.
+
+08:22.740 --> 08:28.290
+Voglio solo che tu abbia una buona immagine di questo nel tuo modo di flusso di dati, quindi facciamo
+
+08:28.290 --> 08:32.920
+finta che questo sia il nostro computer che stiamo usando se voglio accedere a un sito
+
+08:32.990 --> 08:37.200
+web che scriverò nel tuo Arel invierà le informazioni attraverso la tabella del router
+
+08:37.200 --> 08:41.190
+attraverso l'Internet Gateway in uscita per ottenere quel sito Web e quindi
+
+08:41.190 --> 08:46.320
+le informazioni torneranno attraverso il gateway Internet attraverso la tabella delle rotte, i tabulati che ci diranno
+
+08:46.320 --> 08:51.500
+su quale computer andare e passerà attraverso il livello di sicurezza e poi di nuovo su quel computer.
+
+08:51.510 --> 08:57.240
+Quindi c'è una vera somiglianza in termini di semplice architettura semplificata tra la
+
+08:57.390 --> 09:00.480
+tua rete domestica e un VPC.
+
+09:00.490 --> 09:08.620
+Quindi, ancora una volta per riassumere tutto questo è la sezione privata di AWOS in cui è possibile avviare e fornire risorse
+
+09:08.620 --> 09:14.160
+AWOS e controllarne tutti gli aspetti proprio come si fa con la rete domestica.
+
+09:14.170 --> 09:20.320
+Quindi facciamo un paio di note qui di nuovo così quando crei un account AWOS, per impostazione predefinita viene
+
+09:20.320 --> 09:24.970
+creato un VPC che include i componenti standard necessari per renderlo funzionale, incluso il
+
+09:24.970 --> 09:33.390
+gateway Internet una tabella router con percorsi predefiniti alle subnet predefinite a controllo dell'accesso alla rete con regole predefinite per l'accesso e le sottoreti per il
+
+09:33.390 --> 09:40.420
+provisioning delle risorse AWOS e come E. S. due istanze.
+
+09:40.470 --> 09:46.320
+Quindi tutto qui è già stato creato per te, ad eccezione di queste istanze reali.
+
+09:46.320 --> 09:52.290
+Questi non sono ancora stati creati, ma l'intera infrastruttura, tutte queste componenti, tutto il modo in
+
+09:52.290 --> 09:58.980
+cui i dati vengono trasferiti da Internet nel VPC e di nuovo fuori è già pronto per l'uso.
+
+09:59.810 --> 10:02.860
+Quindi con questo concluderemo questa lezione.
+
+10:02.930 --> 10:04.040
+Grazie per aver guardato.
+
+10:04.040 --> 10:04.910
+Ora puoi andare avanti.

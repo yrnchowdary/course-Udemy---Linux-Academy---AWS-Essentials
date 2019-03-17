@@ -1,0 +1,184 @@
+WEBVTT
+
+00:00.360 --> 00:06.750
+Salve e bentornati in Sono meno di cinque, di cui parleremo sono ruoli e in particolare
+
+00:06.750 --> 00:13.200
+come creare uso e gestione I ruoli mi fanno capire che sono ruoli e come vengono utilizzati.
+
+00:13.200 --> 00:18.780
+Infine, esamineremo i requisiti del nostro progetto Omega per assicurarci di soddisfare tutto
+
+00:18.780 --> 00:22.820
+ciò di cui abbiamo bisogno per Project Omega.
+
+00:22.830 --> 00:27.420
+Quindi di nuovo per ricapitolare rapidamente su di me e come è usato.
+
+00:27.420 --> 00:34.750
+Abbiamo già discusso di gruppi e politiche di utenti e politiche e ora parleremo dei ruoli, quindi
+
+00:36.600 --> 00:39.170
+diamo un'occhiata al nostro attuale.
+
+00:39.270 --> 00:46.170
+Sono impostato dove abbiamo ora co Matt e Donna come i nostri tre utenti sono attualmente tutti
+
+00:46.260 --> 00:55.380
+membri di un gruppo chiamato Dev e hanno accesso a S-3 attraverso e io sono S-3 politica di accesso completo che è collegata
+
+00:55.380 --> 00:56.720
+al gruppo .
+
+00:56.790 --> 01:03.570
+Ora i ruoli sono un po 'diversi in questo, diciamo ad esempio che abbiamo un'istanza facile che va bene se non si
+
+01:03.600 --> 01:08.430
+sa cosa sia in questo momento ma fondamentalmente si tratta di un server virtuale e
+
+01:08.430 --> 01:12.050
+ci immergeremo in profondità in modo semplice a qualsiasi sezione futura.
+
+01:12.060 --> 01:15.440
+Ma questo è un servizio piuttosto che un utente.
+
+01:15.540 --> 01:22.050
+Quindi diciamo che c'è un software in esecuzione su un server facile e che il software deve accedere alle informazioni che si
+
+01:22.050 --> 01:23.700
+trovano in un bucket S3.
+
+01:23.850 --> 01:30.870
+Quindi abbiamo un servizio AWOS che tenta di comunicare e parlare con un altro servizio AWOS.
+
+01:30.870 --> 01:35.320
+Ora si può solo pensare di assegnare la politica S-3.
+
+01:35.340 --> 01:44.130
+E questo garantirà l'accesso al bucket S3 ma con i servizi AWOS non è possibile assegnare direttamente le
+
+01:44.580 --> 01:47.250
+politiche ad altri servizi AWOS.
+
+01:47.280 --> 01:53.920
+Innanzitutto è necessario associare un ruolo e quindi al ruolo che è possibile associare alle politiche.
+
+01:54.240 --> 02:03.710
+In sostanza, il ruolo è dare le autorizzazioni a un altro servizio AWOS per agire quasi come un utente.
+
+02:03.990 --> 02:10.920
+Quindi possiamo assegnare un ruolo a un'istanza facile a cui è collegato il criterio di accesso completo S-3.
+
+02:11.040 --> 02:16.860
+Così garantendo l'accesso facile a istanza a S3.
+
+02:17.190 --> 02:24.960
+Ora per farlo veniamo alla navigazione e facciamo clic sui rotoli e creeremo un nuovo ruolo che possiamo
+
+02:25.260 --> 02:30.230
+chiamare questo E. S. fare clic su Avanti.
+
+02:30.300 --> 02:36.750
+E qui ci saranno molte diverse opzioni per i ruoli del servizio AWOS e vediamo qui che il
+
+02:36.750 --> 02:38.050
+primo è Amazon.
+
+02:38.070 --> 02:43.950
+Facile da aggiungere, consente alle istanze di richiamare i servizi AWOS a proprio nome.
+
+02:44.130 --> 02:51.370
+Quindi, dal momento che vogliamo utilizzare questo ruolo per E. In due casi dovremo selezionare il ruolo di facile assistenza.
+
+02:51.540 --> 02:59.700
+Se ad esempio utilizzassimo lambda AWOS, volevamo dare ad Ada l'accesso lambda a S-3, avremmo creato un
+
+02:59.760 --> 03:06.700
+ruolo e scelto il ruolo di servizio lambda di AWOS per creare quel ruolo.
+
+03:06.720 --> 03:09.790
+Ma per questo faremo clic su Amazon E. S. pure.
+
+03:10.530 --> 03:17.880
+E ora qui inseriremo S3 e assegneremo il criterio di accesso completo di Amazon S3 alla E per
+
+03:17.880 --> 03:26.070
+eseguire il rolling dando così DC a instance una volta che avremmo allegato il roll all'istanza che gli avrebbe dato
+
+03:26.070 --> 03:28.390
+le autorizzazioni per l'accesso S3.
+
+03:28.590 --> 03:43.070
+Quindi puoi quasi pensare ai ruoli come gruppo, ma per altri servizi AWOS rispetto agli utenti AWOS.
+
+03:43.100 --> 03:50.030
+E infine diamo un'occhiata al progetto Omega e vediamo se abbiamo completato tutti i test richiesti
+
+03:50.030 --> 03:51.450
+per questa sezione.
+
+03:51.620 --> 03:58.580
+Quindi gli account utente per il team di sviluppo con accesso al core A. W. servizi 3 Sono account utente uno per ciascun
+
+03:58.580 --> 04:00.180
+membro del team di sviluppo.
+
+04:00.250 --> 04:03.810
+Sì, lo abbiamo fatto e io sono un gruppo per la squadra di sviluppo.
+
+04:03.830 --> 04:05.050
+Lo abbiamo fatto.
+
+04:05.210 --> 04:10.930
+Sono politiche collegate al gruppo che concede l'accesso a tre E. S. ad un già sì.
+
+04:10.940 --> 04:12.350
+Ora non abbiamo ancora fatto tutto questo.
+
+04:12.360 --> 04:17.350
+Abbiamo allegato solo una politica che garantisce l'accesso a S-3 al gruppo.
+
+04:17.360 --> 04:21.060
+Quindi ora passiamo e alleghiamo le altre politiche.
+
+04:21.230 --> 04:23.010
+Faremo clic sul gruppo morto.
+
+04:23.120 --> 04:29.300
+E ancora una volta ha solo la politica di accesso completo S3 ad essa assegnata, quindi vogliamo allegare una
+
+04:29.300 --> 04:31.950
+politica facile e una politica già sì.
+
+04:32.150 --> 04:39.760
+Quindi, di nuovo, possiamo solo andare ad allegare la policy, digitare E. C per digitare e, dopo aver completato il
+
+04:39.760 --> 04:46.030
+tutto, otteniamo un accesso semplice e completo, quindi faremo lo stesso per Sì. Pieno accesso completo,
+
+04:49.040 --> 04:53.780
+ora abbiamo soddisfatto tutti i requisiti per Project Omega in questa sezione.
+
+04:57.120 --> 05:03.120
+E con questo concluderemo la sezione 2 degli elementi essenziali di AWOS in cui abbiamo coperto l'identità e la gestione
+
+05:03.120 --> 05:04.010
+degli accessi.
+
+05:04.140 --> 05:08.310
+Tornando al nostro diagramma principale, abbiamo ora completato la sezione di base dell'account.
+
+05:08.320 --> 05:09.770
+La sezione I AM.
+
+05:09.960 --> 05:13.600
+E dopo passeremo al VPC.
+
+05:13.830 --> 05:17.450
+E con questo concluderemo questo video e concluderemo questa sezione.
+
+05:17.520 --> 05:18.580
+Grazie per aver guardato.
+
+05:18.600 --> 05:19.520
+Ora puoi andare avanti.

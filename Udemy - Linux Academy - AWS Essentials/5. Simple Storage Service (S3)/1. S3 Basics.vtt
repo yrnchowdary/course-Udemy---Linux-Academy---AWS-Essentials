@@ -1,0 +1,328 @@
+WEBVTT
+
+00:00.540 --> 00:06.480
+Salve e bentornati a questo punto, ci siamo concentrati su molti aspetti fondamentali
+
+00:06.480 --> 00:12.630
+di AWOS in termini di creazione dei nostri account, impostazione degli utenti sulla comprensione
+
+00:12.660 --> 00:20.700
+delle politiche e delle autorizzazioni e sull'esplorazione della struttura portante dell'infrastruttura AWOS nel modo del cloud privato virtuale.
+
+00:21.150 --> 00:28.410
+In questa sezione entreremo in servizi AWOS più specifici che diventano realmente i driver quotidiani per la
+
+00:28.410 --> 00:32.640
+maggior parte delle persone e delle organizzazioni in particolare.
+
+00:32.660 --> 00:36.300
+Parleremo ora di Amazon S3.
+
+00:36.330 --> 00:38.430
+Quindi tuffiamoci dentro adesso.
+
+00:38.520 --> 00:44.950
+Quindi per la sezione essenziale di AWOS per l'argomento è semplice servizio di archiviazione o S3.
+
+00:45.030 --> 00:51.690
+In questa sezione verranno trattati argomenti che includono introduzione alla determinazione del prezzo S3 e panoramica
+
+00:51.930 --> 00:58.890
+dei costi gestione delle cartelle di bucket e oggetti caricamento e download di oggetti classi di archiviazione
+
+00:58.890 --> 01:07.940
+utilizzo di casi e costi oggetti life cycle autorizzazioni e versioning degli oggetti per questa lezione lezione 1 siamo inizieremo con tre
+
+01:07.940 --> 01:14.900
+principi fondamentali e parleremo in modo specifico delle componenti e della struttura delle definizioni S-3 e una
+
+01:15.110 --> 01:18.210
+panoramica dei costi e dei costi.
+
+01:19.630 --> 01:28.990
+Quindi S3 o semplice servizio di archiviazione è un servizio di archiviazione di massa online a cui è possibile accedere da quasi tutti i
+
+01:29.170 --> 01:37.720
+dispositivi per la definizione di AWOS. Amazon S3 dispone di una semplice interfaccia di servizio Web che è possibile utilizzare per
+
+01:37.780 --> 01:44.170
+archiviare e recuperare qualsiasi quantità di dati in qualsiasi momento da qualsiasi luogo la rete.
+
+01:44.170 --> 01:52.660
+Consente a qualsiasi utente di accedere alla stessa infrastruttura di archiviazione dei dati veloce e affidabile altamente economica e affidabile
+
+01:52.660 --> 01:58.000
+che Amazon utilizza per gestire la propria rete globale di siti Web.
+
+01:58.070 --> 02:04.880
+Il servizio mira a massimizzare i benefici di scala e a trasferire tali benefici agli utenti.
+
+02:04.880 --> 02:11.510
+Quindi, in pratica, questo è il servizio di archiviazione di Amazon in cui è possibile caricare e archiviare qualsiasi tipo
+
+02:11.540 --> 02:14.650
+di file con capacità di archiviazione pressoché illimitata.
+
+02:14.690 --> 02:19.640
+E prima di approfondire le basi, diamo una rapida occhiata alla console
+
+02:19.700 --> 02:22.210
+e vediamo dove accedere a S3.
+
+02:22.400 --> 02:30.670
+Quindi qui sotto immagazzinamento e consegna dei contenuti qui il primo servizio elencato è S3.
+
+02:30.960 --> 02:35.600
+E se non hai mai usato S3 prima che la prima cosa che ti chiederà
+
+02:35.610 --> 02:41.070
+di fare è creare un bucket, ma prima di farlo, almeno comprendiamo cos'è un bucket e quali sono i
+
+02:41.160 --> 02:42.490
+vari componenti di S3.
+
+02:42.510 --> 02:49.260
+Quindi, come abbiamo appena discusso in termini di base, S3 è semplice servizio di archiviazione ed è AWOS è
+
+02:49.260 --> 02:54.930
+il servizio di archiviazione primario ed è possibile memorizzare qualsiasi tipo di file in S3.
+
+02:54.930 --> 03:00.000
+Ha diversi componenti che sono le cartelle e gli oggetti di bucket.
+
+03:00.000 --> 03:05.030
+E prima per le cartelle di livello radice di bucket e te lo spiego in un secondo.
+
+03:05.040 --> 03:12.300
+Si crea un S-3 sono indicati come secchi ogni sottocartella che si crea in un secchio viene indicato semplicemente come
+
+03:12.330 --> 03:13.400
+una cartella.
+
+03:13.410 --> 03:19.260
+Quindi io uso la cartella termini qui solo per fare un confronto con una cartella che potresti avere sul tuo computer
+
+03:19.260 --> 03:24.240
+se guardi il tuo desktop in questo momento potresti avere una cartella che usi per memorizzare i
+
+03:24.330 --> 03:31.800
+file e poi in quella cartella potresti avere una sottocartella mentre con la cartella S-3 di livello principale che indica che la cartella di livello più
+
+03:31.890 --> 03:34.400
+basso è quella che viene definita un bucket.
+
+03:34.400 --> 03:40.260
+Quindi all'interno del bucket puoi posizionare oggetti o creare delle cartelle per loro che puoi inserire anche
+
+03:40.290 --> 03:41.210
+degli oggetti.
+
+03:41.280 --> 03:44.780
+Quindi ti mostrerò un diagramma di ciò che intendo al riguardo in un minuto.
+
+03:44.910 --> 03:51.960
+Ma ora passiamo agli oggetti in modo che i file memorizzati in bucket siano definiti oggetti, così hai
+
+03:51.960 --> 03:56.790
+la tua cartella principale, quindi puoi avere alcune cartelle all'interno del bucket.
+
+03:56.790 --> 04:03.030
+E poi gli oggetti possono essere i tuoi file, sia che si tratti di un documento word che di
+
+04:03.030 --> 04:10.550
+un documento Excel può essere una presentazione e possono essere file musicali, film e un file viene definito semplicemente come un oggetto. Successivamente dovremmo
+
+04:10.610 --> 04:14.130
+solo capire rapidamente come funzionano le regioni con tre bucket.
+
+04:14.210 --> 04:20.630
+E quando crei un bucket devi selezionare una regione specifica in cui possa esistere.
+
+04:20.630 --> 04:26.750
+Ciò significa che tutti i dati che carichi sul bucket S3 saranno fisicamente posizionati in un data center
+
+04:26.840 --> 04:28.240
+in quella regione.
+
+04:28.430 --> 04:35.900
+Pertanto, è consigliabile selezionare la regione fisicamente più vicina a te per ridurre la latenza del trasferimento dei dati.
+
+04:35.930 --> 04:41.300
+Se mi trovo sulla costa orientale degli Stati Uniti, non voglio che i miei secchi personali si
+
+04:41.330 --> 04:46.430
+trovino nella regione di Tokyo, perché allora i dati dovranno essere trasferiti a metà strada in tutto
+
+04:46.430 --> 04:50.540
+il mondo e ritorno e quel trasferimento sarà solo prendi più tempo
+
+04:50.540 --> 04:55.700
+Tuttavia, se stai servendo i clienti Fousek in una determinata area del mondo, crea
+
+04:55.700 --> 05:02.210
+di nuovo il bucket in una regione più vicina ai tuoi clienti, e ho dato questo esempio alcune sezioni
+
+05:02.210 --> 05:08.330
+fa, dove se avessi clienti a Tokyo che voglio servire allora voglio mettere i file a cui
+
+05:08.660 --> 05:16.550
+accederanno nella regione di Tokyo in modo che la loro latenza sia la più bassa possibile e, come nota a margine, voglio
+
+05:16.550 --> 05:21.680
+menzionare che alcuni A. W. di servizi funzionano e comunicano tra loro solo se
+
+05:21.740 --> 05:22.760
+si trovano nella stessa regione.
+
+05:22.760 --> 05:27.590
+Ora questa è più di una funzionalità avanzata e probabilmente è qualcosa di cui
+
+05:27.590 --> 05:33.680
+non devi preoccuparti mentre stai imparando AWOS ma è solo qualcosa da tenere a mente che se hai alcuni
+
+05:33.680 --> 05:39.650
+servizi in una regione e alcuni servizi individuato un altro potrebbe non essere in grado di comunicare tra loro
+
+05:39.650 --> 05:41.430
+direttamente in entrambi i modi.
+
+05:41.430 --> 05:45.530
+Di nuovo qualcosa che è davvero più avanzato o al di fuori dello scopo di questo corso,
+
+05:45.530 --> 05:48.530
+ma qualcosa che volevo solo che tu fossi consapevole di concettualmente.
+
+05:48.560 --> 05:54.080
+Quindi ora diamo un'occhiata più alla struttura e cosa intendo in termini della sottocartella del bucket di
+
+05:54.080 --> 06:00.560
+root è un oggetto così all'interno di S-3 se crei un bucket che è la tua cartella radice come chiamerò
+
+06:00.560 --> 06:06.050
+in termini di confronto con qualcosa che puoi avere sul tuo computer di casa quindi nel
+
+06:06.050 --> 06:11.900
+secchio e puoi avere più bucket ma all'interno di un bucket specifico puoi semplicemente posizionare un oggetto e
+
+06:11.900 --> 06:18.140
+averlo in un bucket o puoi creare una sottocartella e avere anche un oggetto all'interno di quel bucket sottocartella.
+
+06:18.140 --> 06:20.120
+Quindi questa è solo una specie di organizzazione di base.
+
+06:20.120 --> 06:25.280
+Volevo solo che tu vedessi la differenza tra un bucket e una cartella in termini di struttura
+
+06:25.310 --> 06:30.980
+di denominazione e in che modo potrebbe essere leggermente diverso da come chiami le cartelle sul tuo computer di casa.
+
+06:30.980 --> 06:36.720
+Quindi voglio solo essere molto chiaro riguardo al leggero cambiamento nel costrutto dei nomi.
+
+06:36.740 --> 06:41.900
+Quindi ora discutiamo brevemente dei prezzi e dei costi per l'utilizzo di S3.
+
+06:41.900 --> 06:44.580
+Quindi prima diamo un'occhiata a questo link qui sotto.
+
+06:44.570 --> 06:47.640
+Ho incluso un collegamento direttamente al prezzo S-3.
+
+06:47.660 --> 06:54.510
+Quindi se lo avessimo aperto in un'altra scheda, lo trascinerei qui in modo che possiamo vedere entrambi i
+
+06:54.600 --> 06:56.570
+livelli gratuiti disponibili per AWOS.
+
+06:56.790 --> 07:03.090
+E attualmente ciò che è disponibile per AWOS come tre livelli gratuiti è elencato qui, che attualmente include
+
+07:03.390 --> 07:09.270
+cinque gigabyte di memoria S3 e quindi 20000 richieste di richiesta di richiesta e così via.
+
+07:09.270 --> 07:15.520
+Ma la cosa importante da capire è che il livello gratuito include fino a cinque gigabyte di
+
+07:15.580 --> 07:16.700
+spazio di archiviazione.
+
+07:16.720 --> 07:22.350
+Ora in termini di addebiti, ti vengono addebitati principalmente in base ai costi di archiviazione.
+
+07:22.360 --> 07:25.960
+E questo vale per i dati a riposo in S.
+
+07:26.140 --> 07:33.940
+Ti viene addebitato un costo per gigabyte utilizzato e il prezzo per gigabyte varia in base alla regione e alla classe di archiviazione.
+
+07:33.940 --> 07:38.560
+Quindi non ho intenzione di entrare nel dettaglio di tutti i servizi in termini di comprensione delle
+
+07:38.560 --> 07:43.570
+differenze tra le regioni, ma puoi cliccare qui e cambiare una regione diversa e vedrai che i prezzi cambieranno
+
+07:43.570 --> 07:44.930
+in base alla regione.
+
+07:44.930 --> 07:50.140
+Ora per ogni servizio di cui parleremo per il resto di questo corso, i
+
+07:50.290 --> 07:56.080
+prezzi variano a seconda della regione e non lo identificherò sempre così, ma so solo che
+
+07:56.080 --> 08:04.940
+andare avanti utilizzando regioni diverse avrà sempre un costo diverso per servizi diversi, quindi oltre lo storage di base e la quantità di dati archiviati
+
+08:04.940 --> 08:11.000
+in S3 è anche richiesta la determinazione dei prezzi e che sta spostando i dati in entrata
+
+08:11.000 --> 08:13.020
+e in uscita da S3.
+
+08:13.130 --> 08:17.180
+E questo è certamente qualcosa di cui non dovresti preoccuparti immediatamente, ma ti verrà addebitato in
+
+08:17.210 --> 08:20.110
+base a cose come mettere una lista di messaggi copiati.
+
+08:20.150 --> 08:27.000
+Ottenere una richiesta di transizione del ciclo di vita dei dati di recupero dei dati archiviando la richiesta di ripristino dei dati e di nuovo
+
+08:27.020 --> 08:32.120
+tutte le informazioni possono essere visualizzate qui nella pagina dei prezzi in termini di costo per ciascuna.
+
+08:32.120 --> 08:39.800
+Quindi è sempre molto importante capire la struttura dei prezzi di come varie cose funzionano non solo con S-3
+
+08:39.860 --> 08:42.280
+ma anche con altri servizi.
+
+08:42.350 --> 08:50.360
+Prima di iniziare veramente a utilizzare qualsiasi servizio AWOS su larga scala perché AWOS, sebbene possa essere molto economico da utilizzare
+
+08:50.360 --> 08:55.410
+per alcune funzionalità e in condizioni di utilizzo intenso, può diventare piuttosto costoso.
+
+08:55.610 --> 09:01.920
+Quindi assicurati sempre di capire quale sia la struttura dei prezzi e quale sarà la tua carica.
+
+09:01.940 --> 09:08.450
+Ma se stai usando S3 per caricare alcuni file personali o backup per te stesso molto probabilmente cadrrai
+
+09:08.450 --> 09:14.540
+nell'uso del tier gratuito e non ti verrà addebitato nulla, ma sii molto attento ai prezzi quando
+
+09:14.840 --> 09:16.560
+usi Amazon Web Services.
+
+09:16.850 --> 09:17.290
+OK.
+
+09:17.300 --> 09:22.140
+Ora che avevamo terminato la panoramica dei prezzi e dei costi, concluderemo questa lezione.
+
+09:22.250 --> 09:23.300
+Grazie per aver guardato.
+
+09:23.300 --> 09:24.080
+Ora puoi andare avanti.

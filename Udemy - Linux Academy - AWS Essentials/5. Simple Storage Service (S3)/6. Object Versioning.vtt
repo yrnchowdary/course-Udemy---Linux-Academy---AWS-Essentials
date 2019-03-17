@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00.330 --> 00:08.370
+Ciao e in questa lezione continueremo a imparare su Amazon S3 concentrandoci sul controllo delle versioni degli oggetti,
+
+00:08.430 --> 00:14.770
+in particolare sulle versioni delle versioni utilizzando le regole di controllo delle versioni.
+
+00:14.820 --> 00:21.930
+Infine, poiché è l'ultima lezione di questa sezione, verificheremo i requisiti del nostro progetto Omega e ci assicureremo
+
+00:21.930 --> 00:25.300
+di fare tutto ciò di cui abbiamo bisogno.
+
+00:25.530 --> 00:33.600
+Quindi saltare nel versioning ciò che è il versioning S-3 con versioning ESRI è una funzionalità che tiene traccia di
+
+00:33.660 --> 00:43.140
+e archivia tutte le vecchie e nuove versioni di un oggetto in modo che sia possibile accedere e utilizzare una versione precedente se
+
+00:43.260 --> 00:44.760
+lo si desidera.
+
+00:44.760 --> 00:48.540
+Ora ci sono alcune cose molto importanti da capire sul controllo delle versioni.
+
+00:48.550 --> 00:51.820
+È acceso o spento.
+
+00:51.970 --> 00:55.750
+E questo è fatto a livello di benna.
+
+00:55.960 --> 01:00.620
+Una volta attivato, puoi solo sospendere il controllo delle versioni.
+
+01:00.790 --> 01:03.170
+Non può essere completamente disattivato.
+
+01:03.340 --> 01:06.400
+E ti mostrerò un esempio di questo in un secondo.
+
+01:06.400 --> 01:10.410
+Sospendere il controllo delle versioni impedisce solo il controllo delle versioni in futuro.
+
+01:10.420 --> 01:19.540
+Tutti gli oggetti precedenti con versioni manterranno ancora le versioni precedenti e il controllo delle versioni può essere impostato solo
+
+01:19.630 --> 01:25.660
+a livello di bucket e si applica a tutti gli oggetti nel bucket.
+
+01:25.660 --> 01:28.590
+Quindi, ecco il nostro elenco di bucket fare clic su proprietà.
+
+01:30.370 --> 01:36.890
+E lo riapriremo ancora un po 'e faremo clic sulla versione per impostazione predefinita quando crei un bucket.
+
+01:36.890 --> 01:37.880
+Il controllo delle versioni è disattivato.
+
+01:37.880 --> 01:39.630
+Quindi devi abilitarlo.
+
+01:39.680 --> 01:43.430
+Quindi ora abiliterò il controllo delle versioni, fare clic su OK.
+
+01:43.900 --> 01:51.700
+E come vedi qui, non posso disattivare di nuovo le versioni, ma posso solo sospendere il controllo delle versioni Ma andiamo
+
+01:51.700 --> 01:56.390
+nel nostro bucket e diamo un'occhiata qui al progetto Omega file one.
+
+01:56.530 --> 02:02.290
+Ora ho aggiornato il file sul mio computer e ora stiamo per caricare una versione aggiornata di questo file
+
+02:02.320 --> 02:03.670
+e vedere cosa succede.
+
+02:11.460 --> 02:15.530
+Quindi ora ho caricato la seconda versione di questo file.
+
+02:15.570 --> 02:21.210
+Quindi ora una delle cose che dovresti riconoscere è che qui sopra c'è ora questo commutatore per
+
+02:21.210 --> 02:25.260
+la versione hide o show che attualmente è impostato per nascondere.
+
+02:25.270 --> 02:32.380
+Ma se clicco su mostra ora aprirò il progetto Omega file 1 e mostrerò le due versioni diverse quella
+
+02:32.380 --> 02:38.640
+caricata in precedenza in una lezione e quella che ho appena caricato in questa lezione.
+
+02:38.650 --> 02:40.390
+Ora un paio di cose che dovresti notare.
+
+02:40.430 --> 02:47.740
+Una versione precedente era stata impostata per ridurre la classe di archiviazione di ridondanza, ma quando ho caricato la seconda versione non ho specificato
+
+02:48.490 --> 02:53.820
+quale classe di archiviazione dovrebbe essere impostata in modo che sia impostata su standard per impostazione predefinita.
+
+02:53.810 --> 02:57.760
+Quindi è molto importante capire che cos'è il controllo delle versioni solo perché
+
+02:57.760 --> 03:03.150
+una versione precedente ha una determinata classe di memoria non significa che la nuova versione adotterà quella classe di archiviazione.
+
+03:03.550 --> 03:09.190
+Ma se guardiamo questi due file ora posso intervenire su uno di questi due file posso
+
+03:09.220 --> 03:15.730
+scaricare uno di questi due file e se mai avrò problemi con la versione più recente posso sempre guardare
+
+03:15.730 --> 03:20.640
+la versione precedente come backup qualcosa che posso ripristinare se ho bisogno di.
+
+03:20.770 --> 03:28.270
+Quindi questo è un ottimo modo per avere questa ridondanza con i backup incorporati in S3 con la
+
+03:28.300 --> 03:29.340
+versione attivata.
+
+03:29.440 --> 03:34.210
+Ora ovviamente questo aumenterà lo spazio di archiviazione che usi, aumentando così i costi.
+
+03:34.210 --> 03:36.530
+È sempre qualcosa di cui essere consapevoli.
+
+03:36.820 --> 03:39.870
+Ma comunque questa è una grande caratteristica.
+
+03:39.910 --> 03:43.890
+Quindi ora torniamo al livello del secchio.
+
+03:44.070 --> 03:49.560
+Beh, davvero interessante qui perché avevo lo schermo diviso qui e questo nuovo interruttore viene mostrato.
+
+03:49.650 --> 03:55.440
+Immagino che sia tipo schiacciare tutto insieme e ho perso la mia capacità di navigare che se lo
+
+03:55.470 --> 03:56.290
+spostavo qui.
+
+03:56.340 --> 03:59.470
+OK che ritorna tornando al livello di benna.
+
+03:59.550 --> 04:07.990
+Se seleziono il bucket e faccio clic sulle proprietà per il controllo delle versioni se dovessi sospendere il controllo della versione, ciò che
+
+04:07.990 --> 04:14.650
+è successo ora è che gli oggetti che attualmente ho in S3 avranno la loro versione precedente e
+
+04:14.650 --> 04:17.890
+quelle versioni saranno sempre archiviate e rese disponibili.
+
+04:18.130 --> 04:25.600
+Tuttavia, qualsiasi nuovo oggetto che vorrei caricare su questo bucket non avrebbe abilitato il controllo delle versioni su
+
+04:25.720 --> 04:27.410
+quei nuovi oggetti.
+
+04:27.460 --> 04:35.860
+Quindi, come esempio, se torno nel bucket, c'è ancora la possibilità di visualizzare e vedere le versioni dei file che sono stati creati
+
+04:35.860 --> 04:42.590
+quando il controllo delle versioni è stato abilitato, anche se ora il controllo delle versioni è disabilitato.
+
+04:42.700 --> 04:50.620
+Ma se ora caricare un nuovo oggetto qui e quindi caricare una versione più recente di tale oggetto perché la
+
+04:50.620 --> 04:56.280
+versione ha ora le versioni sospese non saranno mantenute solo per quel nuovo oggetto.
+
+04:57.030 --> 05:02.490
+Quindi questa è una rapida panoramica del versioning e spero che abbia senso per tutti.
+
+05:02.780 --> 05:09.390
+E ora, prima di concludere questa lezione e concludere questa sezione, diamo un'occhiata ai nostri
+
+05:09.420 --> 05:11.470
+requisiti di infrastruttura Omega.
+
+05:11.490 --> 05:20.420
+Quindi per la Sezione 4 S3 avevamo bisogno di una posizione per l'archiviazione di massa dei file e in particolare avevamo bisogno di uno come tre bucket
+
+05:20.420 --> 05:22.400
+per la memorizzazione degli oggetti.
+
+05:22.440 --> 05:26.790
+Abbiamo quel progetto di file Omega caricati nel secchio.
+
+05:26.790 --> 05:31.210
+Abbiamo fatto il versioning attivato per il bucket.
+
+05:31.230 --> 05:33.060
+Bene, l'abbiamo acceso.
+
+05:33.090 --> 05:34.520
+Ma poi l'ho sospeso.
+
+05:34.530 --> 05:38.710
+Quindi dovremo tornare indietro e riaccenderlo prima che finiamo qui.
+
+05:38.730 --> 05:46.560
+Infine, una politica del ciclo di vita ha permesso di spostare oggetti su Ghiacciaio dopo 90 giorni e l'abbiamo
+
+05:46.590 --> 05:47.220
+raggiunto.
+
+05:47.220 --> 05:58.390
+Torniamo rapidamente al livello del bucket e passiamo alle proprietà e riabiliteremo la versione.
+
+05:58.390 --> 06:05.600
+Quindi ora è abilitato e ora possiamo completare questa sezione e questa lezione.
+
+06:05.740 --> 06:10.000
+Facciamo nuovamente un breve riepilogo e una panoramica.
+
+06:10.000 --> 06:17.530
+Questa era la sezione 4 di AWOS essential in cui abbiamo imparato a conoscere il semplice servizio di archiviazione
+
+06:17.530 --> 06:22.610
+o più comunemente noto come S. 3 torna alla pagina principale.
+
+06:22.750 --> 06:25.360
+Ora abbiamo completato i concetti di base dell'account.
+
+06:25.360 --> 06:31.820
+Sono VPC e S-3 E dopo passeremo anche a e.
+
+06:31.840 --> 06:36.230
+Con ciò concluderò questa lezione e concluderò questa sezione.
+
+06:36.340 --> 06:37.480
+Grazie per aver guardato.
+
+06:37.480 --> 06:38.350
+Ora puoi andare avanti.

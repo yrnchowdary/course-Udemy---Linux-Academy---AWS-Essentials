@@ -1,0 +1,247 @@
+WEBVTT
+
+00:00.440 --> 00:00.870
+Ciao.
+
+00:00.900 --> 00:07.460
+E in questa lezione parleremo del ciclo di vita degli oggetti S-3, in particolare parlando delle
+
+00:07.650 --> 00:13.510
+definizioni del ciclo di vita e usando i cicli di vita degli oggetti.
+
+00:13.540 --> 00:16.250
+Quindi cos'è un oggetto come Seigel.
+
+00:16.360 --> 00:23.110
+Bene, il ciclo di vita di un oggetto è un insieme di regole che automatizzano la migrazione di una classe
+
+00:23.110 --> 00:29.340
+di archiviazione di oggetti in una diversa classe di memoria o cancellazione basata su intervalli di tempo specifici.
+
+00:29.350 --> 00:38.950
+Ad esempio, ho un file di lavoro a cui accedo ogni giorno per i successivi 30 giorni dopo 30 giorni.
+
+00:38.950 --> 00:44.160
+Potrei aver bisogno di accedere a quel file solo una volta alla settimana per i prossimi 60 giorni.
+
+00:44.970 --> 00:52.260
+Dopo di che, per un totale di 90 giorni, probabilmente non avrò mai più accesso al file, ma voglio mantenerlo solo nel
+
+00:52.260 --> 00:55.830
+caso in cui usi un criterio del ciclo di vita.
+
+00:55.860 --> 01:04.260
+Posso automatizzare il processo di modifica della classe di archiviazione dei file per soddisfare le mie esigenze di utilizzo e mantenere i costi
+
+01:04.260 --> 01:06.900
+di archiviazione S-3 più bassi possibile.
+
+01:07.050 --> 01:13.590
+Quindi è possibile capire quale sarebbe la politica del ciclo di vita e quali classi di archiviazione dovrebbero essere
+
+01:13.590 --> 01:15.950
+utilizzate per ciascun intervallo di tempo.
+
+01:18.110 --> 01:19.790
+Prenditi un secondo per pensarci.
+
+01:19.940 --> 01:21.320
+Vedi se riesci a capirlo.
+
+01:23.180 --> 01:26.180
+Bene ancora qui è il nostro scenario.
+
+01:26.350 --> 01:30.770
+Un file di lavoro per accedere una volta al giorno per i prossimi 30 giorni.
+
+01:31.040 --> 01:38.810
+Quindi dopo 30 giorni potrei aver bisogno di accedere a quel file solo una volta alla settimana per i prossimi 60 giorni e dopo
+
+01:38.810 --> 01:44.380
+90 giorni probabilmente non avrò mai più bisogno di accedere a quel file, ma vorrò tenerlo.
+
+01:44.390 --> 01:49.930
+Quindi qual è la soluzione migliore per soddisfare le esigenze degli utenti e ridurre al minimo i costi.
+
+01:50.000 --> 01:52.670
+Bene, la soluzione sarà simile a questa.
+
+01:52.700 --> 01:53.780
+Quindi per giorni.
+
+01:53.780 --> 02:00.190
+Da 0 a 29 sono i primi 30 giorni in cui le mie esigenze di utilizzo sono molto frequenti.
+
+02:00.260 --> 02:07.400
+Quindi la classe di archiviazione più adatta sarebbe standard e il costo è il livello di costo più alto.
+
+02:07.820 --> 02:15.700
+Ma per il prossimo periodo di tempo da 30 a 89 giorni per un totale di 60 giorni le mie esigenze di utilizzo sono poco frequenti,
+
+02:15.710 --> 02:22.160
+una volta alla settimana o una volta ogni due settimane sono la classe di archiviazione più adatta per un accesso raro
+
+02:22.190 --> 02:28.430
+perché anche se posso accedervi solo una volta alla settimana o una volta ogni due settimane ci sono momenti in
+
+02:28.430 --> 02:32.870
+cui ho bisogno di accedervi e quando voglio accedervi ho bisogno che sia immediato.
+
+02:33.110 --> 02:41.730
+Quindi il costo è di costo medio, quindi leggermente meno costoso dello standard per 90, più le mie esigenze di utilizzo
+
+02:41.730 --> 02:42.810
+sono uguali.
+
+02:42.810 --> 02:44.940
+Molto probabilmente non è mai stato necessario.
+
+02:45.180 --> 02:52.320
+Quindi la classe di archiviazione più adatta sarebbe glacier perché questo fornisce il livello di costo più basso, quindi
+
+02:52.320 --> 03:00.350
+il ciclo di vita dell'oggetto sarà simile a questo a partire dal giorno zero quando sarà caricato al giorno 30 rimarrà nella
+
+03:00.440 --> 03:02.400
+classe di archiviazione standard.
+
+03:02.600 --> 03:11.600
+Quindi il giorno 30 passerà automaticamente a un accesso standard raro.
+
+03:11.840 --> 03:21.530
+Quindi al giorno 90 passerà automaticamente l'oggetto al Ghiacciaio dove rimarrà dal giorno 90
+
+03:21.560 --> 03:23.260
+in poi.
+
+03:23.270 --> 03:26.220
+Ora, se volessi, potrei anche fissare una data.
+
+03:26.390 --> 03:34.940
+Diciamo mille giorni in futuro per eliminare il file, quindi ci sono molte diverse opzioni che è possibile utilizzare quando si
+
+03:34.940 --> 03:38.600
+crea un ciclo di vita di un oggetto.
+
+03:38.600 --> 03:46.130
+Ma lo scopo del ciclo di vita è di automatizzare il processo in base alle esigenze di utilizzo per
+
+03:46.160 --> 03:49.450
+ridurre al minimo i costi di archiviazione.
+
+03:49.460 --> 03:56.210
+Pertanto, in termini di gestione del ciclo di vita, la funzionalità del ciclo di vita si trova a livello di benna, quindi diamo
+
+03:56.210 --> 03:57.190
+un'occhiata a questo.
+
+03:57.200 --> 04:04.040
+Fare clic sul bucket fare clic su proprietà e vedremo qui che il ciclo di vita è elencato qui.
+
+04:05.050 --> 04:12.350
+Quindi, un criterio del ciclo di vita può essere applicato all'intero bucket per tutti gli oggetti in un bucket una specifica
+
+04:13.330 --> 04:19.690
+cartella all'interno di un bucket e quindi si applica a tutti gli oggetti in quella cartella o applicato
+
+04:19.690 --> 04:27.070
+a un solo oggetto all'interno di un bucket e puoi sempre eliminare una politica del ciclo di vita o modificare manualmente la
+
+04:27.070 --> 04:30.900
+classe di archiviazione di nuovo a quello che ti piace.
+
+04:30.900 --> 04:36.670
+Quindi con quella comprensione di Nalut per creare effettivamente questa politica del ciclo di vita.
+
+04:36.750 --> 04:43.330
+Quindi a livello di bucket sotto il ciclo di vita e le proprietà Faremo clic su Aggiungi regola.
+
+04:43.650 --> 04:48.750
+Quindi la prima cosa che devo decidere è che applicherò questa regola all'intero bucket.
+
+04:48.840 --> 04:53.380
+Significa che tutti i file attualmente nel bucket verranno applicati a questo criterio del ciclo di vita.
+
+04:53.400 --> 05:00.460
+E poi tutti i nuovi file caricati rientreranno anche nelle regole del ciclo di vita.
+
+05:00.570 --> 05:07.680
+O posso scegliere un prefisso che significa che posso selezionare una cartella o una cartella e quindi un oggetto nella cartella
+
+05:08.010 --> 05:10.980
+per applicare il criterio del ciclo di vita.
+
+05:10.980 --> 05:14.580
+Per ora ci limiteremo a tutto il secchio.
+
+05:14.940 --> 05:17.220
+Andremo a configurare la regola.
+
+05:17.220 --> 05:23.940
+Quindi, per prima cosa, analizza le azioni sugli oggetti in modo da passare a una memoria di accesso standard poco frequente.
+
+05:23.940 --> 05:29.760
+Ebbene sì, è la prima cosa che vogliamo fare perché di default l'oggetto arriverà come classe di
+
+05:30.060 --> 05:34.960
+archiviazione standard, quindi non dobbiamo impostarlo sullo standard per i primi 30 giorni.
+
+05:35.040 --> 05:41.870
+Ma stiamo per dire che 30 giorni dopo la data di creazione dell'oggetto pre-compilato per me perché è
+
+05:41.870 --> 05:43.080
+una selezione comune.
+
+05:43.080 --> 05:48.920
+Quindi, 30 giorni dopo la data di creazione dell'oggetto, vogliamo passare l'oggetto alla memoria di
+
+05:48.930 --> 05:50.680
+accesso standard poco frequente.
+
+05:50.680 --> 05:59.610
+Quindi vogliamo passare all'archiviazione su Glacier Storage e lo imposteremo non da 60 ma a 90 giorni,
+
+05:59.700 --> 06:07.690
+quindi se guardiamo qui vedremo qui che questo corrisponde esattamente a ciò che ho qui.
+
+06:07.690 --> 06:15.280
+Quindi ho appena creato lo scenario di cui stavamo parlando in quanto dai giorni 0 a 29 o i primi
+
+06:15.280 --> 06:21.730
+30 giorni l'oggetto rimarrà nella classe di archiviazione standard, quindi la transizione per 60 giorni all'accesso raro
+
+06:21.970 --> 06:24.630
+e quindi la transizione a Glacier.
+
+06:24.640 --> 06:29.440
+E se volessi, potresti sempre inserire un file in modo permanente e potrei impostarlo su qualsiasi
+
+06:29.440 --> 06:32.310
+numero che desidero, quindi lo imposto a 1000.
+
+06:32.380 --> 06:37.930
+Quindi dopo un migliaio di giorni è che l'oggetto è stato in S-3 lo eliminerà.
+
+06:37.930 --> 06:44.350
+Quindi è un ottimo modo se, per ragioni normative, devi tenere i file per cinque anni o sette anni
+
+06:44.350 --> 06:49.840
+dopo i quali possono essere cancellati, quindi puoi impostare qui quel periodo e i file saranno
+
+06:49.840 --> 06:54.090
+cancellati e non sarai più addebitato per la memorizzazione di tali oggetti.
+
+06:55.440 --> 07:02.780
+Andando quindi alla revisione rapida, fai clic su Crea e attiva le regole in modo che ora la regola sia attiva e attiva
+
+07:02.780 --> 07:04.990
+per il nostro progetto Omega bucket.
+
+07:05.330 --> 07:07.860
+E con questo concluderò questo video.
+
+07:07.880 --> 07:09.050
+Grazie per aver guardato.
+
+07:09.050 --> 07:09.940
+Ora puoi andare avanti.

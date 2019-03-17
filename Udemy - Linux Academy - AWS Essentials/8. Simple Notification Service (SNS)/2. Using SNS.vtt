@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00.330 --> 00:06.030
+Salve e bentornati in questa lezione ti concentrerai sull'utilizzo effettivo di S e S. Andremo a trattare
+
+00:06.030 --> 00:12.690
+in modo specifico come creare abbonamenti di annunci di argomento e inviare messaggi, nonché a esaminare i nostri controlli sui
+
+00:12.690 --> 00:17.280
+requisiti di Omega per questo sezione per assicurarci di coprire tutto ciò di
+
+00:17.280 --> 00:18.450
+cui abbiamo bisogno.
+
+00:18.480 --> 00:19.200
+Quindi saltando dentro
+
+00:19.200 --> 00:21.740
+Diamo un'occhiata a come creare un argomento.
+
+00:21.750 --> 00:28.920
+Quindi prima nel conteggio AWOS. Dobbiamo navigare verso il servizio
+
+00:28.920 --> 00:35.930
+Asinus e questo è qui sui nostri servizi mobili in asinus.
+
+00:36.060 --> 00:40.880
+Quindi la prima cosa che vogliamo fare se non hai mai usato un servizio prima è fare clic su Inizia.
+
+00:40.890 --> 00:47.100
+E ora, una volta qui, la prima cosa che dobbiamo fare è fare clic su Crea un argomento potrebbe dare a
+
+00:47.610 --> 00:49.860
+questo argomento un nome che chiameremo essenziale.
+
+00:49.910 --> 00:52.070
+Fatturazione S e S.
+
+00:52.170 --> 00:58.470
+Dal momento che sto per trasformarlo in una notifica ora per il nome visualizzato, è sufficiente inserire
+
+00:58.500 --> 01:02.770
+un nome visualizzato se si stanno usando i punti finali.
+
+01:02.820 --> 01:07.950
+Quindi, molto bene, potrei usare stime e punti per testarlo, quindi inserirò
+
+01:07.950 --> 01:15.550
+una breve descrizione. Chiamerò questa fatturazione e creerò l'argomento, quindi è tutto quello che devi fare per creare un argomento.
+
+01:15.550 --> 01:16.320
+È molto semplice.
+
+01:16.330 --> 01:18.610
+Ma ora dobbiamo aggiungere abbonamenti.
+
+01:18.610 --> 01:24.490
+Quindi questi saranno gli endpoint a cui vogliamo inviare i messaggi e lo facciamo ora
+
+01:24.550 --> 01:28.490
+trovandoci nel nostro topic e facendo clic su create subscription.
+
+01:28.720 --> 01:33.790
+Quindi la prima cosa che voglio fare è selezionare il protocollo e questi sono
+
+01:33.790 --> 01:36.790
+i diversi protocolli disponibili per vari endpoint.
+
+01:36.790 --> 01:42.610
+Quindi prima voglio solo selezionare un protocollo e-mail e poi
+
+01:42.610 --> 01:48.460
+inserirò l'e-mail che voglio aggiungere come abbonamento, quindi userò l'e-mail che ho
+
+01:48.460 --> 02:01.570
+impostato qui, che è il uno che uso per creare questo account AWOS e questo è l'ultimo dato di dati AWOS su gmail dot com.
+
+02:02.000 --> 02:07.860
+Bene, ho scritto correttamente L. UN. dot punto essenziale di AWOS su gmail dot com.
+
+02:07.860 --> 02:08.270
+OK.
+
+02:08.310 --> 02:11.020
+Creiamo questo abbonamento.
+
+02:11.100 --> 02:17.370
+Ora, quando crei un abbonamento in modo che tutti i messaggi possano funzionare quando andiamo a pubblicare un
+
+02:17.550 --> 02:23.190
+messaggio, il sottoscrittore che abbiamo aggiunto a questo argomento deve iscriversi e le celle che
+
+02:23.190 --> 02:24.350
+devono autorizzare l'abbonamento.
+
+02:24.570 --> 02:31.800
+Quindi, se ora guardiamo sotto il mio account e-mail, vedo una e-mail che sta iniziando la conferma dell'iscrizione alla
+
+02:31.800 --> 02:32.860
+notifica AWOS.
+
+02:33.030 --> 02:36.250
+Quindi quello che devo fare è cliccare su questo link per confermare.
+
+02:36.330 --> 02:41.370
+Molto simile potresti ricevere una email da qualcuno o accettare che tu stia per ricevere e-mail da
+
+02:41.370 --> 02:41.850
+qualcuno.
+
+02:41.850 --> 02:43.690
+Questo è quello che sta succedendo qui.
+
+02:43.750 --> 02:50.370
+Ma prima che lo faccia di nuovo in Esson come contro. Vedo che per questo ID di iscrizione è in attesa
+
+02:50.370 --> 02:51.210
+di conferma.
+
+02:51.210 --> 02:55.670
+Quindi se ho una lunga lista di abbonati qui posso sempre guardare qui per vedere
+
+02:55.710 --> 02:59.670
+chi è iscritto e chi e forse aspetta ancora di accettare l'abbonamento.
+
+03:00.090 --> 03:02.520
+Quindi ho clix di abbonamento confermato.
+
+03:02.820 --> 03:11.490
+Riceverò una conferma del fatto che sono stato sottoscritto e di nuovo qui se lo aggiorno ora lo avrò
+
+03:11.490 --> 03:15.900
+confermato e ora mi sono aggiunto a questo argomento.
+
+03:15.930 --> 03:21.990
+Ora se si desidera aggiungere un abbonamento aggiuntivo, indicare un numero di telefono che l'argomento invierà
+
+03:21.990 --> 03:25.100
+messaggi a un telefono tramite messaggio di testo.
+
+03:25.170 --> 03:31.440
+Puoi creare un nuovo abbonamento cliccando su come un pasticcio metti il tuo numero di telefono qui seguendo
+
+03:31.440 --> 03:36.530
+questo formato clicca su Iscriviti e poi seguirai attraverso lo stesso processo di prima.
+
+03:36.600 --> 03:38.800
+Ma non ho intenzione di entrare e aggiungere il mio numero di telefono ora.
+
+03:38.970 --> 03:42.680
+Ma ora testiamo effettivamente la pubblicazione sull'argomento.
+
+03:42.690 --> 03:48.600
+Quindi, inviando un messaggio a questa e-mail e facendo ciò manualmente, posso semplicemente fare clic su Pubblica su argomento e posso mettere
+
+03:48.600 --> 03:53.250
+un argomento di prova e questo è quasi come inviare una e-mail e mi viene messo
+
+03:54.410 --> 03:55.360
+un messaggio essenziale.
+
+03:58.500 --> 04:02.490
+Come nel test di S clicca sul messaggio pubblico e poi
+
+04:06.920 --> 04:10.300
+proprio qui sulla mia e-mail vedo che è arrivato.
+
+04:10.790 --> 04:15.470
+Quindi è l'argomento di fatturazione ed è come un test essenziale che è il corpo e ci andiamo.
+
+04:15.470 --> 04:21.020
+Mi sono impostato un messaggio tramite un semplice servizio di notifica WSS.
+
+04:21.440 --> 04:28.830
+Quindi è davvero così semplice creare un argomento in un abbonamento e quindi pubblicare manualmente l'argomento.
+
+04:28.850 --> 04:30.530
+Ma poi è anche molto facile.
+
+04:30.590 --> 04:37.480
+In altri servizi AWOS da utilizzare come S come mezzo per recapitare un messaggio.
+
+04:37.490 --> 04:43.520
+Quindi, mentre ci spostiamo in alcune delle restanti sezioni di questo corso, andremo a quegli altri servizi.
+
+04:43.600 --> 04:49.950
+Impostare i trigger per attivare gli argomenti di s e s per inviare messaggi ai nostri endpoint.
+
+04:52.360 --> 04:54.890
+Quindi ora diamo un'occhiata al nostro progetto Omega.
+
+04:54.900 --> 04:58.180
+Requisiti di infrastruttura per la sezione 7.
+
+04:58.180 --> 05:03.520
+E qui abbiamo bisogno di un modo per inviare notifiche email o messaggi di testo ai membri del team di
+
+05:03.820 --> 05:07.870
+Omega privati in base agli eventi che possono verificarsi con l'infrastruttura di Project Omega.
+
+05:07.930 --> 05:12.790
+Quindi vogliamo impostare un argomento con un avviso di fatturazione con e-mail come punto finale.
+
+05:12.790 --> 05:21.370
+Lo abbiamo fatto, ma poi anche un argomento impostato per un allarme di ridimensionamento automatico con e-mail e endpoint SSL.
+
+05:21.630 --> 05:23.440
+OK, passiamo attraverso questo processo.
+
+05:23.440 --> 05:30.550
+Dobbiamo creare un altro argomento per noi stessi in modo da poter tornare agli argomenti fare clic su Crea un
+
+05:30.580 --> 05:34.660
+nuovo argomento e chiamerò questo avviso di ridimensionamento automatico del gruppo.
+
+05:36.600 --> 05:43.030
+Avvisare come se fosse un nome visualizzato sceglierà lo stesso nome visualizzato e creerà l'argomento.
+
+05:44.050 --> 05:48.350
+Quindi ora sceglierò questo argomento e aggiungerò due endpoint.
+
+05:48.400 --> 05:55.090
+Il mio indirizzo e-mail di nuovo e un S M s in modo creare e-mail di sottoscrizione
+
+05:58.260 --> 05:59.740
+creare un abbonamento.
+
+06:00.150 --> 06:07.180
+Quindi creerò anche un altro abbonamento questa volta come se fosse lo stesso e tu vuoi assicurarti
+
+06:07.180 --> 06:08.880
+di usare questo formato.
+
+06:08.890 --> 06:11.890
+Se non si utilizza questo formato, potrebbe non funzionare.
+
+06:24.310 --> 06:31.470
+E creare l'abbonamento ora in attesa di conferma sull'e-mail, quindi torniamo nella nostra
+
+06:31.470 --> 06:36.080
+e-mail e ci iscriveremo a questa conferma dell'abbonamento.
+
+06:37.340 --> 06:42.830
+E per S e S ci è già stato sottoscritto, che in realtà deve essere nuovo.
+
+06:42.960 --> 06:48.030
+Generalmente in passato ho sempre dovuto confermare la descrizione SML.
+
+06:48.030 --> 06:52.480
+Quindi vediamo se questo effettivamente funziona meno pubblicato su questo argomento e vedere se ricevo un messaggio di testo.
+
+07:01.800 --> 07:02.670
+OK, andiamo.
+
+07:02.670 --> 07:06.130
+Ho appena ricevuto un messaggio di testo sul mio telefono da quell'argomento.
+
+07:07.050 --> 07:08.630
+E questo è venuto bene.
+
+07:08.770 --> 07:09.960
+OK così perfetto.
+
+07:10.090 --> 07:13.590
+Tutto è impostato correttamente e ora siamo pronti per procedere.
+
+07:13.840 --> 07:19.240
+Quindi, mentre finiamo questa lezione e questa sezione lascia solo fare una rapida rassegna.
+
+07:19.270 --> 07:25.300
+Questa era la sezione essenziale di AWOS 7 in cui abbiamo appreso il semplice servizio di notifica.
+
+07:25.300 --> 07:30.730
+Abbiamo avuto un'introduzione a S e S che abbiamo appreso non appena la sua panoramica concettuale e come
+
+07:30.730 --> 07:35.610
+utilizzare S e S, tra cui come creare abbonamenti di annunci di argomento e inviare messaggi.
+
+07:36.820 --> 07:43.300
+Quindi, guardando indietro al nostro diagramma principale, possiamo vedere che stiamo iniziando a riempire molto di
+
+07:43.300 --> 07:51.040
+esso e avvicinarci alla fine e poi passeremo a un WS cloud watch in modo da concludere questa lezione e
+
+07:51.310 --> 07:52.870
+concludere questo sezione.
+
+07:52.870 --> 07:54.040
+Grazie per aver guardato.
+
+07:54.040 --> 07:54.880
+Ora puoi andare avanti.

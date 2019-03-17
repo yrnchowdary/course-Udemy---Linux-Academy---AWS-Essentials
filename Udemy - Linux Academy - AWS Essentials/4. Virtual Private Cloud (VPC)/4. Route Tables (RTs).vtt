@@ -1,0 +1,259 @@
+WEBVTT
+
+00:00.190 --> 00:06.840
+Di seguito e in questa lezione continueremo a costruire su basi VPC questa volta parlando specificamente di
+
+00:06.840 --> 00:11.120
+tavole rotonde e toccando le definizioni della tabella di rotte.
+
+00:11.220 --> 00:19.050
+La funzione di una tavola rotonda che crea e guida una tabella del percorso e imposta percorsi nella tabella del percorso.
+
+00:19.050 --> 00:24.140
+Quindi per iniziare parliamo in modo specifico di alcune definizioni di tabelle router.
+
+00:24.330 --> 00:29.180
+Quindi la definizione semplificata è buona, la definizione di AWOS è abbastanza semplice.
+
+00:29.190 --> 00:36.540
+Quindi, saltiamo giù fino ad esso una tavola rotonda contiene un insieme di regole chiamate rotte che vengono utilizzate
+
+00:36.540 --> 00:40.140
+per determinare dove viene indirizzato il traffico di rete.
+
+00:40.200 --> 00:46.050
+E dovremmo notare qui che il BPC di default ha già una tabella di rotte principale.
+
+00:46.050 --> 00:50.710
+Diamo un'occhiata a questo qui sotto un tavolo o puoi sempre cliccare qui.
+
+00:53.000 --> 00:58.400
+Questa è la nostra tabella di rotta principale e sappiamo che è la nostra tabella di rotta principale sotto la colonna qui.
+
+00:58.400 --> 01:00.720
+Dice si per main.
+
+01:00.860 --> 01:07.430
+Ora, prima di immergerci nei vari aspetti qui sulla console, diamo un'occhiata concettualmente a ciò che
+
+01:07.430 --> 01:09.800
+fa la tabella del percorso.
+
+01:09.980 --> 01:16.400
+Quindi nel nostro diagramma VPC abbiamo il nostro internet, abbiamo il gateway internet di cui abbiamo discusso l'ultima lezione e
+
+01:16.440 --> 01:20.420
+questo è ciò che ci fornisce l'accesso al mondo esterno per VPC.
+
+01:20.450 --> 01:27.120
+Ma una volta all'interno del nostro VPC abbiamo bisogno di qualcosa per dire ai dati dove andare.
+
+01:27.290 --> 01:34.160
+Quindi quando le informazioni arrivano da internet dicono un sito Web, un computer nel VPC avrebbe richiesto tali informazioni in
+
+01:34.160 --> 01:39.680
+modo che le informazioni che tornano abbiano un piccolo pacchetto di informazioni che dice hey questo
+
+01:39.740 --> 01:45.170
+è il computer o questo è il server che questa informazione deve andare a
+
+01:45.410 --> 01:51.320
+Ed è la tabella del router che lo prende e dice OK questo è quello che
+
+01:51.320 --> 01:57.320
+devi andare o forse ce n'è uno qui che devi andare ma è la tabella del
+
+01:57.380 --> 02:02.880
+router che fornisce la connessione tra tutte le varie risorse all'interno del tuo VPC.
+
+02:03.150 --> 02:09.750
+E di nuovo qui sotto la console se guardiamo qui sotto in un riepilogo e facciamo clic su percorsi.
+
+02:09.750 --> 02:15.440
+Questo è ciò che ci dice ciò che è collegato a questo percorso e dove andranno le cose.
+
+02:15.600 --> 02:22.080
+Quindi la prima cosa che voglio che tu guardi e concentrati qui è questa parte qui, che è GW, che
+
+02:22.260 --> 02:25.690
+se non hai già indovinato Dant per il gateway internet.
+
+02:25.740 --> 02:31.310
+Quindi questo qui questa connessione rappresenta questa linea proprio qui.
+
+02:31.350 --> 02:37.590
+Questa è la connessione o il percorso tra la tabella del percorso e il gateway Internet.
+
+02:39.290 --> 02:47.800
+L'altra sezione qui è l'indirizzo IP o il sito o l'intervallo di blocco del VPC stesso.
+
+02:47.900 --> 02:57.860
+Quindi qui sono fondamentalmente qui queste linee che forniscono il percorso attorno agli aspetti interni o alle parti interne del VPC
+
+02:57.890 --> 03:07.430
+ora a scopo dimostrativo, facciamo un po 'di divertimento, facciamo clic sul nostro cancello internet qui per aprire i
+
+03:07.430 --> 03:11.110
+gateway Internet e una nuova scheda .
+
+03:11.300 --> 03:16.130
+E se cancello il tipo dell'auto qui possiamo vedere i nostri due gateway Internet quello che
+
+03:16.130 --> 03:20.180
+abbiamo allegato a BBH e quello che ho creato nella lezione precedente.
+
+03:20.180 --> 03:26.470
+Quindi il BBA è quello che abbiamo collegato quello che è attualmente
+
+03:26.470 --> 03:32.630
+qui nel nostro diagramma cosa succederebbe se dovessi staccarlo dal VPC.
+
+03:32.860 --> 03:35.550
+Bene proviamoci e vediamo cosa succede.
+
+03:38.110 --> 03:44.010
+Quindi l'ho staccato dal VPC e in pratica quello che è successo ora è questo.
+
+03:44.020 --> 03:50.640
+Scollegare il gateway Internet dal VPC, ma la tabella del router continua a eseguire il routing.
+
+03:50.650 --> 03:53.330
+Quindi facciamo di nuovo clic e aggiorniamo la pagina
+
+03:56.160 --> 04:00.040
+della tabella del router, fare clic sulla tabella del router e fare clic su rotte.
+
+04:00.180 --> 04:05.170
+E ora qui sotto questo prima dove è attivo. Ora dice buco nero.
+
+04:05.220 --> 04:11.430
+Questo significa solo che il percorso verso il gateway Internet non sta andando verso i buchi neri,
+
+04:11.430 --> 04:15.920
+ma qualsiasi informazione inviata attraverso di esso andrebbe nelle regioni basse.
+
+04:15.960 --> 04:22.290
+Quindi, se dovessimo semplicemente riattaccare questo particolare gateway, torneremmo subito e
+
+04:22.290 --> 04:24.560
+tutto funzionerebbe perfettamente.
+
+04:24.600 --> 04:33.860
+Ma per questo esempio colleghiamo ora l'altro gateway che ho creato al VPC.
+
+04:34.000 --> 04:43.380
+Quindi ora ho un altro gateway internet qui, ma stiamo ancora eseguendo il routing verso il gateway che è stato rimosso.
+
+04:43.420 --> 04:48.090
+Stiamo ancora effettuando il routing verso il gateway Internet separato di Bebi otto.
+
+04:48.160 --> 04:57.220
+Quindi, se ora lo modifico e rimuovo quella rotta e aggiungo un'altra rotta, il menu a discesa ora mi darà la
+
+04:57.220 --> 04:59.480
+possibilità di aggiungere l'essenziale.
+
+04:59.510 --> 05:03.810
+Internet Gateway Posso fare clic su Salva.
+
+05:03.880 --> 05:05.840
+Tutte le definizioni devono essere valide.
+
+05:05.860 --> 05:12.350
+Blocco Cyder, quindi inserirà 0 e farà clic su Salva.
+
+05:12.430 --> 05:16.520
+Ora abbiamo una rotta attiva verso Internet attraverso un gateway attivo.
+
+05:16.900 --> 05:23.770
+E questo ci porta proprio qui ora a questo diagramma dove questo era il nostro gateway internet predefinito che era
+
+05:23.770 --> 05:24.760
+stato rimosso.
+
+05:24.910 --> 05:32.520
+Quindi lo abbiamo rimosso, abbiamo collegato un nuovo gateway Internet al PC e abbiamo cambiato rotta.
+
+05:32.530 --> 05:38.010
+Così abbiamo preso la rotta che stava andando a questo gateway internet e quando abbiamo cambiato la situazione qui abbiamo
+
+05:38.020 --> 05:41.670
+cambiato il percorso ora al gateway internet che si collega al VPC.
+
+05:41.740 --> 05:46.450
+E ora abbiamo ripristinato l'accesso a Internet al VPC.
+
+05:46.480 --> 05:51.910
+Quindi voglio solo assicurarmi di avere una buona comprensione di cosa fanno le tabelle di routing e di come funzionano
+
+05:51.910 --> 05:53.260
+all'interno di un VPC.
+
+05:53.260 --> 05:57.970
+Ora ci sono molte caratteristiche avanzate per una tavola rotonda,
+
+05:58.040 --> 06:04.570
+ma ai fini dell'ovvio esempio, naturalmente, voglio solo che tu capisca concettualmente il suo scopo e
+
+06:04.660 --> 06:09.850
+come instradi e colleghi i diversi elementi componenti del VPC l'uno con l'altro.
+
+06:09.850 --> 06:16.540
+Quindi, ancora una volta per riassumere una tabella router contiene un insieme di regole chiamate rotte che vengono utilizzate per determinare
+
+06:16.540 --> 06:18.820
+dove viene indirizzato il traffico di rete.
+
+06:19.060 --> 06:28.960
+A differenza di un gateway Internet, è possibile avere più tabelle di instradamento attive in un VPC e non è possibile condurre una
+
+06:29.020 --> 06:32.490
+tabella di router se ha dipendenze associate.
+
+06:32.590 --> 06:35.870
+Quindi, solo per tipo di mostrarti cosa intendo con quello.
+
+06:35.920 --> 06:45.620
+Creiamo una nuova tabella di routing Chiamerò questa tabella del router della tabella del router centrale.
+
+06:45.750 --> 06:54.470
+E di nuovo abbiamo solo un VPC da selezionare da SA, fare clic su Crea e ora abbiamo una tabella di percorso che non è la nostra
+
+06:54.470 --> 06:59.490
+tabella di percorso principale e non ha alcun improvviso che è esplicitamente associato a questo.
+
+06:59.510 --> 07:02.640
+Ne parleremo di più quando arriveremo alle sezioni di sottorete.
+
+07:02.780 --> 07:10.050
+Ma per la nostra tabella di routing predefinita che ha i gateway Internet di Subash e le cose che vi sono indirizzate.
+
+07:10.220 --> 07:13.490
+Se dovessi provare a cancellare questo adesso, non funzionerebbe.
+
+07:16.680 --> 07:21.840
+Arriva e dice che non puoi cancellare la seguente tabella con le dipendenze che non può essere cancellata.
+
+07:21.990 --> 07:29.160
+Ma se dovessi fare clic su questa tabella del percorso di eliminazione perché non ha associato nulla ora può
+
+07:29.160 --> 07:30.260
+essere cancellata.
+
+07:33.350 --> 07:40.010
+Quindi, ancora una volta voglio solo fare attenzione a questi due aspetti che puoi avere più tabelle di routing in
+
+07:40.010 --> 07:42.700
+un BPC che useremo in un po '.
+
+07:42.800 --> 07:47.570
+Inoltre, non è possibile eliminare una tabella di route se ha dipendenze.
+
+07:47.570 --> 07:49.430
+Quindi con quello ti ringrazio per aver guardato.
+
+07:49.430 --> 07:51.140
+Concluderemo questo video.
+
+07:51.170 --> 07:52.030
+Ora puoi andare avanti.

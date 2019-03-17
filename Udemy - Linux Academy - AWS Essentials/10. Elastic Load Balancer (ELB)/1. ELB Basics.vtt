@@ -1,0 +1,154 @@
+WEBVTT
+
+00:00.620 --> 00:07.670
+Salve e bentornati mentre iniziamo un'altra sezione qui in AWOS essentials come abbiamo ora spostato
+
+00:07.670 --> 00:14.690
+dai nostri servizi di monitoraggio e avviso che ora ci concentreremo sulla scalabilità e l'elasticità
+
+00:14.750 --> 00:25.150
+all'interno della nostra architettura AWOS e inizieremo che stiamo parlando per quanto riguarda il bilanciamento del carico elastico, per la sezione 9 di
+
+00:25.210 --> 00:30.290
+AWOS, l'attenzione sarà focalizzata sul classico bilanciamento del carico elastico.
+
+00:30.460 --> 00:35.680
+Ci concentreremo in particolare su un'introduzione al bilanciamento del carico elastico una panoramica concettuale dei
+
+00:35.710 --> 00:40.140
+vantaggi del bilanciamento del carico elastico e del bilanciamento del carico elastico.
+
+00:40.140 --> 00:47.290
+Panoramica sui costi e sui prezzi di utilizzo come creare un bilanciamento del carico elastico e anche una
+
+00:47.290 --> 00:50.040
+sicurezza elastica del bilanciamento del carico.
+
+00:50.090 --> 00:57.680
+La prima lezione incentrata sui classici principi di bilanciamento del carico elastico riguarderà le definizioni EAB.
+
+00:57.680 --> 01:07.530
+Flusso di dati di panoramica concettuale nei vantaggi VPC e casi d'uso e una panoramica dei costi e dei costi in modo che
+
+01:07.530 --> 01:15.220
+l'avvio del bilanciamento del carico elastico o abrevato come la definizione di Elby for inessentials sia in grado
+
+01:15.240 --> 01:24.400
+di distribuire equamente il traffico tra E. S. due istanze ad essa associate per il caricatore di boogle di definizione di AWOS
+
+01:24.490 --> 01:31.420
+distribuiscono il traffico di applicazioni in entrata su più E. S. due istanze in più zone di disponibilità.
+
+01:31.420 --> 01:38.800
+Ciò aumenta la tolleranza agli errori delle applicazioni. Il bilanciamento del carico elastico rileva le istanze insalubri e instrada
+
+01:39.070 --> 01:40.130
+il traffico.
+
+01:40.220 --> 01:42.860
+Solo due casi sani.
+
+01:43.000 --> 01:46.720
+Quindi concettualmente Diamo un'occhiata a come funziona tutto questo.
+
+01:46.810 --> 01:50.290
+Di nuovo ecco una foto del nostro diagramma VPC.
+
+01:50.590 --> 01:58.350
+E poiché ci sono clienti che potrebbero voler accedere alla nostra applicazione che stiamo ospitando in AWOS, ad esempio, diciamo che stiamo
+
+01:58.360 --> 02:03.490
+ospitando un sito Web, quindi abbiamo due server Web che ospitano i nostri file del
+
+02:03.520 --> 02:07.460
+sito Web mentre i clienti richiedono il nostro sito Web.
+
+02:07.480 --> 02:12.190
+La loro richiesta arriverà attraverso Internet attraverso il nostro gateway Internet
+
+02:12.190 --> 02:17.380
+e arriveranno al bilanciamento del carico elastico e il bilanciamento del carico elastico darà
+
+02:17.380 --> 02:23.830
+un'occhiata a entrambi questi server web e vedrà quanti utenti sono attualmente su ciascuno e distribuirà il
+
+02:23.830 --> 02:32.240
+traffico per assicurarsi che la quantità di utenti su entrambe le istanze sia uguale, quindi osservando più da vicino cosa sta succedendo
+
+02:32.240 --> 02:37.940
+sotto il cofano quando le richieste arrivano da Internet colpiscono il classico bilanciamento basso o
+
+02:37.940 --> 02:43.040
+il il bilanciamento del carico elastico deciderà a quale server inviare il traffico.
+
+02:43.100 --> 02:47.030
+Passerà quindi attraverso la tabella del router che indirizzerà il traffico attraverso
+
+02:47.030 --> 02:51.480
+gli elenchi di controllo dell'accesso alla rete attraverso il gruppo di sicurezza e il server.
+
+02:51.490 --> 02:56.230
+Quindi voglio solo portare sia il classico equilibratore che la tavola rotonda perché su molti
+
+02:56.230 --> 03:01.990
+diagrammi fino a questo punto a causa delle dimensioni del diagramma non li ho mai visti entrambi sullo
+
+03:02.020 --> 03:05.670
+stesso diagramma ma voglio che tu veda ecco come lavorano insieme.
+
+03:07.060 --> 03:11.980
+Ora per un esempio, diciamo che abbiamo sei anni è che tutti vogliono accedere
+
+03:12.040 --> 03:20.410
+al nostro sito Web e abbiamo due server Web configurati dietro un sistema di bilanciamento del carico elastico. Ciò che accadrebbe è che ogni
+
+03:20.500 --> 03:26.530
+utente entra e richiede l'accesso al nostro sito Web il classico bilanciamento del carico distribuirà equamente tra i
+
+03:26.530 --> 03:27.110
+due.
+
+03:27.160 --> 03:31.540
+Questo impedisce a un server di sovraccaricarsi e potenzialmente di bloccarsi.
+
+03:31.600 --> 03:40.160
+E che nella sua forma molto semplicistica è ciò che il bilanciamento del carico anelastico fa ora per una rapida panoramica dei costi di Preissing,
+
+03:40.160 --> 03:45.620
+è importante notare che l'uso del tier gratuito non è attualmente disponibile per il bilanciamento
+
+03:45.620 --> 03:51.710
+del carico elastico che viene addebitato per ogni ora o ora parziale. in esecuzione nel proprio account e
+
+03:52.030 --> 03:59.060
+per ogni gigabyte di trasferimento di dati tramite il servizio di bilanciamento del carico, i prezzi varieranno a seconda della
+
+03:59.060 --> 03:59.650
+regione.
+
+03:59.780 --> 04:05.390
+E ancora prima di fare un uso importante del bilanciamento del carico elastico, si dovrebbe sempre verificare la
+
+04:05.540 --> 04:10.520
+guida dettagliata sui prezzi sul sito Web di Amazon per assicurarsi di avere una piena comprensione
+
+04:10.520 --> 04:12.620
+di ciò che ti viene addebitato.
+
+04:12.620 --> 04:16.720
+Quindi riassumere tutto quando si pensa al bilanciamento del carico elastico.
+
+04:16.760 --> 04:22.580
+Basti pensare a distribuire uniformemente il traffico tra più istanze che hai impostato
+
+04:22.580 --> 04:27.950
+nel tuo account per eseguire qualsiasi applicazione per le due istanze.
+
+04:28.040 --> 04:30.040
+E con questo concluderemo questa lezione.
+
+04:30.170 --> 04:31.280
+Grazie per aver guardato.
+
+04:31.280 --> 04:32.060
+Ora puoi andare avanti.
